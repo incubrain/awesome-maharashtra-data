@@ -1,0 +1,24 @@
+title: data.gov.in Crop Production Statistics - Maharashtra
+homepage: "https://www.data.gov.in/catalog/district-wise-season-wise-crop-production-statistics"
+category: agriculture-rural
+description: District-wise, season-wise, crop-wise area (ha), production (tonnes), and yield data for Maharashtra from 1997 onwards, with approximately 246K records all-India filterable to Maharashtra.
+modality: tabular
+size: ~246K records (all-India); filterable to Maharashtra
+language:
+  - en
+license: Government-Open
+ai_use_cases:
+  - Crop yield prediction
+  - Agro-climatic zone analysis
+  - Cropping pattern recommendation
+  - Agricultural policy analysis
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Government of India (data.gov.in)
+format: CSV
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"

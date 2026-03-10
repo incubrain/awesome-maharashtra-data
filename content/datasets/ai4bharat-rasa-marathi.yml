@@ -1,0 +1,23 @@
+title: AI4Bharat Rasa (Marathi)
+homepage: "https://huggingface.co/datasets/ai4bharat/Rasa"
+category: speech-audio
+description: Expressive multilingual TTS dataset with neutral and emotional speech (6 Ekman emotions) for 22 Indian languages
+modality: Speech + Text (Expressive TTS)
+size: ~20 hrs/speaker; 400 hrs total (22 langs)
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - Expressive TTS
+  - Emotion Recognition
+  - Voice Acting
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/Rasa"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

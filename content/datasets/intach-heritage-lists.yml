@@ -1,0 +1,23 @@
+title: INTACH Heritage Lists
+homepage: "https://www.intach.org/"
+category: culture-media-tourism-heritage
+description: Maharashtra — Indian National Trust for Art and Cultural Heritage listings of unprotected heritage sites, buildings, and cultural landscapes in Maharashtra
+modality: Text, Images (web, PDF)
+size: Varied listings
+language:
+  - mr
+license: Open
+ai_use_cases:
+  - Heritage documentation
+  - at-risk site identification
+  - conservation priority modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

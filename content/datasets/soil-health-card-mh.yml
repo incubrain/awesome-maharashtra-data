@@ -1,0 +1,24 @@
+title: Soil Health Card Portal - Maharashtra
+homepage: "https://soilhealth.dac.gov.in/soil-health-map/MAHARASHTRA"
+category: agriculture-rural
+description: Soil test results for Maharashtra farms including N, P, K, pH, EC, organic carbon, and micronutrients at village and district level, covering millions of soil samples.
+modality: tabular
+size: Millions of soil samples across Maharashtra
+language:
+  - en
+license: Government-Open
+ai_use_cases:
+  - Precision fertiliser recommendation
+  - Soil fertility mapping
+  - Crop suitability models
+  - Sustainable agriculture planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: "Department of Agriculture & Farmers Welfare, Government of India"
+format: CSV
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"

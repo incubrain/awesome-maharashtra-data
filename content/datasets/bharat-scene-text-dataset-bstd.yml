@@ -1,0 +1,23 @@
+title: Bharat Scene Text Dataset (BSTD)
+homepage: "https://github.com/Bhashini-IITJ/BharatSceneTextDataset"
+category: vision-ocr-multimodal
+description: Large-scale scene text dataset for 11 Indian languages plus English, sourced from Wikimedia images of Indian signboards and street scenes. Includes 5,113 Marathi word annotations with polygon bounding boxes
+modality: Image (scene text)
+size: 6,582 images; 106K+ word instances
+language:
+  - mr
+license: "Apache-2.0 (images: CC BY-SA 4.0)"
+ai_use_cases:
+  - Scene text detection
+  - script identification
+  - end-to-end OCR
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/Bhashini-IITJ/BharatSceneTextDataset"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

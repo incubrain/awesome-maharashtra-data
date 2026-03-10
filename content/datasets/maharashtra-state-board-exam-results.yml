@@ -1,0 +1,23 @@
+title: Maharashtra State Board Exam Results
+homepage: "https://www.mahahsscboard.in/"
+category: education-skills
+description: Annual SSC (Class 10) and HSC (Class 12) examination results data from the Maharashtra State Board of Secondary and Higher Secondary Education
+modality: Tabular (web portal)
+size: Millions of students annually
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Student performance analytics
+  - pass rate prediction
+  - subject-wise trend analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

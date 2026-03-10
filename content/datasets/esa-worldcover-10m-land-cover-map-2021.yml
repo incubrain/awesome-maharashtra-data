@@ -1,0 +1,24 @@
+title: ESA WorldCover 10m Land Cover Map 2021
+homepage: "https://worldcover2021.esa.int/download"
+category: geospatial-gis
+description: Sentinel-1/2 derived global land cover with 11 classes at 10m resolution
+modality: Raster (Cloud Optimized GeoTIFF)
+size: 10m resolution; 3x3 degree COG tiles; 11 land cover classes
+language:
+  - en
+license: CC-BY 4.0
+ai_use_cases:
+  - High-resolution LULC mapping
+  - urban footprint extraction
+  - wetland delineation
+  - cropland-forest boundary detection
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,26 @@
+title: GHS-BUILT-C Building Characteristics
+homepage: "https://ghsl.jrc.ec.europa.eu/ghs_buC2025.php"
+category: transport-urban-infrastructure
+description: Global Human Settlement Layer Built-Up Characteristics providing building height, morphology classification, and building volume at 100m resolution. Derived from Sentinel-1/2 and ALOS data. Essential for urban planning, population estimation, and disaster vulnerability assessment in Maharashtra cities.
+modality: satellite-imagery
+size: "100m resolution; global coverage; building height, morphology, volume"
+language:
+  - en
+license: CC-BY-4.0
+ai_use_cases:
+  - 3D urban modeling of Mumbai/Pune
+  - Building vulnerability assessment for earthquake/flood
+  - Population density estimation from built-up volume
+  - Urban heat island correlation with building morphology
+  - Infrastructure planning and zoning analysis
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://ghsl.jrc.ec.europa.eu/download.php"
+paper_url: ""
+github_url: ""
+organization: European Commission Joint Research Centre
+format: GeoTIFF
+update_frequency: periodic
+citation: ""
+last_verified: "2026-03-09"

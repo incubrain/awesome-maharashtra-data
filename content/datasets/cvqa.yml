@@ -1,0 +1,23 @@
+title: CVQA
+homepage: "https://huggingface.co/datasets/afaji/cvqa"
+category: vision-ocr-multimodal
+description: Culturally-diverse Multilingual Visual Question Answering benchmark with questions from 30 countries in 31 languages including Marathi. Images and questions are annotated by native speakers familiar with local culture
+modality: Image + Text
+size: ~10K questions across 39 country-language pairs
+language:
+  - mr
+license: CC BY-SA (varies per image)
+ai_use_cases:
+  - Visual question answering
+  - cultural AI
+  - multimodal reasoning
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/afaji/cvqa"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

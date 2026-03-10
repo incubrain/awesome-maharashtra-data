@@ -1,0 +1,23 @@
+title: GST Revenue Data
+homepage: "https://gstcouncil.gov.in/"
+category: economy-labour-finance
+description: Maharashtra — Monthly Goods and Services Tax collection data for Maharashtra, the largest contributor to national GST revenue
+modality: Tabular (press releases, PDF)
+size: Monthly, state-level
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Tax revenue forecasting
+  - economic activity proxy modelling
+  - compliance analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

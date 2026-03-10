@@ -1,0 +1,26 @@
+title: Maharashtra State Data Bank - Transport & Motor Vehicles
+homepage: "https://mahasdb.maharashtra.gov.in/"
+category: transport-urban-infrastructure
+description: District-wise motor vehicle registration data, road accident statistics (fatalities, injuries, causes), and road network length for Maharashtra. Enables traffic safety analysis and accident prediction modeling.
+modality: tabular
+size: "District-level; annual time-series; vehicle types and accident data"
+language:
+  - en
+  - mr
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Traffic accident prediction and hotspot mapping
+  - Road safety intervention prioritization
+  - Vehicle demand forecasting
+  - Urban transport planning
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "https://mahasdb.maharashtra.gov.in/"
+paper_url: ""
+github_url: ""
+organization: Directorate of Economics & Statistics, Maharashtra
+format: CSV / Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-09"

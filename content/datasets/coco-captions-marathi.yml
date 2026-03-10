@@ -1,0 +1,23 @@
+title: COCO Captions Marathi
+homepage: "https://huggingface.co/datasets/Singhchandann/coco-captions_marathi"
+category: vision-ocr-multimodal
+description: Marathi translations of MS-COCO image captions, verified by native Marathi speakers for linguistic accuracy and contextual integrity. Useful for training image captioning and cross-lingual retrieval models
+modality: Text (caption pairs)
+size: 414K rows of Marathi text
+language:
+  - mr
+license: CC BY-NC-ND 4.0
+ai_use_cases:
+  - Image captioning
+  - semantic search
+  - cross-lingual retrieval
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/Singhchandann/coco-captions_marathi"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

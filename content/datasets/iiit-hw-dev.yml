@@ -1,0 +1,22 @@
+title: IIIT-HW-Dev
+homepage: "https://cvit.iiit.ac.in/research/projects/cvit-projects/indic-hw-data"
+category: vision-ocr-multimodal
+description: Large-scale Devanagari handwritten word dataset from CVIT, IIIT Hyderabad. Contains word-level images with corrected segmentation. Applicable to Marathi handwriting recognition as Marathi uses Devanagari script
+modality: Image (handwritten words)
+size: 95K+ handwritten word images
+language:
+  - mr
+license: Research use (CVIT/IIIT-H)
+ai_use_cases:
+  - Handwritten text recognition
+  - document digitization
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

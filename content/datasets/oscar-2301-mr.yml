@@ -1,0 +1,24 @@
+title: OSCAR 23.01 (Marathi)
+homepage: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+category: language-nlp
+description: Marathi subset of the OSCAR 23.01 web-crawled corpus containing 729,578 documents and 252 million words (4.5 GB), derived from Common Crawl with language filtering.
+modality: text
+size: 729,578 documents, 252M words, 4.5 GB
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Language model pretraining
+  - Web text analysis
+  - Text classification
+  - Corpus linguistics research
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: OSCAR Project (Inria / DFKI)
+format: Parquet
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

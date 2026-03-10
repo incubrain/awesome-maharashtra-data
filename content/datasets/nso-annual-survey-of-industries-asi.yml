@@ -1,0 +1,23 @@
+title: NSO Annual Survey of Industries (ASI)
+homepage: "https://www.mospi.gov.in/annual-survey-industries"
+category: economy-labour-finance
+description: Maharashtra — Factory-level data on manufacturing output, employment, capital investment, and value added from registered factories in Maharashtra
+modality: Tabular (unit-level data)
+size: Factory-level, annual
+language:
+  - en
+license: Open (microdata with registration)
+ai_use_cases:
+  - Industrial productivity analysis
+  - manufacturing sector modelling
+  - employment trend forecasting
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

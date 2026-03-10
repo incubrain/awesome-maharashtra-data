@@ -1,0 +1,26 @@
+title: MODIS MCD43A4 BRDF-Adjusted Reflectance (NBAR)
+homepage: "https://lpdaac.usgs.gov/products/mcd43a4v061/"
+category: geospatial-gis
+description: Daily BRDF-corrected surface reflectance at 500m resolution from Terra+Aqua MODIS (7 spectral bands from visible to SWIR). Removes sun-angle and directional effects for consistent multi-temporal analysis. Superior to standard reflectance products for land cover classification and time-series spectral analysis.
+modality: satellite-imagery
+size: "500m resolution; daily; 7 spectral bands; sinusoidal tiles; 2000-present"
+language:
+  - en
+license: Open (NASA LP DAAC, no restrictions)
+ai_use_cases:
+  - Consistent land cover classification without directional artifacts
+  - Burn scar and fire damage assessment in Western Ghats
+  - Urban albedo change monitoring
+  - Crop phenology extraction from BRDF-corrected time-series
+  - Water body turbidity estimation using spectral indices
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://e4ftl01.cr.usgs.gov/MOTA/MCD43A4.061/"
+paper_url: ""
+github_url: ""
+organization: NASA LP DAAC / USGS
+format: HDF4 / GeoTIFF (via GEE/AWS)
+update_frequency: daily
+citation: ""
+last_verified: "2026-03-09"

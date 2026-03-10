@@ -1,0 +1,23 @@
+title: India-WRIS / NRSC Flood Inundation Maps
+homepage: "https://ndrf.nrsc.gov.in/hydrological_flood.php?lang=en"
+category: environment-climate-disaster
+description: Satellite-based near real-time flood inundation extent maps for Maharashtra during monsoon events from ISRO/NRSC
+modality: Geospatial (raster, web maps)
+size: Event-based, spatial
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Flood extent estimation
+  - damage assessment
+  - evacuation planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: ICMR National Cancer Registry
+homepage: "https://ncdirindia.org/Reports.aspx"
+category: health-nutrition
+description: Maharashtra — Population-based cancer registry data from multiple Maharashtra registries (Mumbai, Pune, Aurangabad, Nagpur, Barshi rural)
+modality: Tabular (PDF, web)
+size: Multi-year, 7+ registries
+language:
+  - en
+license: Open (with acknowledgement)
+ai_use_cases:
+  - Cancer incidence prediction
+  - epidemiological modelling
+  - screening programme optimisation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

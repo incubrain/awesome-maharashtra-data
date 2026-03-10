@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# AI4Bharat Shrutilipi (Marathi)
+
+# (required) Human-readable dataset name
+title: "AI4Bharat Shrutilipi (Marathi)"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://huggingface.co/datasets/ai4bharat/Shrutilipi"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "speech-audio"
+
+# (required) One-line description of the dataset
+description: "Pseudo-labeled ASR corpus mined from All India Radio news bulletins for 12 Indian languages, with approximately 1,020 hours of Marathi speech data."
+
+# (required) Data modality
+modality: "speech+text"
+
+# (required) Approximate size with units
+size: "~1,020 hrs Marathi (6,400+ hrs total)"
+
+# (required) ISO 639-1 language codes
+language:
+  - mr
+
+# (required) License identifier
+license: "CC-BY-4.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/Shrutilipi"
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "AI4Bharat"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "ASR pre-training"
+  - "News domain ASR"
+  - "Speech-to-text for Marathi"
+  - "Semi-supervised speech learning"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: false
+
+# Format of the data files
+format: "WAV"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "static"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

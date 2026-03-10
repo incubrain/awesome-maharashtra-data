@@ -1,0 +1,26 @@
+title: GHSL Built-Up Surface (1975-2030)
+homepage: "https://human-settlement.emergency.copernicus.eu/datasets.php"
+category: geospatial-gis
+description: Global Human Settlement Layer providing built-up surface area at 10m resolution from 1975-2030 in 5-year intervals. Maharashtra subset reveals 50 years of urbanization patterns across Mumbai, Pune, Nagpur, and tier-2/3 cities.
+modality: raster-imagery
+size: ~15 GB (global per epoch), ~200 MB (MH subset)
+language:
+  - en
+license: Open (Copernicus)
+ai_use_cases:
+  - Urban expansion time-series analysis
+  - Slum and informal settlement detection
+  - Smart city planning
+  - Land use change modeling
+  - Infrastructure gap identification
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://human-settlement.emergency.copernicus.eu/download.php"
+paper_url: "https://www.researchgate.net/publication/370596013_GHSL_Data_Package_2023"
+github_url: ""
+organization: European Commission JRC
+format: GeoTIFF
+update_frequency: biennial
+citation: ""
+last_verified: "2026-03-07"

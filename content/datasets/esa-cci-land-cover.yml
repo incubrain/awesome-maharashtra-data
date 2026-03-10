@@ -1,0 +1,23 @@
+title: ESA CCI Land Cover
+homepage: "https://www.esa-landcover-cci.org/"
+category: agriculture-rural
+description: 300m annual global land cover maps (1992-2020) with 22 LCCS classes, useful for tracking cropland expansion and land use change in Maharashtra
+modality: Raster (GeoTIFF/NetCDF)
+size: Global; 300m; annual 1992-2020
+language:
+  - en
+license: Open (ESA CCI)
+ai_use_cases:
+  - Cropland change detection
+  - land use classification
+  - agricultural area estimation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

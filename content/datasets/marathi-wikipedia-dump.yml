@@ -1,0 +1,22 @@
+title: Marathi Wikipedia Dump
+homepage: "https://dumps.wikimedia.org/mrwiki/"
+category: language-nlp
+description: Marathi Wikipedia Dump dataset for language nlp.
+modality: text
+size: ~101,000 articles
+language:
+  - mr
+license: CC-BY-SA-3.0
+ai_use_cases:
+  - Knowledge extraction
+  - LM pretraining
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/wikipedia"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

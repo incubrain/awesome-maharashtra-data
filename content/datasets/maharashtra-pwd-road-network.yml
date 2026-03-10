@@ -1,0 +1,23 @@
+title: Maharashtra PWD Road Network
+homepage: "https://mahapwd.gov.in/"
+category: transport-urban-infrastructure
+description: Public Works Department data on state highways, major district roads, and other state road infrastructure in Maharashtra
+modality: Tabular (web)
+size: State-wide
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Road infrastructure planning
+  - maintenance prioritisation
+  - connectivity gap analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

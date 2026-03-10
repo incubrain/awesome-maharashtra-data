@@ -1,0 +1,22 @@
+title: AI4Bharat Shrutilipi
+homepage: "https://huggingface.co/datasets/ai4bharat/Shrutilipi"
+category: speech-audio
+description: Pseudo-labeled ASR corpus mined from All India Radio news bulletins for 12 Indian languages
+modality: Speech + Text
+size: 6,400+ hrs total; ~1,020 hrs Marathi
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - ASR Pre-training
+  - News Domain ASR
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/Shrutilipi"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

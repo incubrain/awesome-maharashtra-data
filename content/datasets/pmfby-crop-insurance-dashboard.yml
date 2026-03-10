@@ -1,0 +1,23 @@
+title: PMFBY Crop Insurance Dashboard
+homepage: "https://pmfby.gov.in/adminStatistics/dashboard"
+category: agriculture-rural
+description: Pradhan Mantri Fasal Bima Yojana state/district-level data on farmers insured, premium, claims reported, and claims paid for kharif/rabi seasons
+modality: Tabular (dashboard/PDF)
+size: State-level; seasonal since 2016
+language:
+  - en
+license: Gov Open (GODL)
+ai_use_cases:
+  - Crop risk modelling
+  - insurance premium optimisation
+  - drought vulnerability mapping
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

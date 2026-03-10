@@ -1,0 +1,23 @@
+title: ASI Protected Monuments
+homepage: "https://asi.nic.in/protected-monuments-in-maharashtra/"
+category: culture-media-tourism-heritage
+description: Maharashtra — List of 285 centrally protected and 244 state protected archaeological monuments and heritage sites in Maharashtra maintained by the Archaeological Survey of India
+modality: Tabular (PDF, web)
+size: 529 monuments
+language:
+  - mr
+license: Open Government
+ai_use_cases:
+  - Heritage site cataloguing
+  - tourism route optimisation
+  - cultural preservation analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

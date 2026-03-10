@@ -1,0 +1,22 @@
+title: Marathi-OCR-Dataset
+homepage: "https://github.com/sayalighodekar/Marathi-OCR-Dataset"
+category: vision-ocr-multimodal
+description: Collection of ~12K Marathi word images with corresponding UTF-8 text labels, sourced from 12 Marathi books across various genres. Images are binarized, thresholded, and resized to 96 dpi for direct neural network input
+modality: Image (printed text)
+size: ~12K word images
+language:
+  - mr
+license: Not specified
+ai_use_cases:
+  - Devanagari OCR
+  - printed text recognition
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/sayalighodekar/Marathi-OCR-Dataset"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

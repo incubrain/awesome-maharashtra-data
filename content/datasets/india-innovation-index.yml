@@ -1,0 +1,23 @@
+title: India Innovation Index
+homepage: "https://www.niti.gov.in/india-innovation-index"
+category: economy-labour-finance
+description: Maharashtra — Composite innovation performance ranking covering human capital, knowledge output, business sophistication, and research for Maharashtra
+modality: Tabular (PDF, web)
+size: State-level, annual
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Innovation ecosystem benchmarking
+  - "R&D policy analysis"
+  - state competitiveness modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

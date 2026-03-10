@@ -1,0 +1,28 @@
+title: AIKOSH IIT Bombay Indic Datasets (IndiaAI)
+homepage: "https://aikosh.indiaai.gov.in/"
+category: vision-ocr-multimodal
+description: Collection of 16 Indic language datasets from IIT Bombay hosted on IndiaAI's AIKOSH platform as part of the BharatGen initiative. Includes handwritten and printed Devanagari script images, scanned table recognition data, 78+ hours of multilingual audio, QA pairs, and math word problems. Covers Marathi plus 9 other Indian languages.
+modality: multimodal
+size: "16 datasets; handwritten/printed script images, 78+ hrs audio, QA pairs"
+language:
+  - mr
+  - hi
+  - en
+license: Open (IndiaAI Mission)
+ai_use_cases:
+  - Marathi LLM fine-tuning for government chatbots
+  - OCR of scanned land records and government documents
+  - Handwritten Devanagari recognition
+  - Speech recognition for rural users
+  - Marathi math word problem solving
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "https://aikosh.indiaai.gov.in/"
+paper_url: ""
+github_url: ""
+organization: IIT Bombay / IndiaAI Mission
+format: Various (images, audio, text)
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

@@ -1,0 +1,25 @@
+title: HASOC Marathi Offensive Language Dataset
+homepage: "https://hasocfire.github.io/hasoc/2022/"
+category: language-nlp
+description: Shared task datasets for Hate Speech and Offensive Content identification in Marathi from HASOC 2021 and 2022. Uses OLID taxonomy with ~4,970 annotated tweets. Complementary to L3Cube MahaHate using different annotation scheme and data sources, with published competitive baselines from multiple research teams.
+modality: text
+size: "~4,970 annotated tweets (1,874 from 2021 + 3,096 from 2022)"
+language:
+  - mr
+license: Research
+ai_use_cases:
+  - Marathi offensive content moderation
+  - Hate speech detection with OLID taxonomy
+  - Social media content filtering
+  - Online safety monitoring
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2211.10163"
+github_url: ""
+organization: HASOC / FIRE
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

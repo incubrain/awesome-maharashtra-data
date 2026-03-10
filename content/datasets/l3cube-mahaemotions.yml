@@ -1,0 +1,21 @@
+title: L3Cube-MahaEmotions
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: L3Cube-MahaEmotions dataset for language nlp.
+modality: text
+size: 15,000 samples, 11 emotion labels
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Emotion recognition
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

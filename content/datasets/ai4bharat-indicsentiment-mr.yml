@@ -1,0 +1,21 @@
+title: AI4Bharat IndicSentiment (mr)
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicSentiment"
+category: language-nlp
+description: AI4Bharat IndicSentiment (mr) dataset for language nlp.
+modality: text
+size: Multilingual sentiment benchmark for 13 languages
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Sentiment analysis
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicSentiment"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,44 @@
+title: L3Cube-MahaSent-MD
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: Multi-domain Marathi sentiment analysis dataset with 60,000 samples across 4 domains, labeled for positive, negative, and neutral sentiment.
+modality: text
+size: 60,000 samples
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Sentiment analysis
+  - Opinion mining
+  - Social media monitoring
+  - Customer feedback classification
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: L3Cube, Pune
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: sentence
+    type: string
+    description: Marathi text sentence
+  - field: label
+    type: string
+    description: "Sentiment label: positive, negative, or neutral"
+  - field: domain
+    type: string
+    description: "Source domain (e.g., news, social media, reviews, general)"
+starter_idea: Build a Marathi product review analyzer for e-commerce
+build_ideas:
+  - "Marathi social media sentiment dashboard for brands operating in Maharashtra"
+  - "Customer feedback classifier for Marathi-language support tickets"
+  - "Political sentiment tracker for Marathi news and social media during elections"
+quick_start: |
+  import pandas as pd
+  df = pd.read_csv("MahaSent-MD.csv")
+  print(df.groupby("label").size())
+  # Output: negative 20000, neutral 20000, positive 20000

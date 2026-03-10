@@ -1,0 +1,23 @@
+title: IMD Climate Data
+homepage: "https://mausam.imd.gov.in/"
+category: environment-climate-disaster
+description: Maharashtra Stations — Historical climate normals, rainfall, and temperature data from India Meteorological Department stations across Maharashtra
+modality: Tabular (PDF, web portal)
+size: Multi-decadal, station-level
+language:
+  - en
+license: Open (data request)
+ai_use_cases:
+  - Climate trend analysis
+  - rainfall prediction
+  - agricultural weather advisory
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: ERA5 Reanalysis (ECMWF)
+homepage: "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download"
+category: environment-climate-disaster
+description: Maharashtra — Hourly global climate reanalysis data (temperature, precipitation, wind, humidity) at 0.25 degree resolution covering Maharashtra from 1940 to present
+modality: Gridded (NetCDF, GRIB)
+size: Hourly, 0.25deg grid, 1940–present
+language:
+  - en
+license: Open (Copernicus License)
+ai_use_cases:
+  - Climate modelling
+  - historical weather reconstruction
+  - crop-weather modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: Maharashtra SDMA Disaster Data
+homepage: "https://sdma.maharashtra.gov.in/en/hazard-vulnerability-risk-information/"
+category: environment-climate-disaster
+description: State Disaster Management Authority data on hazard vulnerability, disaster events, and emergency response covering floods, cyclones, earthquakes in Maharashtra
+modality: Tabular (web, PDF)
+size: State-level, event-based
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Disaster preparedness modelling
+  - risk-informed urban planning
+  - emergency response optimisation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

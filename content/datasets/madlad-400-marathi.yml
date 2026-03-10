@@ -1,0 +1,25 @@
+title: MADLAD-400 Marathi
+homepage: "https://huggingface.co/datasets/allenai/MADLAD-400"
+category: language-nlp
+description: Google's manually audited 3 trillion token monolingual dataset from CommonCrawl covering 419 languages. Document-level with language identification and quality auditing. Manual auditing ensures higher Marathi data quality than fully automated pipelines.
+modality: text
+size: "3 trillion tokens total across 419 languages; significant Marathi subset"
+language:
+  - mr
+license: CC-BY-4.0
+ai_use_cases:
+  - Marathi language model pre-training
+  - Web content quality analysis
+  - Monolingual text generation
+  - Document-level language modeling
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/allenai/MADLAD-400"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Google / Allen AI
+format: Parquet
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

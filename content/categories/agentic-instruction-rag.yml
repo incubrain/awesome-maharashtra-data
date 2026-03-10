@@ -1,0 +1,6 @@
+title: "Agentic, Instruction & RAG"
+slug: "agentic-instruction-rag"
+description: "Instruction-tuning datasets, RAG knowledge bases, and QA corpora for building Marathi AI agents."
+icon: "i-lucide-bot"
+priority: "low"
+order: 14

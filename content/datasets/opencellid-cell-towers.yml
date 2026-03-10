@@ -1,0 +1,51 @@
+title: OpenCelliD Cell Tower Database (India)
+homepage: "https://opencellid.org/"
+category: realtime-streams-apis
+description: World's largest open database of cell towers (40M+ records globally) with geolocations and network metadata. India/Maharashtra subset maps digital connectivity coverage, enabling telecom gap analysis and network planning.
+modality: tabular
+size: ~3 GB (global), ~100 MB (India), ~15 MB (MH subset)
+language:
+  - en
+license: CC BY-SA 4.0
+ai_use_cases:
+  - Telecom coverage gap identification in rural MH
+  - Digital divide analysis by district
+  - Cell tower placement optimization
+  - Emergency service accessibility mapping
+  - Last-mile connectivity planning
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://opencellid.org/downloads.php"
+paper_url: ""
+github_url: ""
+organization: Unwired Labs
+format: CSV
+update_frequency: continuous
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: radio
+    type: string
+    description: "Network type (GSM, UMTS, LTE, NR, CDMA)"
+  - field: mcc
+    type: integer
+    description: "Mobile Country Code (404/405 for India)"
+  - field: net
+    type: integer
+    description: "Mobile Network Code (operator identifier)"
+  - field: cell
+    type: integer
+    description: "Cell ID (unique within a network)"
+  - field: lat
+    type: float
+    description: "Latitude of the cell tower"
+  - field: lon
+    type: float
+    description: "Longitude of the cell tower"
+  - field: range
+    type: integer
+    description: "Approximate coverage range in meters"
+  - field: samples
+    type: integer
+    description: "Number of measurements contributing to this record"

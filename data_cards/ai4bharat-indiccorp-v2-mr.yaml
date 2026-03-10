@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# AI4Bharat IndicCorp v2 (Marathi)
+
+# (required) Human-readable dataset name
+title: "AI4Bharat IndicCorp v2 (Marathi)"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicCorpV2"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "language-nlp"
+
+# (required) One-line description of the dataset
+description: "Marathi subset of the massive 20.9 billion token multilingual corpus covering 24 Indic languages, collected from diverse web sources for language model pretraining."
+
+# (required) Data modality
+modality: "text"
+
+# (required) Approximate size with units
+size: "Part of 20.9B token multilingual corpus"
+
+# (required) ISO 639-1 language codes
+language:
+  - mr
+
+# (required) License identifier
+license: "CC0-1.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicCorpV2"
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "AI4Bharat"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Language model pretraining"
+  - "Word embedding training"
+  - "Text classification"
+  - "Transfer learning for Marathi NLP"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "Parquet"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "static"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

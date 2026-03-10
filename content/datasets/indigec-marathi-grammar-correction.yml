@@ -1,0 +1,25 @@
+title: IndiGEC Marathi Grammar Error Correction
+homepage: "https://aclanthology.org/2025.emnlp-main.1139/"
+category: language-nlp
+description: First Marathi grammar error correction dataset, part of a multilingual GEC benchmark covering Hindi, Bengali, Marathi, and Tamil. Provides source-target corrected sentence pairs for training spelling and grammar checkers. Fills a critical gap since no GEC resources for Marathi previously existed.
+modality: text
+size: "Source-target sentence pairs for grammar correction"
+language:
+  - mr
+license: Research (EMNLP 2025)
+ai_use_cases:
+  - Marathi spell checker development
+  - Grammar correction for Marathi text editors
+  - Writing assistance tools
+  - Automated proofreading
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: "https://aclanthology.org/2025.emnlp-main.1139/"
+github_url: ""
+organization: EMNLP 2025
+format: Text (source-target pairs)
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

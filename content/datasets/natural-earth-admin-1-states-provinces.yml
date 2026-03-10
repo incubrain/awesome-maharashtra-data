@@ -1,0 +1,24 @@
+title: "Natural Earth Admin-1 States & Provinces"
+homepage: "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"
+category: geospatial-gis
+description: Curated global vector dataset including India state boundaries with name variants and statistical codes
+modality: Vector (Shapefile / GeoJSON)
+size: "14.22 MB download; 1:10M scale; 258 features globally"
+language:
+  - en
+license: Public Domain
+ai_use_cases:
+  - Base map creation
+  - multi-state comparative analysis
+  - cartographic reference
+  - choropleth mapping
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

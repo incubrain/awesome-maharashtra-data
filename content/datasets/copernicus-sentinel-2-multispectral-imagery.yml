@@ -1,0 +1,24 @@
+title: Copernicus Sentinel-2 Multispectral Imagery
+homepage: "https://browser.dataspace.copernicus.eu/"
+category: geospatial-gis
+description: 10m resolution 13-band optical satellite imagery with 5-day revisit for Maharashtra
+modality: Raster (GeoTIFF / JPEG2000 / COG)
+size: 10m/20m/60m bands; 100x100 km tiles; full archive since 2015
+language:
+  - en
+license: Copernicus Open License (free, full, open)
+ai_use_cases:
+  - Crop type classification
+  - urban growth detection
+  - water quality monitoring
+  - NDVI/EVI vegetation indexing
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

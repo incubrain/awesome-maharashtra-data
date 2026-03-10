@@ -1,0 +1,23 @@
+title: Skill India / NSDC Dashboard
+homepage: "https://nsdcindia.org/maharashtra"
+category: education-skills
+description: Maharashtra — Skill development training data including candidates trained, certified, and placed across various sectors in Maharashtra via NSDC programmes
+modality: Tabular (dashboard)
+size: State-level, ongoing
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Skill gap identification
+  - workforce planning
+  - training programme effectiveness analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

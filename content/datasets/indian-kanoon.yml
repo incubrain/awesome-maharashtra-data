@@ -1,0 +1,25 @@
+title: Indian Kanoon
+homepage: "https://indiankanoon.org/browse/bombay/"
+category: governance-census-demographics-legal
+description: Bombay High Court Judgments — Searchable database of Supreme Court and Bombay High Court judgments with full text, available for legal research and analysis
+modality: Text (HTML)
+size: Millions of judgments
+language:
+  - en
+  - mr
+license: Open
+ai_use_cases:
+  - Legal RAG systems
+  - case law analysis
+  - judgment prediction
+  - precedent mining
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,24 @@
+title: MODIS MCD12Q1 Land Cover Type (NASA)
+homepage: "https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061"
+category: geospatial-gis
+description: Annual 500m global land cover classification (IGBP 17-class) covering Maharashtra from 2001 to present
+modality: Raster (HDF4 / GeoTIFF)
+size: 500m resolution; annual; 17 land cover classes; HDF/GeoTIFF tiles
+language:
+  - en
+license: Free (NASA LP DAAC)
+ai_use_cases:
+  - Land use / land cover change detection
+  - urbanization tracking
+  - agricultural extent mapping
+  - ecosystem monitoring
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

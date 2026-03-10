@@ -1,0 +1,23 @@
+title: EM-DAT Disaster Database
+homepage: "https://public.emdat.be/"
+category: environment-climate-disaster
+description: Maharashtra Events — International disaster database recording natural and technological disasters in Maharashtra including floods, droughts, cyclones, and earthquakes since 1900
+modality: Tabular (Excel)
+size: Event-level, 1900–present
+language:
+  - en
+license: Open (non-commercial)
+ai_use_cases:
+  - Disaster risk assessment
+  - historical loss modelling
+  - climate adaptation planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

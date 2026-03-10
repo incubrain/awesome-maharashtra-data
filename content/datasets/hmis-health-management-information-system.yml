@@ -1,0 +1,23 @@
+title: HMIS (Health Management Information System)
+homepage: "https://hmis.mohfw.gov.in/"
+category: health-nutrition
+description: Monthly facility-level health data from all government health facilities across Maharashtra covering maternal health, immunisation, disease reporting
+modality: Tabular (web portal)
+size: All districts, monthly from 2008
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Health facility performance monitoring
+  - disease trend analysis
+  - resource allocation models
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

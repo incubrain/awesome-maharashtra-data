@@ -1,0 +1,24 @@
+title: "OpenCity.in Mumbai & Pune Urban Data"
+homepage: "https://data.opencity.in/dataset?city=Mumbai"
+category: geospatial-gis
+description: Ward boundaries, tree census, air quality, rainfall, and climate action GIS datasets for Maharashtra cities
+modality: Vector (GeoJSON / CSV)
+size: 50+ datasets for Mumbai; ward-level shapefiles in GeoJSON
+language:
+  - en
+license: ODbL / CC-BY-SA
+ai_use_cases:
+  - Urban heat island analysis
+  - ward-level pollution mapping
+  - tree canopy assessment
+  - climate resilience planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: Pune PMPML Open Data
+homepage: "http://opendata.punecorporation.org/Citizen/CitizenDatasets/Index?categoryId=15"
+category: transport-urban-infrastructure
+description: Bus route, stop, and BRTS information for Pune Mahanagar Parivahan Mahamandal Limited including route geometry and stop coordinates
+modality: Tabular, Geospatial (CSV)
+size: "City-level, routes & stops"
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Transit route optimisation
+  - bus network coverage analysis
+  - GTFS feed creation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/datameet-pune/datameet-pune.github.io/wiki/Project:-GTFS-feed-creation"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,22 @@
+title: Devanagari Handwritten Character Dataset
+homepage: "https://archive.ics.uci.edu/dataset/389/devanagari+handwritten+character+dataset"
+category: vision-ocr-multimodal
+description: Handwritten character image database with 46 classes (36 characters + 10 digits) of Devanagari script. Each grayscale image is 32x32 pixels. Applicable to Marathi character recognition since Marathi uses Devanagari
+modality: Image (handwritten characters)
+size: 92K images (2K per class)
+language:
+  - mr
+license: CC BY 4.0
+ai_use_cases:
+  - Handwritten character recognition
+  - OCR
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,26 @@
+title: NASA SMAP Soil Moisture
+homepage: "https://smap.jpl.nasa.gov/"
+category: agriculture-rural
+description: Soil Moisture Active Passive (SMAP) satellite providing global soil moisture measurements at 9-36km resolution with 2-3 day revisit. Essential for drought detection, irrigation planning, and crop stress assessment in Maharashtra's rain-fed agricultural belts.
+modality: satellite-imagery
+size: "9-36km resolution; 2-3 day revisit; global coverage since April 2015"
+language:
+  - en
+license: Open (NASA)
+ai_use_cases:
+  - Drought early warning for Marathwada/Vidarbha
+  - Root-zone soil moisture for crop stress detection
+  - Irrigation scheduling optimization
+  - Flood potential assessment
+  - PMFBY crop insurance claim validation
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://nsidc.org/data/smap/smap-data.html"
+paper_url: ""
+github_url: ""
+organization: NASA Jet Propulsion Laboratory
+format: HDF5 / NetCDF
+update_frequency: "2-3 days"
+citation: ""
+last_verified: "2026-03-09"

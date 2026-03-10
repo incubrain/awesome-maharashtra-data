@@ -1,0 +1,22 @@
+title: IIT Madras IndicTTS (Marathi)
+homepage: "https://www.iitm.ac.in/donlab/indictts/database"
+category: speech-audio
+description: Studio-quality single-speaker TTS corpus with male and female Marathi recordings plus English by native speakers
+modality: Speech + Text (TTS)
+size: "~40 hrs (10 hrs each: male mono, female mono, male English, female English)"
+language:
+  - mr
+license: Custom academic license (request-based)
+ai_use_cases:
+  - TTS
+  - Speech Synthesis Research
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

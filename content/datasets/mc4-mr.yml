@@ -1,0 +1,24 @@
+title: mC4 (Marathi)
+homepage: "https://huggingface.co/datasets/mc4"
+category: language-nlp
+description: Marathi subset of the multilingual Colossal Clean Crawled Corpus (mC4) with approximately 7.8 million documents and 14 billion raw tokens, used for large-scale language model pretraining.
+modality: text
+size: ~7.8M documents, ~14B tokens (raw)
+language:
+  - mr
+license: ODC-BY-1.0
+ai_use_cases:
+  - Language model pretraining
+  - Large-scale text mining
+  - Unsupervised representation learning
+  - Marathi LLM training
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/mc4"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Google / Allen AI
+format: JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

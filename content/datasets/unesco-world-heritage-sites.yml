@@ -1,0 +1,23 @@
+title: UNESCO World Heritage Sites
+homepage: "https://whc.unesco.org/"
+category: culture-media-tourism-heritage
+description: "Maharashtra — Detailed documentation for Maharashtra's UNESCO World Heritage Sites including Ajanta Caves, Ellora Caves, Elephanta Caves, Chhatrapati Shivaji Terminus, and Victorian Gothic/Art Deco ensembles of Mumbai"
+modality: Text, Images (web)
+size: 5 sites
+language:
+  - mr
+license: Open
+ai_use_cases:
+  - Heritage tourism analytics
+  - cultural significance analysis
+  - visitor flow modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

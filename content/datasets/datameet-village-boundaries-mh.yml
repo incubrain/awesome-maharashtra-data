@@ -1,0 +1,25 @@
+title: DataMeet Indian Village Boundaries - Maharashtra
+homepage: "https://projects.datameet.org/indian_village_boundaries/mh/"
+category: geospatial-gis
+description: Community-digitized village-level boundary polygons for all Maharashtra districts across 36 districts in GeoJSON format, enabling granular spatial analysis.
+modality: geospatial
+size: All villages across 36 districts
+language:
+  - en
+  - mr
+license: ODbL-1.0
+ai_use_cases:
+  - Village-level socioeconomic analysis
+  - Census integration
+  - Micro-level planning
+  - Electoral mapping
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/datameet/indian_village_boundaries"
+organization: DataMeet
+format: GeoJSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

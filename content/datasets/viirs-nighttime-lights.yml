@@ -1,0 +1,51 @@
+title: VIIRS Nighttime Lights (Annual Composites)
+homepage: "https://eogdata.mines.edu/products/vnl/"
+category: geospatial-gis
+description: Global annual nighttime light composites from VIIRS Day/Night Band at ~500m resolution. Maharashtra subsets enable mapping urbanization, electrification, economic activity, and informal settlements at district level.
+modality: raster-imagery
+size: ~2 GB/year (global), ~50 MB (MH subset)
+language:
+  - en
+license: Open
+ai_use_cases:
+  - Urban sprawl detection
+  - GDP and economic activity estimation at district level
+  - Rural electrification monitoring
+  - Informal settlement mapping
+  - Disaster impact assessment
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://eogdata.mines.edu/nighttime_light/annual/v22/"
+paper_url: ""
+github_url: ""
+organization: Colorado School of Mines / NOAA
+format: GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: latitude
+    type: float
+    description: "Grid cell center latitude"
+  - field: longitude
+    type: float
+    description: "Grid cell center longitude"
+  - field: avg_rad
+    type: float
+    description: "Average radiance (nanoWatts/cm²/sr)"
+  - field: cf_cvg
+    type: integer
+    description: "Cloud-free observation count for the compositing period"
+starter_idea: Map Maharashtra's economic growth using nighttime light intensity
+build_ideas:
+  - "Year-over-year urbanization tracker for all MH districts"
+  - "Rural electrification progress dashboard using light intensity change"
+  - "GDP estimation model trained on nighttime lights vs known economic data"
+quick_start: |
+  import rasterio
+  with rasterio.open("VNL_v22_2023.tif") as src:
+      # Read Maharashtra extent (approx bounding box)
+      window = rasterio.windows.from_bounds(72.6, 15.5, 80.9, 22.1, src.transform)
+      mh_data = src.read(1, window=window)
+  print(f"Mean radiance: {mh_data[mh_data > 0].mean():.2f} nW/cm²/sr")

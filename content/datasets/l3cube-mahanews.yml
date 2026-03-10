@@ -1,0 +1,21 @@
+title: L3Cube-MahaNews
+homepage: "https://huggingface.co/l3cube-pune/marathi-topic-all-doc"
+category: language-nlp
+description: L3Cube-MahaNews dataset for language nlp.
+modality: text
+size: 1.05 lakh records across 12 news categories
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - News topic classification
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/l3cube-pune/marathi-topic-all-doc"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

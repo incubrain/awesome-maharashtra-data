@@ -1,0 +1,51 @@
+title: GBIF Species Occurrence Records (Western Ghats & Maharashtra)
+homepage: "https://www.gbif.org/occurrence/search?geometry=POLYGON((72.6%2015.5,80.5%2015.5,80.5%2021.5,72.6%2021.5,72.6%2015.5))"
+category: environment-climate-disaster
+description: Global Biodiversity Information Facility occurrence records for Maharashtra and the Western Ghats biodiversity hotspot. Contains millions of georeferenced species observations from herbaria, museums, citizen science (iNaturalist), and field surveys.
+modality: tabular
+size: ~5M records (MH bounding box)
+language:
+  - en
+license: Various (CC0, CC BY, CC BY-NC)
+ai_use_cases:
+  - Biodiversity mapping and conservation priority areas
+  - Species distribution modeling for Western Ghats endemics
+  - Invasive species early warning
+  - Environmental impact assessment
+  - Ecotourism planning
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://www.gbif.org/occurrence/download"
+paper_url: ""
+github_url: ""
+organization: GBIF
+format: Darwin Core Archive (CSV)
+update_frequency: continuous
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: gbifID
+    type: integer
+    description: "Unique GBIF occurrence identifier"
+  - field: scientificName
+    type: string
+    description: "Full scientific name of the organism"
+  - field: decimalLatitude
+    type: float
+    description: "Latitude of observation (WGS84)"
+  - field: decimalLongitude
+    type: float
+    description: "Longitude of observation (WGS84)"
+  - field: eventDate
+    type: date
+    description: "Date the observation was recorded"
+  - field: basisOfRecord
+    type: string
+    description: "Type of record (HUMAN_OBSERVATION, PRESERVED_SPECIMEN, etc.)"
+  - field: kingdom
+    type: string
+    description: "Taxonomic kingdom (Plantae, Animalia, Fungi, etc.)"
+  - field: datasetName
+    type: string
+    description: "Name of the contributing dataset"

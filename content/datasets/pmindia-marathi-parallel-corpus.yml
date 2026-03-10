@@ -1,0 +1,26 @@
+title: PMIndia Marathi Parallel Corpus
+homepage: "http://data.statmt.org/pmindia/"
+category: language-nlp
+description: English-Marathi parallel corpus extracted from the Prime Minister of India website (pmindia.gov.in) containing up to 56,000 aligned sentence pairs. Covers speeches, press releases, and official communications, providing a domain-specific parallel corpus for machine translation.
+modality: text
+size: "~56,000 sentence pairs (English-Marathi)"
+language:
+  - en
+  - mr
+license: Open
+ai_use_cases:
+  - English-Marathi machine translation training
+  - Government domain language model fine-tuning
+  - Cross-lingual transfer learning
+  - Formal Marathi text generation
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "http://data.statmt.org/pmindia/"
+paper_url: "https://arxiv.org/abs/2001.09907"
+github_url: "https://github.com/bhaddow/pmindia-crawler"
+organization: University of Edinburgh
+format: TSV / plain text
+update_frequency: static
+citation: "Haddow & Kirefu. 2020. PMIndia - A Collection of Parallel Corpora of Languages of India."
+last_verified: "2026-03-09"

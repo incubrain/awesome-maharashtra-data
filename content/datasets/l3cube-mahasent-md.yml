@@ -1,0 +1,21 @@
+title: L3Cube-MahaSent-MD
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: L3Cube-MahaSent-MD dataset for language nlp.
+modality: text
+size: 60,000 samples across 4 domains
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Sentiment analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

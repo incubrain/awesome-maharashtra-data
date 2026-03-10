@@ -1,0 +1,23 @@
+title: IHME Global Burden of Disease
+homepage: "https://vizhub.healthdata.org/gbd-results/"
+category: health-nutrition
+description: India Subnational — Comprehensive disease burden estimates (292 causes, 88 risk factors) for Maharashtra from 1990 to present via the India State-Level Disease Burden Initiative
+modality: Tabular (CSV, interactive)
+size: Subnational, 1990–2023
+language:
+  - en
+license: Open (IHME Free-of-Charge)
+ai_use_cases:
+  - Disease burden forecasting
+  - risk factor modelling
+  - health intervention prioritisation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

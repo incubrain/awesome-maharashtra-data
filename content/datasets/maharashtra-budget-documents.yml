@@ -1,0 +1,23 @@
+title: Maharashtra Budget Documents
+homepage: "https://beams.mahakosh.gov.in/"
+category: economy-labour-finance
+description: Detailed state budget data including revenue receipts, expenditure by department, plan/non-plan breakdowns, and fiscal indicators
+modality: Tabular (PDF, Excel)
+size: State-level, annual
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Fiscal analysis
+  - budget allocation optimisation
+  - public expenditure modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

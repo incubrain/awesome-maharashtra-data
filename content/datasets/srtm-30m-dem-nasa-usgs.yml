@@ -1,0 +1,24 @@
+title: SRTM 30m DEM (NASA/USGS)
+homepage: "https://earthexplorer.usgs.gov/"
+category: geospatial-gis
+description: Shuttle Radar Topography Mission 1 arc-second (~30m) global elevation data covering all of Maharashtra
+modality: Raster (GeoTIFF / HGT)
+size: ~30 tiles for Maharashtra; 30m resolution; ~25 MB per tile (GeoTIFF)
+language:
+  - en
+license: Public Domain (NASA)
+ai_use_cases:
+  - Flood risk modeling
+  - watershed delineation
+  - slope and aspect analysis
+  - viewshed computation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

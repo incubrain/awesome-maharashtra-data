@@ -1,0 +1,21 @@
+title: AI4Bharat IndicHeadlineGeneration (mr)
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicHeadlineGeneration"
+category: language-nlp
+description: AI4Bharat IndicHeadlineGeneration (mr) dataset for language nlp.
+modality: text
+size: 114,042 train + 14,253 dev + 14,340 test
+language:
+  - mr
+license: CC-BY-NC-4.0
+ai_use_cases:
+  - Headline generation
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicHeadlineGeneration"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

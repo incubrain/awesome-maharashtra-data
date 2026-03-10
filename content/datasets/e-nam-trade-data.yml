@@ -1,0 +1,23 @@
+title: e-NAM Trade Data
+homepage: "https://enam.gov.in/web/dashboard/trade-data"
+category: agriculture-rural
+description: Electronic National Agriculture Market with 118 Maharashtra mandis integrated, providing real-time commodity arrivals, quality parameters, and trade prices
+modality: Tabular (web/API)
+size: 118 MH mandis; live trade data
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Real-time price discovery
+  - market integration analysis
+  - supply-demand forecasting
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

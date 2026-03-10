@@ -1,0 +1,22 @@
+title: IndicSTR12
+homepage: "https://cvit.iiit.ac.in/research/projects/cvit-projects/indicstr"
+category: vision-ocr-multimodal
+description: Indic Scene Text Recognition dataset covering 12 major Indian languages including Marathi. Word images collected from natural scenes such as signboards, shop nameplates, railway stations, advertisements, and banners
+modality: Image (scene text)
+size: 27K+ word images (1K+ per language)
+language:
+  - mr
+license: Research use (CVIT/IIIT-H)
+ai_use_cases:
+  - Scene text recognition
+  - OCR for Indic scripts
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

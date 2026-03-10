@@ -1,0 +1,23 @@
+title: CWC Flood Forecasting
+homepage: "https://ffs.india-water.gov.in/"
+category: environment-climate-disaster
+description: "Maharashtra River Gauges — Real-time and historical water level and discharge data from river gauging stations across Maharashtra's major river basins (Krishna, Godavari, Tapi)"
+modality: Tabular (web portal)
+size: Hourly (monsoon), 340 stations nationally
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Flood forecasting
+  - river discharge prediction
+  - dam inflow modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

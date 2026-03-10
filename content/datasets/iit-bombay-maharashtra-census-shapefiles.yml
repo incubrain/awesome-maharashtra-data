@@ -1,0 +1,24 @@
+title: IIT Bombay Maharashtra Census Shapefiles
+homepage: "https://www.cse.iitb.ac.in/~pocra/MahaCensus_shapefile_data1.2/MaharashtraCensus.html"
+category: geospatial-gis
+description: District and taluka boundary shapefiles with 600+ census attributes per village
+modality: Vector (Shapefile)
+size: 36 districts; taluka + village boundaries; 600+ attributes
+language:
+  - en
+license: Free / Academic
+ai_use_cases:
+  - Census-linked spatial analysis
+  - demographic hotspot mapping
+  - rural development targeting
+  - POCRA project planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

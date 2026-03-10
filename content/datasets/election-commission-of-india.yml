@@ -1,0 +1,24 @@
+title: Election Commission of India
+homepage: "https://www.eci.gov.in/"
+category: governance-census-demographics-legal
+description: Maharashtra Results — Constituency-wise election results for Lok Sabha and Vidhan Sabha elections in Maharashtra including candidate, party, and vote count data
+modality: Tabular (web, PDF)
+size: Constituency-level, all elections
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Electoral analytics
+  - voter turnout prediction
+  - constituency-level political analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

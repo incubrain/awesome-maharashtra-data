@@ -1,0 +1,21 @@
+title: AI4Bharat BPCC (mr)
+homepage: "https://huggingface.co/datasets/ai4bharat/BPCC"
+category: language-nlp
+description: AI4Bharat BPCC (mr) dataset for language nlp.
+modality: parallel-text
+size: Part of 230M bitext pairs across 22 languages
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Machine translation
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/BPCC"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

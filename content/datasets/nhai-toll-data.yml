@@ -1,0 +1,23 @@
+title: NHAI Toll Data
+homepage: "https://nhai.gov.in/"
+category: transport-urban-infrastructure
+description: Maharashtra Highways — National Highways Authority of India toll plaza transaction data and traffic volume for Maharashtra national highway sections
+modality: Tabular (web portal)
+size: Toll plaza level, ongoing
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Highway traffic volume forecasting
+  - toll revenue prediction
+  - congestion modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: Government Scheme Documents for RAG
+homepage: "https://pmkisan.gov.in/"
+category: agentic-instruction-rag
+description: Official documents for central government schemes (PM-KISAN, PMFBY, MGNREGA) with Maharashtra implementation guidelines, suitable for building scheme information retrieval agents
+modality: Text (PDF, web)
+size: Scheme-level documents
+language:
+  - mr
+license: Open Government
+ai_use_cases:
+  - Government scheme QA bot
+  - citizen service agents
+  - benefit eligibility assessment
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

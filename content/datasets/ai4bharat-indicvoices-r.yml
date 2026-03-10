@@ -1,0 +1,23 @@
+title: AI4Bharat IndicVoices-R
+homepage: "https://huggingface.co/datasets/ai4bharat/indicvoices_r"
+category: speech-audio
+description: ASR-enhanced high-quality TTS corpus for 22 Indian languages; subset of IndicVoices optimized for speech synthesis
+modality: Speech + Text (TTS-ready)
+size: 1,704 hrs total (22 langs); 9-175 hrs/lang
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - TTS
+  - Voice Cloning
+  - Expressive Speech Synthesis
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/indicvoices_r"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

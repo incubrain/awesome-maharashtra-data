@@ -1,0 +1,22 @@
+title: UD Marathi-UFAL Treebank
+homepage: "https://github.com/UniversalDependencies/UD_Marathi-UFAL"
+category: language-nlp
+description: UD Marathi-UFAL Treebank dataset for language nlp.
+modality: text (CoNLL-U)
+size: 466 sentences, 3,506 tokens
+language:
+  - mr
+license: CC-BY-SA-4.0
+ai_use_cases:
+  - POS tagging
+  - dependency parsing
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/UniversalDependencies/UD_Marathi-UFAL"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

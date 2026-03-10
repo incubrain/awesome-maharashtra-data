@@ -1,0 +1,23 @@
+title: Mozilla Common Voice (Marathi)
+homepage: "https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0"
+category: speech-audio
+description: Crowd-sourced read-speech recordings with validated transcriptions for Marathi
+modality: Speech + Text
+size: ~30 hrs total, ~21 hrs validated
+language:
+  - mr
+license: CC-0
+ai_use_cases:
+  - ASR
+  - Speaker ID
+  - Pronunciation Modeling
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

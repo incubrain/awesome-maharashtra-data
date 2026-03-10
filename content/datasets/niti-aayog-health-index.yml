@@ -1,0 +1,23 @@
+title: NITI Aayog Health Index
+homepage: "https://social.niti.gov.in/hlt-ranking"
+category: health-nutrition
+description: Composite state health performance rankings across health outcomes, governance, and key inputs/processes for Maharashtra
+modality: Tabular (PDF, Excel)
+size: State-level, annual rounds
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - State health benchmarking
+  - policy impact evaluation
+  - health governance analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

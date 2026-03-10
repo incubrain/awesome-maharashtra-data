@@ -1,0 +1,25 @@
+title: Maharashtra Forest Dept - Plantation & Survival Status
+homepage: "https://www.data.gov.in/"
+category: environment-climate-disaster
+description: District and taluka-wise tree plantation data from Maharashtra's reforestation programs including the 10 Crore Plantation initiative. Tracks planted area, species, survival rates, and carbon sequestration potential. Enables monitoring of reforestation commitments.
+modality: tabular
+size: "District/taluka-level; species-wise; survival rates"
+language:
+  - en
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Reforestation success prediction modeling
+  - Carbon credit verification
+  - Species suitability recommendation
+  - Plantation survival rate optimization
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Maharashtra Forest Department
+format: CSV / Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-09"

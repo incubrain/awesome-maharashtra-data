@@ -1,0 +1,23 @@
+title: AgMarkNet Daily Market Prices
+homepage: "https://agmarknet.gov.in/"
+category: agriculture-rural
+description: Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs. Also available via CEDA Ashoka cleaned API (2000-2023)
+modality: Tabular (CSV/API)
+size: Millions of daily price records
+language:
+  - en
+license: Gov Open (GODL)
+ai_use_cases:
+  - Price forecasting
+  - market volatility analysis
+  - farmer advisory chatbots
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,21 @@
+title: OSCAR 23.01 (mr)
+homepage: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+category: language-nlp
+description: OSCAR 23.01 (mr) dataset for language nlp.
+modality: text
+size: 729,578 documents, 252M words, 4.5 GB
+language:
+  - mr
+license: CC0-1.0 (metadata)
+ai_use_cases:
+  - Language model pretraining
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

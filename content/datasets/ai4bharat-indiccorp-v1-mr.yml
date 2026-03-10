@@ -1,0 +1,21 @@
+title: AI4Bharat IndicCorp v1 (mr)
+homepage: "https://indicnlp.ai4bharat.org/corpora/"
+category: language-nlp
+description: AI4Bharat IndicCorp v1 (mr) dataset for language nlp.
+modality: text
+size: 551M tokens
+language:
+  - mr
+license: CC-BY-NC-4.0
+ai_use_cases:
+  - Language model pretraining
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

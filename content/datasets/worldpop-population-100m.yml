@@ -1,0 +1,36 @@
+title: WorldPop Population Counts (100m)
+homepage: "https://hub.worldpop.org/project/categories?id=3"
+category: governance-census-demographics-legal
+description: Annual population estimates at 100m resolution for 2000-2030 using Random Forest dasymetric disaggregation. Maharashtra subset provides village-level population grids far more granular than census ward boundaries.
+modality: raster-gridded
+size: ~200 MB/year (India), ~30 MB (MH subset)
+language:
+  - en
+license: CC BY 4.0
+ai_use_cases:
+  - High-resolution population mapping
+  - Service delivery planning (schools, hospitals, anganwadis)
+  - Disaster vulnerability assessment
+  - Urban-rural migration analysis
+  - Electoral ward delineation
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://hub.worldpop.org/geodata/listing?id=76"
+paper_url: "https://www.nature.com/articles/sdata20174"
+github_url: ""
+organization: WorldPop / University of Southampton
+format: GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: latitude
+    type: float
+    description: "Grid cell center latitude (WGS84)"
+  - field: longitude
+    type: float
+    description: "Grid cell center longitude (WGS84)"
+  - field: population
+    type: float
+    description: "Estimated residential population per 100m x 100m grid cell"

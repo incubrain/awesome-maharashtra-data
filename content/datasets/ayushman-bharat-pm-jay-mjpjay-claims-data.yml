@@ -1,0 +1,23 @@
+title: Ayushman Bharat PM-JAY / MJPJAY Claims Data
+homepage: "https://nha.gov.in/PM-JAY"
+category: health-nutrition
+description: "Health insurance claims data from the Pradhan Mantri Jan Arogya Yojana and Maharashtra's Mahatma Jyotiba Phule Jan Arogya Yojana"
+modality: Tabular (dashboard)
+size: 3.57 Cr+ claims nationally
+language:
+  - en
+license: Restricted (portal access)
+ai_use_cases:
+  - Health expenditure analysis
+  - claims fraud detection
+  - hospital performance analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

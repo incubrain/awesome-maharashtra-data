@@ -1,0 +1,23 @@
+title: "ICAR-NBSS&LUP Soil Resource Maps (BHOOMI Geoportal)"
+homepage: "https://bhoomigeoportal-nbsslup.in/"
+category: agriculture-rural
+description: "Soil maps of India at 1:1M and 1:250K scale, plus soil fertility and land degradation layers, served via WMS"
+modality: Geospatial (WMS/raster)
+size: "National coverage; 1:250K for states"
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Soil-type classification
+  - land suitability mapping
+  - erosion risk prediction
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

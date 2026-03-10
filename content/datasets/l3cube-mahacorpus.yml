@@ -1,0 +1,35 @@
+title: L3Cube-MahaCorpus
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: Large-scale Marathi monolingual text corpus with 24.8 million sentences and 289 million tokens, curated for language model pretraining.
+modality: text
+size: 24.8M sentences, 289M tokens
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Language model pretraining
+  - Word embedding training
+  - Marathi text generation
+  - Transfer learning for downstream NLP tasks
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: L3Cube, Pune
+format: text
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"
+starter_idea: Fine-tune a Marathi language model for your domain
+build_ideas:
+  - "Domain-specific Marathi LLM for legal or medical text understanding"
+  - "Marathi text autocomplete for mobile keyboards"
+  - "Content generation engine for Marathi marketing copy"
+quick_start: |
+  # Download from GitHub and load as text
+  with open("MahaCorpus.txt", "r") as f:
+      lines = f.readlines()
+  print(f"{len(lines):,} sentences loaded")
+  print(lines[0][:100])

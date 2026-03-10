@@ -1,0 +1,22 @@
+title: NIRF Rankings
+homepage: "https://www.nirfindia.org/"
+category: education-skills
+description: Maharashtra Institutions — National Institutional Ranking Framework data covering teaching, research, perception, and outcome metrics for Maharashtra higher education institutions
+modality: Tabular (PDF, web)
+size: ~1,000+ institutions annually
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Institutional benchmarking
+  - higher education quality analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

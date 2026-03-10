@@ -1,0 +1,23 @@
+title: Copernicus Global Land Service
+homepage: "https://land.copernicus.eu/en"
+category: agriculture-rural
+description: Vegetation indices (NDVI, LAI, FAPAR), surface soil moisture, and soil water index at 300m-1km resolution, 10-day frequency, global coverage
+modality: Raster (NetCDF/GeoTIFF)
+size: Global; 300m-1km; 10-day
+language:
+  - en
+license: Open (Copernicus)
+ai_use_cases:
+  - Crop condition monitoring
+  - soil moisture-driven irrigation scheduling
+  - vegetation phenology
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

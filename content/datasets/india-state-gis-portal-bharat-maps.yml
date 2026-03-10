@@ -1,0 +1,24 @@
+title: India State GIS Portal (Bharat Maps)
+homepage: "https://stategisportal.nic.in/stategisportal/Home/State/27"
+category: geospatial-gis
+description: Maharashtra — Multi-layer GIS platform with 23 layers including admin, transport, forest, terrain, and settlements
+modality: WMS / WFS / Vector tiles
+size: 23 layers; state-wide coverage
+language:
+  - en
+license: OGL-India (NIC/MeitY)
+ai_use_cases:
+  - Administrative boundary reference
+  - transport network analysis
+  - settlement pattern study
+  - multi-layer overlay analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

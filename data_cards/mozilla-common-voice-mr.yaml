@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# Mozilla Common Voice (Marathi)
+
+# (required) Human-readable dataset name
+title: "Mozilla Common Voice (Marathi)"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://commonvoice.mozilla.org/en/datasets"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "speech-audio"
+
+# (required) One-line description of the dataset
+description: "Crowd-sourced read-speech recordings with validated transcriptions for Marathi, with approximately 30 hours total and 21 hours validated, part of Mozilla's open voice dataset initiative."
+
+# (required) Data modality
+modality: "speech+text"
+
+# (required) Approximate size with units
+size: "~30 hrs total, ~21 hrs validated"
+
+# (required) ISO 639-1 language codes
+language:
+  - mr
+
+# (required) License identifier
+license: "CC0-1.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: "https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0"
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "Mozilla Foundation"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "ASR training"
+  - "Speaker identification"
+  - "Pronunciation modeling"
+  - "Voice interface development"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "WAV"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "monthly"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

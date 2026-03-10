@@ -1,0 +1,21 @@
+title: Meta FLORES-200 (mr)
+homepage: "https://huggingface.co/datasets/facebook/flores"
+category: language-nlp
+description: Meta FLORES-200 (mr) dataset for language nlp.
+modality: parallel-text
+size: 3,001 sentences, parallel across 200 languages
+language:
+  - mr
+license: CC-BY-SA-4.0
+ai_use_cases:
+  - MT evaluation benchmark
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/facebook/flores"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

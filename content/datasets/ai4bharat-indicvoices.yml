@@ -1,0 +1,24 @@
+title: AI4Bharat IndicVoices
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicVoices"
+category: speech-audio
+description: Large-scale multilingual speech corpus with read, extempore, and conversational audio across 22 Indian languages including Marathi, totaling 7,348 hours.
+modality: speech+text
+size: 7,348 hrs total (22 langs); ~334 hrs/lang median
+language:
+  - mr
+license: CC-BY-4.0
+ai_use_cases:
+  - ASR training
+  - Language identification
+  - Speaker verification
+  - Multilingual speech processing
+maharashtra_specific: false
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicVoices"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

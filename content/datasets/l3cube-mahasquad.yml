@@ -1,0 +1,24 @@
+title: L3Cube-MahaSQuAD
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: Large-scale Marathi question answering dataset with 118,516 training, 11,873 validation, and 11,803 test QA samples, modeled after SQuAD.
+modality: text
+size: 142,192 QA samples
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Question answering
+  - Reading comprehension
+  - RAG knowledge base evaluation
+  - Conversational AI
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: L3Cube, Pune
+format: JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

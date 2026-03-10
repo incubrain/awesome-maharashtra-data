@@ -1,0 +1,23 @@
+title: IDSP (Integrated Disease Surveillance Programme)
+homepage: "https://idsp.mohfw.gov.in/"
+category: health-nutrition
+description: Weekly disease outbreak data covering epidemic-prone diseases across Maharashtra districts in syndromic, probable, and lab-confirmed formats
+modality: Tabular (web reports)
+size: Weekly reports, 720+ districts nationally
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Epidemic early-warning systems
+  - disease outbreak prediction
+  - syndromic surveillance AI
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

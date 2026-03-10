@@ -1,0 +1,48 @@
+title: NASA FIRMS Active Fire Data (MODIS/VIIRS)
+homepage: "https://firms.modaps.eosdis.nasa.gov/"
+category: environment-climate-disaster
+description: Near real-time active fire detections from MODIS and VIIRS satellites at 375m-1km resolution, updated every 3 hours. Maharashtra subset tracks agricultural stubble burning, forest fires in Western Ghats, and industrial fire incidents.
+modality: tabular
+size: ~10 GB/year (global), ~50 MB (MH subset)
+language:
+  - en
+license: Open (NASA)
+ai_use_cases:
+  - Crop residue burning monitoring and compliance
+  - Forest fire early detection in Western Ghats
+  - Air quality impact from agricultural fires
+  - Industrial fire incident mapping
+  - Seasonal fire risk prediction
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://firms.modaps.eosdis.nasa.gov/download/"
+paper_url: ""
+github_url: ""
+organization: NASA LANCE
+format: CSV / SHP / KML
+update_frequency: near-real-time (3 hours)
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: latitude
+    type: float
+    description: "Fire detection latitude"
+  - field: longitude
+    type: float
+    description: "Fire detection longitude"
+  - field: acq_date
+    type: date
+    description: "Acquisition date"
+  - field: acq_time
+    type: string
+    description: "Acquisition time (HHMM UTC)"
+  - field: brightness
+    type: float
+    description: "Brightness temperature (Kelvin)"
+  - field: confidence
+    type: string
+    description: "Detection confidence (low/nominal/high)"
+  - field: frp
+    type: float
+    description: "Fire Radiative Power (MW)"

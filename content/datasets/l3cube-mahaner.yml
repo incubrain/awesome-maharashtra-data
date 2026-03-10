@@ -1,0 +1,24 @@
+title: L3Cube-MahaNER
+homepage: "https://huggingface.co/l3cube-pune/marathi-ner"
+category: language-nlp
+description: Manually annotated Marathi named entity recognition dataset with 25,000 sentences tagged across 8 entity classes.
+modality: text
+size: 25,000 sentences
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Named entity recognition
+  - Information extraction
+  - Knowledge graph construction
+  - Document understanding
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/l3cube-pune/marathi-ner"
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: L3Cube, Pune
+format: JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

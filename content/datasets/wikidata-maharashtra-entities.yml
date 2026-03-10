@@ -1,0 +1,44 @@
+title: Wikidata Maharashtra Entities (Knowledge Graph)
+homepage: "https://www.wikidata.org/wiki/Wikidata:Main_Page"
+category: agentic-instruction-rag
+description: Structured knowledge graph with multilingual labels (including Marathi) for Maharashtra entities — people, places, organizations, cultural artifacts, administrative divisions. Extractable via SPARQL for RAG systems, entity linking, and question answering.
+modality: knowledge-graph
+size: ~100 GB (full dump), ~500 MB (MH entities subset)
+language:
+  - mr
+  - en
+  - hi
+license: CC0-1.0
+ai_use_cases:
+  - Marathi question answering and fact retrieval
+  - Entity linking for Marathi NLP pipelines
+  - Knowledge-grounded chatbot development
+  - Administrative geography lookup
+  - Cultural heritage digital catalog
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://dumps.wikimedia.org/wikidatawiki/entities/"
+paper_url: ""
+github_url: ""
+organization: Wikimedia Foundation
+format: JSON / RDF
+update_frequency: weekly
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: id
+    type: string
+    description: "Wikidata QID (e.g., Q1156 for Mumbai)"
+  - field: labels
+    type: object
+    description: "Multilingual labels keyed by language code (mr, en, hi, etc.)"
+  - field: descriptions
+    type: object
+    description: "Multilingual entity descriptions"
+  - field: claims
+    type: object
+    description: "Structured property-value pairs (P31=instance_of, P17=country, etc.)"
+  - field: sitelinks
+    type: object
+    description: "Links to Wikipedia articles in various languages"

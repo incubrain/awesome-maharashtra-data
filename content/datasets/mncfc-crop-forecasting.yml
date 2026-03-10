@@ -1,0 +1,23 @@
+title: MNCFC Crop Forecasting
+homepage: "https://www.ncfc.gov.in/"
+category: agriculture-rural
+description: Mahalanobis National Crop Forecast Centre district/state-level forecasts for 9 major crops using optical and microwave remote sensing data
+modality: Tabular/raster (reports)
+size: District-level; seasonal bulletins
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Crop acreage estimation
+  - production forecasting
+  - food security early warning
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

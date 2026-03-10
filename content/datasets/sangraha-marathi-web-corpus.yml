@@ -1,0 +1,25 @@
+title: Sangraha Marathi Web Corpus
+homepage: "https://huggingface.co/datasets/ai4bharat/sangraha"
+category: language-nlp
+description: Large-scale Indic web corpus by AI4Bharat with curated Marathi subset from Common Crawl, featuring language identification, quality filtering, and deduplication. Includes verified, unverified, and synthetic (back-translated) splits for comprehensive Marathi language model training.
+modality: text
+size: "Large-scale web corpus; Marathi subset with millions of documents"
+language:
+  - mr
+license: CC-BY-4.0
+ai_use_cases:
+  - Marathi LLM pre-training and continued pre-training
+  - Domain-specific fine-tuning data extraction
+  - Web content quality analysis
+  - Marathi text generation
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/sangraha"
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2403.06350"
+github_url: ""
+organization: AI4Bharat
+format: JSONL / Parquet
+update_frequency: static
+citation: "Ai4bharat. 2024. Sangraha: A Large-scale Indic Data Synthesis and Curation Pipeline."
+last_verified: "2026-03-09"

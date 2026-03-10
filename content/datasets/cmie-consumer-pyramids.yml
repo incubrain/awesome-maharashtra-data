@@ -1,0 +1,23 @@
+title: CMIE Consumer Pyramids
+homepage: "https://consumerpyramidsdx.cmie.com/"
+category: economy-labour-finance
+description: Maharashtra — Longitudinal panel survey of household income, expenditure, employment, and consumer behaviour across Maharashtra (requires subscription)
+modality: Tabular (API, dashboard)
+size: ~1.7 lakh households nationally, ongoing
+language:
+  - en
+license: Proprietary (subscription)
+ai_use_cases:
+  - Consumer behaviour modelling
+  - household income prediction
+  - economic impact assessment
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

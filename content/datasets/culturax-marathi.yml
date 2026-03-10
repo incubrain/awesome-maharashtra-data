@@ -1,0 +1,25 @@
+title: CulturaX Marathi
+homepage: "https://huggingface.co/datasets/uonlp/CulturaX"
+category: language-nlp
+description: Large-scale multilingual web corpus with a substantial Marathi subset, combining mC4 and OSCAR data with extensive cleaning and deduplication. Provides high-quality pre-training data for Marathi language models with better filtering than raw web crawls.
+modality: text
+size: "Billions of tokens across 167 languages; significant Marathi subset"
+language:
+  - mr
+license: Various (mC4 + OSCAR terms)
+ai_use_cases:
+  - Marathi language model pre-training
+  - Text quality filtering research
+  - Web content analysis
+  - Domain-specific corpus extraction
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/uonlp/CulturaX"
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2309.09400"
+github_url: ""
+organization: UoNLP (University of Oregon NLP)
+format: Parquet / JSONL
+update_frequency: static
+citation: "Nguyen et al. 2023. CulturaX: A Cleaned, Enormous, and Multilingual Dataset for Large Language Models in 167 Languages."
+last_verified: "2026-03-09"

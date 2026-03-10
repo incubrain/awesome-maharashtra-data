@@ -1,0 +1,22 @@
+title: WHO Global Health Observatory
+homepage: "https://www.who.int/data/gho/"
+category: health-nutrition
+description: India — Disaggregated health indicators for India including mortality, morbidity, health systems, and risk factors from the WHO data repository
+modality: Tabular (CSV, API)
+size: Country-level, multi-year
+language:
+  - en
+license: Open (CC BY-NC-SA 3.0 IGO)
+ai_use_cases:
+  - Cross-country health benchmarking
+  - SDG health indicator tracking
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

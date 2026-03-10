@@ -1,0 +1,23 @@
+title: UDISE+ (Unified District Information System for Education)
+homepage: "https://udiseplus.gov.in/"
+category: education-skills
+description: Comprehensive annual school-level data on enrolment, infrastructure, teachers, and facilities for all recognised schools in Maharashtra
+modality: Tabular (web portal, reports)
+size: ~1.1 lakh+ schools in Maharashtra
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Education access modelling
+  - school infrastructure gap analysis
+  - dropout prediction
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

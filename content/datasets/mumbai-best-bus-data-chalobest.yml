@@ -1,0 +1,23 @@
+title: Mumbai BEST Bus Data (ChaloBEST)
+homepage: "https://mobilitydatabase.org/"
+category: transport-urban-infrastructure
+description: "Community-created GTFS feed for Mumbai's BEST (Bombay Electric Supply & Transport) bus network including routes, stops, and schedules"
+modality: Tabular (GTFS)
+size: City-level, 400+ routes
+language:
+  - en
+license: Open (community)
+ai_use_cases:
+  - Public transit modelling
+  - multimodal journey planning
+  - transit accessibility analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

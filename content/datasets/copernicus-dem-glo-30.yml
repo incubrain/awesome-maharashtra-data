@@ -1,0 +1,24 @@
+title: Copernicus DEM GLO-30
+homepage: "https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3"
+category: geospatial-gis
+description: Global 30m digital surface model derived from TanDEM-X radar data with water body flattening
+modality: Raster (GeoTIFF / COG)
+size: 30m resolution; global coverage; ~25 MB per 1x1 degree tile
+language:
+  - en
+license: Copernicus License (free, open)
+ai_use_cases:
+  - Hydrological modeling
+  - urban elevation profiling
+  - infrastructure planning
+  - line-of-sight analysis
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

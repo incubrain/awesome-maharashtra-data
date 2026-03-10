@@ -1,0 +1,23 @@
+title: NSS 75th Round
+homepage: "https://microdata.gov.in/NADA/index.php/catalog/151"
+category: education-skills
+description: "Education Survey — Household Social Consumption: Education survey covering participation, expenditure, and out-of-school indicators with Maharashtra state-level tabulations"
+modality: Tabular (unit-level data)
+size: 1,13,757 households nationally
+language:
+  - en
+license: Open (microdata access)
+ai_use_cases:
+  - Education expenditure modelling
+  - out-of-school children identification
+  - equity analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

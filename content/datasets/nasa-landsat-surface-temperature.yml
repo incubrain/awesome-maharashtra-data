@@ -1,0 +1,26 @@
+title: Landsat Land Surface Temperature (30m)
+homepage: "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products"
+category: environment-climate-disaster
+description: Land surface temperature derived from Landsat 8/9 thermal bands at 30m resolution (resampled from 100m). Maharashtra subset enables urban heat island mapping for Mumbai, Pune, Nagpur, and heat stress analysis across agricultural regions.
+modality: raster-imagery
+size: ~1 GB per scene, ~100 scenes/year (MH coverage)
+language:
+  - en
+license: Open (USGS)
+ai_use_cases:
+  - Urban heat island mapping and mitigation
+  - Crop water stress detection
+  - Industrial thermal anomaly detection
+  - Climate-resilient urban planning
+  - Heat wave vulnerability mapping
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://earthexplorer.usgs.gov/"
+paper_url: ""
+github_url: ""
+organization: USGS / NASA
+format: GeoTIFF
+update_frequency: 16-day revisit
+citation: ""
+last_verified: "2026-03-07"

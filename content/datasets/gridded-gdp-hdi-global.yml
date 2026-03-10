@@ -1,0 +1,39 @@
+title: Gridded GDP & HDI (1990-2022)
+homepage: "https://www.nature.com/articles/s41597-025-04487-x"
+category: economy-labour-finance
+description: Downscaled gridded GDP per capita (PPP) and Human Development Index at admin-2 (municipality/district) level for 1990-2022 using machine learning. Maharashtra districts covered, enabling economic inequality and development tracking.
+modality: tabular-gridded
+size: ~500 MB (global), ~5 MB (MH subset)
+language:
+  - en
+license: CC BY 4.0
+ai_use_cases:
+  - District-level economic inequality mapping
+  - Development program targeting
+  - Investment and industry location analysis
+  - Urbanization-prosperity correlation
+  - Time-series economic growth modeling
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://datadryad.org/dataset/doi:10.5061/dryad.dk1j0"
+paper_url: "https://www.nature.com/articles/s41597-025-04487-x"
+github_url: ""
+organization: Multiple (Academic)
+format: GeoTIFF / CSV
+update_frequency: periodic
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: admin2_code
+    type: string
+    description: "Administrative level 2 (district/municipality) code"
+  - field: year
+    type: integer
+    description: "Year of estimate (1990-2022)"
+  - field: gdp_ppp
+    type: float
+    description: "GDP per capita in PPP (constant 2017 international $)"
+  - field: hdi
+    type: float
+    description: "Human Development Index (0-1)"

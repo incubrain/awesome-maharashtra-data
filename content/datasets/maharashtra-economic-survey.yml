@@ -1,0 +1,23 @@
+title: Maharashtra Economic Survey
+homepage: "https://finance.maharashtra.gov.in/en/publication/economic-survey-of-maharashtra-2023-24/"
+category: economy-labour-finance
+description: Annual publication by the Directorate of Economics and Statistics covering GSDP, agriculture, industry, infrastructure, and social indicators for Maharashtra
+modality: Tabular (PDF)
+size: State-level, annual
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - State economic planning
+  - sector-wise growth analysis
+  - policy impact evaluation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

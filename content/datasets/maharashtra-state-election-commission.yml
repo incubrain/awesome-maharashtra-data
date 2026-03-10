@@ -1,0 +1,24 @@
+title: Maharashtra State Election Commission
+homepage: "https://mahasec.maharashtra.gov.in/"
+category: governance-census-demographics-legal
+description: Local Body Elections — Election data for municipal corporations, municipal councils, nagar panchayats, and zilla parishad elections in Maharashtra
+modality: Tabular (web)
+size: Ward/constituency level
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Local election analytics
+  - ward-level political analysis
+  - urban governance research
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

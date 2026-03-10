@@ -1,0 +1,24 @@
+title: Maharashtra Legislative Assembly Proceedings
+homepage: "https://mls.org.in/"
+category: governance-census-demographics-legal
+description: Debates, questions, and legislative proceedings from the Maharashtra Vidhan Sabha and Vidhan Parishad
+modality: Text (web, PDF)
+size: Session-level, historical
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Legislative discourse analysis
+  - policy debate mining
+  - representative accountability tracking
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

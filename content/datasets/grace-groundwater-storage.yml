@@ -1,0 +1,39 @@
+title: GRACE/GRACE-FO Groundwater Storage Anomalies
+homepage: "https://grace.jpl.nasa.gov/data/get-data/"
+category: environment-climate-disaster
+description: Satellite gravity measurements from GRACE/GRACE-FO missions providing monthly terrestrial water storage anomalies at ~300km resolution since 2002. Combined with GLDAS soil moisture, yields groundwater depletion maps critical for Maharashtra's water-stressed Marathwada and Vidarbha regions.
+modality: raster-gridded
+size: ~2 GB (global), ~50 MB (India subset)
+language:
+  - en
+license: Open (NASA)
+ai_use_cases:
+  - Groundwater depletion monitoring in Marathwada
+  - Drought severity classification
+  - Irrigation sustainability assessment
+  - Water resource management modeling
+  - Climate adaptation planning
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://podaac.jpl.nasa.gov/GRACE"
+paper_url: ""
+github_url: ""
+organization: NASA JPL / GFZ Potsdam
+format: NetCDF / ASCII
+update_frequency: monthly
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: latitude
+    type: float
+    description: "Grid cell latitude (~1° resolution)"
+  - field: longitude
+    type: float
+    description: "Grid cell longitude (~1° resolution)"
+  - field: time
+    type: date
+    description: "Monthly observation period"
+  - field: lwe_thickness
+    type: float
+    description: "Liquid water equivalent thickness anomaly (cm)"

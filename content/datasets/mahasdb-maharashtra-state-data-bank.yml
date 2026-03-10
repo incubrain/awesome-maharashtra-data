@@ -1,0 +1,22 @@
+title: MahaSDB (Maharashtra State Data Bank)
+homepage: "https://mahasdb.maharashtra.gov.in/sector.do?sec=1"
+category: agriculture-rural
+description: District-level statistics covering agriculture area, production, land use, irrigation, and allied activities published by Government of Maharashtra
+modality: Tabular (web/XLS)
+size: All 36 districts; multi-year
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - District-level agricultural benchmarking
+  - policy impact analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

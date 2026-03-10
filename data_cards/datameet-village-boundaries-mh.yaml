@@ -1,0 +1,66 @@
+---
+# Awesome Marathi Datasets - Data Card
+# DataMeet Indian Village Boundaries - Maharashtra
+
+# (required) Human-readable dataset name
+title: "DataMeet Indian Village Boundaries - Maharashtra"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://projects.datameet.org/indian_village_boundaries/mh/"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "geospatial-gis"
+
+# (required) One-line description of the dataset
+description: "Community-digitized village-level boundary polygons for all Maharashtra districts across 36 districts in GeoJSON format, enabling granular spatial analysis."
+
+# (required) Data modality
+modality: "geospatial"
+
+# (required) Approximate size with units
+size: "All villages across 36 districts"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+  - mr
+
+# (required) License identifier
+license: "ODbL-1.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: "https://github.com/datameet/indian_village_boundaries"
+
+# Organization or author that created/maintains the dataset
+organization: "DataMeet"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Village-level socioeconomic analysis"
+  - "Census integration"
+  - "Micro-level planning"
+  - "Electoral mapping"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "GeoJSON"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "static"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

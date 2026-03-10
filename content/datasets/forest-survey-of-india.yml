@@ -1,0 +1,24 @@
+title: Forest Survey of India
+homepage: "https://fsi.nic.in/introduction"
+category: geospatial-gis
+description: ISFR biennial forest cover maps at district level using satellite interpretation for Maharashtra
+modality: Raster / Report (PDF maps)
+size: "State and district level; 1:50K scale; biennial cycle"
+language:
+  - en
+license: OGL-India (MoEFCC)
+ai_use_cases:
+  - Deforestation monitoring
+  - forest type classification
+  - carbon stock estimation
+  - biodiversity corridor planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

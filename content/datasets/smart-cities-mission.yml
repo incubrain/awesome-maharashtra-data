@@ -1,0 +1,22 @@
+title: Smart Cities Mission
+homepage: "https://smartcities.data.gov.in/city/maharashtra"
+category: transport-urban-infrastructure
+description: "Pune & Nagpur — Urban data from Smart Cities dashboards covering infrastructure, mobility, environment, and governance indicators for Pune and Nagpur"
+modality: Tabular (dashboard, API)
+size: City-level, ongoing
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Smart city performance benchmarking
+  - urban service delivery analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: OpenAssistant OASST1/OASST2
+homepage: "https://huggingface.co/datasets/OpenAssistant/oasst1"
+category: agentic-instruction-rag
+description: Multilingual (incl. Marathi) — Human-generated, human-annotated assistant-style conversation corpus in 35 languages including Marathi conversation trees with quality ratings
+modality: Text (multilingual)
+size: 161K messages in 35 languages
+language:
+  - mr
+license: Apache 2.0
+ai_use_cases:
+  - Conversational AI training
+  - RLHF data for Marathi
+  - multilingual chat model fine-tuning
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/OpenAssistant/oasst2"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

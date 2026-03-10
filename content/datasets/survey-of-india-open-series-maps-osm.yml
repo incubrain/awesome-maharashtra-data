@@ -1,0 +1,24 @@
+title: Survey of India Open Series Maps (OSM)
+homepage: "https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx"
+category: geospatial-gis
+description: "Topographic map sheets at 1:50K scale covering Maharashtra terrain, contours, settlements, and transport networks"
+modality: "Vector (PDF / Shapefile at 1:1M)"
+size: "~60 sheets for Maharashtra; 1:50K scale; PDF vector format"
+language:
+  - en
+license: OGL-India (Survey of India)
+ai_use_cases:
+  - Terrain analysis
+  - settlement pattern study
+  - infrastructure planning
+  - contour-based slope modeling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

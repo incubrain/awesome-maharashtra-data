@@ -1,0 +1,23 @@
+title: Maharashtra Government Resolutions (mahGRs)
+homepage: "https://github.com/orgpedia/mahGRs"
+category: agentic-instruction-rag
+description: RAG Corpus — ~47,000 Government Resolutions in Marathi and English from 33 departments, structured by department and updated weekly, ideal for RAG pipelines over policy documents
+modality: Text (Marathi + English)
+size: ~47,000 documents, bilingual
+language:
+  - mr
+license: CC BY 4.0
+ai_use_cases:
+  - Policy QA agents
+  - government scheme retrieval
+  - administrative document RAG
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/orgpedia/mahGRs"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: Marathi Wikipedia Articles Corpus
+homepage: "https://mr.wikipedia.org/"
+category: culture-media-tourism-heritage
+description: Full dump of Marathi Wikipedia articles providing encyclopaedic knowledge coverage across diverse topics in Marathi language
+modality: Text (Marathi)
+size: 90,000+ articles
+language:
+  - mr
+license: CC BY-SA 3.0
+ai_use_cases:
+  - Knowledge base construction
+  - Marathi RAG systems
+  - language model pre-training
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: MRSAC MahaAgriTech
+homepage: "http://mrsac.maharashtra.gov.in/mahaagritech/index.html"
+category: agriculture-rural
+description: Satellite-based kharif and rabi crop mapping and crop condition monitoring across Maharashtra, implemented by MRSAC and NRSC-ISRO since 2018
+modality: Geospatial (web/raster)
+size: State-wide; seasonal maps
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Crop type classification
+  - sowing progress tracking
+  - yield estimation at taluka level
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

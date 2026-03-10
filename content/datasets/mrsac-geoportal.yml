@@ -1,0 +1,25 @@
+title: MRSAC Geoportal
+homepage: "https://geoportal.mrsac.org.in/explore/"
+category: geospatial-gis
+description: "Maharashtra Remote Sensing Application Centre geospatial layers covering land use, admin boundaries, watersheds, and thematic maps for all 36 districts at 1:50K scale."
+modality: geospatial
+size: "50+ layers; state-wide coverage at 1:50K scale"
+language:
+  - mr
+  - en
+license: Government-Open
+ai_use_cases:
+  - Land use classification
+  - Drought monitoring
+  - Watershed delineation
+  - Urban sprawl analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: "https://mrsac.gov.in/MRSAC/"
+paper_url: ""
+github_url: ""
+organization: Maharashtra Remote Sensing Application Centre (MRSAC), Government of Maharashtra
+format: Shapefile
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"

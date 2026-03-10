@@ -1,0 +1,26 @@
+title: Census 2011 Village Amenities - Maharashtra
+homepage: "https://www.data.gov.in/catalog/village-amenities-census-2011"
+category: governance-census-demographics-legal
+description: Village-level amenities data from Census 2011 covering educational facilities (pre-primary through degree colleges), medical facilities (PHC, CHC, hospitals), water sources (tap, well, hand pump), banking, post offices, and communication infrastructure for all Maharashtra villages.
+modality: tabular
+size: "43,000+ villages; 100+ amenity variables per village"
+language:
+  - en
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Rural service delivery gap identification
+  - Healthcare access modeling at village level
+  - Education infrastructure assessment
+  - Water supply coverage mapping
+  - Rural development priority scoring
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "https://www.data.gov.in/catalog/village-amenities-census-2011"
+paper_url: ""
+github_url: ""
+organization: Census of India / data.gov.in
+format: CSV / Excel
+update_frequency: decennial
+citation: ""
+last_verified: "2026-03-09"

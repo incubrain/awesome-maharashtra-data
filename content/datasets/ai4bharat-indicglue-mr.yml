@@ -1,0 +1,21 @@
+title: AI4Bharat IndicGLUE (mr)
+homepage: "https://huggingface.co/datasets/ai4bharat/indic_glue"
+category: language-nlp
+description: AI4Bharat IndicGLUE (mr) dataset for language nlp.
+modality: text
+size: Multi-task NLU benchmark for 11 languages
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - NLU benchmark evaluation
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/indic_glue"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

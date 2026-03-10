@@ -1,0 +1,27 @@
+title: Indian Languages Audio Dataset
+homepage: "https://www.kaggle.com/datasets/hmsolanki/indian-languages-audio-dataset"
+category: speech-audio
+description: 5-second MP3 audio samples across 10 Indian languages including Marathi, sourced from YouTube regional videos. Designed for spoken language identification and audio classification tasks rather than ASR transcription.
+modality: audio
+size: "~748 MB; 5-second clips; 10 Indian languages including Marathi"
+language:
+  - mr
+  - hi
+  - en
+license: Apache-2.0
+ai_use_cases:
+  - Spoken language identification (Marathi vs other Indian languages)
+  - Audio classification and dialect detection
+  - Multilingual call routing for contact centers
+  - Language detection in mixed-language broadcast media
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "https://www.kaggle.com/datasets/hmsolanki/indian-languages-audio-dataset"
+paper_url: ""
+github_url: ""
+organization: Independent researcher (Kaggle)
+format: MP3
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

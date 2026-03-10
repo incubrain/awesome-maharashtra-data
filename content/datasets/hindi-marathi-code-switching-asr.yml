@@ -1,0 +1,26 @@
+title: Hindi-Marathi Code-Switching ASR Dataset
+homepage: "https://arxiv.org/abs/2104.00235"
+category: speech-audio
+description: 450-hour annotated dataset of Hindi-Marathi code-switching speech, including tag-switching, intra-sentential, and inter-sentential code-mixing patterns. Designed for automatic speech recognition in multilingual contexts common in Maharashtra where Hindi-Marathi mixing is prevalent.
+modality: audio
+size: "450 hours of annotated speech; balanced code-switching patterns"
+language:
+  - mr
+  - hi
+license: Research
+ai_use_cases:
+  - Code-switched speech recognition for Maharashtra
+  - Bilingual virtual assistant development
+  - Language identification in mixed speech
+  - Multilingual contact center transcription
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2104.00235"
+github_url: ""
+organization: Research
+format: Audio + transcriptions
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

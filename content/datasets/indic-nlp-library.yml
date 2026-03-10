@@ -1,0 +1,23 @@
+title: Indic NLP Library
+homepage: "https://github.com/anoopkunchukuttan/indic_nlp_library"
+category: benchmarks-fairness-dialects-tools
+description: Python library for Indian language text processing including tokenisation, normalisation, script conversion, and transliteration with full support for Devanagari/Marathi
+modality: Tools (Python)
+size: 20+ Indian languages
+language:
+  - mr
+license: GPL v3
+ai_use_cases:
+  - Text preprocessing pipeline
+  - script normalisation
+  - tokenisation for downstream NLP
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/anoopkunchukuttan/indic_nlp_library"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

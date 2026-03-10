@@ -1,0 +1,22 @@
+title: OpenSLR-64 (Marathi)
+homepage: "https://openslr.org/64/"
+category: speech-audio
+description: Crowdsourced high-quality multi-speaker Marathi speech corpus for TTS; female speakers only
+modality: Speech + Text (TTS)
+size: ~3 hrs; 712 MB archive
+language:
+  - mr
+license: CC-BY-SA 4.0
+ai_use_cases:
+  - TTS
+  - Multi-Speaker Voice Synthesis
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/openslr/openslr"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

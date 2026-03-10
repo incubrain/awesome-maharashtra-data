@@ -1,0 +1,25 @@
+title: Microsoft Updesh (Marathi LLM Post-Training)
+homepage: "https://huggingface.co/datasets/microsoft/Updesh_beta"
+category: agentic-instruction-rag
+description: Large-scale synthetic dataset for LLM post-training in 13 Indic languages including Marathi. Integrates translated reasoning data and synthesized open-domain generative content with multi-stage quality checks (language ID, word repetition filtering). Designed for LLM alignment and instruction-following.
+modality: text
+size: "~8.9M data points across 13 languages; significant Marathi subset"
+language:
+  - mr
+license: Microsoft Research License
+ai_use_cases:
+  - Marathi LLM fine-tuning and alignment
+  - Instruction-following capability training
+  - Reasoning task training in Marathi
+  - Open-domain Marathi content generation
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/microsoft/Updesh_beta"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Microsoft Research
+format: JSON / Parquet
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

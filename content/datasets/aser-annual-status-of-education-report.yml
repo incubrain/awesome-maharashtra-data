@@ -1,0 +1,23 @@
+title: ASER (Annual Status of Education Report)
+homepage: "https://asercentre.org/"
+category: education-skills
+description: "Maharashtra — Household-based survey of children's enrolment status and learning outcomes (reading, arithmetic) across rural Maharashtra districts"
+modality: Tabular (PDF, Excel)
+size: District-level, annual since 2005
+language:
+  - en
+license: Open (with attribution)
+ai_use_cases:
+  - Learning outcome prediction
+  - education quality assessment
+  - intervention targeting
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

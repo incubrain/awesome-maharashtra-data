@@ -1,0 +1,23 @@
+title: data.gov.in APIs
+homepage: "https://www.data.gov.in/apis"
+category: realtime-streams-apis
+description: Open Government Data platform providing 100,000+ APIs for real-time government data feeds across sectors including agriculture, transport, health, and environment for Maharashtra
+modality: API (REST/JSON)
+size: 100,000+ APIs
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Government data integration
+  - real-time analytics dashboards
+  - multi-source data aggregation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

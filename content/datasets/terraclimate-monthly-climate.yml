@@ -1,0 +1,26 @@
+title: TerraClimate Monthly Climate Dataset
+homepage: "https://www.climatologylab.org/terraclimate.html"
+category: environment-climate-disaster
+description: Global monthly climate and water balance dataset at ~4km resolution from 1958 to present. Provides temperature, precipitation, evapotranspiration, soil moisture, vapor pressure deficit, Palmer Drought Severity Index (PDSI), and runoff. Critical for agricultural planning and drought monitoring in Maharashtra.
+modality: gridded
+size: "~4km (~2.5 arcmin) resolution; monthly; 1958-present; 14+ variables"
+language:
+  - en
+license: Public Domain
+ai_use_cases:
+  - Long-term drought trend analysis for Marathwada
+  - Crop yield forecasting using water balance variables
+  - Climate change impact assessment on agriculture
+  - Evapotranspiration mapping for irrigation planning
+  - Heat stress monitoring for urban areas
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://climate.northwestknowledge.net/TERRACLIMATE/index_directDownloads.php"
+paper_url: "https://doi.org/10.1038/sdata.2017.191"
+github_url: ""
+organization: University of Idaho Climatology Lab
+format: NetCDF4
+update_frequency: monthly
+citation: "Abatzoglou et al. 2018. TerraClimate. Scientific Data."
+last_verified: "2026-03-09"

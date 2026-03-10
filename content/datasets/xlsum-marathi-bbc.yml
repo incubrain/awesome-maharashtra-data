@@ -1,0 +1,25 @@
+title: XL-Sum Marathi (BBC)
+homepage: "https://huggingface.co/datasets/csebuetnlp/xlsum"
+category: language-nlp
+description: 10,903 article-summary pairs from BBC Marathi website with professionally written, highly abstractive summaries. Part of the 45-language XL-Sum benchmark. Gold-standard editorial quality summaries that crowdsourced datasets cannot match.
+modality: text
+size: "~10,903 Marathi samples with train/val/test splits"
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Marathi abstractive summarization benchmarking
+  - News content summarization
+  - Cross-lingual summarization evaluation
+  - Fine-tuning LLMs for Marathi text generation
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/csebuetnlp/xlsum"
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2106.13822"
+github_url: ""
+organization: BUET CSE NLP Group
+format: JSON
+update_frequency: static
+citation: "Hasan et al. 2021. XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages."
+last_verified: "2026-03-09"

@@ -1,0 +1,26 @@
+title: ALOS PALSAR DEM (JAXA)
+homepage: "https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm"
+category: geospatial-gis
+description: ALOS World 3D 30m (AW3D30) digital surface model derived from ALOS PRISM stereo imagery by JAXA, providing 30m resolution global elevation data. Alternative to SRTM with better accuracy in some terrain types. The higher-res 12.5m PALSAR RTC DEM is also available via ASF.
+modality: satellite-imagery
+size: "30m resolution (AW3D30); 12.5m (PALSAR RTC via ASF); global coverage"
+language:
+  - en
+license: Open (JAXA)
+ai_use_cases:
+  - Flood risk modeling in river basins
+  - Watershed delineation for irrigation planning
+  - Terrain analysis for infrastructure projects
+  - Slope stability assessment in Western Ghats
+  - Urban elevation profiling
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://www.eorc.jaxa.jp/ALOS/en/aw3d30/data/index.htm"
+paper_url: ""
+github_url: ""
+organization: Japan Aerospace Exploration Agency (JAXA)
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

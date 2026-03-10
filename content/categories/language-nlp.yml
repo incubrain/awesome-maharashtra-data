@@ -1,0 +1,6 @@
+title: "Language & NLP"
+slug: "language-nlp"
+description: "Foundation datasets for Marathi language models, NER, sentiment analysis, machine translation, and text processing."
+icon: "i-lucide-languages"
+priority: "high"
+order: 1

@@ -1,0 +1,23 @@
+title: ICRISAT VDSA (Village Dynamics in South Asia)
+homepage: "https://vdsa.icrisat.org/"
+category: agriculture-rural
+description: Longitudinal household-level panel data from 4 Maharashtra villages covering income, assets, consumption, and agricultural practices over 30+ years
+modality: Tabular (CSV/XLS)
+size: 864 panel households; 18 villages
+language:
+  - en
+license: Academic open access
+ai_use_cases:
+  - Poverty dynamics modelling
+  - smallholder livelihood analysis
+  - climate adaptation studies
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

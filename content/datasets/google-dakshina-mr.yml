@@ -1,0 +1,21 @@
+title: Google Dakshina (mr)
+homepage: "https://github.com/google-research-datasets/dakshina"
+category: language-nlp
+description: Google Dakshina (mr) dataset for language nlp.
+modality: text, transliteration
+size: 25,000 lexicon entries + 10,000 romanized sentences
+language:
+  - mr
+license: CC-BY-SA-4.0
+ai_use_cases:
+  - Transliteration
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/google-research-datasets/dakshina"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

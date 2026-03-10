@@ -1,0 +1,23 @@
+title: CHIRPS Rainfall Data (v2/v3)
+homepage: "https://www.chc.ucsb.edu/data/chirps"
+category: agriculture-rural
+description: Climate Hazards Group InfraRed Precipitation with Station data, 0.05° resolution daily/monthly rainfall from 1981 to near-present (50°S-50°N)
+modality: Gridded (GeoTIFF/NetCDF)
+size: Global; 0.05° (~5.5 km); daily since 1981
+language:
+  - en
+license: Open (public domain)
+ai_use_cases:
+  - Rainfall anomaly detection
+  - agricultural drought monitoring
+  - crop-climate modelling
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

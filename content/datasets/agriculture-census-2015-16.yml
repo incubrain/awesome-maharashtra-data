@@ -1,0 +1,23 @@
+title: Agriculture Census 2015-16
+homepage: "https://agcensus.nic.in/"
+category: agriculture-rural
+description: "Maharashtra — 10th Agriculture Census data on operational holdings by size class, land use, tenancy, and irrigation at district level. Maharashtra: 15.29M holdings, 20.51M ha"
+modality: Tabular (PDF/XLS)
+size: 15.29M holdings; all MH districts
+language:
+  - en
+license: Gov Open (GODL)
+ai_use_cases:
+  - Land fragmentation analysis
+  - smallholder targeting
+  - rural credit risk models
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

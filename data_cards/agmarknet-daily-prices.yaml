@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# AgMarkNet Daily Market Prices
+
+# (required) Human-readable dataset name
+title: "AgMarkNet Daily Market Prices"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://agmarknet.gov.in/"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "agriculture-rural"
+
+# (required) One-line description of the dataset
+description: "Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs, with cleaned data also available via CEDA Ashoka API covering 2000-2023."
+
+# (required) Data modality
+modality: "tabular"
+
+# (required) Approximate size with units
+size: "Millions of daily price records"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+
+# (required) License identifier
+license: "Government-Open"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: "https://agmarknet.ceda.ashoka.edu.in/"
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "Directorate of Marketing & Inspection (DMI), Ministry of Agriculture / CEDA Ashoka"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Price forecasting"
+  - "Market volatility analysis"
+  - "Farmer advisory chatbots"
+  - "Supply chain optimization"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: false
+
+# Format of the data files
+format: "CSV"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "daily"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

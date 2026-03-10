@@ -1,0 +1,23 @@
+title: Marathi Alpaca Instruction Dataset
+homepage: "https://huggingface.co/datasets/smallstepai/marathi-instruction-tuning-alpaca"
+category: agentic-instruction-rag
+description: Marathi translation of the Stanford Alpaca instruction-tuning dataset for fine-tuning instruction-following capabilities in Marathi language models
+modality: Text (Marathi)
+size: ~52K instructions
+language:
+  - mr
+license: Open Research
+ai_use_cases:
+  - Marathi instruction fine-tuning
+  - conversational AI training
+  - task-following model development
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/smallstepai/marathi-instruction-tuning-alpaca"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

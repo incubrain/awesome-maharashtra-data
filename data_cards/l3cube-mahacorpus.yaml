@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# L3Cube MahaCorpus
+
+# (required) Human-readable dataset name
+title: "L3Cube-MahaCorpus"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "language-nlp"
+
+# (required) One-line description of the dataset
+description: "Large-scale Marathi monolingual text corpus with 24.8 million sentences and 289 million tokens, curated for language model pretraining."
+
+# (required) Data modality
+modality: "text"
+
+# (required) Approximate size with units
+size: "24.8M sentences, 289M tokens"
+
+# (required) ISO 639-1 language codes
+language:
+  - mr
+
+# (required) License identifier
+license: "CC-BY-NC-SA-4.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+
+# Organization or author that created/maintains the dataset
+organization: "L3Cube, Pune"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Language model pretraining"
+  - "Word embedding training"
+  - "Marathi text generation"
+  - "Transfer learning for downstream NLP tasks"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "text"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "static"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

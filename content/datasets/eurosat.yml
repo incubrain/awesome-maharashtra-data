@@ -1,0 +1,23 @@
+title: EuroSAT
+homepage: "https://github.com/phelber/EuroSAT"
+category: vision-ocr-multimodal
+description: Sentinel-2 satellite image dataset for land use and land cover classification. Contains geo-referenced RGB and multispectral images across 10 classes. Applicable to Maharashtra remote sensing and agricultural monitoring
+modality: Satellite imagery (RGB + multispectral)
+size: 27K images (64x64 px), 10 classes
+language:
+  - mr
+license: MIT
+ai_use_cases:
+  - Land cover classification
+  - remote sensing
+  - agricultural monitoring
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/blanchon/EuroSAT_RGB"
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/phelber/EuroSAT"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

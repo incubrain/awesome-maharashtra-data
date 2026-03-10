@@ -1,0 +1,24 @@
+title: PMGSY GeoSadak
+homepage: "https://geosadak-pmgsy.nic.in/opendata/"
+category: geospatial-gis
+description: Rural Road Network GIS — National rural road connectivity data with geo-tagged facilities for Maharashtra
+modality: Vector (Shapefile / WMS)
+size: 7.70 lakh+ geo-tagged facilities nationally; road network vectors
+language:
+  - en
+license: OGL-India (compatible with CC-BY, ODbL)
+ai_use_cases:
+  - Rural accessibility analysis
+  - last-mile connectivity modeling
+  - facility location optimization
+  - road network completeness assessment
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/datameet/pmgsy-geosadak"
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

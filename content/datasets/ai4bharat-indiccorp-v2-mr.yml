@@ -1,0 +1,24 @@
+title: AI4Bharat IndicCorp v2 (Marathi)
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicCorpV2"
+category: language-nlp
+description: Marathi subset of the massive 20.9 billion token multilingual corpus covering 24 Indic languages, collected from diverse web sources for language model pretraining.
+modality: text
+size: Part of 20.9B token multilingual corpus
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Language model pretraining
+  - Word embedding training
+  - Text classification
+  - Transfer learning for Marathi NLP
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicCorpV2"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat
+format: Parquet
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: National Achievement Survey (NAS)
+homepage: "https://nas.gov.in/"
+category: education-skills
+description: Maharashtra — Large-scale assessment of student learning outcomes in Classes 3, 5, 8, and 10 across Maharashtra government and private schools
+modality: Tabular (PDF, dashboard)
+size: ~34 lakh students nationally (2021)
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Student performance prediction
+  - learning gap analysis
+  - education policy evaluation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

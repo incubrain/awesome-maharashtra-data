@@ -1,0 +1,25 @@
+title: Marathi Handwritten Text Dataset
+homepage: "https://www.kaggle.com/datasets/hrushikeshsarode/marathi-handwritten-text-dataset"
+category: vision-ocr-multimodal
+description: 2,500+ images of full handwritten Marathi text (sentences and paragraphs, not isolated characters). Native speakers wrote pre-designed text covering nearly all Marathi characters, words, and diacritical marks. Fills the gap between character-level datasets (like Devanagari HWR) and real-world handwritten text recognition (HTR).
+modality: image
+size: "2,500+ images; ~14 MB; full handwritten text passages"
+language:
+  - mr
+license: CC0 (Public Domain)
+ai_use_cases:
+  - Marathi handwritten text recognition (HTR)
+  - Document digitization for Marathi manuscripts
+  - Handwriting analysis and writer identification
+  - Historical document OCR pipeline development
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: "https://www.kaggle.com/datasets/hrushikeshsarode/marathi-handwritten-text-dataset"
+paper_url: ""
+github_url: ""
+organization: Independent researcher (Kaggle)
+format: Image files (PNG/JPG)
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

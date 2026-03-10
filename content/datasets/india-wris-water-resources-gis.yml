@@ -1,0 +1,24 @@
+title: India-WRIS Water Resources GIS
+homepage: "https://indiawris.gov.in/wris/"
+category: geospatial-gis
+description: River basins, sub-basins, watershed boundaries, dams, reservoirs, and ground water layers for Maharashtra
+modality: WMS / Vector (Shapefile)
+size: 95 layers across 12 info systems; WMS-accessible
+language:
+  - en
+license: OGL-India (CWC / NRSC)
+ai_use_cases:
+  - Flood mapping
+  - river basin management
+  - water resource allocation modeling
+  - drought assessment
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,66 @@
+---
+# Awesome Marathi Datasets - Data Card
+# MRSAC Geoportal
+
+# (required) Human-readable dataset name
+title: "MRSAC Geoportal"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://geoportal.mrsac.org.in/explore/"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "geospatial-gis"
+
+# (required) One-line description of the dataset
+description: "Maharashtra Remote Sensing Application Centre geospatial layers covering land use, admin boundaries, watersheds, and thematic maps for all 36 districts at 1:50K scale."
+
+# (required) Data modality
+modality: "geospatial"
+
+# (required) Approximate size with units
+size: "50+ layers; state-wide coverage at 1:50K scale"
+
+# (required) ISO 639-1 language codes
+language:
+  - mr
+  - en
+
+# (required) License identifier
+license: "Government-Open"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: "https://mrsac.gov.in/MRSAC/"
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "Maharashtra Remote Sensing Application Centre (MRSAC), Government of Maharashtra"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Land use classification"
+  - "Drought monitoring"
+  - "Watershed delineation"
+  - "Urban sprawl analysis"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "Shapefile"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "annual"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

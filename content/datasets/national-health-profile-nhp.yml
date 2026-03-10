@@ -1,0 +1,22 @@
+title: National Health Profile (NHP)
+homepage: "https://cbhidghs.mohfw.gov.in/"
+category: health-nutrition
+description: Maharashtra — Comprehensive health statistics including infrastructure, human resources, disease burden, and vital statistics for Maharashtra
+modality: Tabular (PDF, Excel)
+size: State-level, annual
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Healthcare planning models
+  - health infrastructure gap analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

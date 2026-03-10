@@ -1,0 +1,24 @@
+title: AI4Bharat Naamapadam (Marathi)
+homepage: "https://huggingface.co/datasets/ai4bharat/naamapadam"
+category: language-nlp
+description: Large-scale Marathi NER dataset with 455,200 training sentences annotated across 3 entity types (PER, LOC, ORG), part of the largest publicly available Indic NER dataset.
+modality: text
+size: 455.2K training sentences
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Named entity recognition
+  - Information extraction
+  - Knowledge graph construction
+  - Document understanding
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/naamapadam"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat
+format: Parquet
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

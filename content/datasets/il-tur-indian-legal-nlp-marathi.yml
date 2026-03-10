@@ -1,0 +1,27 @@
+title: IL-TUR Indian Legal NLP Benchmark (Marathi)
+homepage: "https://huggingface.co/datasets/Exploration-Lab/IL-TUR"
+category: governance-census-demographics-legal
+description: Comprehensive Indian legal NLP benchmark with 8 tasks in Marathi including Legal NER, Rhetorical Role Prediction, Court Judgment Prediction, Bail Prediction, Legal Statute Identification, Prior Case Retrieval, Summarization, and Legal Machine Translation. Far more structured than raw court document text.
+modality: text
+size: "Multi-task benchmark; 8 legal NLP tasks in Marathi"
+language:
+  - mr
+  - en
+license: Research
+ai_use_cases:
+  - Marathi legal judgment prediction
+  - Court document summarization
+  - Legal named entity recognition
+  - Bail prediction for Maharashtra courts
+  - Legal statute identification
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: "https://huggingface.co/datasets/Exploration-Lab/IL-TUR"
+direct_download_url: ""
+paper_url: "https://arxiv.org/abs/2407.05399"
+github_url: ""
+organization: Exploration Lab (ACL 2024)
+format: JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

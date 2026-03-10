@@ -1,0 +1,23 @@
+title: Indian Railways
+homepage: "https://www.data.gov.in/sector/railways"
+category: transport-urban-infrastructure
+description: Maharashtra Routes — Train schedules, station data, running status, and route information for Maharashtra railway stations from open data and API sources
+modality: Tabular (CSV, API)
+size: National network, Maharashtra subset
+language:
+  - en
+license: Open Government / API
+ai_use_cases:
+  - Rail traffic prediction
+  - schedule optimisation
+  - station connectivity modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

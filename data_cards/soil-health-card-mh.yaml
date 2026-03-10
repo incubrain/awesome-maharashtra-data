@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# Soil Health Card Portal - Maharashtra
+
+# (required) Human-readable dataset name
+title: "Soil Health Card Portal - Maharashtra"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://soilhealth.dac.gov.in/soil-health-map/MAHARASHTRA"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "agriculture-rural"
+
+# (required) One-line description of the dataset
+description: "Soil test results for Maharashtra farms including N, P, K, pH, EC, organic carbon, and micronutrients at village and district level, covering millions of soil samples."
+
+# (required) Data modality
+modality: "tabular"
+
+# (required) Approximate size with units
+size: "Millions of soil samples across Maharashtra"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+
+# (required) License identifier
+license: "Government-Open"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "Department of Agriculture & Farmers Welfare, Government of India"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Precision fertiliser recommendation"
+  - "Soil fertility mapping"
+  - "Crop suitability models"
+  - "Sustainable agriculture planning"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: true
+
+# Format of the data files
+format: "CSV"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "annual"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

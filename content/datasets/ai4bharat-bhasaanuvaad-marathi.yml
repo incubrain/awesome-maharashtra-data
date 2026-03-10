@@ -1,0 +1,22 @@
+title: AI4Bharat BhasaAnuvaad (Marathi)
+homepage: "https://huggingface.co/collections/ai4bharat/bhasaanuvaad-672b3790b6470eab68b1cb87"
+category: speech-audio
+description: Largest Indic speech translation dataset with curated, web-mined, and synthetic speech-text pairs for 13 Indian languages
+modality: Speech + Text (Translation)
+size: 44,400 hrs total (13 langs + English)
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - Speech Translation
+  - Multilingual ASR
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/collections/ai4bharat/bhasaanuvaad-672b3790b6470eab68b1cb87"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

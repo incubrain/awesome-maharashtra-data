@@ -1,0 +1,23 @@
+title: AgMarkNet Daily Prices API
+homepage: "https://www.agmarknet.gov.in/PriceAndArrivals/CommodityDailyStateWise.aspx"
+category: realtime-streams-apis
+description: "Daily wholesale commodity prices and arrival data from agricultural mandis across Maharashtra provided by the Directorate of Marketing & Inspection"
+modality: API (web)
+size: Daily, mandi-level
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Commodity price forecasting
+  - farmer advisory systems
+  - agricultural market analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

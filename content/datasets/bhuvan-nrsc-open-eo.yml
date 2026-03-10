@@ -1,0 +1,24 @@
+title: Bhuvan NRSC Open EO Data Archive
+homepage: "https://bhuvan.nrsc.gov.in/ngmaps"
+category: geospatial-gis
+description: ISRO satellite imagery archive including Resourcesat LISS-III, AWiFS, and Cartosat DEM freely downloadable for the Maharashtra region, with resolutions from 23.5m to 56m.
+modality: geospatial
+size: 20+ TB archive; Cartosat DEM 30m, LISS-III 23.5m, AWiFS 56m resolution
+language:
+  - en
+license: Government-Open
+ai_use_cases:
+  - Crop mapping
+  - NDVI time-series analysis
+  - DEM-based flood modeling
+  - Change detection
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: "https://bhuvan-app3.nrsc.gov.in/data/"
+paper_url: ""
+github_url: ""
+organization: ISRO / National Remote Sensing Centre (NRSC)
+format: GeoTIFF
+update_frequency: monthly
+citation: ""
+last_verified: "2026-03-07"

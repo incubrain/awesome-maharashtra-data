@@ -1,0 +1,23 @@
+title: APEDA AgriXchange
+homepage: "https://agriexchange.apeda.gov.in/"
+category: agriculture-rural
+description: Agricultural and processed food export statistics by commodity, state, and destination country. Includes Maharashtra production and export data
+modality: Tabular (web/XLS)
+size: Multi-year; all APEDA commodities
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Export trend forecasting
+  - supply chain optimisation
+  - market diversification analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

@@ -1,0 +1,24 @@
+title: IndiaCode
+homepage: "https://www.indiacode.nic.in/handle/123456789/2517/"
+category: governance-census-demographics-legal
+description: Maharashtra Acts and Laws — Digital repository of all Maharashtra state enactments including acts, rules, regulations, notifications, and ordinances in searchable format
+modality: Text (PDF, HTML)
+size: 100s of state acts
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Legal information retrieval
+  - statute analysis
+  - legislative text mining
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

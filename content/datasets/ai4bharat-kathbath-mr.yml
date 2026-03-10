@@ -1,0 +1,24 @@
+title: AI4Bharat Kathbath (Marathi)
+homepage: "https://huggingface.co/datasets/ai4bharat/Kathbath"
+category: speech-audio
+description: Crowdsourced human-labeled ASR dataset for 12 Indian languages including Marathi, collected via the Karya platform with approximately 140 hours per language.
+modality: speech+text
+size: ~140 hrs Marathi (1,684 hrs total across 12 langs)
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - ASR training
+  - Speech benchmarking
+  - Voice-based applications
+  - Marathi speech recognition
+maharashtra_specific: false
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/Kathbath"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

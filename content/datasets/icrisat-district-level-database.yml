@@ -1,0 +1,24 @@
+title: ICRISAT District Level Database
+homepage: "http://data.icrisat.org/dld/"
+category: agriculture-rural
+description: Comprehensive district-level agricultural database covering 571 districts with 1,030 variables and 11M+ data points on crops, irrigation, infrastructure, and GDP from 1966-2020.
+modality: tabular
+size: 74 datasets; 11M+ data points; 571 districts; 1,030 variables
+language:
+  - en
+license: CC-BY-4.0
+ai_use_cases:
+  - Multi-factor crop analysis
+  - Irrigation impact studies
+  - Rural development indicators
+  - Agricultural trend forecasting
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ICRISAT (International Crops Research Institute for the Semi-Arid Tropics)
+format: Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"

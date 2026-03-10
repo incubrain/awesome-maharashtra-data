@@ -1,0 +1,23 @@
+title: Maharashtra Tourism Statistics
+homepage: "https://www.maharashtratourism.gov.in/"
+category: culture-media-tourism-heritage
+description: Official tourism data from the Maharashtra Tourism Development Corporation covering domestic and international visitor numbers, tourist destinations, and accommodation statistics
+modality: Tabular (PDF, web)
+size: State-level, annual
+language:
+  - mr
+license: Open Government
+ai_use_cases:
+  - Tourism demand forecasting
+  - destination recommendation systems
+  - visitor pattern analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

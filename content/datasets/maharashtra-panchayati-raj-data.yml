@@ -1,0 +1,24 @@
+title: Maharashtra Panchayati Raj Data
+homepage: "https://grampanchayat.gov.in/"
+category: governance-census-demographics-legal
+description: Local governance data from the three-tier panchayati raj system covering village panchayats, taluka panchayats, and zilla parishads in Maharashtra
+modality: Tabular (web)
+size: Village to district level
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Local governance analytics
+  - rural development modelling
+  - decentralisation analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

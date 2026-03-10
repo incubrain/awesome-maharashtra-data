@@ -1,0 +1,23 @@
+title: NOAA Climate Data Online
+homepage: "https://www.ncei.noaa.gov/cdo-web/"
+category: environment-climate-disaster
+description: "India Stations — Historical weather observations (temperature, precipitation, wind) from NOAA's global surface summary of day stations in Maharashtra"
+modality: Tabular (CSV)
+size: Daily, multi-decadal
+language:
+  - en
+license: Open (US Public Domain)
+ai_use_cases:
+  - Climate trend analysis
+  - station-level weather modelling
+  - quality control benchmarking
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

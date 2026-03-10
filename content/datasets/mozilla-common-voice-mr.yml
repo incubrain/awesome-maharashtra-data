@@ -1,0 +1,59 @@
+title: Mozilla Common Voice (Marathi)
+homepage: "https://commonvoice.mozilla.org/en/datasets"
+category: speech-audio
+description: "Crowd-sourced read-speech recordings with validated transcriptions for Marathi, with approximately 30 hours total and 21 hours validated, part of Mozilla's open voice dataset initiative."
+modality: speech+text
+size: ~30 hrs total, ~21 hrs validated
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - ASR training
+  - Speaker identification
+  - Pronunciation modeling
+  - Voice interface development
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Mozilla Foundation
+format: WAV
+update_frequency: monthly
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: client_id
+    type: string
+    description: Unique hashed speaker identifier
+  - field: path
+    type: string
+    description: Relative path to the audio clip (MP3/WAV)
+  - field: sentence
+    type: string
+    description: Transcribed Marathi text for the audio clip
+  - field: up_votes
+    type: integer
+    description: Number of listener validations confirming correctness
+  - field: down_votes
+    type: integer
+    description: Number of listener validations marking as incorrect
+  - field: age
+    type: string
+    description: "Self-reported age bracket of the speaker"
+  - field: gender
+    type: string
+    description: "Self-reported gender of the speaker"
+  - field: accent
+    type: string
+    description: Self-reported accent or dialect
+starter_idea: Build a Marathi voice assistant for farmers
+build_ideas:
+  - "Voice-controlled Marathi assistant for agricultural market prices"
+  - "Marathi speech-to-text for court proceeding transcription"
+  - "Accessibility app that reads Marathi web content aloud for visually impaired users"
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset("mozilla-foundation/common_voice_17_0", "mr", split="train")
+  sample = ds[0]
+  print(sample["sentence"], sample["path"])

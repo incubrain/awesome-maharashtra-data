@@ -1,0 +1,21 @@
+title: AI4Bharat IndicSentenceSummarization (mr)
+homepage: "https://huggingface.co/datasets/ai4bharat/IndicSentenceSummarization"
+category: language-nlp
+description: AI4Bharat IndicSentenceSummarization (mr) dataset for language nlp.
+modality: text
+size: 27,066 train + 3,249 dev + 3,309 test
+language:
+  - mr
+license: CC-BY-NC-4.0
+ai_use_cases:
+  - Text summarization
+maharashtra_specific: true
+huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicSentenceSummarization"
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

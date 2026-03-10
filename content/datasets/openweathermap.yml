@@ -1,0 +1,23 @@
+title: OpenWeatherMap
+homepage: "https://openweathermap.org/"
+category: realtime-streams-apis
+description: India Historical + Forecast — Weather data API providing current conditions, forecasts, and historical weather data for Maharashtra cities with free and paid tiers
+modality: API (REST/JSON)
+size: Real-time + historical
+language:
+  - en
+license: Freemium (CC BY-SA 4.0)
+ai_use_cases:
+  - Weather-dependent demand forecasting
+  - logistics optimisation
+  - IoT weather integration
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

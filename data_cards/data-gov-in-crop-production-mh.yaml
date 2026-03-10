@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# data.gov.in Crop Production Statistics - Maharashtra
+
+# (required) Human-readable dataset name
+title: "data.gov.in Crop Production Statistics - Maharashtra"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://www.data.gov.in/catalog/district-wise-season-wise-crop-production-statistics"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "agriculture-rural"
+
+# (required) One-line description of the dataset
+description: "District-wise, season-wise, crop-wise area (ha), production (tonnes), and yield data for Maharashtra from 1997 onwards, with approximately 246K records all-India filterable to Maharashtra."
+
+# (required) Data modality
+modality: "tabular"
+
+# (required) Approximate size with units
+size: "~246K records (all-India); filterable to Maharashtra"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+
+# (required) License identifier
+license: "Government-Open"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "Government of India (data.gov.in)"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Crop yield prediction"
+  - "Agro-climatic zone analysis"
+  - "Cropping pattern recommendation"
+  - "Agricultural policy analysis"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: false
+
+# Format of the data files
+format: "CSV"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "annual"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: India Flood Atlas
+homepage: "https://indiafloodatlas.in/"
+category: environment-climate-disaster
+description: Gridded simulations of annual maximum flood extent across India (including Maharashtra) from 1901–2020 based on hydrological modelling
+modality: Geospatial (web maps)
+size: 1901–2020, gridded
+language:
+  - en
+license: Open
+ai_use_cases:
+  - Long-term flood risk assessment
+  - climate change impact analysis
+  - land-use planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

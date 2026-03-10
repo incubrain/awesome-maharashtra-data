@@ -1,0 +1,36 @@
+title: Satellite-Derived Surface PM2.5 (ACAG/WashU)
+homepage: "https://sites.wustl.edu/acag/datasets/surface-pm2-5/"
+category: health-nutrition
+description: Global annual mean surface PM2.5 concentrations at 0.01° (~1km) resolution derived from satellite AOD, GEOS-Chem model, and ground stations. Maharashtra subset maps air pollution exposure across all districts, enabling health impact assessment.
+modality: raster-gridded
+size: ~2 GB (global), ~20 MB (MH subset)
+language:
+  - en
+license: Open (Academic)
+ai_use_cases:
+  - Air pollution health impact modeling
+  - Respiratory disease burden estimation by district
+  - Urban planning and green corridor design
+  - School and hospital site selection
+  - Environmental justice analysis
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: "https://sites.wustl.edu/acag/datasets/surface-pm2-5/"
+paper_url: "https://www.science.org/doi/10.1126/sciadv.adq1071"
+github_url: ""
+organization: Washington University in St. Louis (ACAG)
+format: NetCDF / GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-07"
+schema:
+  - field: latitude
+    type: float
+    description: "Grid cell latitude (0.01° resolution)"
+  - field: longitude
+    type: float
+    description: "Grid cell longitude (0.01° resolution)"
+  - field: PM25
+    type: float
+    description: "Annual mean surface PM2.5 concentration (µg/m³)"

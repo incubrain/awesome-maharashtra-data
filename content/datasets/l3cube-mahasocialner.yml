@@ -1,0 +1,25 @@
+title: L3Cube-MahaSocialNER
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: language-nlp
+description: Social media-based Marathi Named Entity Recognition dataset with annotations for entities in informal, code-mixed social media text. Addresses the gap between formal NER (like Naamapadam) and real-world social media Marathi usage with noisy, informal text patterns.
+modality: text
+size: "Social media NER annotations; BIO-tagged entities"
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Social media entity extraction in Marathi
+  - Informal text NER for trend analysis
+  - Social media monitoring for Maharashtra brands
+  - Code-mixed Marathi-English entity recognition
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: L3Cube, Pune
+format: CoNLL / CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-09"

@@ -1,0 +1,22 @@
+title: MUCS 2021 (Marathi)
+homepage: "https://www.openslr.org/103/"
+category: speech-audio
+description: Multilingual and code-switching ASR challenge dataset with Marathi speech from diverse speaker groups (college students, rural/urban workers)
+modality: Speech + Text
+size: ~99 hrs (93.9 hrs train + 5 hrs test); 31 speakers
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - ASR
+  - Accent-Robust Speech Recognition
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

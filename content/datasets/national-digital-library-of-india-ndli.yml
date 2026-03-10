@@ -1,0 +1,23 @@
+title: National Digital Library of India (NDLI)
+homepage: "https://ndl.iitkgp.ac.in/"
+category: culture-media-tourism-heritage
+description: Marathi Collection — Digital library providing access to Marathi books, manuscripts, lecture videos, and research articles across multiple disciplines, with Marathi language interface
+modality: Text, Multimedia
+size: 81M+ items nationally, Marathi subset
+language:
+  - mr
+license: Open
+ai_use_cases:
+  - Marathi knowledge retrieval
+  - digital humanities research
+  - educational content recommendation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

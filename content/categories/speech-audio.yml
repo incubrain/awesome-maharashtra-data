@@ -1,0 +1,6 @@
+title: "Speech & Audio"
+slug: "speech-audio"
+description: "Speech recognition, text-to-speech, and audio datasets covering Marathi and Indian languages."
+icon: "i-lucide-audio-lines"
+priority: "high"
+order: 2

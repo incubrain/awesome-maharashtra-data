@@ -1,0 +1,23 @@
+title: Indian Railways Live Status API
+homepage: "https://www.indianrailapi.com/"
+category: realtime-streams-apis
+description: Real-time train running status, PNR tracking, schedule, and route information for Maharashtra railway network via REST APIs
+modality: API (REST/JSON)
+size: Real-time, national network
+language:
+  - en
+license: Open / Freemium API
+ai_use_cases:
+  - Real-time journey planning
+  - delay prediction
+  - multimodal transit integration
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

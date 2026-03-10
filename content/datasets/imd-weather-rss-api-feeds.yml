@@ -1,0 +1,23 @@
+title: IMD Weather RSS/API Feeds
+homepage: "https://mausam.imd.gov.in/"
+category: realtime-streams-apis
+description: India Meteorological Department weather forecasts, warnings, and current conditions for Maharashtra cities via RSS feeds and web services
+modality: API (RSS, web)
+size: Real-time, city-level
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Weather-aware applications
+  - agricultural advisory bots
+  - disaster early warning systems
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

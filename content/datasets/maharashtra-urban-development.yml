@@ -1,0 +1,23 @@
+title: Maharashtra Urban Development
+homepage: "https://mhada.gov.in/"
+category: transport-urban-infrastructure
+description: MHADA/CIDCO — Housing and urban development data from Maharashtra Housing and Area Development Authority and City and Industrial Development Corporation covering affordable housing and new township projects
+modality: Tabular (web, PDF)
+size: Project-level
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Urban housing demand modelling
+  - affordable housing gap analysis
+  - township planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"

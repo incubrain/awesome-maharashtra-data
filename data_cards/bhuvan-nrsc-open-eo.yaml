@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# Bhuvan NRSC Open EO Data Archive
+
+# (required) Human-readable dataset name
+title: "Bhuvan NRSC Open EO Data Archive"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "https://bhuvan.nrsc.gov.in/ngmaps"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "geospatial-gis"
+
+# (required) One-line description of the dataset
+description: "ISRO satellite imagery archive including Resourcesat LISS-III, AWiFS, and Cartosat DEM freely downloadable for the Maharashtra region, with resolutions from 23.5m to 56m."
+
+# (required) Data modality
+modality: "geospatial"
+
+# (required) Approximate size with units
+size: "20+ TB archive; Cartosat DEM 30m, LISS-III 23.5m, AWiFS 56m resolution"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+
+# (required) License identifier
+license: "Government-Open"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: "https://bhuvan-app3.nrsc.gov.in/data/"
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "ISRO / National Remote Sensing Centre (NRSC)"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Crop mapping"
+  - "NDVI time-series analysis"
+  - "DEM-based flood modeling"
+  - "Change detection"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: false
+
+# Format of the data files
+format: "GeoTIFF"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "monthly"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

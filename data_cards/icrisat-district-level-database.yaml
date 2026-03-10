@@ -1,0 +1,65 @@
+---
+# Awesome Marathi Datasets - Data Card
+# ICRISAT District Level Database
+
+# (required) Human-readable dataset name
+title: "ICRISAT District Level Database"
+
+# (required) URL to the dataset homepage, download page, or HuggingFace page
+homepage: "http://data.icrisat.org/dld/"
+
+# (required) Which category file this belongs to (without number prefix)
+category: "agriculture-rural"
+
+# (required) One-line description of the dataset
+description: "Comprehensive district-level agricultural database covering 571 districts with 1,030 variables and 11M+ data points on crops, irrigation, infrastructure, and GDP from 1966-2020."
+
+# (required) Data modality
+modality: "tabular"
+
+# (required) Approximate size with units
+size: "74 datasets; 11M+ data points; 571 districts; 1,030 variables"
+
+# (required) ISO 639-1 language codes
+language:
+  - en
+
+# (required) License identifier
+license: "CC-BY-4.0"
+
+# HuggingFace dataset URL (if available)
+huggingface_url: ""
+
+# Direct download URL (if different from homepage)
+direct_download_url: ""
+
+# Academic paper URL (arXiv, ACL Anthology, etc.)
+paper_url: ""
+
+# GitHub repository URL (if applicable)
+github_url: ""
+
+# Organization or author that created/maintains the dataset
+organization: "ICRISAT (International Crops Research Institute for the Semi-Arid Tropics)"
+
+# (required) List of AI/ML use cases this dataset enables
+ai_use_cases:
+  - "Multi-factor crop analysis"
+  - "Irrigation impact studies"
+  - "Rural development indicators"
+  - "Agricultural trend forecasting"
+
+# Is this dataset already specific to Maharashtra, or does it need filtering?
+maharashtra_specific: false
+
+# Format of the data files
+format: "Excel"
+
+# How frequently the data is updated (if applicable)
+update_frequency: "annual"
+
+# BibTeX citation (if available)
+citation: ""
+
+# Date this data card was last verified to be accurate (YYYY-MM-DD)
+last_verified: "2026-03-07"

@@ -1,0 +1,23 @@
+title: AISHE (All India Survey on Higher Education)
+homepage: "https://aishe.gov.in/"
+category: education-skills
+description: Maharashtra — Annual census of higher education institutions covering student enrolment, faculty, programmes, examination results, and finances for Maharashtra
+modality: Tabular (PDF, web)
+size: State-level, 42,825 colleges nationally
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Higher education access analytics
+  - faculty-student ratio optimisation
+  - enrolment forecasting
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: ""
+format: ""
+update_frequency: static
+citation: ""
+last_verified: "2026-03-07"
