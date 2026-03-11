@@ -30,6 +30,17 @@ The full searchable catalog with filters by category, license, modality, and AI 
 - Agentic, Instruction and RAG
 - Benchmarks, Tools and Dialects
 
+## Roadmap
+
+**Phase 1 — Expand Coverage (Mar–May 2026)**
+Grow the catalog and extract Marathi-specific subsets from larger multilingual and national datasets.
+
+**Phase 2 — Enhance & Clean (Jun–Aug 2026)**
+Improve existing datasets for better AI consumption — standardise schemas, fix encoding issues, add quality scores, and publish cleaned derivatives.
+
+**Phase 3 — Outreach & Empowerment (Sep 2026+)**
+Find and mentor entrepreneurs in Maharashtra to build AI-first applications powered by these datasets. This may be done in collaboration with the Maharashtra State Government — at this stage the project is a proof of concept accompanying a proposal.
+
 ## Contributing
 
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding datasets.
