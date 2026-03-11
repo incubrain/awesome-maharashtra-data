@@ -9,7 +9,7 @@ WORKDIR /app
 # Install dependencies
 FROM base AS deps
 COPY package.json pnpm-lock.yaml ./
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN --mount=type=cache,id=pnpm-91295612-0643-42fa-a85f-f8ed81b20c0b,target=/pnpm/store pnpm install --frozen-lockfile
 
 # Build the application
 FROM base AS build
