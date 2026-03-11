@@ -63,4 +63,36 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "geometry"
+    type: "Polygon"
+    description: "Village boundary polygon coordinates"
+  - field: "village_name"
+    type: "string"
+    description: "Name of the village"
+  - field: "district"
+    type: "string"
+    description: "District the village belongs to"
+  - field: "sub_district"
+    type: "string"
+    description: "Sub-district / taluka name"
+  - field: "census_code"
+    type: "string"
+    description: "Census village code for cross-referencing"
+
+starter_idea: "Build a village-level service delivery gap analyzer that overlays infrastructure data on village boundaries to identify underserved areas in Maharashtra."
+
+build_ideas:
+  - "Create a granular election results visualization tool mapping party-wise results to individual village polygons across Maharashtra"
+  - "Develop a school catchment area optimizer that assigns students to nearest schools using village boundary and road network data"
+  - "Build a crop insurance claims mapper that visualizes damage reports at village level to detect patterns and potential fraud"
+
+quick_start: |
+  import geopandas as gpd
+  # Download from https://github.com/datameet/indian_village_boundaries
+  gdf = gpd.read_file('mh/maharashtra_village_boundaries.geojson')
+  print(f"Total villages: {len(gdf)}")
+  print(f"Districts: {gdf['district'].nunique()}")
+  print(gdf[['village_name', 'district', 'sub_district']].head())

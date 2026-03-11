@@ -1,7 +1,9 @@
 title: OpenStreetMap
-homepage: "https://download.geofabrik.de/asia/india/maharashtra.html"
+homepage: https://download.geofabrik.de/asia/india/maharashtra.html
 category: transport-urban-infrastructure
-description: Maharashtra Road Networks — Community-mapped road network, building footprints, and POI data for Maharashtra extracted from OpenStreetMap
+description:
+  Maharashtra Road Networks — Community-mapped road network, building footprints, and POI data for Maharashtra
+  extracted from OpenStreetMap
 modality: Geospatial (PBF, Shapefile)
 size: State-wide, continuously updated
 language:
@@ -16,8 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: OpenStreetMap Foundation
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: osm_id
+    type: int
+    description: OpenStreetMap feature identifier
+  - field: name
+    type: string
+    description: Feature name
+  - field: geometry
+    type: various
+    description: Spatial geometry (node, way, relation)
+  - field: tags
+    type: object
+    description: Key-value tag pairs describing the feature
+starter_idea: Build a Maharashtra points-of-interest database from OpenStreetMap for location-based services and analysis.
+build_ideas:
+  - Create a Maharashtra road network graph for routing and accessibility analysis using OSM road data
+  - Develop a facility coverage analyzer using OSM hospital, school, and bank locations for Maharashtra
+  - Build a Marathi place name standardizer using OSM's multilingual name tags for geocoding services
+quick_start: "import osmnx as ox
+
+  # Get Maharashtra road network
+
+  # G = ox.graph_from_place('Maharashtra, India', network_type='drive')
+
+  print('OpenStreetMap: https://www.openstreetmap.org/')
+
+  print('Use osmnx or Overpass API for data extraction')
+
+  "

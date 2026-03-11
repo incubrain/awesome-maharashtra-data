@@ -1,0 +1,37 @@
+title: AI4Bharat Kathbath
+homepage: https://huggingface.co/datasets/ai4bharat/Kathbath
+category: speech-audio
+description: Crowdsourced human-labeled ASR dataset for 12 Indian languages including Marathi, collected via the Karya platform
+modality: Speech + Text
+size: 1,684 hrs total (12 langs); ~140 hrs/lang median
+language:
+  - mr
+license: CC-0
+ai_use_cases:
+  - ASR
+  - Speech Benchmarking
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/ai4bharat/Kathbath
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: Speech audio recording
+  - field: sentence
+    type: string
+    description: Human-verified transcription
+starter_idea: Build a Marathi ASR system with human-verified labels for high-accuracy speech recognition in formal settings.
+build_ideas:
+  - Create a Marathi dictation system for legal professionals transcribing court proceedings
+  - Develop an educational speech assessment tool that evaluates Marathi pronunciation accuracy
+  - Build a customer service call transcription system for Maharashtra-based call centers
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/Kathbath', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Sentence: {ex['sentence'][:80]}...\")\n    if i >= 4: break\n"

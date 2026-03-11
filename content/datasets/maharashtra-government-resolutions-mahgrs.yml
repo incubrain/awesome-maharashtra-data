@@ -1,7 +1,9 @@
 title: Maharashtra Government Resolutions (mahGRs)
-homepage: "https://github.com/orgpedia/mahGRs"
+homepage: https://github.com/orgpedia/mahGRs
 category: agentic-instruction-rag
-description: RAG Corpus — ~47,000 Government Resolutions in Marathi and English from 33 departments, structured by department and updated weekly, ideal for RAG pipelines over policy documents
+description:
+  RAG Corpus — ~47,000 Government Resolutions in Marathi and English from 33 departments, structured by department
+  and updated weekly, ideal for RAG pipelines over policy documents
 modality: Text (Marathi + English)
 size: ~47,000 documents, bilingual
 language:
@@ -15,9 +17,39 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/orgpedia/mahGRs"
-organization: ""
-format: ""
+github_url: https://github.com/orgpedia/mahGRs
+organization: General Administration Department, Government of Maharashtra
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: gr_number
+    type: string
+    description: Government Resolution number
+  - field: department
+    type: string
+    description: Issuing department
+  - field: subject
+    type: string
+    description: Subject/title of the GR
+  - field: date
+    type: date
+    description: Date of issue
+  - field: text
+    type: string
+    description: Full text of the resolution
+starter_idea: Build a searchable Maharashtra GR database with semantic search in both Marathi and English for government officers.
+build_ideas:
+  - Create a GR impact analyzer tracking how government resolutions affect policy implementation across departments
+  - Develop a scheme eligibility extractor that parses GRs to identify beneficiary criteria for citizen services
+  - Build a regulatory change alerting system notifying affected stakeholders when new GRs modify existing rules
+quick_start: "# Maharashtra Government Resolutions
+
+  import requests
+
+  print('Maharashtra GRs: https://gr.maharashtra.gov.in/')
+
+  print('Searchable database of government resolutions')
+
+  "

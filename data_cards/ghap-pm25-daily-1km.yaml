@@ -1,0 +1,55 @@
+title: GHAP Daily PM2.5 (1km, 2017-2022)
+homepage: https://weijing-rs.github.io/product.html
+category: environment-climate-disaster
+description:
+  Global High Air Pollutants dataset providing gapless daily PM2.5 concentrations at 1km resolution from 2017-2022
+  using machine learning and big data. Maharashtra subset enables day-level air quality tracking across every taluka.
+modality: raster-gridded
+size: ~500 GB (global), ~5 GB (MH subset)
+language:
+  - en
+license: Open (Academic)
+ai_use_cases:
+  - Daily air quality forecasting
+  - Pollution source attribution
+  - Health exposure assessment by locality
+  - Crop damage from air pollution
+  - Policy impact evaluation (e.g., stubble burning bans)
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://zenodo.org/records/6398971
+paper_url: https://essd.copernicus.org/articles/16/2425/2024/
+github_url: ""
+organization: Wuhan University / Multiple
+format: GeoTIFF / NetCDF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: pm25
+    type: float
+    description: Daily PM2.5 concentration in ug/m3
+  - field: latitude
+    type: float
+    description: Latitude at 1km resolution
+  - field: longitude
+    type: float
+    description: Longitude at 1km resolution
+  - field: date
+    type: date
+    description: Date of estimate
+starter_idea: Build a hyper-local air pollution exposure model for Maharashtra using 1km daily PM2.5 estimates.
+build_ideas:
+  - Create a school-level air quality assessment for every school in Maharashtra using 1km PM2.5 data
+  - Develop a long-term health impact model correlating 1km PM2.5 exposure with disease rates in Maharashtra
+  - Build a real estate air quality score generator that rates Maharashtra neighborhoods by pollution exposure
+quick_start: "import xarray as xr
+
+  # Download from https://zenodo.org/records/
+
+  print('GHAP PM2.5 Daily 1km: Check Zenodo for latest release')
+
+  print('High-resolution daily PM2.5 estimates globally')
+
+  "

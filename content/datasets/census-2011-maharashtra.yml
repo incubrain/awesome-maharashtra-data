@@ -1,7 +1,9 @@
 title: Census 2011 Maharashtra
-homepage: "https://censusindia.gov.in/census.website/data/census-tables"
+homepage: https://censusindia.gov.in/census.website/data/census-tables
 category: governance-census-demographics-legal
-description: District-Level Tables — Comprehensive demographic data including population, literacy, SC/ST, workers, religion, and housing for Maharashtra at village, town, and district levels
+description:
+  District-Level Tables — Comprehensive demographic data including population, literacy, SC/ST, workers, religion,
+  and housing for Maharashtra at village, town, and district levels
 modality: Tabular (Excel, CSV, PDF)
 size: 36 districts, 43,000+ villages
 language:
@@ -17,8 +19,8 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Registrar General of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
@@ -52,11 +54,9 @@ schema:
     description: Scheduled Tribe population count
 starter_idea: Build a district-level demographic dashboard for Maharashtra
 build_ideas:
-  - "Interactive population density map with literacy and gender ratio overlays"
-  - "SC/ST welfare scheme targeting tool using census demographics"
-  - "Urban-rural migration predictor using intercensal population change"
-quick_start: |
-  import pandas as pd
-  df = pd.read_csv("census_2011_maharashtra.csv")
-  print(df[["district_name", "total_population", "literacy_rate"]]
-        .sort_values("literacy_rate", ascending=False).head(10))
+  - Interactive population density map with literacy and gender ratio overlays
+  - SC/ST welfare scheme targeting tool using census demographics
+  - Urban-rural migration predictor using intercensal population change
+quick_start:
+  "import pandas as pd\ndf = pd.read_csv(\"census_2011_maharashtra.csv\")\nprint(df[[\"district_name\", \"total_population\"\
+  , \"literacy_rate\"]]\n      .sort_values(\"literacy_rate\", ascending=False).head(10))\n"

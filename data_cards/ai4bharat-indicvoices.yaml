@@ -62,4 +62,35 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: audio
+    type: audio
+    description: Audio waveform of the speech recording
+  - field: transcript
+    type: string
+    description: Transcription of the spoken content
+  - field: language
+    type: string
+    description: ISO language code (e.g., mr for Marathi)
+  - field: speaker_id
+    type: string
+    description: Unique speaker identifier
+  - field: duration
+    type: float
+    description: Duration of audio clip in seconds
+
+starter_idea: Build a Marathi voice assistant that handles read, extempore, and conversational speech styles for agricultural advisory services.
+
+build_ideas:
+  - "Create a Marathi-Hindi-English code-switching ASR model trained on the conversational speech subset for real-world call center applications"
+  - "Develop a speaker diarization system for Marathi meetings and interviews using the multi-speaker conversational data"
+  - "Build a speech style classifier that distinguishes read, spontaneous, and conversational Marathi speech for adaptive ASR pipelines"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('ai4bharat/IndicVoices', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"Duration: {ex['duration']:.1f}s, Transcript: {ex['transcript'][:60]}...")
+      if i >= 4: break

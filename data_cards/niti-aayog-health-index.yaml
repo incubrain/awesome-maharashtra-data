@@ -1,0 +1,54 @@
+title: NITI Aayog Health Index
+homepage: https://social.niti.gov.in/hlt-ranking
+category: health-nutrition
+description:
+  Composite state health performance rankings across health outcomes, governance, and key inputs/processes for
+  Maharashtra
+modality: Tabular (PDF, Excel)
+size: State-level, annual rounds
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - State health benchmarking
+  - policy impact evaluation
+  - health governance analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: NITI Aayog, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: domain
+    type: string
+    description: Health domain (outcomes, governance, key inputs, processes)
+  - field: indicator
+    type: string
+    description: Specific health indicator
+  - field: score
+    type: float
+    description: Indicator score
+starter_idea: Build a Maharashtra health system performance tracker using NITI Aayog's composite health index.
+build_ideas:
+  - Create a health governance quality analyzer for Maharashtra comparing process indicators with outcome achievements
+  - Develop a health investment prioritizer identifying which domain improvements would most boost Maharashtra's health index
+  - Build a state peer comparison tool showing Maharashtra's relative strengths and weaknesses in health system performance
+quick_start: "# Download from https://social.niti.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('health_index.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh[['Domain', 'Indicator', 'Score']].head(10))
+
+  "

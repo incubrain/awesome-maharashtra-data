@@ -1,7 +1,9 @@
 title: OSCAR 23.01 (Marathi)
-homepage: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+homepage: https://huggingface.co/datasets/oscar-corpus/OSCAR-2301
 category: language-nlp
-description: Marathi subset of the OSCAR 23.01 web-crawled corpus containing 729,578 documents and 252 million words (4.5 GB), derived from Common Crawl with language filtering.
+description:
+  Marathi subset of the OSCAR 23.01 web-crawled corpus containing 729,578 documents and 252 million words (4.5
+  GB), derived from Common Crawl with language filtering.
 modality: text
 size: 729,578 documents, 252M words, 4.5 GB
 language:
@@ -13,7 +15,7 @@ ai_use_cases:
   - Text classification
   - Corpus linguistics research
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/oscar-corpus/OSCAR-2301"
+huggingface_url: https://huggingface.co/datasets/oscar-corpus/OSCAR-2301
 direct_download_url: ""
 paper_url: ""
 github_url: ""
@@ -22,3 +24,21 @@ format: Parquet
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Web-crawled Marathi text content
+  - field: meta
+    type: object
+    description: Metadata including quality scores, sentence count, and word count
+starter_idea:
+  Build a Marathi text corpus quality pipeline that deduplicates and filters OSCAR data to create a clean pre-training
+  dataset.
+build_ideas:
+  - Create a Marathi Wikipedia content gap detector that compares OSCAR web content topics against existing Wikipedia coverage
+  - Develop a Marathi writing style analyzer trained on web text to identify formal, informal, and news writing styles
+  - Build a Marathi corpus for training word embeddings and evaluate them on analogy and similarity benchmarks
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('oscar-corpus/OSCAR-2301', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Text: {ex['text'][:100]}...\")\n    print(f\"Meta: {ex['meta']}\\n\")\n    if\
+  \ i >= 4: break\n"

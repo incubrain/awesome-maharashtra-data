@@ -1,0 +1,51 @@
+title: ISRO Cartosat-3 Submeter Imagery
+homepage: https://bhoonidhi.nrsc.gov.in/
+category: geospatial-gis
+description:
+  India's highest-resolution civilian optical satellite providing 0.28m panchromatic and 1.1m multispectral imagery.
+  Available via Bhoonidhi portal - free for government entities, priced for non-government. Covers 17x17km scenes with exceptional
+  detail for building-level urban mapping and infrastructure monitoring.
+modality: satellite-imagery
+size: 0.28m PAN, 1.1m MX resolution; 17x17km scenes; since November 2019
+language:
+  - en
+license: OGL-India (free for government; priced for NGEs)
+ai_use_cases:
+  - Building footprint extraction at sub-meter detail
+  - Urban infrastructure monitoring in Mumbai/Pune
+  - Road and bridge condition assessment
+  - Illegal construction detection
+  - Precision agriculture at field level
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://bhoonidhi.nrsc.gov.in/bhoonidhi/index.html
+paper_url: ""
+github_url: ""
+organization: Indian Space Research Organisation (ISRO)
+format: GeoTIFF
+update_frequency: on-demand
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: image
+    type: raster
+    description: Sub-meter resolution satellite image
+  - field: resolution
+    type: float
+    description: Spatial resolution in meters (0.25-0.65m)
+  - field: acquisition_date
+    type: date
+    description: Image capture date
+starter_idea: Build a building footprint extractor for Maharashtra using sub-meter Cartosat-3 imagery for urban planning.
+build_ideas:
+  - Create an unauthorized construction detector for Maharashtra municipalities using change detection on sub-meter imagery
+  - Develop a tree canopy mapper for Maharashtra cities at individual tree resolution for urban forestry
+  - Build a road condition assessor using sub-meter imagery to identify potholes and surface damage in Maharashtra
+quick_start: "# ISRO Cartosat-3 data
+
+  print('Cartosat-3: Sub-meter resolution Indian satellite')
+
+  print('Access via NRSC/Bhuvan for authorized users')
+
+  "

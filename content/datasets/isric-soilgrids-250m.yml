@@ -1,7 +1,10 @@
 title: ISRIC SoilGrids 250m v2.0
-homepage: "https://soilgrids.org/"
+homepage: https://soilgrids.org/
 category: agriculture-rural
-description: Global gridded soil property maps at 250m resolution for 6 standard depth intervals. Maharashtra subset provides pH, organic carbon, clay/sand/silt content, bulk density, and CEC maps critical for precision agriculture and crop suitability modeling.
+description:
+  Global gridded soil property maps at 250m resolution for 6 standard depth intervals. Maharashtra subset provides
+  pH, organic carbon, clay/sand/silt content, bulk density, and CEC maps critical for precision agriculture and crop suitability
+  modeling.
 modality: raster-gridded
 size: ~100 GB (global, all properties), ~1 GB (MH subset)
 language:
@@ -16,8 +19,8 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://files.isric.org/soilgrids/latest/"
-paper_url: "https://soil.copernicus.org/articles/7/217/2021/"
+direct_download_url: https://files.isric.org/soilgrids/latest/
+paper_url: https://soil.copernicus.org/articles/7/217/2021/
 github_url: ""
 organization: ISRIC - World Soil Information
 format: GeoTIFF / COG
@@ -27,25 +30,41 @@ last_verified: "2026-03-07"
 schema:
   - field: latitude
     type: float
-    description: "Grid cell center latitude"
+    description: Grid cell center latitude
   - field: longitude
     type: float
-    description: "Grid cell center longitude"
+    description: Grid cell center longitude
   - field: phh2o
     type: float
-    description: "Soil pH in water (pH x 10)"
+    description: Soil pH in water (pH x 10)
   - field: soc
     type: float
-    description: "Soil organic carbon content (g/kg)"
+    description: Soil organic carbon content (g/kg)
   - field: clay
     type: float
-    description: "Clay content (g/kg)"
+    description: Clay content (g/kg)
   - field: sand
     type: float
-    description: "Sand content (g/kg)"
+    description: Sand content (g/kg)
   - field: bdod
     type: float
-    description: "Bulk density of fine earth (kg/dm³ x 100)"
+    description: Bulk density of fine earth (kg/dm³ x 100)
   - field: cec
     type: float
-    description: "Cation exchange capacity (cmol(c)/kg)"
+    description: Cation exchange capacity (cmol(c)/kg)
+starter_idea: Build a precision agriculture soil advisor for Maharashtra using 250m resolution SoilGrids predictions.
+build_ideas:
+  - Create a soil carbon mapping service for Maharashtra supporting carbon credit verification programs
+  - Develop a crop-soil matching optimizer recommending ideal crops for each field based on soil properties
+  - Build a soil degradation risk model for Maharashtra using SoilGrids multi-depth property analysis
+quick_start: "import requests
+
+  # SoilGrids REST API
+
+  url = 'https://rest.isric.org/soilgrids/v2.0/properties/query'
+
+  print('SoilGrids 250m: https://soilgrids.org/')
+
+  print('250m resolution soil property predictions globally')
+
+  "

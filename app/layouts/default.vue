@@ -24,7 +24,6 @@ const categoryNavItems = computed<NavigationMenuItem[]>(() =>
 
 const mainNavItems: NavigationMenuItem[] = [
   { label: 'Home', icon: 'i-lucide-home', to: '/' },
-  { label: 'All Datasets', icon: 'i-lucide-database', to: '/datasets' },
   { label: 'Data Gaps', icon: 'i-lucide-search-x', to: '/gaps' },
 ]
 

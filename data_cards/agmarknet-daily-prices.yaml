@@ -1,65 +1,59 @@
----
-# Awesome Marathi Datasets - Data Card
-# AgMarkNet Daily Market Prices
-
-# (required) Human-readable dataset name
-title: "AgMarkNet Daily Market Prices"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
-homepage: "https://agmarknet.gov.in/"
-
-# (required) Which category file this belongs to (without number prefix)
-category: "agriculture-rural"
-
-# (required) One-line description of the dataset
-description: "Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs, with cleaned data also available via CEDA Ashoka API covering 2000-2023."
-
-# (required) Data modality
-modality: "tabular"
-
-# (required) Approximate size with units
-size: "Millions of daily price records"
-
-# (required) ISO 639-1 language codes
+title: AgMarkNet Daily Market Prices
+homepage: https://agmarknet.gov.in/
+category: agriculture-rural
+description:
+  Daily wholesale mandi prices (min, max, modal) for 300+ commodities across
+  Maharashtra APMCs, with cleaned data also available via CEDA Ashoka API covering
+  2000-2023.
+modality: tabular
+size: Millions of daily price records
 language:
   - en
-
-# (required) License identifier
-license: "Government-Open"
-
-# HuggingFace dataset URL (if available)
+license: Government-Open
 huggingface_url: ""
-
-# Direct download URL (if different from homepage)
-direct_download_url: "https://agmarknet.ceda.ashoka.edu.in/"
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
+direct_download_url: https://agmarknet.ceda.ashoka.edu.in/
 paper_url: ""
-
-# GitHub repository URL (if applicable)
 github_url: ""
-
-# Organization or author that created/maintains the dataset
-organization: "Directorate of Marketing & Inspection (DMI), Ministry of Agriculture / CEDA Ashoka"
-
-# (required) List of AI/ML use cases this dataset enables
+organization:
+  Directorate of Marketing & Inspection (DMI), Ministry of Agriculture
+  / CEDA Ashoka
 ai_use_cases:
-  - "Price forecasting"
-  - "Market volatility analysis"
-  - "Farmer advisory chatbots"
-  - "Supply chain optimization"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - Price forecasting
+  - Market volatility analysis
+  - Farmer advisory chatbots
+  - Supply chain optimization
 maharashtra_specific: false
-
-# Format of the data files
-format: "CSV"
-
-# How frequently the data is updated (if applicable)
-update_frequency: "daily"
-
-# BibTeX citation (if available)
+format: CSV
+update_frequency: daily
 citation: ""
-
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
 last_verified: "2026-03-07"
+schema:
+  - field: date
+    type: date
+    description: Date of the market price report
+  - field: commodity
+    type: string
+    description: Name of agricultural commodity (onion, soybean, jowar, etc.)
+  - field: market
+    type: string
+    description: APMC mandi name in Maharashtra
+  - field: min_price
+    type: float
+    description: Minimum price in rupees per quintal
+  - field: max_price
+    type: float
+    description: Maximum price in rupees per quintal
+  - field: modal_price
+    type: float
+    description: Modal (most common) price in rupees per quintal
+starter_idea: "Build an SMS-based price alert app for farmers to get daily mandi prices in their local language."
+build_ideas:
+  - "Create a price forecasting model using historical trends to help farmers decide the optimal time to sell"
+  - "Build a multi-language mobile app showing regional price variations so farmers can route goods to the best-paying mandi"
+  - "Develop a warehouse receipt financing platform that uses live price data to set loan-to-value ratios"
+quick_start: |
+  # Download from https://agmarknet.ceda.ashoka.edu.in/
+  import pandas as pd
+  df = pd.read_csv('agmarknet_prices.csv')
+  latest = df[df['date'] == df['date'].max()]
+  print(latest[['commodity', 'market', 'modal_price']].head(10))

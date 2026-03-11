@@ -1,0 +1,39 @@
+title: AI4Bharat IndicHeadlineGeneration (mr)
+homepage: https://huggingface.co/datasets/ai4bharat/IndicHeadlineGeneration
+category: language-nlp
+description: AI4Bharat IndicHeadlineGeneration (mr) dataset for language nlp.
+modality: text
+size: 114,042 train + 14,253 dev + 14,340 test
+language:
+  - mr
+license: CC-BY-NC-4.0
+ai_use_cases:
+  - Headline generation
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicHeadlineGeneration
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Full Marathi news article text
+  - field: headline
+    type: string
+    description: Corresponding headline for the article
+starter_idea:
+  Build an automatic Marathi headline generator for news aggregation platforms to create concise, accurate headlines
+  from article text.
+build_ideas:
+  - Create a Marathi clickbait detector that compares generated headlines against article content to identify misleading titles
+  - Develop an SEO-optimized headline suggester for Marathi news publishers that maximizes search visibility
+  - Build a multilingual headline comparison tool that generates headlines in both Marathi and English for bilingual news platforms
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicHeadlineGeneration', 'mr', split='train',\
+  \ streaming=True)\nfor i, ex in enumerate(ds):\n    print(f\"Headline: {ex['headline'][:60]}\")\n    print(f\"Article: {ex['text'][:80]}...\\\
+  n\")\n    if i >= 4: break\n"

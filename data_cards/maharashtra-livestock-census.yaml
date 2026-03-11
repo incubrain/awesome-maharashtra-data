@@ -1,0 +1,58 @@
+title: Maharashtra Livestock Census
+homepage: https://www.data.gov.in/catalog/livestock-census-all-india-report
+category: agriculture-rural
+description:
+  District-wise livestock numbers by species (cattle, buffalo, sheep, goat, poultry), breed type, ownership category,
+  and gender from the quinquennial Livestock Census. Covers all Maharashtra districts with trend data across census rounds.
+modality: tabular
+size: District-level; quinquennial; all livestock species and breeds
+language:
+  - en
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Livestock disease outbreak prediction
+  - Fodder demand forecasting
+  - Dairy supply chain optimization
+  - Breed improvement program targeting
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://www.data.gov.in/catalog/livestock-census-all-india-report
+paper_url: ""
+github_url: ""
+organization: Maharashtra Animal Husbandry Department
+format: CSV / Excel
+update_frequency: quinquennial
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: species
+    type: string
+    description: Livestock species (cattle, buffalo, goat, etc.)
+  - field: count
+    type: int
+    description: Number of animals
+  - field: breed
+    type: string
+    description: Breed name
+starter_idea:
+  Build a livestock distribution analyzer for Maharashtra showing breed concentrations and species ratios across
+  districts.
+build_ideas:
+  - Create a dairy potential mapper for Maharashtra districts based on milch animal density and breed quality
+  - Develop a veterinary service planning tool distributing animal healthcare resources proportional to livestock populations
+  - Build a fodder demand estimator for Maharashtra districts using livestock census data and feed requirements
+quick_start: "# Download from https://dahd.nic.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('livestock_census.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh.groupby('Species')['Count'].sum().sort_values(ascending=False))
+
+  "

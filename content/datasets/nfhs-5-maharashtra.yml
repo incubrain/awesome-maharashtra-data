@@ -1,7 +1,9 @@
 title: NFHS-5 Maharashtra
-homepage: "http://rchiips.org/nfhs/"
+homepage: http://rchiips.org/nfhs/
 category: health-nutrition
-description: National Family Health Survey (2019-21) district-level data on health, nutrition, fertility, and demographic indicators for Maharashtra
+description:
+  National Family Health Survey (2019-21) district-level data on health, nutrition, fertility, and demographic
+  indicators for Maharashtra
 modality: Tabular (CSV, PDF)
 size: ~36 districts, 31,643 households surveyed
 language:
@@ -15,20 +17,30 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/pratapvardhan/NFHS-5"
-organization: ""
-format: ""
+github_url: https://github.com/pratapvardhan/NFHS-5
+organization: International Institute for Population Sciences (IIPS)
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
 starter_idea: Build a district health scorecard for Maharashtra
 build_ideas:
-  - "Malnutrition hotspot identifier using child stunting/wasting data by district"
-  - "Maternal health risk predictor based on antenatal care and institutional delivery rates"
-  - "Interactive dashboard comparing health outcomes across MH districts"
-quick_start: |
-  import pandas as pd
-  df = pd.read_csv("NFHS5_Maharashtra.csv")
-  # Compare child stunting rates across districts
-  print(df[["district", "children_stunted_pct"]]
-        .sort_values("children_stunted_pct", ascending=False).head(10))
+  - Malnutrition hotspot identifier using child stunting/wasting data by district
+  - Maternal health risk predictor based on antenatal care and institutional delivery rates
+  - Interactive dashboard comparing health outcomes across MH districts
+quick_start:
+  "import pandas as pd\ndf = pd.read_csv(\"NFHS5_Maharashtra.csv\")\n# Compare child stunting rates across districts\n\
+  print(df[[\"district\", \"children_stunted_pct\"]]\n      .sort_values(\"children_stunted_pct\", ascending=False).head(10))\n"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: indicator
+    type: string
+    description: Health/demographic indicator name
+  - field: value
+    type: float
+    description: Indicator value (usually percentage)
+  - field: category
+    type: string
+    description: Population subgroup (urban, rural, gender, etc.)

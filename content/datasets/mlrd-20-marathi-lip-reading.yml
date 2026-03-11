@@ -1,9 +1,11 @@
 title: "MLRD-20: Marathi Lip Reading Dataset"
-homepage: "https://www.kaggle.com/datasets/desaivedantanil/mlrd-20"
+homepage: https://www.kaggle.com/datasets/desaivedantanil/mlrd-20
 category: vision-ocr-multimodal
-description: Marathi lip reading dataset containing video recordings of speakers pronouncing Marathi words and phrases, designed for visual speech recognition and lip-reading AI systems. One of the few lip-reading datasets for any Indian language.
+description:
+  Marathi lip reading dataset containing video recordings of speakers pronouncing Marathi words and phrases, designed
+  for visual speech recognition and lip-reading AI systems. One of the few lip-reading datasets for any Indian language.
 modality: video
-size: "20 classes; video recordings of Marathi speech"
+size: 20 classes; video recordings of Marathi speech
 language:
   - mr
 license: Unknown
@@ -15,7 +17,7 @@ ai_use_cases:
 maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
-direct_download_url: "https://www.kaggle.com/datasets/desaivedantanil/mlrd-20"
+direct_download_url: https://www.kaggle.com/datasets/desaivedantanil/mlrd-20
 paper_url: ""
 github_url: ""
 organization: Independent researcher (Kaggle)
@@ -23,3 +25,26 @@ format: Video files
 update_frequency: static
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: video
+    type: video
+    description: Video clip of speaker's face
+  - field: text
+    type: string
+    description: Spoken text transcription in Marathi
+starter_idea:
+  Build a Marathi lip reading model for silent speech recognition in noisy environments or for hearing-impaired
+  users.
+build_ideas:
+  - Create an assistive communication tool for hearing-impaired Marathi speakers using visual speech recognition
+  - Develop a multimodal Marathi ASR system combining audio and visual cues for robust speech recognition
+  - Build a Marathi speech privacy tool that recognizes speech from video without audio for security applications
+quick_start: "# MLRD-20 Marathi Lip Reading Dataset
+
+  import cv2
+
+  print('MLRD-20: Marathi Lip Reading Dataset')
+
+  print('20 Marathi words with video recordings')
+
+  "

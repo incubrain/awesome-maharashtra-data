@@ -1,7 +1,9 @@
 title: ICRISAT District Level Database
-homepage: "http://data.icrisat.org/dld/"
+homepage: http://data.icrisat.org/dld/
 category: agriculture-rural
-description: Comprehensive district-level agricultural database covering 571 districts with 1,030 variables and 11M+ data points on crops, irrigation, infrastructure, and GDP from 1966-2020.
+description:
+  Comprehensive district-level agricultural database covering 571 districts with 1,030 variables and 11M+ data
+  points on crops, irrigation, infrastructure, and GDP from 1966-2020.
 modality: tabular
 size: 74 datasets; 11M+ data points; 571 districts; 1,030 variables
 language:
@@ -22,3 +24,47 @@ format: Excel
 update_frequency: annual
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: district_code
+    type: string
+    description: Unique district identifier
+  - field: district_name
+    type: string
+    description: District name
+  - field: state_name
+    type: string
+    description: State name (filter for Maharashtra)
+  - field: year
+    type: int
+    description: Data year (1966-2020)
+  - field: variable_name
+    type: string
+    description: Variable name (crop area, yield, rainfall, irrigation, GDP, etc.)
+  - field: value
+    type: float
+    description: Observed value for the variable
+starter_idea:
+  Build a multi-factor agricultural productivity model for Maharashtra that correlates irrigation, rainfall, and
+  input usage with crop yields across decades.
+build_ideas:
+  - Create a district development index for Maharashtra by combining agricultural, infrastructure, and economic variables into
+    a composite score over time
+  - Develop a climate adaptation recommender that identifies which Maharashtra districts should shift crop patterns based on
+    50-year rainfall and yield trends
+  - Build a rural-urban migration predictor using agricultural productivity decline and infrastructure growth patterns at district
+    level
+quick_start: '# Download from http://data.icrisat.org/dld/
+
+  import pandas as pd
+
+  df = pd.read_excel(''ICRISAT_DLD.xlsx'', sheet_name=''Crop'')
+
+  mh = df[df[''State_Name''] == ''Maharashtra'']
+
+  print(f"Maharashtra records: {len(mh)}")
+
+  print(f"Years: {mh[''Year''].min()}-{mh[''Year''].max()}")
+
+  print(f"Districts: {mh[''District_Name''].nunique()}")
+
+  '

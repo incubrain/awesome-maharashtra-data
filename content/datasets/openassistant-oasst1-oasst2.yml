@@ -1,7 +1,9 @@
 title: OpenAssistant OASST1/OASST2
-homepage: "https://huggingface.co/datasets/OpenAssistant/oasst1"
+homepage: https://huggingface.co/datasets/OpenAssistant/oasst1
 category: agentic-instruction-rag
-description: Multilingual (incl. Marathi) — Human-generated, human-annotated assistant-style conversation corpus in 35 languages including Marathi conversation trees with quality ratings
+description:
+  Multilingual (incl. Marathi) — Human-generated, human-annotated assistant-style conversation corpus in 35 languages
+  including Marathi conversation trees with quality ratings
 modality: Text (multilingual)
 size: 161K messages in 35 languages
 language:
@@ -12,12 +14,41 @@ ai_use_cases:
   - RLHF data for Marathi
   - multilingual chat model fine-tuning
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/OpenAssistant/oasst2"
+huggingface_url: https://huggingface.co/datasets/OpenAssistant/oasst2
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: LAION / Open Assistant Community
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Conversation message text
+  - field: role
+    type: string
+    description: Message role (prompter, assistant)
+  - field: lang
+    type: string
+    description: Language code
+  - field: rank
+    type: int
+    description: Quality rank from human evaluation
+starter_idea: Fine-tune a Marathi conversational AI model using OpenAssistant multilingual data including Indic languages.
+build_ideas:
+  - Create a Marathi RLHF training pipeline using human preference data from OpenAssistant for chatbot alignment
+  - Develop a cross-lingual conversation quality evaluator benchmarking Marathi chatbot responses against other languages
+  - Build a Marathi conversation dataset by translating high-ranked OpenAssistant dialogues for local context
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''OpenAssistant/oasst2'')
+
+  print(f''Total messages: {len(ds["train"])}'')
+
+  mr = [ex for ex in ds[''train''] if ex.get(''lang'') == ''mr'']
+
+  print(f''Marathi messages: {len(mr)}'')
+
+  '

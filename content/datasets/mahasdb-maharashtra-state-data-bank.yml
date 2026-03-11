@@ -1,7 +1,9 @@
 title: MahaSDB (Maharashtra State Data Bank)
-homepage: "https://mahasdb.maharashtra.gov.in/sector.do?sec=1"
+homepage: https://mahasdb.maharashtra.gov.in/sector.do?sec=1
 category: agriculture-rural
-description: District-level statistics covering agriculture area, production, land use, irrigation, and allied activities published by Government of Maharashtra
+description:
+  District-level statistics covering agriculture area, production, land use, irrigation, and allied activities
+  published by Government of Maharashtra
 modality: Tabular (web/XLS)
 size: All 36 districts; multi-year
 language:
@@ -15,8 +17,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Directorate of Economics and Statistics, Government of Maharashtra
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: category
+    type: string
+    description: Data category (agriculture, health, education, etc.)
+  - field: indicator
+    type: string
+    description: Indicator name
+  - field: value
+    type: float
+    description: Indicator value
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a comprehensive Maharashtra district comparison tool using State Data Bank indicators across all sectors.
+build_ideas:
+  - Create an automated district development report generator using State Data Bank indicators
+  - Develop a cross-sector correlation analyzer finding relationships between health, education, and economic indicators
+  - Build a data quality monitor for Maharashtra State Data Bank identifying gaps and inconsistencies in reported data
+quick_start: "# Maharashtra State Data Bank
+
+  import pandas as pd
+
+  print('MahaSDB: Maharashtra State Data Bank')
+
+  print('Access district-level data across sectors')
+
+  "

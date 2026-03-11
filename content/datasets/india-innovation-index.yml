@@ -1,7 +1,9 @@
 title: India Innovation Index
-homepage: "https://www.niti.gov.in/india-innovation-index"
+homepage: https://www.niti.gov.in/india-innovation-index
 category: economy-labour-finance
-description: Maharashtra — Composite innovation performance ranking covering human capital, knowledge output, business sophistication, and research for Maharashtra
+description:
+  Maharashtra — Composite innovation performance ranking covering human capital, knowledge output, business sophistication,
+  and research for Maharashtra
 modality: Tabular (PDF, web)
 size: State-level, annual
 language:
@@ -9,15 +11,44 @@ language:
 license: Open Government
 ai_use_cases:
   - Innovation ecosystem benchmarking
-  - "R&D policy analysis"
+  - R&D policy analysis
   - state competitiveness modelling
 maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: NITI Aayog, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: indicator
+    type: string
+    description: Innovation indicator name
+  - field: score
+    type: float
+    description: Indicator score
+  - field: rank
+    type: int
+    description: State rank on this indicator
+starter_idea: Build an innovation ecosystem analyzer for Maharashtra identifying strengths and gaps compared to leading states.
+build_ideas:
+  - Create a district-level innovation potential mapper for Maharashtra using sub-national proxy indicators
+  - Develop a startup ecosystem recommendation engine suggesting interventions to boost Maharashtra's innovation ranking
+  - Build a patent and research output tracker for Maharashtra institutions correlated with innovation index factors
+quick_start: "# Download from https://www.niti.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('innovation_index.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh[['Indicator', 'Score', 'Rank']].head(10))
+
+  "

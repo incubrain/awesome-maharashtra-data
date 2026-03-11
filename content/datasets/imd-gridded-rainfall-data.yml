@@ -1,7 +1,9 @@
 title: IMD Gridded Rainfall Data
-homepage: "https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html"
+homepage: https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html
 category: agriculture-rural
-description: India Meteorological Department high-resolution (0.25° x 0.25°) daily gridded rainfall dataset covering 1901-2024 in 135x129 grid points
+description:
+  India Meteorological Department high-resolution (0.25° x 0.25°) daily gridded rainfall dataset covering 1901-2024
+  in 135x129 grid points
 modality: Gridded (NetCDF/binary)
 size: 120+ years; daily; 0.25° grid
 language:
@@ -16,32 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: India Meteorological Department
+format: Various
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
 schema:
   - field: latitude
     type: float
-    description: "Latitude of grid point (6.5°N to 38.5°N)"
+    description: Latitude of grid point (6.5°N to 38.5°N)
   - field: longitude
     type: float
-    description: "Longitude of grid point (66.5°E to 100°E)"
+    description: Longitude of grid point (66.5°E to 100°E)
   - field: time
     type: date
     description: Date of observation (daily, 1901-present)
   - field: rainfall
     type: float
-    description: "Daily rainfall in mm at the grid point (0.25° x 0.25° resolution)"
+    description: Daily rainfall in mm at the grid point (0.25° x 0.25° resolution)
 starter_idea: Build a monsoon rainfall predictor for Maharashtra districts
 build_ideas:
-  - "Crop sowing date advisor based on historical rainfall onset patterns"
-  - "Drought early warning system for Marathwada and Vidarbha"
-  - "Reservoir inflow forecasting using rainfall-runoff correlation"
-quick_start: |
-  import xarray as xr
+  - Crop sowing date advisor based on historical rainfall onset patterns
+  - Drought early warning system for Marathwada and Vidarbha
+  - Reservoir inflow forecasting using rainfall-runoff correlation
+quick_start: 'import xarray as xr
+
   ds = xr.open_dataset("rainfall_2023.nc")
+
   # Clip to Maharashtra bounding box
+
   mh = ds.sel(lat=slice(15.5, 22.1), lon=slice(72.6, 80.9))
+
   print(mh["rainfall"].mean(dim=["lat", "lon"]).plot())
+
+  '

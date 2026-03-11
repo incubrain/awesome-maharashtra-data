@@ -1,9 +1,11 @@
 title: Maharashtra Socio-Economic Review
-homepage: "https://mahades.maharashtra.gov.in/"
+homepage: https://mahades.maharashtra.gov.in/
 category: economy-labour-finance
-description: Annual statistical publication covering population, agriculture, industry, infrastructure, and welfare indicators from the DES Maharashtra
+description:
+  Annual statistical publication covering population, agriculture, industry, infrastructure, and welfare indicators
+  from the DES Maharashtra
 modality: Tabular (PDF)
-size: "State & district level, annual"
+size: State & district level, annual
 language:
   - en
 license: Open Government
@@ -15,8 +17,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Directorate of Economics and Statistics, Government of Maharashtra
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: sector
+    type: string
+    description: Sector name
+  - field: indicator
+    type: string
+    description: Socio-economic indicator
+  - field: value
+    type: float
+    description: Indicator value
+  - field: year
+    type: string
+    description: Reference year
+starter_idea:
+  Build a Maharashtra development dashboard tracking socio-economic progress across sectors and districts over
+  time.
+build_ideas:
+  - Create a development gap analyzer comparing Maharashtra's performance against national averages and peer states
+  - Develop a SDG progress tracker mapping Maharashtra's socio-economic indicators to UN Sustainable Development Goals
+  - Build a regional disparity visualizer showing Vidarbha, Marathwada, Western Maharashtra development differences
+quick_start: "# Maharashtra Socio-Economic Review
+
+  import pandas as pd
+
+  print('Maharashtra Socio-Economic Review')
+
+  print('Published by Directorate of Economics and Statistics, Maharashtra')
+
+  "

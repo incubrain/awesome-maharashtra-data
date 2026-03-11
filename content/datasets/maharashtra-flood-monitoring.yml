@@ -1,7 +1,9 @@
 title: Maharashtra Flood Monitoring
-homepage: "https://mahasdb.maharashtra.gov.in/sector.do?sec=5"
+homepage: https://mahasdb.maharashtra.gov.in/sector.do?sec=5
 category: realtime-streams-apis
-description: Real-time dam water levels, river gauge data, and flood alerts from Maharashtra Water Resources Department and related agencies during monsoon season
+description:
+  Real-time dam water levels, river gauge data, and flood alerts from Maharashtra Water Resources Department and
+  related agencies during monsoon season
 modality: Web (dashboard)
 size: Real-time (monsoon), state-wide
 language:
@@ -16,8 +18,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Disaster Management Department, Government of Maharashtra
+format: JSON API
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: district
+    type: string
+    description: Affected district
+  - field: river
+    type: string
+    description: River causing flooding
+  - field: villages_affected
+    type: int
+    description: Number of villages affected
+  - field: people_evacuated
+    type: int
+    description: Number of people evacuated
+  - field: date
+    type: date
+    description: Report date
+starter_idea: Build a Maharashtra flood impact dashboard showing real-time and historical flood damage across districts.
+build_ideas:
+  - Create a flood vulnerability index for Maharashtra villages combining historical flood data with infrastructure exposure
+  - Develop a flood damage estimation model using historical impact data for rapid post-flood assessment
+  - Build an evacuation planning optimizer using flood monitoring data to pre-position resources in vulnerable areas
+quick_start: "# Maharashtra SDMA flood monitoring
+
+  import pandas as pd
+
+  print('Maharashtra Flood Monitoring Data')
+
+  print('Source: Maharashtra SDMA and Revenue Department')
+
+  "

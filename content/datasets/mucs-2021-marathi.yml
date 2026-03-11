@@ -1,7 +1,9 @@
 title: MUCS 2021 (Marathi)
-homepage: "https://www.openslr.org/103/"
+homepage: https://www.openslr.org/103/
 category: speech-audio
-description: Multilingual and code-switching ASR challenge dataset with Marathi speech from diverse speaker groups (college students, rural/urban workers)
+description:
+  Multilingual and code-switching ASR challenge dataset with Marathi speech from diverse speaker groups (college
+  students, rural/urban workers)
 modality: Speech + Text
 size: ~99 hrs (93.9 hrs train + 5 hrs test); 31 speakers
 language:
@@ -15,8 +17,29 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: MediaEval / MUCS Challenge Organizers
+format: WAV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: audio
+    type: audio
+    description: Marathi speech recording
+  - field: text
+    type: string
+    description: Transcription text
+starter_idea: Build a competition-grade Marathi ASR model using MUCS 2021 challenge data for benchmarking against other systems.
+build_ideas:
+  - Create a Marathi ASR model comparison framework using MUCS evaluation protocols and metrics
+  - Develop an ensemble ASR system combining multiple models trained on MUCS data for improved accuracy
+  - Build an ASR error analysis tool specifically for Marathi speech recognition challenges identified in MUCS
+quick_start: '# MUCS 2021 Marathi ASR challenge data
+
+  # Download from https://navana-tech.github.io/MUCS2021/
+
+  print("Download MUCS 2021 Marathi data from:")
+
+  print("https://navana-tech.github.io/MUCS2021/")
+
+  '

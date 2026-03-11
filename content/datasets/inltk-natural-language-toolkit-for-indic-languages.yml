@@ -1,7 +1,9 @@
 title: iNLTK (Natural Language Toolkit for Indic Languages)
-homepage: "https://github.com/goru001/inltk"
+homepage: https://github.com/goru001/inltk
 category: benchmarks-fairness-dialects-tools
-description: Deep learning-based NLP library supporting Marathi with pre-trained language models, text generation, tokenisation, sentence embeddings, and data augmentation
+description:
+  Deep learning-based NLP library supporting Marathi with pre-trained language models, text generation, tokenisation,
+  sentence embeddings, and data augmentation
 modality: Tools (Python)
 size: 12 Indic languages incl. Marathi
 language:
@@ -15,9 +17,28 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/goru001/nlp-for-marathi"
-organization: ""
-format: ""
+github_url: https://github.com/goru001/nlp-for-marathi
+organization: iNLTK Community
+format: Various
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: function
+    type: string
+    description: NLP function (tokenize, embed, classify, generate)
+  - field: language
+    type: string
+    description: Language code
+starter_idea: Build a Marathi NLP application using iNLTK's pre-trained models for text generation and classification.
+build_ideas:
+  - Create a Marathi text autocomplete engine using iNLTK's language model for messaging applications
+  - Develop a Marathi content generator for social media marketing using iNLTK's text generation capabilities
+  - Build a Marathi document classifier using iNLTK embeddings for government document categorization
+quick_start: "from inltk.inltk import setup, predict_next_words
+
+  setup('mr')
+
+  print(predict_next_words('मराठी भाषा', 5, 'mr'))
+
+  "

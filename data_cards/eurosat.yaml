@@ -1,0 +1,48 @@
+title: EuroSAT
+homepage: https://github.com/phelber/EuroSAT
+category: vision-ocr-multimodal
+description:
+  Sentinel-2 satellite image dataset for land use and land cover classification. Contains geo-referenced RGB and
+  multispectral images across 10 classes. Applicable to Maharashtra remote sensing and agricultural monitoring
+modality: Satellite imagery (RGB + multispectral)
+size: 27K images (64x64 px), 10 classes
+language:
+  - mr
+license: MIT
+ai_use_cases:
+  - Land cover classification
+  - remote sensing
+  - agricultural monitoring
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/blanchon/EuroSAT_RGB
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/phelber/EuroSAT
+organization: German Research Center for Artificial Intelligence (DFKI)
+format: PNG/JPEG
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: image
+    type: image
+    description: Sentinel-2 satellite image patch (64x64 pixels)
+  - field: label
+    type: string
+    description: Land use class (10 classes)
+starter_idea: Fine-tune a land use classifier pre-trained on EuroSAT for Maharashtra-specific land cover classification.
+build_ideas:
+  - Create a transfer learning pipeline adapting European-trained satellite classifiers to Indian/Maharashtra contexts
+  - Develop a few-shot land cover classifier using EuroSAT as pre-training for limited Maharashtra training samples
+  - Build a satellite image labeling tool that uses EuroSAT-trained models as initial predictions for Maharashtra data annotation
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''blanchon/EuroSAT_RGB'')
+
+  print(f''Samples: {len(ds["train"])}'')
+
+  from collections import Counter
+
+  print(Counter(ds[''train''][''label'']).most_common())
+
+  '

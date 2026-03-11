@@ -1,9 +1,12 @@
 title: iNLTK Marathi News Headlines
-homepage: "https://www.kaggle.com/datasets/disisbig/marathi-news-dataset"
+homepage: https://www.kaggle.com/datasets/disisbig/marathi-news-dataset
 category: language-nlp
-description: Marathi news classification dataset containing ~12,000 news article headlines collected from a Marathi news website, labeled across 3 categories (state 62%, entertainment 27%, sports 10%). Part of the iNLTK (Indic Natural Language Toolkit) project.
+description:
+  Marathi news classification dataset containing ~12,000 news article headlines collected from a Marathi news website,
+  labeled across 3 categories (state 62%, entertainment 27%, sports 10%). Part of the iNLTK (Indic Natural Language Toolkit)
+  project.
 modality: text
-size: "~12,000 headlines; 3 categories"
+size: ~12,000 headlines; 3 categories
 language:
   - mr
 license: CC-BY-SA-4.0
@@ -15,11 +18,28 @@ ai_use_cases:
 maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
-direct_download_url: "https://www.kaggle.com/datasets/disisbig/marathi-news-dataset"
+direct_download_url: https://www.kaggle.com/datasets/disisbig/marathi-news-dataset
 paper_url: ""
-github_url: "https://github.com/goru001/nlp-for-marathi"
+github_url: https://github.com/goru001/nlp-for-marathi
 organization: iNLTK / DISISBIG
 format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: headline
+    type: string
+    description: Marathi news headline text
+  - field: category
+    type: string
+    description: News category (sports, entertainment, politics, etc.)
+starter_idea:
+  Build a Marathi news topic classifier that automatically categorizes incoming news articles for a Marathi news
+  aggregator app.
+build_ideas:
+  - Create a Marathi trending topics detector that identifies emerging news stories from headline clustering
+  - Develop a Marathi headline style transfer tool that rewrites headlines for different audience segments (formal vs casual)
+  - Build a fake news detector for Marathi by analyzing headline linguistic patterns and comparing against verified sources
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('inltk/marathi-news-headlines')\nprint(f\"Headlines: {len(ds['train'])}\"\
+  )\nfor ex in ds['train'][:5]:\n    print(f\"[{ex['category']}] {ex['headline'][:80]}\")\n"

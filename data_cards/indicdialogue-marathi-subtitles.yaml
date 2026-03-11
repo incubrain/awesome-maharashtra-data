@@ -1,0 +1,52 @@
+title: IndicDialogue Marathi (Movie/TV Subtitles)
+homepage: https://data.mendeley.com/datasets/wcb4bxbyxx/1
+category: culture-media-tourism-heritage
+description:
+  Movie and TV subtitle dataset in 10 Indic languages sourced from OpenSubtitles.org. Contains pre-processed dialogues
+  in JSONL format. The only publicly available Marathi conversational/dialogue dataset, essential for training chatbots and
+  conversational AI in Marathi.
+modality: text
+size: Part of 6.85M dialogues total across 10 languages; Marathi subset
+language:
+  - mr
+license: Open (Academic)
+ai_use_cases:
+  - Marathi chatbot training
+  - Conversational AI development
+  - Dialogue generation
+  - Informal Marathi language modeling
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://data.mendeley.com/datasets/wcb4bxbyxx/1
+paper_url: https://www.sciencedirect.com/science/article/pii/S2352340924006577
+github_url: ""
+organization: Mendeley Data
+format: SRT / JSONL
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: dialogue
+    type: string
+    description: Marathi dialogue text from subtitles
+  - field: movie_id
+    type: string
+    description: Source movie identifier
+  - field: timestamp
+    type: string
+    description: Subtitle timestamp
+starter_idea: Build a conversational Marathi language model trained on natural movie dialogue for chatbot development.
+build_ideas:
+  - Create a Marathi dialogue generation model for video game and interactive fiction applications
+  - Develop a Marathi speech style analyzer comparing formal vs colloquial language patterns in movie subtitles
+  - Build a Marathi vocabulary frequency analyzer from movie subtitles for language learning curriculum design
+quick_start: "# IndicDialogue Marathi subtitles
+
+  import json
+
+  print('IndicDialogue: Marathi movie subtitle corpus')
+
+  print('Access from research repositories')
+
+  "

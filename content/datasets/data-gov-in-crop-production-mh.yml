@@ -1,7 +1,9 @@
 title: data.gov.in Crop Production Statistics - Maharashtra
-homepage: "https://www.data.gov.in/catalog/district-wise-season-wise-crop-production-statistics"
+homepage: https://www.data.gov.in/catalog/district-wise-season-wise-crop-production-statistics
 category: agriculture-rural
-description: District-wise, season-wise, crop-wise area (ha), production (tonnes), and yield data for Maharashtra from 1997 onwards, with approximately 246K records all-India filterable to Maharashtra.
+description:
+  District-wise, season-wise, crop-wise area (ha), production (tonnes), and yield data for Maharashtra from 1997
+  onwards, with approximately 246K records all-India filterable to Maharashtra.
 modality: tabular
 size: ~246K records (all-India); filterable to Maharashtra
 language:
@@ -22,3 +24,49 @@ format: CSV
 update_frequency: annual
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state_name
+    type: string
+    description: State name (filter for MAHARASHTRA)
+  - field: district_name
+    type: string
+    description: District name within the state
+  - field: crop_year
+    type: int
+    description: Agricultural year of production
+  - field: season
+    type: string
+    description: Cropping season (Kharif, Rabi, Whole Year)
+  - field: crop
+    type: string
+    description: Name of the crop
+  - field: area
+    type: float
+    description: Area under cultivation in hectares
+  - field: production
+    type: float
+    description: Total production in tonnes
+starter_idea:
+  Build a crop yield prediction model for Maharashtra districts that forecasts production based on historical
+  trends, season, and crop type.
+build_ideas:
+  - Create a crop diversification advisor that recommends alternative crops for Maharashtra farmers based on historical yield
+    data and market prices
+  - Develop a district-level agricultural dashboard showing production trends, seasonal patterns, and yield comparisons across
+    Maharashtra
+  - Build an early warning system for crop production shortfalls by comparing current season estimates with historical district-level
+    baselines
+quick_start:
+  '# Download from https://data.gov.in/catalog/district-wise-season-wise-crop-production-statistics
+
+  import pandas as pd
+
+  df = pd.read_csv(''crop_production.csv'')
+
+  mh = df[df[''State_Name''] == ''Maharashtra'']
+
+  print(f"Maharashtra records: {len(mh)}")
+
+  print(mh.groupby(''Crop'')[''Production''].sum().sort_values(ascending=False).head(10))
+
+  '

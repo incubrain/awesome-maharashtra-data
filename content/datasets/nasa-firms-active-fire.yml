@@ -1,7 +1,9 @@
 title: NASA FIRMS Active Fire Data (MODIS/VIIRS)
-homepage: "https://firms.modaps.eosdis.nasa.gov/"
+homepage: https://firms.modaps.eosdis.nasa.gov/
 category: environment-climate-disaster
-description: Near real-time active fire detections from MODIS and VIIRS satellites at 375m-1km resolution, updated every 3 hours. Maharashtra subset tracks agricultural stubble burning, forest fires in Western Ghats, and industrial fire incidents.
+description:
+  Near real-time active fire detections from MODIS and VIIRS satellites at 375m-1km resolution, updated every 3
+  hours. Maharashtra subset tracks agricultural stubble burning, forest fires in Western Ghats, and industrial fire incidents.
 modality: tabular
 size: ~10 GB/year (global), ~50 MB (MH subset)
 language:
@@ -16,7 +18,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://firms.modaps.eosdis.nasa.gov/download/"
+direct_download_url: https://firms.modaps.eosdis.nasa.gov/download/
 paper_url: ""
 github_url: ""
 organization: NASA LANCE
@@ -27,22 +29,38 @@ last_verified: "2026-03-07"
 schema:
   - field: latitude
     type: float
-    description: "Fire detection latitude"
+    description: Fire detection latitude
   - field: longitude
     type: float
-    description: "Fire detection longitude"
+    description: Fire detection longitude
   - field: acq_date
     type: date
-    description: "Acquisition date"
+    description: Acquisition date
   - field: acq_time
     type: string
-    description: "Acquisition time (HHMM UTC)"
+    description: Acquisition time (HHMM UTC)
   - field: brightness
     type: float
-    description: "Brightness temperature (Kelvin)"
+    description: Brightness temperature (Kelvin)
   - field: confidence
     type: string
-    description: "Detection confidence (low/nominal/high)"
+    description: Detection confidence (low/nominal/high)
   - field: frp
     type: float
-    description: "Fire Radiative Power (MW)"
+    description: Fire Radiative Power (MW)
+starter_idea: Build a real-time forest fire monitoring system for Maharashtra using NASA FIRMS satellite fire detections.
+build_ideas:
+  - Create a fire season forecaster for Maharashtra forests correlating fire occurrences with drought and temperature data
+  - Develop a crop residue burning tracker for Maharashtra agricultural regions using FIRMS fire data
+  - Build a fire response optimizer for Maharashtra forest department routing firefighting resources based on active fire data
+quick_start: "import requests
+
+  # NASA FIRMS API
+
+  url = 'https://firms.modaps.eosdis.nasa.gov/api/area'
+
+  print('NASA FIRMS: https://firms.modaps.eosdis.nasa.gov/')
+
+  print('Near real-time active fire data globally')
+
+  "

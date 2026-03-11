@@ -1,7 +1,9 @@
 title: Smart Cities Mission
-homepage: "https://smartcities.data.gov.in/city/maharashtra"
+homepage: https://smartcities.data.gov.in/city/maharashtra
 category: transport-urban-infrastructure
-description: "Pune & Nagpur — Urban data from Smart Cities dashboards covering infrastructure, mobility, environment, and governance indicators for Pune and Nagpur"
+description:
+  Pune & Nagpur — Urban data from Smart Cities dashboards covering infrastructure, mobility, environment, and governance
+  indicators for Pune and Nagpur
 modality: Tabular (dashboard, API)
 size: City-level, ongoing
 language:
@@ -15,8 +17,35 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Ministry of Housing and Urban Affairs, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: city
+    type: string
+    description: Smart city name
+  - field: project
+    type: string
+    description: Project name
+  - field: budget_crore
+    type: float
+    description: Project budget in crores
+  - field: status
+    type: string
+    description: Implementation status
+starter_idea: Build a Smart Cities Mission progress tracker for Maharashtra cities showing project completion and fund utilization.
+build_ideas:
+  - Create a project impact evaluator for Maharashtra smart cities measuring citizen satisfaction pre/post implementation
+  - Develop a best practices recommender identifying successful smart city projects transferable across Maharashtra cities
+  - Build a fund utilization optimizer identifying Maharashtra smart city projects with lowest spending efficiency
+quick_start: "# Smart Cities Mission
+
+  import pandas as pd
+
+  print('Smart Cities: https://smartcities.gov.in/')
+
+  print('Maharashtra smart cities: Pune, Nagpur, Nashik, etc.')
+
+  "

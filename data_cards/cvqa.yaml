@@ -1,0 +1,43 @@
+title: CVQA
+homepage: https://huggingface.co/datasets/afaji/cvqa
+category: vision-ocr-multimodal
+description:
+  Culturally-diverse Multilingual Visual Question Answering benchmark with questions from 30 countries in 31 languages
+  including Marathi. Images and questions are annotated by native speakers familiar with local culture
+modality: Image + Text
+size: ~10K questions across 39 country-language pairs
+language:
+  - mr
+license: CC BY-SA (varies per image)
+ai_use_cases:
+  - Visual question answering
+  - cultural AI
+  - multimodal reasoning
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/afaji/cvqa
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: CVQA Benchmark Authors
+format: PNG/JPEG
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: image
+    type: image
+    description: Image for visual question answering
+  - field: question
+    type: string
+    description: Question about the image in Marathi
+  - field: answer
+    type: string
+    description: Answer to the question
+starter_idea: Build a culturally-aware Marathi visual question answering system that understands Indian visual contexts.
+build_ideas:
+  - Create a multimodal Marathi educational tool that answers student questions about diagrams and charts
+  - Develop a visual accessibility assistant that describes and answers questions about images in Marathi
+  - Build a Marathi visual content moderation system that combines image understanding with text analysis
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('cvqa/cvqa')\nprint(f'Samples: {len(ds[\"test\"])}')\n\
+  for ex in list(ds['test'])[:3]:\n    print(f\"Q: {ex['question'][:60]}\")\n    print(f\"A: {ex['answer'][:60]}\\n\")\n"

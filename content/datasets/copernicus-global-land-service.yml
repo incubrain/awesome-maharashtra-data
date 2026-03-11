@@ -1,7 +1,9 @@
 title: Copernicus Global Land Service
-homepage: "https://land.copernicus.eu/en"
+homepage: https://land.copernicus.eu/en
 category: agriculture-rural
-description: Vegetation indices (NDVI, LAI, FAPAR), surface soil moisture, and soil water index at 300m-1km resolution, 10-day frequency, global coverage
+description:
+  Vegetation indices (NDVI, LAI, FAPAR), surface soil moisture, and soil water index at 300m-1km resolution, 10-day
+  frequency, global coverage
 modality: Raster (NetCDF/GeoTIFF)
 size: Global; 300m-1km; 10-day
 language:
@@ -16,8 +18,35 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: European Space Agency / Copernicus Programme
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: ndvi
+    type: float
+    description: Normalized Difference Vegetation Index value
+  - field: date
+    type: date
+    description: Observation date (10-day composite)
+  - field: latitude
+    type: float
+    description: Latitude coordinate
+  - field: longitude
+    type: float
+    description: Longitude coordinate
+starter_idea: Build a crop growth monitoring system for Maharashtra using Copernicus Global Land Service NDVI time-series.
+build_ideas:
+  - Create a seasonal vegetation health dashboard for Maharashtra tracking NDVI anomalies during crop growing seasons
+  - Develop a deforestation early warning for Western Ghats using NDVI decline detection from Copernicus data
+  - Build a pasture condition monitor for Maharashtra's livestock regions using vegetation productivity indicators
+quick_start: "import xarray as xr
+
+  # Download from https://land.copernicus.eu/global/
+
+  # ds = xr.open_dataset('ndvi_300m.nc')
+
+  print('Copernicus Global Land Service: https://land.copernicus.eu/global/')
+
+  "

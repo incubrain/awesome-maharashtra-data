@@ -62,4 +62,32 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: audio
+    type: audio
+    description: Audio waveform of the speech recording (WAV format)
+  - field: sentence
+    type: string
+    description: Human-verified transcription of the audio
+  - field: locale
+    type: string
+    description: Language locale code (mr_IN for Marathi)
+  - field: split
+    type: string
+    description: Dataset split (train, valid, test_known, test_unknown)
+
+starter_idea: Build a production-ready Marathi speech-to-text API for customer service automation in Maharashtra banks and telecom companies.
+
+build_ideas:
+  - "Create a Marathi dictation app for government officials to transcribe meeting notes and official correspondence in real-time"
+  - "Develop a voice-based form filling system for illiterate citizens accessing Maharashtra government services"
+  - "Build an automated Marathi subtitling service for educational video content from Maharashtra state board schools"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('ai4bharat/Kathbath', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"Sentence: {ex['sentence'][:80]}...")
+      if i >= 4: break

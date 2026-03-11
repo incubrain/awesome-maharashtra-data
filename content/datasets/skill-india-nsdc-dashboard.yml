@@ -1,7 +1,9 @@
 title: Skill India / NSDC Dashboard
-homepage: "https://nsdcindia.org/maharashtra"
+homepage: https://nsdcindia.org/maharashtra
 category: education-skills
-description: Maharashtra — Skill development training data including candidates trained, certified, and placed across various sectors in Maharashtra via NSDC programmes
+description:
+  Maharashtra — Skill development training data including candidates trained, certified, and placed across various
+  sectors in Maharashtra via NSDC programmes
 modality: Tabular (dashboard)
 size: State-level, ongoing
 language:
@@ -16,8 +18,35 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: National Skill Development Corporation (NSDC)
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: sector
+    type: string
+    description: Skill sector
+  - field: trained
+    type: int
+    description: Number of people trained
+  - field: placed
+    type: int
+    description: Number of people placed in jobs
+starter_idea: Build a skills gap analyzer for Maharashtra showing demand-supply mismatches in vocational training by sector.
+build_ideas:
+  - Create a training-to-placement efficiency tracker for Maharashtra skill development programs
+  - Develop a skill demand forecaster predicting which sectors will need most trained workers in Maharashtra
+  - Build a career guidance tool for Maharashtra youth recommending high-placement skill courses
+quick_start: "# Skill India Dashboard
+
+  import pandas as pd
+
+  print('Skill India: https://www.skillindia.gov.in/')
+
+  print('NSDC skill training and placement data')
+
+  "

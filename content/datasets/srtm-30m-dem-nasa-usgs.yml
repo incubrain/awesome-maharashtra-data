@@ -1,5 +1,5 @@
 title: SRTM 30m DEM (NASA/USGS)
-homepage: "https://earthexplorer.usgs.gov/"
+homepage: https://earthexplorer.usgs.gov/
 category: geospatial-gis
 description: Shuttle Radar Topography Mission 1 arc-second (~30m) global elevation data covering all of Maharashtra
 modality: Raster (GeoTIFF / HGT)
@@ -17,8 +17,34 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: NASA / USGS
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: elevation
+    type: float
+    description: Elevation in meters above sea level
+  - field: latitude
+    type: float
+    description: Latitude coordinate
+  - field: longitude
+    type: float
+    description: Longitude coordinate
+starter_idea:
+  Build a terrain analysis toolkit for Maharashtra using SRTM 30m elevation data for infrastructure and hazard
+  planning.
+build_ideas:
+  - Create a micro-watershed delineation tool for Maharashtra using SRTM DEM for water harvesting site selection
+  - Develop a road cut-and-fill estimator for Maharashtra highway projects using DEM-based terrain profiles
+  - Build a viewshed analyzer for Maharashtra telecom tower placement optimizing signal coverage using elevation data
+quick_start: "import rasterio
+
+  # Download from https://earthexplorer.usgs.gov/
+
+  # src = rasterio.open('srtm_30m.tif')
+
+  print('SRTM 30m DEM: https://earthexplorer.usgs.gov/')
+
+  "

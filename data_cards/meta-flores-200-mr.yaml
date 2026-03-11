@@ -1,0 +1,36 @@
+title: Meta FLORES-200 (mr)
+homepage: https://huggingface.co/datasets/facebook/flores
+category: language-nlp
+description: Meta FLORES-200 (mr) dataset for language nlp.
+modality: parallel-text
+size: 3,001 sentences, parallel across 200 languages
+language:
+  - mr
+license: CC-BY-SA-4.0
+ai_use_cases:
+  - MT evaluation benchmark
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/facebook/flores
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Meta AI
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: sentence
+    type: string
+    description: Text sentence in Marathi (or source language)
+  - field: id
+    type: int
+    description: Sentence identifier aligned across languages
+starter_idea: Evaluate and benchmark Marathi machine translation models using FLORES-200 as a standardized test set.
+build_ideas:
+  - Create a Marathi translation quality leaderboard comparing commercial and open-source MT systems on FLORES-200
+  - Develop a fine-grained translation error analysis tool that identifies specific error types in Marathi MT output
+  - Build a parallel corpus augmentation pipeline using FLORES-200 as seed data for mining additional Marathi translation pairs
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('facebook/flores', 'mar_Deva', split='devtest')\nfor ex\
+  \ in ds[:5]:\n    print(f\"[{ex['id']}] {ex['sentence'][:80]}...\")\n"

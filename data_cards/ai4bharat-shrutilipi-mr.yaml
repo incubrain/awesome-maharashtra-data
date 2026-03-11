@@ -62,4 +62,33 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "audio"
+    type: "audio"
+    description: "Audio waveform from All India Radio news bulletin"
+  - field: "sentence"
+    type: "string"
+    description: "Pseudo-labeled transcription of the audio"
+  - field: "language"
+    type: "string"
+    description: "Language code (mr for Marathi)"
+  - field: "duration"
+    type: "float"
+    description: "Duration of audio clip in seconds"
+
+starter_idea: "Build a Marathi news transcription service that automatically generates text from radio broadcasts for rural information dissemination."
+
+build_ideas:
+  - "Create a Marathi news summarization pipeline that transcribes radio bulletins and generates concise text summaries for mobile alerts"
+  - "Develop a domain-adapted ASR model fine-tuned on formal Marathi news speech for government communication transcription"
+  - "Build an accessibility tool that converts Marathi radio content into searchable text archives for hearing-impaired users"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('ai4bharat/Shrutilipi', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"Duration: {ex['duration']:.1f}s")
+      print(f"Text: {ex['sentence'][:80]}...\n")
+      if i >= 4: break

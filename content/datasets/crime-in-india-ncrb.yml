@@ -1,9 +1,11 @@
 title: Crime in India (NCRB)
-homepage: "https://www.ncrb.gov.in/"
+homepage: https://www.ncrb.gov.in/
 category: governance-census-demographics-legal
-description: Maharashtra — Annual crime statistics from the National Crime Records Bureau covering IPC crimes, SLL cases, crimes against women, cybercrime, and police data for Maharashtra
+description:
+  Maharashtra — Annual crime statistics from the National Crime Records Bureau covering IPC crimes, SLL cases,
+  crimes against women, cybercrime, and police data for Maharashtra
 modality: Tabular (PDF, Excel)
-size: "State & district level, annual"
+size: State & district level, annual
 language:
   - en
   - mr
@@ -17,8 +19,44 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: National Crime Records Bureau (NCRB)
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: crime_type
+    type: string
+    description: Type of crime (IPC category)
+  - field: cases_registered
+    type: int
+    description: Number of cases registered
+  - field: year
+    type: int
+    description: Data year
+starter_idea:
+  Build a crime analytics dashboard for Maharashtra districts showing patterns, trends, and hotspots by crime
+  type.
+build_ideas:
+  - Create a crime prediction model for Maharashtra cities identifying high-risk areas and times for police resource deployment
+  - Develop a women's safety index for Maharashtra districts combining crime statistics with infrastructure and social indicators
+  - Build a judicial efficiency analyzer comparing case clearance rates across Maharashtra districts
+quick_start: '# Download from https://ncrb.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''crime_india.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f''Districts: {mh["District"].nunique()}'')
+
+  print(mh.groupby(''Crime_Type'')[''Cases_Registered''].sum().sort_values(ascending=False).head())
+
+  '

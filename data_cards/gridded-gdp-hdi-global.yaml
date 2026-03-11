@@ -1,0 +1,55 @@
+title: Gridded GDP & HDI (1990-2022)
+homepage: https://www.nature.com/articles/s41597-025-04487-x
+category: economy-labour-finance
+description:
+  Downscaled gridded GDP per capita (PPP) and Human Development Index at admin-2 (municipality/district) level
+  for 1990-2022 using machine learning. Maharashtra districts covered, enabling economic inequality and development tracking.
+modality: tabular-gridded
+size: ~500 MB (global), ~5 MB (MH subset)
+language:
+  - en
+license: CC BY 4.0
+ai_use_cases:
+  - District-level economic inequality mapping
+  - Development program targeting
+  - Investment and industry location analysis
+  - Urbanization-prosperity correlation
+  - Time-series economic growth modeling
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://datadryad.org/dataset/doi:10.5061/dryad.dk1j0
+paper_url: https://www.nature.com/articles/s41597-025-04487-x
+github_url: ""
+organization: Multiple (Academic)
+format: GeoTIFF / CSV
+update_frequency: periodic
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: gdp_ppp
+    type: float
+    description: GDP per capita in PPP dollars
+  - field: hdi
+    type: float
+    description: Human Development Index value
+  - field: latitude
+    type: float
+    description: Grid latitude
+  - field: longitude
+    type: float
+    description: Grid longitude
+starter_idea: Build a sub-district level economic development mapper for Maharashtra using gridded GDP and HDI data.
+build_ideas:
+  - Create an inequality hotspot identifier showing within-district economic disparities across Maharashtra
+  - Develop a development convergence analyzer tracking whether poorer Maharashtra regions are catching up
+  - Build a public investment prioritizer ranking Maharashtra locations by development need using gridded HDI
+quick_start: "import xarray as xr
+
+  # Download from https://datadryad.org/
+
+  print('Gridded GDP/HDI: Check Dryad repository')
+
+  print('Subnational gridded economic data globally')
+
+  "

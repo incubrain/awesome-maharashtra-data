@@ -1,5 +1,5 @@
 title: L3Cube-MahaNER
-homepage: "https://huggingface.co/l3cube-pune/marathi-ner"
+homepage: https://huggingface.co/l3cube-pune/marathi-ner
 category: language-nlp
 description: Manually annotated Marathi named entity recognition dataset with 25,000 sentences tagged across 8 entity classes.
 modality: text
@@ -13,12 +13,35 @@ ai_use_cases:
   - Knowledge graph construction
   - Document understanding
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/l3cube-pune/marathi-ner"
+huggingface_url: https://huggingface.co/l3cube-pune/marathi-ner
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
+github_url: https://github.com/l3cube-pune/MarathiNLP
 organization: L3Cube, Pune
 format: JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: tokens
+    type: list[string]
+    description: List of tokenized words in the sentence
+  - field: ner_tags
+    type: list[int]
+    description: BIO-scheme entity tags per token (8 entity classes including PER, ORG, LOC)
+starter_idea:
+  Build a named entity recognition service to extract person, organization, and location names from Marathi government
+  documents
+build_ideas:
+  - Create a knowledge graph from Marathi news articles using this NER dataset
+  - Develop a Marathi legal document parser that extracts entities for contract analysis
+  - Build a fine-tuned NER model for identifying crop names and agricultural organizations in Marathi advisory texts
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''l3cube-pune/marathi-ner'')
+
+  example = ds[''train''][0]
+
+  print(f"Tokens: {example[''tokens'']}")
+
+  print(f"Tags: {example[''ner_tags'']}")'

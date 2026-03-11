@@ -1,7 +1,9 @@
 title: Maharashtra Budget Documents
-homepage: "https://beams.mahakosh.gov.in/"
+homepage: https://beams.mahakosh.gov.in/
 category: economy-labour-finance
-description: Detailed state budget data including revenue receipts, expenditure by department, plan/non-plan breakdowns, and fiscal indicators
+description:
+  Detailed state budget data including revenue receipts, expenditure by department, plan/non-plan breakdowns, and
+  fiscal indicators
 modality: Tabular (PDF, Excel)
 size: State-level, annual
 language:
@@ -16,8 +18,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Finance Department, Government of Maharashtra
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: department
+    type: string
+    description: Government department name
+  - field: head
+    type: string
+    description: Budget head/category
+  - field: allocation_crore
+    type: float
+    description: Budget allocation in crores
+  - field: expenditure_crore
+    type: float
+    description: Actual expenditure in crores
+  - field: year
+    type: string
+    description: Financial year
+starter_idea: Build a Maharashtra budget analysis tool showing allocation trends, spending patterns, and departmental priorities.
+build_ideas:
+  - Create a budget utilization tracker identifying Maharashtra departments with chronic underspending or overspending
+  - Develop a citizen budget explorer translating complex budget documents into simple visual stories in Marathi
+  - Build a policy priority analyzer comparing budget allocations with stated government objectives for Maharashtra
+quick_start: "# Download from https://finance.maharashtra.gov.in/
+
+  import pandas as pd
+
+  print('Maharashtra Budget: https://finance.maharashtra.gov.in/')
+
+  print('Annual budget documents and expenditure data')
+
+  "

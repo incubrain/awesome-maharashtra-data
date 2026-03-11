@@ -1,0 +1,54 @@
+title: PMGSY GeoSadak
+homepage: https://geosadak-pmgsy.nic.in/opendata/
+category: geospatial-gis
+description: Rural Road Network GIS — National rural road connectivity data with geo-tagged facilities for Maharashtra
+modality: Vector (Shapefile / WMS)
+size: 7.70 lakh+ geo-tagged facilities nationally; road network vectors
+language:
+  - en
+license: OGL-India (compatible with CC-BY, ODbL)
+ai_use_cases:
+  - Rural accessibility analysis
+  - last-mile connectivity modeling
+  - facility location optimization
+  - road network completeness assessment
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/datameet/pmgsy-geosadak
+organization: Ministry of Rural Development, Government of India
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: road_length_km
+    type: float
+    description: Road length in kilometers
+  - field: habitations_connected
+    type: int
+    description: Number of habitations connected
+  - field: status
+    type: string
+    description: Construction status
+starter_idea: Build a rural road connectivity tracker for Maharashtra showing PMGSY progress and remaining gaps.
+build_ideas:
+  - Create a last-mile connectivity prioritizer ranking unconnected Maharashtra habitations by population and distance
+  - Develop a road quality monitoring system using crowd-sourced data to track PMGSY road maintenance needs
+  - Build a rural market access improver correlating PMGSY road connectivity with agricultural price realization
+quick_start: "# Download from https://geosadak-pmgsy.nic.in/
+
+  import pandas as pd
+
+  print('PMGSY GeoSadak: https://geosadak-pmgsy.nic.in/')
+
+  print('Rural road network data under PMGSY')
+
+  "

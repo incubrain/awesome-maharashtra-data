@@ -1,0 +1,35 @@
+title: AI4Bharat IndicCorp v1 (mr)
+homepage: https://indicnlp.ai4bharat.org/corpora/
+category: language-nlp
+description: AI4Bharat IndicCorp v1 (mr) dataset for language nlp.
+modality: text
+size: 551M tokens
+language:
+  - mr
+license: CC-BY-NC-4.0
+ai_use_cases:
+  - Language model pretraining
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Marathi text document from web crawl
+starter_idea:
+  Pre-train Marathi word embeddings on IndicCorp v1 to create static and contextual embeddings for downstream
+  NLP tasks.
+build_ideas:
+  - Create a Marathi language model pre-training pipeline comparing v1 and v2 corpus quality for downstream task performance
+  - Develop a Marathi domain classifier trained on web text to automatically categorize documents by topic
+  - Build a Marathi text deduplication tool to identify and remove near-duplicate content across corpora
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicCorp-v1', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Text: {ex['text'][:100]}...\\n\")\n    if i >= 4: break\n"

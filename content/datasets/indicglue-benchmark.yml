@@ -1,7 +1,9 @@
 title: IndicGLUE Benchmark
-homepage: "https://huggingface.co/datasets/ai4bharat/indic_glue"
+homepage: https://huggingface.co/datasets/ai4bharat/indic_glue
 category: benchmarks-fairness-dialects-tools
-description: Marathi Subset — Natural language understanding benchmark for 11 Indian languages including Marathi, covering tasks like news categorisation, headline prediction, and paraphrase detection
+description:
+  Marathi Subset — Natural language understanding benchmark for 11 Indian languages including Marathi, covering
+  tasks like news categorisation, headline prediction, and paraphrase detection
 modality: Text (Marathi)
 size: Multi-task, Marathi subset
 language:
@@ -11,12 +13,36 @@ ai_use_cases:
   - NLU model evaluation
   - Marathi language model benchmarking
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/indic_glue"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/indic_glue
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: task
+    type: string
+    description: NLU task name
+  - field: text
+    type: string
+    description: Input text for the task
+  - field: label
+    type: string
+    description: Task-specific label
+starter_idea: Run comprehensive NLU benchmarks on Marathi models using IndicGLUE to identify areas needing improvement.
+build_ideas:
+  - Create an automated Marathi model evaluation suite that benchmarks new models on all IndicGLUE tasks
+  - Develop a model selection guide recommending the best Marathi NLP model for each specific task type
+  - Build a Marathi NLU leaderboard website tracking model performance over time on IndicGLUE benchmarks
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''ai4bharat/indic_glue'', ''wnli.mr'')
+
+  print(f''Tasks available for Marathi (mr)'')
+
+  print(f''WNLI samples: {len(ds["train"])}'')
+
+  '

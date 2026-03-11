@@ -1,5 +1,5 @@
 title: IIT Bombay Maharashtra Census Shapefiles
-homepage: "https://www.cse.iitb.ac.in/~pocra/MahaCensus_shapefile_data1.2/MaharashtraCensus.html"
+homepage: https://www.cse.iitb.ac.in/~pocra/MahaCensus_shapefile_data1.2/MaharashtraCensus.html
 category: geospatial-gis
 description: District and taluka boundary shapefiles with 600+ census attributes per village
 modality: Vector (Shapefile)
@@ -17,8 +17,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: IIT Bombay
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: geometry
+    type: Polygon
+    description: Administrative boundary polygon
+  - field: name
+    type: string
+    description: Area name
+  - field: census_code
+    type: string
+    description: Census area code
+  - field: level
+    type: string
+    description: Administrative level (district, taluka, village)
+starter_idea: Build a multi-level Maharashtra administrative boundary service API for GIS applications and data visualization.
+build_ideas:
+  - Create a Maharashtra census data visualization tool overlaying demographic data on administrative boundaries
+  - Develop a constituency boundary mapper aligning census boundaries with electoral wards for political analysis
+  - Build a development indicator dashboard using census shapefiles as the geographic framework for Maharashtra
+quick_start: "import geopandas as gpd
+
+  # Download from IIT Bombay research repository
+
+  # gdf = gpd.read_file('maharashtra_census_shapefiles.shp')
+
+  print('IIT Bombay Maharashtra Census Shapefiles')
+
+  print('Contact IIT Bombay GIS lab for access')
+
+  "

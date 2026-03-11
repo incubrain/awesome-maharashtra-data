@@ -1,0 +1,53 @@
+title: Maharashtra Government Resolutions (orgpedia/mahGRs)
+homepage: https://github.com/orgpedia/mahGRs
+category: governance-census-demographics-legal
+description:
+  Full text of ~47,000 Government Resolutions from 33 departments in Marathi and English (AI-translated), updated
+  weekly
+modality: Text (Marathi + English)
+size: ~47,000 GRs, bilingual
+language:
+  - en
+  - mr
+license: CC BY 4.0
+ai_use_cases:
+  - Government policy RAG
+  - legal document search
+  - administrative decision mining
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/orgpedia/mahGRs
+organization: Orgpedia Foundation / Government of Maharashtra
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: gr_id
+    type: string
+    description: GR identifier
+  - field: department
+    type: string
+    description: Department name
+  - field: entities
+    type: list[string]
+    description: Named entities extracted from GR
+  - field: structured_data
+    type: object
+    description: Structured fields extracted from GR text
+starter_idea: Build a structured knowledge base from Maharashtra GRs using Orgpedia's entity-extracted data for policy research.
+build_ideas:
+  - Create a government officer appointment tracker using entity extraction from GR transfers and postings
+  - Develop a budget allocation tracker extracting financial figures from GRs across Maharashtra departments
+  - Build a policy timeline visualizer showing the evolution of Maharashtra government policies through GR sequences
+quick_start: "# Orgpedia Maharashtra GRs
+
+  import json
+
+  print('Orgpedia MahaGRs: Structured Maharashtra GR data')
+
+  print('Access from Orgpedia GitHub repository')
+
+  "

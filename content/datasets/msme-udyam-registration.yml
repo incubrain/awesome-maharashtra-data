@@ -1,7 +1,9 @@
 title: MSME Udyam Registration
-homepage: "https://www.data.gov.in/resource/list-msme-registered-units-under-udyam"
+homepage: https://www.data.gov.in/resource/list-msme-registered-units-under-udyam
 category: economy-labour-finance
-description: Maharashtra — Enterprise-level registration data for micro, small, and medium enterprises in Maharashtra including district-wise distribution and sector classification
+description:
+  Maharashtra — Enterprise-level registration data for micro, small, and medium enterprises in Maharashtra including
+  district-wise distribution and sector classification
 modality: Tabular (CSV, dashboard)
 size: 8.9 lakh+ MSMEs in Maharashtra
 language:
@@ -16,8 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Ministry of Micro, Small and Medium Enterprises, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: enterprise_type
+    type: string
+    description: Enterprise category (micro, small, medium)
+  - field: district
+    type: string
+    description: District of registration
+  - field: sector
+    type: string
+    description: Industry sector
+  - field: investment_lakh
+    type: float
+    description: Investment in plant and machinery in lakhs
+starter_idea:
+  Build an MSME ecosystem analyzer for Maharashtra showing enterprise density, sector distribution, and growth
+  trends.
+build_ideas:
+  - Create a supply chain cluster mapper identifying MSME agglomerations and potential industrial cluster zones in Maharashtra
+  - Develop a business survival predictor for Maharashtra MSMEs based on size, sector, and location characteristics
+  - Build a government scheme matchmaker connecting Maharashtra MSMEs with relevant subsidies and support programs
+quick_start: "# Udyam Registration data
+
+  import pandas as pd
+
+  print('Udyam Registration: https://udyamregistration.gov.in/')
+
+  print('MSME registration data for Maharashtra')
+
+  "

@@ -1,7 +1,9 @@
 title: AgMarkNet Daily Market Prices
-homepage: "https://agmarknet.gov.in/"
+homepage: https://agmarknet.gov.in/
 category: agriculture-rural
-description: Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs. Also available via CEDA Ashoka cleaned API (2000-2023)
+description:
+  Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs. Also available
+  via CEDA Ashoka cleaned API (2000-2023)
 modality: Tabular (CSV/API)
 size: Millions of daily price records
 language:
@@ -16,8 +18,50 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Directorate of Marketing & Inspection, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: market
+    type: string
+    description: Market/mandi name
+  - field: commodity
+    type: string
+    description: Agricultural commodity name
+  - field: variety
+    type: string
+    description: Variety or grade of commodity
+  - field: arrival_date
+    type: date
+    description: Date of market arrival
+  - field: min_price
+    type: float
+    description: Minimum price in Rs/quintal
+  - field: max_price
+    type: float
+    description: Maximum price in Rs/quintal
+  - field: modal_price
+    type: float
+    description: Most common trading price in Rs/quintal
+starter_idea:
+  Build a price prediction model for Maharashtra agricultural markets that forecasts commodity prices based on
+  historical trends.
+build_ideas:
+  - Create a farmer-facing mobile app showing real-time mandi prices across Maharashtra with best-market recommendations
+  - Develop a price anomaly detector that alerts authorities about unusual price movements indicating market manipulation
+  - Build a crop selling timing advisor that recommends optimal sell dates based on seasonal price patterns
+quick_start: '# Download from https://agmarknet.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''agmarknet_prices.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f"Maharashtra records: {len(mh)}")
+
+  print(mh.groupby(''Commodity'')[''Modal_Price''].mean().sort_values(ascending=False).head(10))
+
+  '

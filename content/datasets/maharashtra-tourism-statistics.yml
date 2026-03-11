@@ -1,7 +1,9 @@
 title: Maharashtra Tourism Statistics
-homepage: "https://www.maharashtratourism.gov.in/"
+homepage: https://www.maharashtratourism.gov.in/
 category: culture-media-tourism-heritage
-description: Official tourism data from the Maharashtra Tourism Development Corporation covering domestic and international visitor numbers, tourist destinations, and accommodation statistics
+description:
+  Official tourism data from the Maharashtra Tourism Development Corporation covering domestic and international
+  visitor numbers, tourist destinations, and accommodation statistics
 modality: Tabular (PDF, web)
 size: State-level, annual
 language:
@@ -16,8 +18,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Maharashtra Tourism Development Corporation
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: destination
+    type: string
+    description: Tourist destination name
+  - field: district
+    type: string
+    description: District location
+  - field: domestic_visitors
+    type: int
+    description: Number of domestic tourists
+  - field: foreign_visitors
+    type: int
+    description: Number of foreign tourists
+  - field: year
+    type: int
+    description: Statistics year
+starter_idea: Build a tourism analytics dashboard for Maharashtra showing visitor patterns, seasonal trends, and revenue estimates.
+build_ideas:
+  - Create a tourism demand forecaster for Maharashtra destinations to optimize infrastructure and staffing
+  - Develop an unexplored destination recommender identifying under-visited Maharashtra sites with high tourism potential
+  - Build a tourist circuit optimizer creating multi-day itineraries maximizing Maharashtra's tourism attractions
+quick_start: "# Maharashtra Tourism statistics
+
+  import pandas as pd
+
+  print('Maharashtra Tourism: https://tourism.maharashtra.gov.in/')
+
+  print('Visitor statistics by destination')
+
+  "

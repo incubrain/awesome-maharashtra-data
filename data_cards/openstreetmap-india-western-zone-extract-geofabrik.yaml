@@ -1,0 +1,48 @@
+title: OpenStreetMap India Western Zone Extract (Geofabrik)
+homepage: https://download.geofabrik.de/asia/india/western-zone.html
+category: geospatial-gis
+description: Crowdsourced vector map data including roads, buildings, POIs, land use, and waterways covering Maharashtra
+modality: Vector (OSM PBF / Shapefile / GeoPackage)
+size: 196 MB (PBF); 429 MB (Shapefile); updated daily
+language:
+  - en
+license: ODbL 1.0
+ai_use_cases:
+  - Road network analysis
+  - POI density mapping
+  - building footprint extraction
+  - routing and accessibility modeling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: OpenStreetMap Foundation
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: osm_id
+    type: int
+    description: OSM feature identifier
+  - field: geometry
+    type: various
+    description: Spatial geometry
+  - field: highway
+    type: string
+    description: Road classification tag
+starter_idea: Build a Maharashtra road condition and coverage analyzer using Geofabrik's pre-processed OSM data extracts.
+build_ideas:
+  - Create a last-mile connectivity analyzer for Maharashtra villages using OSM road network data
+  - Develop a route optimization service for Maharashtra agricultural supply chains using OSM road graph
+  - Build a map completeness tracker identifying areas of Maharashtra needing more OSM mapping contributions
+quick_start: "import geopandas as gpd
+
+  # Download from https://download.geofabrik.de/asia/india.html
+
+  print('Geofabrik India Extract: https://download.geofabrik.de/asia/india.html')
+
+  print('Pre-processed OSM data for Western India zone')
+
+  "

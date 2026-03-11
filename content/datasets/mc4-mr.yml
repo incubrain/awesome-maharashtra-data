@@ -1,7 +1,9 @@
 title: mC4 (Marathi)
-homepage: "https://huggingface.co/datasets/mc4"
+homepage: https://huggingface.co/datasets/mc4
 category: language-nlp
-description: Marathi subset of the multilingual Colossal Clean Crawled Corpus (mC4) with approximately 7.8 million documents and 14 billion raw tokens, used for large-scale language model pretraining.
+description:
+  Marathi subset of the multilingual Colossal Clean Crawled Corpus (mC4) with approximately 7.8 million documents
+  and 14 billion raw tokens, used for large-scale language model pretraining.
 modality: text
 size: ~7.8M documents, ~14B tokens (raw)
 language:
@@ -13,7 +15,7 @@ ai_use_cases:
   - Unsupervised representation learning
   - Marathi LLM training
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/mc4"
+huggingface_url: https://huggingface.co/datasets/mc4
 direct_download_url: ""
 paper_url: ""
 github_url: ""
@@ -22,3 +24,25 @@ format: JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Web-crawled Marathi text document
+  - field: timestamp
+    type: string
+    description: Crawl timestamp of the document
+  - field: url
+    type: string
+    description: Source URL of the crawled page
+starter_idea:
+  Pre-train a Marathi-specific language model on the mC4 corpus to create a foundation model for downstream NLP
+  tasks like classification and QA.
+build_ideas:
+  - Create a Marathi domain classifier that categorizes web content by topic (news, government, education, commerce) for targeted
+    corpus curation
+  - Develop a Marathi text quality scorer that filters high-quality documents from mC4 for cleaner language model training
+  - Build a Marathi web content analyzer that identifies emerging topics and trends from the crawled corpus for media monitoring
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('mc4', 'mr', split='train', streaming=True)\nfor i, ex\
+  \ in enumerate(ds):\n    print(f\"URL: {ex['url'][:60]}\")\n    print(f\"Text: {ex['text'][:100]}...\\n\")\n    if i >=\
+  \ 4: break\n"

@@ -1,7 +1,10 @@
 title: GloFAS Global Flood Forecasting (Copernicus)
-homepage: "https://www.globalfloods.eu/"
+homepage: https://www.globalfloods.eu/
 category: environment-climate-disaster
-description: Global Flood Awareness System providing river discharge reanalysis (1979-present) and 30-day probabilistic flood forecasts at ~10km resolution. Maharashtra subset covers Krishna, Godavari, Bhima, and Tapi river basins for operational flood early warning.
+description:
+  Global Flood Awareness System providing river discharge reanalysis (1979-present) and 30-day probabilistic flood
+  forecasts at ~10km resolution. Maharashtra subset covers Krishna, Godavari, Bhima, and Tapi river basins for operational
+  flood early warning.
 modality: raster-gridded
 size: ~50 GB (global reanalysis), ~1 GB (MH river basins)
 language:
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical"
+direct_download_url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical
 paper_url: ""
 github_url: ""
 organization: ECMWF / Copernicus EMS
@@ -27,13 +30,29 @@ last_verified: "2026-03-07"
 schema:
   - field: latitude
     type: float
-    description: "Grid cell latitude (0.05° resolution)"
+    description: Grid cell latitude (0.05° resolution)
   - field: longitude
     type: float
-    description: "Grid cell longitude (0.05° resolution)"
+    description: Grid cell longitude (0.05° resolution)
   - field: time
     type: datetime
-    description: "Forecast or reanalysis time step"
+    description: Forecast or reanalysis time step
   - field: dis24
     type: float
-    description: "River discharge (m³/s) — 24-hour mean"
+    description: River discharge (m³/s) — 24-hour mean
+starter_idea: Build a 30-day flood forecasting system for Maharashtra rivers using GloFAS global discharge predictions.
+build_ideas:
+  - Create a Maharashtra dam inflow forecaster using GloFAS discharge predictions for reservoir management
+  - Develop a flood insurance risk model using GloFAS return period estimates for Maharashtra river basins
+  - Build a crop flood damage predictor combining GloFAS forecasts with crop calendars and field locations
+quick_start: "import cdsapi
+
+  # c = cdsapi.Client()
+
+  # c.retrieve('cems-glofas-historical', {...})
+
+  print('GloFAS: https://cds.climate.copernicus.eu/')
+
+  print('Global flood forecasting at 0.05 degree resolution')
+
+  "

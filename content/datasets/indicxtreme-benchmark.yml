@@ -1,7 +1,9 @@
 title: IndicXTREME Benchmark
-homepage: "https://huggingface.co/collections/ai4bharat/indicxtreme-66c59f576386ba2955650030"
+homepage: https://huggingface.co/collections/ai4bharat/indicxtreme-66c59f576386ba2955650030
 category: benchmarks-fairness-dialects-tools
-description: Marathi — Comprehensive NLU benchmark of 9 tasks across 20 Indian languages including Marathi, covering classification, structure prediction, QA, and sentence retrieval
+description:
+  Marathi — Comprehensive NLU benchmark of 9 tasks across 20 Indian languages including Marathi, covering classification,
+  structure prediction, QA, and sentence retrieval
 modality: Text (Marathi)
 size: 9 tasks, 105 evaluation sets
 language:
@@ -11,12 +13,36 @@ ai_use_cases:
   - Comprehensive Marathi NLU evaluation
   - model comparison across tasks
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/collections/ai4bharat/indicxtreme-66c59f576386ba2955650030"
+huggingface_url: https://huggingface.co/collections/ai4bharat/indicxtreme-66c59f576386ba2955650030
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/AI4Bharat/IndicBERT"
-organization: ""
-format: ""
+github_url: https://github.com/AI4Bharat/IndicBERT
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: task
+    type: string
+    description: Evaluation task name
+  - field: input
+    type: string
+    description: Task input text in Marathi
+  - field: target
+    type: string
+    description: Expected output or label
+starter_idea: Evaluate Marathi language models on IndicXTREME's diverse task suite for comprehensive performance assessment.
+build_ideas:
+  - Create a multi-task Marathi model trained on all IndicXTREME tasks for a single deployable system
+  - Develop a task difficulty ranker identifying which NLP tasks remain hardest for Marathi models
+  - Build a cross-lingual transfer effectiveness study comparing Marathi performance with related Indic languages
+quick_start: "# IndicXTREME benchmark
+
+  from datasets import load_dataset
+
+  print('IndicXTREME: Comprehensive Indic NLP benchmark')
+
+  print('Multiple tasks including Marathi')
+
+  "

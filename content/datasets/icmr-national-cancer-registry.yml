@@ -1,7 +1,9 @@
 title: ICMR National Cancer Registry
-homepage: "https://ncdirindia.org/Reports.aspx"
+homepage: https://ncdirindia.org/Reports.aspx
 category: health-nutrition
-description: Maharashtra — Population-based cancer registry data from multiple Maharashtra registries (Mumbai, Pune, Aurangabad, Nagpur, Barshi rural)
+description:
+  Maharashtra — Population-based cancer registry data from multiple Maharashtra registries (Mumbai, Pune, Aurangabad,
+  Nagpur, Barshi rural)
 modality: Tabular (PDF, web)
 size: Multi-year, 7+ registries
 language:
@@ -16,8 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Indian Council of Medical Research
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: registry
+    type: string
+    description: Cancer registry name and location
+  - field: cancer_site
+    type: string
+    description: Cancer type/site
+  - field: incidence_rate
+    type: float
+    description: Age-adjusted incidence rate per 100,000
+  - field: gender
+    type: string
+    description: Gender (male, female)
+starter_idea: Build a cancer burden analysis tool for Maharashtra showing trends in cancer types and regional variations.
+build_ideas:
+  - Create a cancer screening prioritization model identifying high-risk populations in Maharashtra districts
+  - Develop a cancer treatment facility planner optimizing oncology service locations based on incidence data
+  - Build a cancer risk factor analyzer correlating incidence rates with environmental and lifestyle factors in Maharashtra
+quick_start: '# Download from https://ncdirindia.org/
+
+  import pandas as pd
+
+  df = pd.read_csv(''ncr_data.csv'')
+
+  print(f''Registries: {df["Registry"].nunique()}'')
+
+  print(df.groupby(''Cancer_Site'')[''Incidence_Rate''].mean().sort_values(ascending=False).head())
+
+  '

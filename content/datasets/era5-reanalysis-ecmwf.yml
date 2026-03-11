@@ -1,7 +1,9 @@
 title: ERA5 Reanalysis (ECMWF)
-homepage: "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download"
+homepage: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download
 category: environment-climate-disaster
-description: Maharashtra — Hourly global climate reanalysis data (temperature, precipitation, wind, humidity) at 0.25 degree resolution covering Maharashtra from 1940 to present
+description:
+  Maharashtra — Hourly global climate reanalysis data (temperature, precipitation, wind, humidity) at 0.25 degree
+  resolution covering Maharashtra from 1940 to present
 modality: Gridded (NetCDF, GRIB)
 size: Hourly, 0.25deg grid, 1940–present
 language:
@@ -16,8 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: European Centre for Medium-Range Weather Forecasts (ECMWF)
+format: Various
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: temperature_2m
+    type: float
+    description: 2-meter air temperature in Kelvin
+  - field: precipitation
+    type: float
+    description: Total precipitation in meters
+  - field: wind_speed
+    type: float
+    description: Wind speed at 10m in m/s
+  - field: time
+    type: datetime
+    description: Timestamp (hourly resolution)
+starter_idea: Build a historical weather analysis tool for Maharashtra agriculture using 40+ years of ERA5 reanalysis data.
+build_ideas:
+  - Create a crop-weather model correlating ERA5 climate variables with Maharashtra crop yields for climate-smart farming
+  - Develop a heatwave prediction system for Maharashtra cities using ERA5 temperature patterns and trends
+  - Build a renewable energy assessment tool using ERA5 wind and solar radiation data for Maharashtra site selection
+quick_start: "import cdsapi
+
+  c = cdsapi.Client()
+
+  # c.retrieve('reanalysis-era5-single-levels', {...})
+
+  print('ERA5 reanalysis: https://cds.climate.copernicus.eu/')
+
+  print('Register for CDS API access')
+
+  "

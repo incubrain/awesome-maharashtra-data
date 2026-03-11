@@ -1,0 +1,59 @@
+title: APEDA AgriXchange
+homepage: https://agriexchange.apeda.gov.in/
+category: agriculture-rural
+description:
+  Agricultural and processed food export statistics by commodity, state, and destination country. Includes Maharashtra
+  production and export data
+modality: Tabular (web/XLS)
+size: Multi-year; all APEDA commodities
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Export trend forecasting
+  - supply chain optimisation
+  - market diversification analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Agricultural and Processed Food Products Export Development Authority (APEDA)
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: product
+    type: string
+    description: Agricultural export product name
+  - field: country
+    type: string
+    description: Destination country
+  - field: quantity_mt
+    type: float
+    description: Export quantity in metric tonnes
+  - field: value_lakh
+    type: float
+    description: Export value in lakhs of rupees
+  - field: year
+    type: int
+    description: Export year
+starter_idea:
+  Build an agricultural export analytics dashboard for Maharashtra products showing global demand patterns and
+  growth opportunities.
+build_ideas:
+  - Create an export opportunity predictor for Maharashtra farmers identifying high-demand international markets for their crops
+  - Develop a supply chain optimizer that connects Maharashtra agricultural exporters with the most profitable trade routes
+  - Build a trade policy impact analyzer modeling how tariff changes affect Maharashtra's agricultural exports
+quick_start: '# Download from https://agriexchange.apeda.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''apeda_exports.csv'')
+
+  print(f"Total records: {len(df)}")
+
+  print(df.groupby(''Product'')[''Value_Lakh''].sum().sort_values(ascending=False).head(10))
+
+  '

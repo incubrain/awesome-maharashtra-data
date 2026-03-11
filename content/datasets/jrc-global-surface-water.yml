@@ -1,7 +1,9 @@
 title: JRC Global Surface Water (1984-2021)
-homepage: "https://global-surface-water.appspot.com/"
+homepage: https://global-surface-water.appspot.com/
 category: environment-climate-disaster
-description: Maps of surface water location and temporal distribution from 1984-2021 derived from Landsat imagery at 30m resolution. Maharashtra subset reveals reservoir levels, river width changes, seasonal wetlands, and water body loss over 37 years.
+description:
+  Maps of surface water location and temporal distribution from 1984-2021 derived from Landsat imagery at 30m resolution.
+  Maharashtra subset reveals reservoir levels, river width changes, seasonal wetlands, and water body loss over 37 years.
 modality: raster-imagery
 size: ~150 GB (global), ~2 GB (MH subset)
 language:
@@ -16,7 +18,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://global-surface-water.appspot.com/download"
+direct_download_url: https://global-surface-water.appspot.com/download
 paper_url: ""
 github_url: ""
 organization: European Commission JRC
@@ -27,16 +29,32 @@ last_verified: "2026-03-07"
 schema:
   - field: occurrence
     type: integer
-    description: "Percentage of time water was present (0-100) over 1984-2021"
+    description: Percentage of time water was present (0-100) over 1984-2021
   - field: change
     type: integer
-    description: "Change in water occurrence intensity between periods"
+    description: Change in water occurrence intensity between periods
   - field: seasonality
     type: integer
-    description: "Number of months water is present per year"
+    description: Number of months water is present per year
   - field: recurrence
     type: integer
-    description: "Frequency of water return in inter-annual cycle"
+    description: Frequency of water return in inter-annual cycle
   - field: transitions
     type: categorical
-    description: "Class of water presence transition (permanent, seasonal, new, lost, etc.)"
+    description: Class of water presence transition (permanent, seasonal, new, lost, etc.)
+starter_idea: Build a Maharashtra water body dynamics analyzer tracking seasonal and long-term changes in surface water extent.
+build_ideas:
+  - Create a reservoir capacity estimator for Maharashtra dams using satellite-derived water surface area time-series
+  - Develop a wetland conservation monitor tracking degradation of Maharashtra's lakes and marshes
+  - Build a waterlogging risk mapper identifying areas in Maharashtra with increasing surface water frequency
+quick_start: "import ee
+
+  # Google Earth Engine
+
+  # gsw = ee.Image('JRC/GSW1_4/GlobalSurfaceWater')
+
+  print('JRC Global Surface Water: https://global-surface-water.appspot.com/')
+
+  print('Also available on Google Earth Engine')
+
+  "

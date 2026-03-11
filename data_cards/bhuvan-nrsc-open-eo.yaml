@@ -62,4 +62,39 @@ update_frequency: "monthly"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "tile_id"
+    type: "string"
+    description: "Unique tile/scene identifier for the satellite image"
+  - field: "acquisition_date"
+    type: "date"
+    description: "Date the satellite image was captured"
+  - field: "sensor"
+    type: "string"
+    description: "Sensor type (LISS-III, AWiFS, Cartosat)"
+  - field: "resolution_m"
+    type: "float"
+    description: "Spatial resolution in meters"
+  - field: "bands"
+    type: "list[string]"
+    description: "Spectral bands available (e.g., Green, Red, NIR, SWIR)"
+
+starter_idea: "Build a crop health monitoring system using NDVI time-series from LISS-III imagery to detect drought stress in Maharashtra's rainfed agriculture zones."
+
+build_ideas:
+  - "Create an automated flood extent mapper for Maharashtra using pre/post monsoon satellite imagery with change detection algorithms"
+  - "Develop a deforestation monitoring dashboard for Western Ghats using multi-temporal satellite data with deep learning classification"
+  - "Build a solar farm site suitability model combining Cartosat DEM with land cover classification from LISS-III imagery"
+
+quick_start: |
+  # Register at https://bhuvan.nrsc.gov.in/ for data access
+  import rasterio
+  import numpy as np
+  # After downloading a LISS-III GeoTIFF for Maharashtra:
+  # src = rasterio.open('liss3_maharashtra.tif')
+  # nir, red = src.read(4), src.read(3)
+  # ndvi = (nir.astype(float) - red) / (nir + red + 1e-10)
+  # print(f"NDVI range: {ndvi.min():.2f} to {ndvi.max():.2f}")
+  print("Register at https://bhuvan.nrsc.gov.in/ to download GeoTIFF tiles")

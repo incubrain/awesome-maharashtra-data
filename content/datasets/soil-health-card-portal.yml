@@ -1,7 +1,9 @@
 title: Soil Health Card Portal
-homepage: "https://soilhealth.dac.gov.in/soil-health-map/MAHARASHTRA"
+homepage: https://soilhealth.dac.gov.in/soil-health-map/MAHARASHTRA
 category: agriculture-rural
-description: Maharashtra — Soil test results for Maharashtra farms including N, P, K, pH, EC, organic carbon, and micronutrients at village and district level
+description:
+  Maharashtra — Soil test results for Maharashtra farms including N, P, K, pH, EC, organic carbon, and micronutrients
+  at village and district level
 modality: Tabular (web)
 size: Millions of soil samples across MH
 language:
@@ -16,8 +18,45 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Department of Agriculture, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: village_code
+    type: string
+    description: Village administrative code
+  - field: nitrogen_mg_kg
+    type: float
+    description: Available nitrogen in mg/kg
+  - field: phosphorus_mg_kg
+    type: float
+    description: Available phosphorus in mg/kg
+  - field: potassium_mg_kg
+    type: float
+    description: Available potassium in mg/kg
+  - field: ph
+    type: float
+    description: Soil pH value
+  - field: organic_carbon_percent
+    type: float
+    description: Percentage of organic carbon
+starter_idea: Build a fertilizer recommendation engine for Maharashtra farmers based on soil test results and crop requirements.
+build_ideas:
+  - Create a soil health dashboard showing nutrient deficiency hotspots across Maharashtra districts
+  - Develop a precision fertilizer calculator that optimizes NPK application rates based on soil tests and target yields
+  - Build a soil health trend tracker analyzing how Maharashtra's soil quality changes over time
+quick_start: '# Download from https://soilhealth.dac.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''soil_health_card.csv'')
+
+  print(f"Total samples: {len(df)}")
+
+  deficient = df[df[''Phosphorus_mg_kg''] < 12]
+
+  print(f"P-deficient samples: {len(deficient)}")
+
+  '

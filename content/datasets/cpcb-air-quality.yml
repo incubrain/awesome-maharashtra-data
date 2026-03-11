@@ -1,7 +1,9 @@
 title: CPCB Air Quality
-homepage: "https://cpcb.nic.in/real-time-air-qulity-data/"
+homepage: https://cpcb.nic.in/real-time-air-qulity-data/
 category: health-nutrition
-description: Maharashtra Stations — Continuous ambient air quality monitoring data (PM2.5, PM10, NO2, SO2, O3) from CAAQMS stations across Maharashtra cities
+description:
+  Maharashtra Stations — Continuous ambient air quality monitoring data (PM2.5, PM10, NO2, SO2, O3) from CAAQMS
+  stations across Maharashtra cities
 modality: Tabular (CSV, API)
 size: Hourly, 20+ Maharashtra stations
 language:
@@ -16,8 +18,42 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Central Pollution Control Board, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: station
+    type: string
+    description: Monitoring station name
+  - field: city
+    type: string
+    description: City name
+  - field: pm25
+    type: float
+    description: PM2.5 concentration in ug/m3
+  - field: pm10
+    type: float
+    description: PM10 concentration in ug/m3
+  - field: date
+    type: date
+    description: Measurement date
+starter_idea: Build an air quality forecasting model for Maharashtra cities that predicts pollution levels 48 hours ahead.
+build_ideas:
+  - Create a health advisory system that correlates air quality with hospital admission data for Maharashtra cities
+  - Develop a pollution source attribution model identifying major contributors to poor air quality in Mumbai and Pune
+  - Build a citizen-facing air quality app with hyper-local predictions and health recommendations for Maharashtra
+quick_start: '# Download from https://cpcb.nic.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''cpcb_air_quality.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f''Stations: {mh["Station"].nunique()}'')
+
+  print(mh.groupby(''City'')[''PM25''].mean().sort_values(ascending=False))
+
+  '

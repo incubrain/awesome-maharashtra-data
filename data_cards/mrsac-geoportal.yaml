@@ -1,66 +1,58 @@
----
-# Awesome Marathi Datasets - Data Card
-# MRSAC Geoportal
-
-# (required) Human-readable dataset name
-title: "MRSAC Geoportal"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
-homepage: "https://geoportal.mrsac.org.in/explore/"
-
-# (required) Which category file this belongs to (without number prefix)
-category: "geospatial-gis"
-
-# (required) One-line description of the dataset
-description: "Maharashtra Remote Sensing Application Centre geospatial layers covering land use, admin boundaries, watersheds, and thematic maps for all 36 districts at 1:50K scale."
-
-# (required) Data modality
-modality: "geospatial"
-
-# (required) Approximate size with units
-size: "50+ layers; state-wide coverage at 1:50K scale"
-
-# (required) ISO 639-1 language codes
+title: MRSAC Geoportal
+homepage: https://geoportal.mrsac.org.in/explore/
+category: geospatial-gis
+description:
+  Maharashtra Remote Sensing Application Centre geospatial layers covering
+  land use, admin boundaries, watersheds, and thematic maps for all 36 districts at
+  1:50K scale.
+modality: geospatial
+size: 50+ layers; state-wide coverage at 1:50K scale
 language:
   - mr
   - en
-
-# (required) License identifier
-license: "Government-Open"
-
-# HuggingFace dataset URL (if available)
+license: Government-Open
 huggingface_url: ""
-
-# Direct download URL (if different from homepage)
-direct_download_url: "https://mrsac.gov.in/MRSAC/"
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
+direct_download_url: https://mrsac.gov.in/MRSAC/
 paper_url: ""
-
-# GitHub repository URL (if applicable)
 github_url: ""
-
-# Organization or author that created/maintains the dataset
-organization: "Maharashtra Remote Sensing Application Centre (MRSAC), Government of Maharashtra"
-
-# (required) List of AI/ML use cases this dataset enables
+organization:
+  Maharashtra Remote Sensing Application Centre (MRSAC), Government of
+  Maharashtra
 ai_use_cases:
-  - "Land use classification"
-  - "Drought monitoring"
-  - "Watershed delineation"
-  - "Urban sprawl analysis"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - Land use classification
+  - Drought monitoring
+  - Watershed delineation
+  - Urban sprawl analysis
 maharashtra_specific: true
-
-# Format of the data files
-format: "Shapefile"
-
-# How frequently the data is updated (if applicable)
-update_frequency: "annual"
-
-# BibTeX citation (if available)
+format: Shapefile
+update_frequency: annual
 citation: ""
-
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
 last_verified: "2026-03-07"
+schema:
+  - field: geometry
+    type: geojson
+    description: Polygon or multipolygon boundary geometry
+  - field: layer_name
+    type: string
+    description: "Thematic layer (e.g. LULC, admin boundaries, watersheds)"
+  - field: district
+    type: string
+    description: Maharashtra district name
+  - field: attribute
+    type: string
+    description: "Layer-specific attribute (land use class, watershed code, etc.)"
+starter_idea: "Create a visual dashboard showing land cover changes to track deforestation or illegal mining in Maharashtra."
+build_ideas:
+  - "Build a change-detection alert system that compares annual land use layers and flags rapid conversions for environmental enforcement"
+  - "Create a precision agriculture app overlaying MRSAC land use with soil and crop data for optimized resource allocation"
+  - "Develop an urban sprawl tracker for Maharashtra cities using time-series land use layers"
+quick_start: |
+  # Access WMS layers from MRSAC Geoportal
+  import folium
+  m = folium.Map(location=[19.5, 76], zoom_start=7)
+  folium.WmsTileLayer(
+      url='https://geoportal.mrsac.org.in/geoserver/wms',
+      layers='mrsac:lulc', fmt='image/png', transparent=True,
+      name='MRSAC Land Use'
+  ).add_to(m)
+  m.save('maharashtra_landuse.html')

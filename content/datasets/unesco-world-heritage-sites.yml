@@ -1,7 +1,9 @@
 title: UNESCO World Heritage Sites
-homepage: "https://whc.unesco.org/"
+homepage: https://whc.unesco.org/
 category: culture-media-tourism-heritage
-description: "Maharashtra — Detailed documentation for Maharashtra's UNESCO World Heritage Sites including Ajanta Caves, Ellora Caves, Elephanta Caves, Chhatrapati Shivaji Terminus, and Victorian Gothic/Art Deco ensembles of Mumbai"
+description:
+  Maharashtra — Detailed documentation for Maharashtra's UNESCO World Heritage Sites including Ajanta Caves, Ellora
+  Caves, Elephanta Caves, Chhatrapati Shivaji Terminus, and Victorian Gothic/Art Deco ensembles of Mumbai
 modality: Text, Images (web)
 size: 5 sites
 language:
@@ -16,8 +18,40 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: UNESCO
+format: PNG/JPEG
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: site_name
+    type: string
+    description: Heritage site name
+  - field: country
+    type: string
+    description: Country location
+  - field: category
+    type: string
+    description: Category (Cultural, Natural, Mixed)
+  - field: latitude
+    type: float
+    description: Site latitude
+  - field: longitude
+    type: float
+    description: Site longitude
+starter_idea:
+  Build a Maharashtra World Heritage tourism platform highlighting Ajanta, Ellora, Chhatrapati Shivaji Terminus,
+  and other sites.
+build_ideas:
+  - Create a heritage site visitor flow optimizer managing tourist capacity at Maharashtra's World Heritage sites
+  - Develop a buffer zone monitoring system tracking development encroachment near Maharashtra's heritage sites
+  - Build a virtual heritage tour creator using 3D models and historical information for Maharashtra's UNESCO sites
+quick_start: "import pandas as pd
+
+  # UNESCO World Heritage List
+
+  url = 'https://whc.unesco.org/en/list/'
+
+  print('UNESCO WH Sites in Maharashtra: Ajanta, Ellora, CST, etc.')
+
+  "

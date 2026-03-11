@@ -1,7 +1,9 @@
 title: IndicSTR12
-homepage: "https://cvit.iiit.ac.in/research/projects/cvit-projects/indicstr"
+homepage: https://cvit.iiit.ac.in/research/projects/cvit-projects/indicstr
 category: vision-ocr-multimodal
-description: Indic Scene Text Recognition dataset covering 12 major Indian languages including Marathi. Word images collected from natural scenes such as signboards, shop nameplates, railway stations, advertisements, and banners
+description:
+  Indic Scene Text Recognition dataset covering 12 major Indian languages including Marathi. Word images collected
+  from natural scenes such as signboards, shop nameplates, railway stations, advertisements, and banners
 modality: Image (scene text)
 size: 27K+ word images (1K+ per language)
 language:
@@ -15,8 +17,32 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: PNG/JPEG
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: image
+    type: image
+    description: Scene text image in Indian script
+  - field: text
+    type: string
+    description: Ground truth text transcription
+  - field: script
+    type: string
+    description: Script type (Devanagari, etc.)
+starter_idea: Build a robust Devanagari scene text recognition system for reading Marathi text in natural images.
+build_ideas:
+  - Create a Marathi street sign reader for autonomous vehicle navigation in Maharashtra cities
+  - Develop a product label reader for Marathi-labeled consumer goods in retail automation
+  - Build a Marathi document image search engine indexing text recognized from scanned documents and photos
+quick_start: "# IndicSTR12 dataset
+
+  import json
+
+  print('IndicSTR12: Scene text recognition for 12 Indian scripts')
+
+  print('Includes Devanagari for Marathi text recognition')
+
+  "

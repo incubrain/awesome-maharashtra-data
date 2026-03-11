@@ -1,0 +1,50 @@
+title: IIT Madras IndicTTS (Marathi)
+homepage: https://www.iitm.ac.in/donlab/indictts/database
+category: speech-audio
+description: Studio-quality single-speaker TTS corpus with male and female Marathi recordings plus English by native speakers
+modality: Speech + Text (TTS)
+size: "~40 hrs (10 hrs each: male mono, female mono, male English, female English)"
+language:
+  - mr
+license: Custom academic license (request-based)
+ai_use_cases:
+  - TTS
+  - Speech Synthesis Research
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: IIT Madras
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: High-quality studio-recorded Marathi speech
+  - field: text
+    type: string
+    description: Corresponding text transcript
+  - field: speaker_id
+    type: string
+    description: Speaker identifier
+starter_idea:
+  Build a natural-sounding Marathi text-to-speech system using IndicTTS studio recordings for voice assistant
+  applications.
+build_ideas:
+  - Create a Marathi audiobook generator that converts text to natural-sounding speech with multiple voice options
+  - Develop a Marathi voice cloning system for preserving voices of elderly native speakers for linguistic documentation
+  - Build an accessible screen reader with high-quality Marathi speech synthesis for visually impaired users
+quick_start: '# Download from https://www.iitm.ac.in/donlab/tts/
+
+  import torchaudio
+
+  # audio, sr = torchaudio.load(''indictts_mr_sample.wav'')
+
+  # print(f"Duration: {audio.shape[1]/sr:.2f}s, Sample rate: {sr}")
+
+  print("Download IndicTTS Marathi from: https://www.iitm.ac.in/donlab/tts/")
+
+  '

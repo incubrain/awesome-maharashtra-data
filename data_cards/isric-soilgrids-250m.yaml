@@ -1,0 +1,55 @@
+title: ISRIC SoilGrids 250m v2.0
+homepage: https://soilgrids.org/
+category: agriculture-rural
+description:
+  Global gridded soil property maps at 250m resolution for 6 standard depth intervals. Maharashtra subset provides
+  pH, organic carbon, clay/sand/silt content, bulk density, and CEC maps critical for precision agriculture and crop suitability
+  modeling.
+modality: raster-gridded
+size: ~100 GB (global, all properties), ~1 GB (MH subset)
+language:
+  - en
+license: CC BY 4.0
+ai_use_cases:
+  - Crop suitability mapping for Maharashtra's agro-climatic zones
+  - Soil health assessment and fertilizer recommendation
+  - Carbon sequestration estimation
+  - Irrigation planning based on soil water holding capacity
+  - Land degradation monitoring
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://files.isric.org/soilgrids/latest/
+paper_url: https://soil.copernicus.org/articles/7/217/2021/
+github_url: ""
+organization: ISRIC - World Soil Information
+format: GeoTIFF / COG
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: soil_property
+    type: string
+    description: Soil property name (clay, sand, pH, SOC, etc.)
+  - field: depth_cm
+    type: string
+    description: Soil depth interval (0-5, 5-15, 15-30 cm, etc.)
+  - field: value
+    type: float
+    description: Predicted soil property value
+starter_idea: Build a precision agriculture soil advisor for Maharashtra using 250m resolution SoilGrids predictions.
+build_ideas:
+  - Create a soil carbon mapping service for Maharashtra supporting carbon credit verification programs
+  - Develop a crop-soil matching optimizer recommending ideal crops for each field based on soil properties
+  - Build a soil degradation risk model for Maharashtra using SoilGrids multi-depth property analysis
+quick_start: "import requests
+
+  # SoilGrids REST API
+
+  url = 'https://rest.isric.org/soilgrids/v2.0/properties/query'
+
+  print('SoilGrids 250m: https://soilgrids.org/')
+
+  print('250m resolution soil property predictions globally')
+
+  "

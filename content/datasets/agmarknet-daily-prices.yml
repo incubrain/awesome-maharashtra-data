@@ -1,7 +1,9 @@
 title: AgMarkNet Daily Market Prices
-homepage: "https://agmarknet.gov.in/"
+homepage: https://agmarknet.gov.in/
 category: agriculture-rural
-description: Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs, with cleaned data also available via CEDA Ashoka API covering 2000-2023.
+description:
+  Daily wholesale mandi prices (min, max, modal) for 300+ commodities across Maharashtra APMCs, with cleaned data
+  also available via CEDA Ashoka API covering 2000-2023.
 modality: tabular
 size: Millions of daily price records
 language:
@@ -14,22 +16,46 @@ ai_use_cases:
   - Supply chain optimization
 maharashtra_specific: false
 huggingface_url: ""
-direct_download_url: "https://agmarknet.ceda.ashoka.edu.in/"
+direct_download_url: https://agmarknet.ceda.ashoka.edu.in/
 paper_url: ""
 github_url: ""
-organization: "Directorate of Marketing & Inspection (DMI), Ministry of Agriculture / CEDA Ashoka"
+organization: Directorate of Marketing & Inspection (DMI), Ministry of Agriculture / CEDA Ashoka
 format: CSV
 update_frequency: daily
 citation: ""
 last_verified: "2026-03-07"
 starter_idea: Build a real-time mandi price alert app for MH farmers
 build_ideas:
-  - "SMS/WhatsApp price alert system for onion, soybean, and cotton farmers"
-  - "Price arbitrage finder showing which APMC pays highest for a commodity"
-  - "Seasonal price forecaster to help farmers time their market entry"
-quick_start: |
-  import pandas as pd
+  - SMS/WhatsApp price alert system for onion, soybean, and cotton farmers
+  - Price arbitrage finder showing which APMC pays highest for a commodity
+  - Seasonal price forecaster to help farmers time their market entry
+quick_start: 'import pandas as pd
+
   df = pd.read_csv("agmarknet_prices.csv")
+
   # Filter Maharashtra onion prices
+
   mh_onion = df[(df["state"] == "Maharashtra") & (df["commodity"] == "Onion")]
+
   print(mh_onion[["market", "modal_price"]].groupby("market").mean())
+
+  '
+schema:
+  - field: date
+    type: date
+    description: Date of the market price report
+  - field: commodity
+    type: string
+    description: Name of agricultural commodity (onion, soybean, jowar, etc.)
+  - field: market
+    type: string
+    description: APMC mandi name in Maharashtra
+  - field: min_price
+    type: float
+    description: Minimum price in rupees per quintal
+  - field: max_price
+    type: float
+    description: Maximum price in rupees per quintal
+  - field: modal_price
+    type: float
+    description: Modal (most common) price in rupees per quintal

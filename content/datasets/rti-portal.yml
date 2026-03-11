@@ -1,7 +1,9 @@
 title: RTI Portal
-homepage: "https://mcsic.gov.in/"
+homepage: https://mcsic.gov.in/
 category: governance-census-demographics-legal
-description: Maharashtra — Right to Information request and response data from the Maharashtra Information Commission tracking transparency and governance accountability
+description:
+  Maharashtra — Right to Information request and response data from the Maharashtra Information Commission tracking
+  transparency and governance accountability
 modality: Text, Tabular (web)
 size: State-level, ongoing
 language:
@@ -16,8 +18,35 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Department of Personnel and Training, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: department
+    type: string
+    description: Government department
+  - field: query_topic
+    type: string
+    description: RTI query topic
+  - field: response_text
+    type: string
+    description: Government response
+  - field: date
+    type: date
+    description: Response date
+starter_idea: Build an RTI analytics platform analyzing government transparency trends and response patterns in Maharashtra.
+build_ideas:
+  - Create an RTI response quality analyzer scoring government departments on completeness and timeliness
+  - Develop a common RTI query template generator for Maharashtra citizens based on frequently asked questions
+  - Build a government data gap identifier using RTI queries to find information that should be proactively disclosed
+quick_start: "# RTI Portal
+
+  import pandas as pd
+
+  print('RTI Portal: https://rtionline.gov.in/')
+
+  print('Right to Information online filing and responses')
+
+  "

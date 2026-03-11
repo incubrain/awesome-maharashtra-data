@@ -1,0 +1,43 @@
+title: AI4Bharat Rasa (Marathi)
+homepage: https://huggingface.co/datasets/ai4bharat/Rasa
+category: speech-audio
+description: Expressive multilingual TTS dataset with neutral and emotional speech (6 Ekman emotions) for 22 Indian languages
+modality: Speech + Text (Expressive TTS)
+size: ~20 hrs/speaker; 400 hrs total (22 langs)
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - Expressive TTS
+  - Emotion Recognition
+  - Voice Acting
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/ai4bharat/Rasa
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: Marathi emotional speech recording
+  - field: emotion
+    type: string
+    description: Emotion label (happy, sad, angry, etc.)
+  - field: text
+    type: string
+    description: Transcription of the spoken content
+starter_idea:
+  Build a Marathi speech emotion recognition system for call center analytics to detect customer sentiment from
+  voice.
+build_ideas:
+  - Create a Marathi mental health screening tool that detects emotional distress signals from speech patterns
+  - Develop an emotion-aware Marathi TTS system that generates speech with appropriate emotional intonation
+  - Build a real-time call center dashboard that tracks customer emotion trends during Marathi-language support calls
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/rasa', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Emotion: {ex['emotion']}, Text: {ex['text'][:60]}...\")\n    if i >= 4: break\n"

@@ -1,0 +1,47 @@
+title: ESA WorldCover 10m Land Cover Map 2021
+homepage: https://worldcover2021.esa.int/download
+category: geospatial-gis
+description: Sentinel-1/2 derived global land cover with 11 classes at 10m resolution
+modality: Raster (Cloud Optimized GeoTIFF)
+size: 10m resolution; 3x3 degree COG tiles; 11 land cover classes
+language:
+  - en
+license: CC-BY 4.0
+ai_use_cases:
+  - High-resolution LULC mapping
+  - urban footprint extraction
+  - wetland delineation
+  - cropland-forest boundary detection
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: European Space Agency
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: land_cover
+    type: int
+    description: Land cover class (11 classes including tree cover, cropland, built-up)
+  - field: resolution
+    type: int
+    description: 10m spatial resolution
+starter_idea:
+  Build a high-resolution land use map for Maharashtra using ESA WorldCover 10m data for urban and agricultural
+  planning.
+build_ideas:
+  - Create a green space analyzer for Maharashtra cities using 10m resolution tree cover and built-up area data
+  - Develop a wetland inventory for Maharashtra using WorldCover water body and herbaceous wetland classes
+  - Build a cropland boundary extractor using WorldCover for farm-level analysis in Maharashtra
+quick_start: "import rasterio
+
+  # Download from https://worldcover2021.esa.int/
+
+  # src = rasterio.open('ESA_WorldCover_10m.tif')
+
+  print('ESA WorldCover 10m: https://worldcover2021.esa.int/')
+
+  "

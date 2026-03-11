@@ -1,9 +1,12 @@
 title: TerraClimate Monthly Climate Dataset
-homepage: "https://www.climatologylab.org/terraclimate.html"
+homepage: https://www.climatologylab.org/terraclimate.html
 category: environment-climate-disaster
-description: Global monthly climate and water balance dataset at ~4km resolution from 1958 to present. Provides temperature, precipitation, evapotranspiration, soil moisture, vapor pressure deficit, Palmer Drought Severity Index (PDSI), and runoff. Critical for agricultural planning and drought monitoring in Maharashtra.
+description:
+  Global monthly climate and water balance dataset at ~4km resolution from 1958 to present. Provides temperature,
+  precipitation, evapotranspiration, soil moisture, vapor pressure deficit, Palmer Drought Severity Index (PDSI), and runoff.
+  Critical for agricultural planning and drought monitoring in Maharashtra.
 modality: gridded
-size: "~4km (~2.5 arcmin) resolution; monthly; 1958-present; 14+ variables"
+size: ~4km (~2.5 arcmin) resolution; monthly; 1958-present; 14+ variables
 language:
   - en
 license: Public Domain
@@ -16,11 +19,38 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://climate.northwestknowledge.net/TERRACLIMATE/index_directDownloads.php"
-paper_url: "https://doi.org/10.1038/sdata.2017.191"
+direct_download_url: https://climate.northwestknowledge.net/TERRACLIMATE/index_directDownloads.php
+paper_url: https://doi.org/10.1038/sdata.2017.191
 github_url: ""
 organization: University of Idaho Climatology Lab
 format: NetCDF4
 update_frequency: monthly
-citation: "Abatzoglou et al. 2018. TerraClimate. Scientific Data."
+citation: Abatzoglou et al. 2018. TerraClimate. Scientific Data.
 last_verified: "2026-03-09"
+schema:
+  - field: temperature
+    type: float
+    description: Monthly mean temperature in Celsius
+  - field: precipitation
+    type: float
+    description: Monthly precipitation in mm
+  - field: et
+    type: float
+    description: Evapotranspiration in mm
+  - field: soil_moisture
+    type: float
+    description: Soil moisture in mm
+starter_idea: Build a climate analytics dashboard for Maharashtra using TerraClimate's multi-variable monthly climate data.
+build_ideas:
+  - Create a water balance model for Maharashtra using TerraClimate precipitation, ET, and soil moisture data
+  - Develop a crop suitability shift model predicting how climate changes affect optimal growing zones in Maharashtra
+  - Build a drought severity index for Maharashtra combining temperature, rainfall, and soil moisture anomalies
+quick_start: "import xarray as xr
+
+  # Download from https://www.climatologylab.org/terraclimate.html
+
+  print('TerraClimate: https://www.climatologylab.org/terraclimate.html')
+
+  print('Monthly climate data at ~4km resolution since 1958')
+
+  "

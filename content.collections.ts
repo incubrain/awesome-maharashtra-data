@@ -39,9 +39,3 @@ export const categorySchema = z.object({
   priority: z.enum(['high', 'medium', 'low']),
   order: z.number(),
 })
-
-export const sotaSchema = z.object({
-  category: z.string(),
-  title: z.string(),
-  last_updated: z.string(),
-})

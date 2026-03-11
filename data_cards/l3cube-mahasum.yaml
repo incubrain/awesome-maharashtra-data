@@ -1,0 +1,47 @@
+title: L3Cube-MahaSum
+homepage: https://github.com/l3cube-pune/MarathiNLP
+category: language-nlp
+description:
+  Largest Marathi news summarization dataset containing 25,374 news articles from Lokmat and Loksatta with manually
+  verified abstractive summaries. Covers politics, economics, culture, sports, and more. First large-scale abstractive summarization
+  dataset for Marathi.
+modality: text
+size: 25,374 article-summary pairs
+language:
+  - mr
+license: CC-BY-NC-SA-4.0
+ai_use_cases:
+  - Marathi news article summarization
+  - Abstractive text generation
+  - Content condensation for Marathi news apps
+  - Headline generation from articles
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2410.09184
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
+format: CSV / JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: article
+    type: string
+    description: Full Marathi news article text
+  - field: summary
+    type: string
+    description: Human-written summary of the article
+starter_idea:
+  Build a Marathi news summarization API that generates concise summaries from full-length news articles for mobile
+  news apps.
+build_ideas:
+  - Create a daily Marathi news digest service that summarizes top stories across categories for WhatsApp distribution
+  - Develop a legislative bill summarizer for Maharashtra Assembly that condenses lengthy bills into accessible summaries for
+    citizens
+  - Build an extractive-abstractive hybrid summarizer for Marathi that first selects key sentences then paraphrases them
+quick_start:
+  "# Download from https://github.com/l3cube-pune/MarathiNLP\nimport pandas as pd\ndf = pd.read_csv('MahaSum.csv')\n\
+  print(f\"Article-summary pairs: {len(df)}\")\nfor _, row in df.head(3).iterrows():\n    print(f\"Article: {row['article'][:80]}...\"\
+  )\n    print(f\"Summary: {row['summary'][:80]}...\\n\")\n"

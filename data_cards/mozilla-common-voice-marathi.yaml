@@ -1,0 +1,45 @@
+title: Mozilla Common Voice (Marathi)
+homepage: https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0
+category: speech-audio
+description: Crowd-sourced read-speech recordings with validated transcriptions for Marathi
+modality: Speech + Text
+size: ~30 hrs total, ~21 hrs validated
+language:
+  - mr
+license: CC-0
+ai_use_cases:
+  - ASR
+  - Speaker ID
+  - Pronunciation Modeling
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Mozilla Foundation
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: Crowd-sourced speech recording
+  - field: sentence
+    type: string
+    description: Reference text that was read
+  - field: up_votes
+    type: int
+    description: Validation up-votes
+  - field: down_votes
+    type: int
+    description: Validation down-votes
+starter_idea: Build a community-driven Marathi speech recognition model using validated Common Voice recordings.
+build_ideas:
+  - Create a Marathi speech data quality pipeline that filters Common Voice by validation scores for cleaner training
+  - Develop a Marathi pronunciation dictionary from Common Voice audio-text alignments
+  - Build a Marathi voice interface SDK for app developers with pre-trained models on Common Voice data
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('mozilla-foundation/common_voice_17_0', 'mr', split='train',\
+  \ streaming=True)\nfor i, ex in enumerate(ds):\n    print(f\"Text: {ex['sentence']}, Votes: +{ex['up_votes']}/-{ex['down_votes']}\"\
+  )\n    if i >= 4: break\n"

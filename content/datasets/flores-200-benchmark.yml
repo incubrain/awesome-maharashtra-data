@@ -1,7 +1,9 @@
 title: FLORES-200 Benchmark
-homepage: "https://huggingface.co/datasets/facebook/flores"
+homepage: https://huggingface.co/datasets/facebook/flores
 category: benchmarks-fairness-dialects-tools
-description: Marathi — Human-translated evaluation benchmark for machine translation covering 200+ languages including Marathi, with 3,001 sentences from diverse web articles
+description:
+  Marathi — Human-translated evaluation benchmark for machine translation covering 200+ languages including Marathi,
+  with 3,001 sentences from diverse web articles
 modality: Text (parallel, Marathi)
 size: 3,001 sentences, 200+ languages
 language:
@@ -11,12 +13,28 @@ ai_use_cases:
   - Machine translation evaluation
   - cross-lingual transfer benchmarking
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/openlanguagedata/flores_plus"
+huggingface_url: https://huggingface.co/datasets/openlanguagedata/flores_plus
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/facebookresearch/flores"
-organization: ""
-format: ""
+github_url: https://github.com/facebookresearch/flores
+organization: Meta AI
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: sentence
+    type: string
+    description: Sentence in source/target language
+  - field: id
+    type: int
+    description: Sentence ID aligned across 200 languages
+starter_idea: Benchmark Marathi machine translation quality against 200 languages using the FLORES-200 evaluation set.
+build_ideas:
+  - Create a Marathi MT evaluation framework using FLORES-200 with automatic metrics and human evaluation
+  - Develop a cross-lingual transfer study measuring how Marathi MT benefits from related language data
+  - Build a translation difficulty analyzer identifying which FLORES-200 sentences are hardest to translate to/from Marathi
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('facebook/flores', 'mar_Deva')\nprint(f'Dev: {len(ds[\"\
+  dev\"])}, DevTest: {len(ds[\"devtest\"])}')\nfor ex in list(ds['devtest'])[:3]:\n    print(f'[{ex[\"id\"]}] {ex[\"sentence\"\
+  ][:80]}...')\n"

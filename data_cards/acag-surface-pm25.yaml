@@ -1,0 +1,58 @@
+title: Satellite-Derived Surface PM2.5 (ACAG/WashU)
+homepage: https://sites.wustl.edu/acag/datasets/surface-pm2-5/
+category: health-nutrition
+description:
+  Global annual mean surface PM2.5 concentrations at 0.01° (~1km) resolution derived from satellite AOD, GEOS-Chem
+  model, and ground stations. Maharashtra subset maps air pollution exposure across all districts, enabling health impact
+  assessment.
+modality: raster-gridded
+size: ~2 GB (global), ~20 MB (MH subset)
+language:
+  - en
+license: Open (Academic)
+ai_use_cases:
+  - Air pollution health impact modeling
+  - Respiratory disease burden estimation by district
+  - Urban planning and green corridor design
+  - School and hospital site selection
+  - Environmental justice analysis
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://sites.wustl.edu/acag/datasets/surface-pm2-5/
+paper_url: https://www.science.org/doi/10.1126/sciadv.adq1071
+github_url: ""
+organization: Washington University in St. Louis (ACAG)
+format: NetCDF / GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: latitude
+    type: float
+    description: Latitude coordinate
+  - field: longitude
+    type: float
+    description: Longitude coordinate
+  - field: pm25_ugm3
+    type: float
+    description: Annual mean PM2.5 concentration in ug/m3
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build an air quality exposure map for Maharashtra showing population-weighted PM2.5 levels at village resolution.
+build_ideas:
+  - Create a health risk estimator correlating PM2.5 exposure with respiratory disease rates across Maharashtra districts
+  - Develop a clean air corridor planner for Maharashtra urban areas using high-resolution PM2.5 surface data
+  - Build a school air quality alert system that identifies Maharashtra schools in high-pollution zones
+quick_start: "import xarray as xr
+
+  # Download from https://sites.wustl.edu/acag/datasets/
+
+  # ds = xr.open_dataset('acag_pm25.nc')
+
+  # mh = ds.sel(lat=slice(15.5, 22.5), lon=slice(72.5, 81))
+
+  print('ACAG PM2.5 data: https://sites.wustl.edu/acag/datasets/')
+
+  "

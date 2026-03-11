@@ -1,7 +1,10 @@
 title: GRACE/GRACE-FO Groundwater Storage Anomalies
-homepage: "https://grace.jpl.nasa.gov/data/get-data/"
+homepage: https://grace.jpl.nasa.gov/data/get-data/
 category: environment-climate-disaster
-description: Satellite gravity measurements from GRACE/GRACE-FO missions providing monthly terrestrial water storage anomalies at ~300km resolution since 2002. Combined with GLDAS soil moisture, yields groundwater depletion maps critical for Maharashtra's water-stressed Marathwada and Vidarbha regions.
+description:
+  Satellite gravity measurements from GRACE/GRACE-FO missions providing monthly terrestrial water storage anomalies
+  at ~300km resolution since 2002. Combined with GLDAS soil moisture, yields groundwater depletion maps critical for Maharashtra's
+  water-stressed Marathwada and Vidarbha regions.
 modality: raster-gridded
 size: ~2 GB (global), ~50 MB (India subset)
 language:
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://podaac.jpl.nasa.gov/GRACE"
+direct_download_url: https://podaac.jpl.nasa.gov/GRACE
 paper_url: ""
 github_url: ""
 organization: NASA JPL / GFZ Potsdam
@@ -27,13 +30,28 @@ last_verified: "2026-03-07"
 schema:
   - field: latitude
     type: float
-    description: "Grid cell latitude (~1° resolution)"
+    description: Grid cell latitude (~1° resolution)
   - field: longitude
     type: float
-    description: "Grid cell longitude (~1° resolution)"
+    description: Grid cell longitude (~1° resolution)
   - field: time
     type: date
-    description: "Monthly observation period"
+    description: Monthly observation period
   - field: lwe_thickness
     type: float
-    description: "Liquid water equivalent thickness anomaly (cm)"
+    description: Liquid water equivalent thickness anomaly (cm)
+starter_idea: Build a groundwater depletion monitor for Maharashtra using GRACE satellite gravity measurements.
+build_ideas:
+  - Create a long-term groundwater sustainability model for Maharashtra combining GRACE trends with rainfall and extraction
+    data
+  - Develop a drought indicator combining GRACE groundwater anomalies with surface water and vegetation data
+  - Build a policy impact evaluator measuring how watershed management programs affect Maharashtra groundwater levels
+quick_start: "import xarray as xr
+
+  # Download from https://podaac.jpl.nasa.gov/
+
+  print('GRACE groundwater: https://podaac.jpl.nasa.gov/')
+
+  print('Monthly groundwater storage anomalies from satellite gravity')
+
+  "

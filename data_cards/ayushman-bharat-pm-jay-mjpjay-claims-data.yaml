@@ -1,0 +1,59 @@
+title: Ayushman Bharat PM-JAY / MJPJAY Claims Data
+homepage: https://nha.gov.in/PM-JAY
+category: health-nutrition
+description:
+  Health insurance claims data from the Pradhan Mantri Jan Arogya Yojana and Maharashtra's Mahatma Jyotiba Phule
+  Jan Arogya Yojana
+modality: Tabular (dashboard)
+size: 3.57 Cr+ claims nationally
+language:
+  - en
+license: Restricted (portal access)
+ai_use_cases:
+  - Health expenditure analysis
+  - claims fraud detection
+  - hospital performance analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: National Health Authority, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: district
+    type: string
+    description: District name in Maharashtra
+  - field: hospital
+    type: string
+    description: Hospital name
+  - field: procedure
+    type: string
+    description: Medical procedure name
+  - field: claims_count
+    type: int
+    description: Number of claims filed
+  - field: amount_sanctioned
+    type: float
+    description: Total sanctioned amount in Rs
+starter_idea:
+  Build a healthcare utilization analytics platform for Maharashtra showing disease burden and treatment access
+  patterns under PM-JAY/MJPJAY.
+build_ideas:
+  - Create a hospital performance benchmarking system comparing treatment outcomes across Maharashtra empaneled hospitals
+  - Develop a healthcare demand forecaster predicting future claim volumes by procedure type and district
+  - Build a fraud detection model identifying anomalous claiming patterns across Maharashtra's health insurance schemes
+quick_start: "# Download from https://pmjay.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('pmjay_claims.csv')
+
+  print(f'Total claims: {len(df)}')
+
+  print(df.groupby('Procedure')['Claims_Count'].sum().sort_values(ascending=False).head())
+
+  "

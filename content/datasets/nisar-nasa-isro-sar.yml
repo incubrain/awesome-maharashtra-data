@@ -1,9 +1,12 @@
 title: NISAR SAR (NASA-ISRO)
-homepage: "https://nisar.jpl.nasa.gov/"
+homepage: https://nisar.jpl.nasa.gov/
 category: geospatial-gis
-description: NASA-ISRO Synthetic Aperture Radar mission launched July 2025, providing dual-frequency L-band and S-band SAR data at ~8m resolution with 12-day repeat cycle. Measures surface deformation less than 1cm. Critical for tracking land subsidence, earthquake deformation, glacier dynamics, and ecosystem changes across Maharashtra.
+description:
+  NASA-ISRO Synthetic Aperture Radar mission launched July 2025, providing dual-frequency L-band and S-band SAR
+  data at ~8m resolution with 12-day repeat cycle. Measures surface deformation less than 1cm. Critical for tracking land
+  subsidence, earthquake deformation, glacier dynamics, and ecosystem changes across Maharashtra.
 modality: satellite-imagery
-size: "~8m azimuth resolution; 244km swath; 12-day repeat; L+S band SAR"
+size: ~8m azimuth resolution; 244km swath; 12-day repeat; L+S band SAR
 language:
   - en
 license: Open (NASA/ISRO)
@@ -16,11 +19,35 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://search.asf.alaska.edu/"
+direct_download_url: https://search.asf.alaska.edu/
 paper_url: ""
 github_url: ""
 organization: NASA / ISRO
 format: GeoTIFF / HDF5
-update_frequency: "12 days"
+update_frequency: 12 days
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: backscatter
+    type: float
+    description: L/S-band SAR backscatter value
+  - field: polarization
+    type: string
+    description: Polarization mode
+  - field: resolution_m
+    type: float
+    description: Spatial resolution in meters
+starter_idea: Build a next-generation crop monitoring system for Maharashtra using dual-frequency NISAR SAR data when available.
+build_ideas:
+  - Create a biomass estimation model for Maharashtra forests using NISAR's L-band penetration capabilities
+  - Develop a surface deformation monitor for Maharashtra's mining areas using NISAR interferometric SAR
+  - Build a soil moisture mapping system at field scale using NISAR's high-resolution SAR capabilities
+quick_start: "# NISAR mission (NASA-ISRO SAR)
+
+  print('NISAR: https://nisar.jpl.nasa.gov/')
+
+  print('Joint NASA-ISRO SAR mission for Earth observation')
+
+  print('L-band and S-band SAR data')
+
+  "

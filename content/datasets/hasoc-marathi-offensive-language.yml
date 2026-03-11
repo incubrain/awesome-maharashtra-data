@@ -1,9 +1,12 @@
 title: HASOC Marathi Offensive Language Dataset
-homepage: "https://hasocfire.github.io/hasoc/2022/"
+homepage: https://hasocfire.github.io/hasoc/2022/
 category: language-nlp
-description: Shared task datasets for Hate Speech and Offensive Content identification in Marathi from HASOC 2021 and 2022. Uses OLID taxonomy with ~4,970 annotated tweets. Complementary to L3Cube MahaHate using different annotation scheme and data sources, with published competitive baselines from multiple research teams.
+description:
+  Shared task datasets for Hate Speech and Offensive Content identification in Marathi from HASOC 2021 and 2022.
+  Uses OLID taxonomy with ~4,970 annotated tweets. Complementary to L3Cube MahaHate using different annotation scheme and
+  data sources, with published competitive baselines from multiple research teams.
 modality: text
-size: "~4,970 annotated tweets (1,874 from 2021 + 3,096 from 2022)"
+size: ~4,970 annotated tweets (1,874 from 2021 + 3,096 from 2022)
 language:
   - mr
 license: Research
@@ -16,10 +19,35 @@ maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
 direct_download_url: ""
-paper_url: "https://arxiv.org/abs/2211.10163"
+paper_url: https://arxiv.org/abs/2211.10163
 github_url: ""
 organization: HASOC / FIRE
 format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: text
+    type: string
+    description: Social media text in Marathi
+  - field: label
+    type: string
+    description: Classification label (hate, offensive, profane, none)
+starter_idea:
+  Build an automated content moderation system for Marathi social media platforms to flag offensive language in
+  real-time.
+build_ideas:
+  - Create a toxicity severity scorer for Marathi text that ranks offensive content by intensity for prioritized human review
+  - Develop a counter-speech generator that suggests constructive Marathi responses to hateful messages
+  - Build an election-period hate speech monitor for Maharashtra that tracks spikes in offensive language across social media
+quick_start: '# Download from https://hasocfire.github.io/hasoc/
+
+  import pandas as pd
+
+  df = pd.read_csv(''hasoc_marathi.csv'')
+
+  print(f"Total samples: {len(df)}")
+
+  print(df[''label''].value_counts())
+
+  '

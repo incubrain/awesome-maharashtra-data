@@ -1,0 +1,55 @@
+title: Maharashtra Pollution Control Board (MPCB)
+homepage: https://mpcb.gov.in/
+category: environment-climate-disaster
+description:
+  State-level ambient air and water quality monitoring data, industrial pollution consent data, and environmental
+  compliance reports for Maharashtra
+modality: Tabular (PDF, web)
+size: State-wide, ongoing
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Environmental compliance analytics
+  - pollution hotspot identification
+  - water quality modelling
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Maharashtra Pollution Control Board
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: industry_name
+    type: string
+    description: Industry/facility name
+  - field: district
+    type: string
+    description: District location
+  - field: pollutant
+    type: string
+    description: Pollutant type
+  - field: emission_value
+    type: float
+    description: Emission/effluent measurement
+  - field: compliance_status
+    type: string
+    description: Compliance status
+starter_idea: Build a pollution compliance tracker for Maharashtra industries showing violators and pollution hotspots.
+build_ideas:
+  - Create an industrial pollution forecasting model for Maharashtra predicting emissions based on production patterns
+  - Develop a river water quality impact model linking upstream industrial discharges to downstream quality in Maharashtra
+  - Build a citizen pollution reporting platform integrating MPCB data with crowd-sourced environmental observations
+quick_start: "# Maharashtra Pollution Control Board
+
+  import pandas as pd
+
+  print('MPCB: https://mpcb.gov.in/')
+
+  print('Industrial emission and consent data')
+
+  "

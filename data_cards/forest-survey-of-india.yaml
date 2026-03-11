@@ -1,0 +1,58 @@
+title: Forest Survey of India
+homepage: https://fsi.nic.in/introduction
+category: geospatial-gis
+description: ISFR biennial forest cover maps at district level using satellite interpretation for Maharashtra
+modality: Raster / Report (PDF maps)
+size: State and district level; 1:50K scale; biennial cycle
+language:
+  - en
+license: OGL-India (MoEFCC)
+ai_use_cases:
+  - Deforestation monitoring
+  - forest type classification
+  - carbon stock estimation
+  - biodiversity corridor planning
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Forest Survey of India
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: forest_cover_sqkm
+    type: float
+    description: Forest cover area in sq km
+  - field: forest_type
+    type: string
+    description: Forest type (very dense, moderately dense, open)
+  - field: year
+    type: int
+    description: Assessment year
+starter_idea: Build a Maharashtra forest cover change tracker showing deforestation and afforestation trends at district level.
+build_ideas:
+  - Create a biodiversity corridor planner for Western Ghats using forest cover connectivity analysis
+  - Develop a tree plantation impact evaluator comparing FSI data before and after government afforestation programs
+  - Build a forest fire risk model combining forest density, climate data, and historical fire incidents for Maharashtra
+quick_start: '# Download from https://fsi.nic.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''fsi_forest_cover.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f''Districts: {mh["District"].nunique()}'')
+
+  print(mh.groupby(''Forest_Type'')[''Forest_Cover_SqKm''].sum())
+
+  '

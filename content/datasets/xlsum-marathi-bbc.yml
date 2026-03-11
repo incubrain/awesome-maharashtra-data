@@ -1,9 +1,11 @@
 title: XL-Sum Marathi (BBC)
-homepage: "https://huggingface.co/datasets/csebuetnlp/xlsum"
+homepage: https://huggingface.co/datasets/csebuetnlp/xlsum
 category: language-nlp
-description: 10,903 article-summary pairs from BBC Marathi website with professionally written, highly abstractive summaries. Part of the 45-language XL-Sum benchmark. Gold-standard editorial quality summaries that crowdsourced datasets cannot match.
+description:
+  10,903 article-summary pairs from BBC Marathi website with professionally written, highly abstractive summaries.
+  Part of the 45-language XL-Sum benchmark. Gold-standard editorial quality summaries that crowdsourced datasets cannot match.
 modality: text
-size: "~10,903 Marathi samples with train/val/test splits"
+size: ~10,903 Marathi samples with train/val/test splits
 language:
   - mr
 license: CC-BY-NC-SA-4.0
@@ -14,12 +16,35 @@ ai_use_cases:
   - Fine-tuning LLMs for Marathi text generation
 maharashtra_specific: false
 extraction_status: ready
-huggingface_url: "https://huggingface.co/datasets/csebuetnlp/xlsum"
+huggingface_url: https://huggingface.co/datasets/csebuetnlp/xlsum
 direct_download_url: ""
-paper_url: "https://arxiv.org/abs/2106.13822"
+paper_url: https://arxiv.org/abs/2106.13822
 github_url: ""
 organization: BUET CSE NLP Group
 format: JSON
 update_frequency: static
 citation: "Hasan et al. 2021. XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages."
 last_verified: "2026-03-09"
+schema:
+  - field: text
+    type: string
+    description: Full BBC Marathi news article text
+  - field: summary
+    type: string
+    description: Professional summary of the article
+  - field: title
+    type: string
+    description: Article headline
+  - field: url
+    type: string
+    description: Source BBC URL
+starter_idea: Build a Marathi news summarization model trained on professional BBC Marathi summaries for high-quality output.
+build_ideas:
+  - Create a daily Marathi news brief generator that produces BBC-quality summaries of top Maharashtra stories
+  - Develop a headline generation model trained on BBC Marathi articles for automated news headline creation
+  - Build a cross-lingual news summarizer that generates Marathi summaries from English BBC articles using this as training
+    data
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('csebuetnlp/xlsum', 'marathi', split='train')\nprint(f\"\
+  Articles: {len(ds)}\")\nfor ex in ds[:3]:\n    print(f\"Title: {ex['title'][:60]}\")\n    print(f\"Summary: {ex['summary'][:80]}...\\\
+  n\")\n"

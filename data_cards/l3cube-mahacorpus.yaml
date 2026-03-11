@@ -1,65 +1,42 @@
----
-# Awesome Marathi Datasets - Data Card
-# L3Cube MahaCorpus
-
-# (required) Human-readable dataset name
-title: "L3Cube-MahaCorpus"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
-homepage: "https://github.com/l3cube-pune/MarathiNLP"
-
-# (required) Which category file this belongs to (without number prefix)
-category: "language-nlp"
-
-# (required) One-line description of the dataset
-description: "Large-scale Marathi monolingual text corpus with 24.8 million sentences and 289 million tokens, curated for language model pretraining."
-
-# (required) Data modality
-modality: "text"
-
-# (required) Approximate size with units
-size: "24.8M sentences, 289M tokens"
-
-# (required) ISO 639-1 language codes
+title: L3Cube-MahaCorpus
+homepage: https://github.com/l3cube-pune/MarathiNLP
+category: language-nlp
+description:
+  Large-scale Marathi monolingual text corpus with 24.8 million sentences
+  and 289 million tokens, curated for language model pretraining.
+modality: text
+size: 24.8M sentences, 289M tokens
 language:
   - mr
-
-# (required) License identifier
-license: "CC-BY-NC-SA-4.0"
-
-# HuggingFace dataset URL (if available)
+license: CC-BY-NC-SA-4.0
 huggingface_url: ""
-
-# Direct download URL (if different from homepage)
 direct_download_url: ""
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
 paper_url: ""
-
-# GitHub repository URL (if applicable)
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
-
-# Organization or author that created/maintains the dataset
-organization: "L3Cube, Pune"
-
-# (required) List of AI/ML use cases this dataset enables
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
 ai_use_cases:
-  - "Language model pretraining"
-  - "Word embedding training"
-  - "Marathi text generation"
-  - "Transfer learning for downstream NLP tasks"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - Language model pretraining
+  - Word embedding training
+  - Marathi text generation
+  - Transfer learning for downstream NLP tasks
 maharashtra_specific: true
-
-# Format of the data files
-format: "text"
-
-# How frequently the data is updated (if applicable)
-update_frequency: "static"
-
-# BibTeX citation (if available)
+format: text
+update_frequency: static
 citation: ""
-
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Marathi text sentence from the corpus
+starter_idea: "Train a Marathi text classifier for sentiment or topic detection to monitor Marathi-language social media conversations."
+build_ideas:
+  - "Build a GPT-style language model for Marathi using this corpus and deploy as a chatbot for agriculture advisory"
+  - "Create a text summarization service for Marathi news articles to help busy farmers stay informed"
+  - "Develop spell-check and grammar correction tools specifically for Marathi using this clean corpus"
+quick_start: |
+  # Download from https://github.com/l3cube-pune/MarathiNLP
+  with open('MahaCorpus.txt', 'r') as f:
+      lines = f.readlines()
+  print(f"Total sentences: {len(lines)}")
+  for line in lines[:5]:
+      print(line.strip())

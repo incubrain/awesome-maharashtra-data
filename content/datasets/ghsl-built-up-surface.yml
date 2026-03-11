@@ -1,7 +1,9 @@
 title: GHSL Built-Up Surface (1975-2030)
-homepage: "https://human-settlement.emergency.copernicus.eu/datasets.php"
+homepage: https://human-settlement.emergency.copernicus.eu/datasets.php
 category: geospatial-gis
-description: Global Human Settlement Layer providing built-up surface area at 10m resolution from 1975-2030 in 5-year intervals. Maharashtra subset reveals 50 years of urbanization patterns across Mumbai, Pune, Nagpur, and tier-2/3 cities.
+description:
+  Global Human Settlement Layer providing built-up surface area at 10m resolution from 1975-2030 in 5-year intervals.
+  Maharashtra subset reveals 50 years of urbanization patterns across Mumbai, Pune, Nagpur, and tier-2/3 cities.
 modality: raster-imagery
 size: ~15 GB (global per epoch), ~200 MB (MH subset)
 language:
@@ -16,11 +18,32 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://human-settlement.emergency.copernicus.eu/download.php"
-paper_url: "https://www.researchgate.net/publication/370596013_GHSL_Data_Package_2023"
+direct_download_url: https://human-settlement.emergency.copernicus.eu/download.php
+paper_url: https://www.researchgate.net/publication/370596013_GHSL_Data_Package_2023
 github_url: ""
 organization: European Commission JRC
 format: GeoTIFF
 update_frequency: biennial
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: built_up_fraction
+    type: float
+    description: Fraction of built-up surface per pixel (0-1)
+  - field: year
+    type: int
+    description: Reference epoch year
+starter_idea: Build an urbanization trend analyzer for Maharashtra tracking built-up surface expansion from 1975 to present.
+build_ideas:
+  - Create an urban sprawl predictor for Maharashtra cities using multi-decadal built-up surface trends
+  - Develop an agricultural land loss tracker showing how much farmland Maharashtra loses to urbanization annually
+  - Build a smart city baseline generator measuring current built-up density for Maharashtra smart city candidates
+quick_start: "import rasterio
+
+  # Download from https://ghsl.jrc.ec.europa.eu/
+
+  print('GHSL Built-up Surface: https://ghsl.jrc.ec.europa.eu/')
+
+  print('Multi-temporal built-up surface data (1975-2030)')
+
+  "

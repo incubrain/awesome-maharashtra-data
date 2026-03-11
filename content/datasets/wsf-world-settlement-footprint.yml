@@ -1,7 +1,10 @@
 title: World Settlement Footprint (WSF) 2015/2019
-homepage: "https://geoservice.dlr.de/web/datasets/guf"
+homepage: https://geoservice.dlr.de/web/datasets/guf
 category: transport-urban-infrastructure
-description: Global human settlement extent at 10m resolution from Sentinel-1 radar and Landsat-8 optical imagery. Maharashtra subset maps built-up area with high accuracy, distinguishing settlements from bare soil — critical for urban planning in rapidly growing tier-2/3 cities.
+description:
+  Global human settlement extent at 10m resolution from Sentinel-1 radar and Landsat-8 optical imagery. Maharashtra
+  subset maps built-up area with high accuracy, distinguishing settlements from bare soil — critical for urban planning in
+  rapidly growing tier-2/3 cities.
 modality: raster-imagery
 size: ~30 GB (global), ~500 MB (MH subset)
 language:
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://download.geoservice.dlr.de/WSF2019/"
+direct_download_url: https://download.geoservice.dlr.de/WSF2019/
 paper_url: ""
 github_url: ""
 organization: German Aerospace Center (DLR)
@@ -24,3 +27,27 @@ format: GeoTIFF
 update_frequency: periodic
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: settlement
+    type: int
+    description: Binary settlement mask (1=built-up, 0=non-built-up)
+  - field: year
+    type: int
+    description: Reference year for settlement extent
+  - field: resolution_m
+    type: int
+    description: 10m spatial resolution
+starter_idea: Build a Maharashtra settlement growth tracker using 10m resolution World Settlement Footprint for urban planning.
+build_ideas:
+  - Create an unauthorized settlement detector for Maharashtra municipalities using WSF change detection
+  - Develop a rural-to-urban transition mapper tracking how Maharashtra villages evolve into towns
+  - Build a building density estimator combining WSF settlement masks with population data for Maharashtra
+quick_start: "import rasterio
+
+  # Download from https://download.geoservice.dlr.de/WSF2019/
+
+  print('WSF: https://download.geoservice.dlr.de/WSF2019/')
+
+  print('10m resolution world settlement footprint')
+
+  "

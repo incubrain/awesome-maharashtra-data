@@ -1,0 +1,45 @@
+title: AI4Bharat IndicQA
+homepage: https://huggingface.co/datasets/ai4bharat/IndicQA
+category: agentic-instruction-rag
+description:
+  Marathi — Expert-generated reading comprehension dataset for 11 Indic languages including Marathi, with context-question-answer
+  triples for extractive QA tasks
+modality: Text (Marathi)
+size: Multi-lingual, Marathi subset
+language:
+  - mr
+license: CC BY 4.0
+ai_use_cases:
+  - Question answering fine-tuning
+  - reading comprehension evaluation
+  - RAG answer extraction
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicQA
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: context
+    type: string
+    description: Passage text in Marathi
+  - field: question
+    type: string
+    description: Question about the passage
+  - field: answers
+    type: object
+    description: Answer object with text and start position lists
+starter_idea:
+  Build a Marathi reading comprehension system for educational assessments that tests understanding of passage
+  content.
+build_ideas:
+  - Create a Marathi QA chatbot for government scheme information that answers citizen questions from official documents
+  - Develop an automated exam question generator that creates comprehension questions from Marathi textbook passages
+  - Build a Marathi document search-and-answer system for legal professionals querying Maharashtra case law
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicQA', 'indicqa.mr', split='test')\nfor ex\
+  \ in ds[:3]:\n    print(f\"Q: {ex['question'][:60]}\")\n    print(f\"A: {ex['answers']['text'][0][:60]}\\n\")\n"

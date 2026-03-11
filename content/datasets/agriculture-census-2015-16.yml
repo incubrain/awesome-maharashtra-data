@@ -1,7 +1,9 @@
 title: Agriculture Census 2015-16
-homepage: "https://agcensus.nic.in/"
+homepage: https://agcensus.nic.in/
 category: agriculture-rural
-description: "Maharashtra — 10th Agriculture Census data on operational holdings by size class, land use, tenancy, and irrigation at district level. Maharashtra: 15.29M holdings, 20.51M ha"
+description:
+  "Maharashtra — 10th Agriculture Census data on operational holdings by size class, land use, tenancy, and irrigation
+  at district level. Maharashtra: 15.29M holdings, 20.51M ha"
 modality: Tabular (PDF/XLS)
 size: 15.29M holdings; all MH districts
 language:
@@ -16,8 +18,45 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Ministry of Agriculture & Farmers Welfare, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: size_class
+    type: string
+    description: Land holding size class (marginal, small, semi-medium, medium, large)
+  - field: number_holdings
+    type: int
+    description: Number of operational holdings
+  - field: area_hectares
+    type: float
+    description: Total area under holdings in hectares
+starter_idea:
+  Build a land fragmentation analysis tool for Maharashtra that models the impact of shrinking farm sizes on agricultural
+  productivity.
+build_ideas:
+  - Create a farmer typology classifier for Maharashtra that segments farmers by holding size for targeted subsidy design
+  - Develop a cooperative farming opportunity mapper that identifies clusters of marginal farmers who could benefit from joint
+    operations
+  - Build a land consolidation simulator that models the economic impact of land reform policies in Maharashtra districts
+quick_start: '# Download from https://agcensus.nic.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''agriculture_census_2015_16.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f"Maharashtra records: {len(mh)}")
+
+  print(mh.groupby(''Size_Class'')[''Number_Holdings''].sum())
+
+  '

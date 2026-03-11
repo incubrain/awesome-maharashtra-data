@@ -1,9 +1,12 @@
 title: IndicXNLI Marathi
-homepage: "https://huggingface.co/datasets/Divyanshu/indicxnli"
+homepage: https://huggingface.co/datasets/Divyanshu/indicxnli
 category: benchmarks-fairness-dialects-tools
-description: Natural Language Inference (NLI) dataset for 11 Indic languages including Marathi, created by high-quality machine translation of the English XNLI dataset. Contains premise-hypothesis pairs with entailment, contradiction, and neutral labels for evaluating Marathi language understanding.
+description:
+  Natural Language Inference (NLI) dataset for 11 Indic languages including Marathi, created by high-quality machine
+  translation of the English XNLI dataset. Contains premise-hypothesis pairs with entailment, contradiction, and neutral labels
+  for evaluating Marathi language understanding.
 modality: text
-size: "~393K train, ~2.5K dev, ~5K test pairs for Marathi"
+size: ~393K train, ~2.5K dev, ~5K test pairs for Marathi
 language:
   - mr
   - en
@@ -15,12 +18,33 @@ ai_use_cases:
   - Multilingual model evaluation
 maharashtra_specific: false
 extraction_status: ready
-huggingface_url: "https://huggingface.co/datasets/Divyanshu/indicxnli"
+huggingface_url: https://huggingface.co/datasets/Divyanshu/indicxnli
 direct_download_url: ""
-paper_url: "https://arxiv.org/abs/2204.08776"
+paper_url: https://arxiv.org/abs/2204.08776
 github_url: ""
 organization: AI4Bharat
 format: Parquet / JSON
 update_frequency: static
 citation: "Aggarwal et al. 2022. IndicXNLI: Evaluating Multilingual Inference for Indian Languages."
 last_verified: "2026-03-09"
+schema:
+  - field: premise
+    type: string
+    description: Premise sentence in Marathi
+  - field: hypothesis
+    type: string
+    description: Hypothesis sentence in Marathi
+  - field: label
+    type: int
+    description: Entailment label (0=entailment, 1=neutral, 2=contradiction)
+starter_idea:
+  Build a Marathi fact-checking assistant that uses natural language inference to verify claims against known
+  facts.
+build_ideas:
+  - Create a Marathi reading comprehension evaluator that tests whether students can infer correct conclusions from passages
+  - Develop a news consistency checker that identifies contradictory claims across Marathi news articles
+  - Build a Marathi argument analysis tool that identifies supporting and contradicting evidence in debate transcripts
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('Divyanshu/indicxnli', 'mr', split='test')\nfor ex in ds[:5]:\n\
+  \    labels = ['entailment', 'neutral', 'contradiction']\n    print(f\"P: {ex['premise'][:60]}...\")\n    print(f\"H: {ex['hypothesis'][:60]}...\"\
+  )\n    print(f\"Label: {labels[ex['label']]}\\n\")\n"

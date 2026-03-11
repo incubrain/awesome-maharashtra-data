@@ -1,5 +1,5 @@
 title: AI4Bharat IndicVoices-R
-homepage: "https://huggingface.co/datasets/ai4bharat/indicvoices_r"
+homepage: https://huggingface.co/datasets/ai4bharat/indicvoices_r
 category: speech-audio
 description: ASR-enhanced high-quality TTS corpus for 22 Indian languages; subset of IndicVoices optimized for speech synthesis
 modality: Speech + Text (TTS-ready)
@@ -12,12 +12,32 @@ ai_use_cases:
   - Voice Cloning
   - Expressive Speech Synthesis
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/indicvoices_r"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/indicvoices_r
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: WAV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: audio
+    type: audio
+    description: Read speech audio recording
+  - field: transcript
+    type: string
+    description: Reference text that was read aloud
+  - field: language
+    type: string
+    description: Language code
+starter_idea:
+  Build a Marathi read-speech ASR model optimized for formal reading scenarios like news broadcasting and audiobook
+  narration.
+build_ideas:
+  - Create an audiobook generation quality checker that compares TTS output against human read-speech patterns
+  - Develop a Marathi reading fluency assessment tool for schools that evaluates student oral reading performance
+  - Build a pronunciation training app for Marathi language learners using native read-speech as reference
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicVoices-R', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Transcript: {ex['transcript'][:80]}...\")\n    if i >= 4: break\n"

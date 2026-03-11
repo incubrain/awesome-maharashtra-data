@@ -1,0 +1,42 @@
+title: AI4Bharat IndicParaphrase (mr)
+homepage: https://huggingface.co/datasets/ai4bharat/IndicParaphrase
+category: language-nlp
+description: AI4Bharat IndicParaphrase (mr) dataset for language nlp.
+modality: text
+size: Multilingual paraphrase dataset for 10 languages
+language:
+  - mr
+license: CC0-1.0
+ai_use_cases:
+  - Paraphrase generation
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicParaphrase
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: sentence1
+    type: string
+    description: First Marathi sentence
+  - field: sentence2
+    type: string
+    description: Second Marathi sentence (paraphrase or non-paraphrase)
+  - field: label
+    type: int
+    description: 1 if paraphrase, 0 if not
+starter_idea:
+  Build a Marathi duplicate content detector for news agencies to identify when multiple outlets cover the same
+  story differently.
+build_ideas:
+  - Create a Marathi question deduplication system for educational Q&A platforms to merge equivalent student questions
+  - Develop a plagiarism checker for Marathi academic papers that identifies paraphrased content across submissions
+  - Build a Marathi semantic search engine that retrieves relevant documents even when queries use different wording
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicParaphrase', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"S1: {ex['sentence1'][:60]}...\")\n    print(f\"S2: {ex['sentence2'][:60]}...\"\
+  )\n    print(f\"Paraphrase: {bool(ex['label'])}\\n\")\n    if i >= 4: break\n"

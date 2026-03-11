@@ -1,0 +1,55 @@
+title: VIIRS Nighttime Lights (Annual Composites)
+homepage: https://eogdata.mines.edu/products/vnl/
+category: geospatial-gis
+description:
+  Global annual nighttime light composites from VIIRS Day/Night Band at ~500m resolution. Maharashtra subsets enable
+  mapping urbanization, electrification, economic activity, and informal settlements at district level.
+modality: raster-imagery
+size: ~2 GB/year (global), ~50 MB (MH subset)
+language:
+  - en
+license: Open
+ai_use_cases:
+  - Urban sprawl detection
+  - GDP and economic activity estimation at district level
+  - Rural electrification monitoring
+  - Informal settlement mapping
+  - Disaster impact assessment
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://eogdata.mines.edu/nighttime_light/annual/v22/
+paper_url: ""
+github_url: ""
+organization: Colorado School of Mines / NOAA
+format: GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: radiance
+    type: float
+    description: Nighttime light radiance value
+  - field: latitude
+    type: float
+    description: Grid latitude
+  - field: longitude
+    type: float
+    description: Grid longitude
+  - field: date
+    type: date
+    description: Composite period
+starter_idea:
+  Build an economic activity proxy for Maharashtra using VIIRS nighttime lights as a measure of urbanization and
+  development.
+build_ideas:
+  - Create a rural electrification progress tracker for Maharashtra using nighttime light intensity changes
+  - Develop a GDP disaggregation model distributing Maharashtra GSDP to sub-district levels using nighttime lights
+  - Build a disaster impact assessor measuring economic disruption from floods through nighttime light dimming
+quick_start: "import ee
+
+  # viirs = ee.ImageCollection('NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG')
+
+  print('VIIRS Nighttime Lights: via Google Earth Engine or EOG/NOAA')
+
+  "

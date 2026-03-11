@@ -1,7 +1,9 @@
 title: Maharashtra Economic Survey
-homepage: "https://finance.maharashtra.gov.in/en/publication/economic-survey-of-maharashtra-2023-24/"
+homepage: https://finance.maharashtra.gov.in/en/publication/economic-survey-of-maharashtra-2023-24/
 category: economy-labour-finance
-description: Annual publication by the Directorate of Economics and Statistics covering GSDP, agriculture, industry, infrastructure, and social indicators for Maharashtra
+description:
+  Annual publication by the Directorate of Economics and Statistics covering GSDP, agriculture, industry, infrastructure,
+  and social indicators for Maharashtra
 modality: Tabular (PDF)
 size: State-level, annual
 language:
@@ -16,8 +18,37 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Department of Planning, Government of Maharashtra
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: sector
+    type: string
+    description: Economic sector name
+  - field: indicator
+    type: string
+    description: Economic indicator name
+  - field: value
+    type: float
+    description: Indicator value
+  - field: year
+    type: string
+    description: Financial year
+starter_idea:
+  Build a Maharashtra economic performance tracker analyzing GSDP growth, sectoral contributions, and development
+  indicators.
+build_ideas:
+  - Create a sector-wise investment opportunity ranker for Maharashtra based on growth trends from economic surveys
+  - Develop a district economic disparity analyzer using economic survey data to identify lagging regions
+  - Build a policy impact evaluator measuring how government interventions affect Maharashtra's economic indicators
+quick_start: "# Download from https://finance.maharashtra.gov.in/
+
+  import pandas as pd
+
+  print('Maharashtra Economic Survey')
+
+  print('Available at: https://finance.maharashtra.gov.in/')
+
+  "

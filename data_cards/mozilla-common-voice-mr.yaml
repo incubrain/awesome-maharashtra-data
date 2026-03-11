@@ -62,4 +62,39 @@ update_frequency: "monthly"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "audio"
+    type: "audio"
+    description: "Audio waveform of the speech recording (MP3)"
+  - field: "sentence"
+    type: "string"
+    description: "Reference text that was read aloud"
+  - field: "up_votes"
+    type: "int"
+    description: "Number of validation up-votes"
+  - field: "down_votes"
+    type: "int"
+    description: "Number of validation down-votes"
+  - field: "age"
+    type: "string"
+    description: "Speaker's age range (if provided)"
+  - field: "gender"
+    type: "string"
+    description: "Speaker's gender (if provided)"
+
+starter_idea: "Build a lightweight Marathi voice interface for feature phones that works with limited compute, targeting rural Maharashtra users."
+
+build_ideas:
+  - "Create a Marathi pronunciation assessment tool for language learners that scores speech accuracy against validated recordings"
+  - "Develop a voice-controlled Marathi search engine for accessing government schemes and agricultural information hands-free"
+  - "Build a Marathi TTS training pipeline using the validated recordings as high-quality reference for text-to-speech synthesis"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('mozilla-foundation/common_voice_17_0', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"Sentence: {ex['sentence']}")
+      print(f"Votes: +{ex['up_votes']}/-{ex['down_votes']}\n")
+      if i >= 4: break

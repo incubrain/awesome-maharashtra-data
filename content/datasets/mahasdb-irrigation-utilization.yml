@@ -1,9 +1,12 @@
 title: Maharashtra State Data Bank - Irrigation Area & Utilization
-homepage: "https://mahasdb.maharashtra.gov.in/"
+homepage: https://mahasdb.maharashtra.gov.in/
 category: agriculture-rural
-description: Taluka-wise irrigated area data by irrigation source (canals, wells, tanks, tubewells) for all Maharashtra districts. Tracks net and gross irrigated area, utilization of irrigation potential created, and source-wise breakdowns. Critical for water-stress mapping in Vidarbha and Marathwada.
+description:
+  Taluka-wise irrigated area data by irrigation source (canals, wells, tanks, tubewells) for all Maharashtra districts.
+  Tracks net and gross irrigated area, utilization of irrigation potential created, and source-wise breakdowns. Critical for
+  water-stress mapping in Vidarbha and Marathwada.
 modality: tabular
-size: "Taluka-level; annual time-series; all 36 districts"
+size: Taluka-level; annual time-series; all 36 districts
 language:
   - en
   - mr
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
-direct_download_url: "https://mahasdb.maharashtra.gov.in/"
+direct_download_url: https://mahasdb.maharashtra.gov.in/
 paper_url: ""
 github_url: ""
 organization: Directorate of Economics & Statistics, Maharashtra
@@ -24,3 +27,35 @@ format: CSV / Excel
 update_frequency: annual
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: project_name
+    type: string
+    description: Irrigation project name
+  - field: district
+    type: string
+    description: District in Maharashtra
+  - field: potential_ha
+    type: float
+    description: Irrigation potential in hectares
+  - field: utilized_ha
+    type: float
+    description: Actually irrigated area in hectares
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build an irrigation efficiency analyzer for Maharashtra that identifies projects with low utilization rates.
+build_ideas:
+  - Create a water budget optimizer that allocates irrigation water across Maharashtra projects based on crop needs and availability
+  - Develop an irrigation gap mapper showing which Maharashtra districts have the largest potential-utilization gaps
+  - Build a dam storage-irrigation demand forecasting model using historical utilization patterns and weather data
+quick_start: "# Maharashtra State Data Bank
+
+  import pandas as pd
+
+  df = pd.read_csv('mahasdb_irrigation.csv')
+
+  df['utilization_pct'] = df['Utilized_Ha'] / df['Potential_Ha'] * 100
+
+  print(df.sort_values('utilization_pct')[['Project_Name', 'utilization_pct']].head(10))
+
+  "

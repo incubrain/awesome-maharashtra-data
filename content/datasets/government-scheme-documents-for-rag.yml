@@ -1,7 +1,9 @@
 title: Government Scheme Documents for RAG
-homepage: "https://pmkisan.gov.in/"
+homepage: https://pmkisan.gov.in/
 category: agentic-instruction-rag
-description: Official documents for central government schemes (PM-KISAN, PMFBY, MGNREGA) with Maharashtra implementation guidelines, suitable for building scheme information retrieval agents
+description:
+  Official documents for central government schemes (PM-KISAN, PMFBY, MGNREGA) with Maharashtra implementation
+  guidelines, suitable for building scheme information retrieval agents
 modality: Text (PDF, web)
 size: Scheme-level documents
 language:
@@ -16,8 +18,34 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Various Maharashtra/India Government Departments
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Government scheme document text
+  - field: scheme_name
+    type: string
+    description: Name of the government scheme
+  - field: department
+    type: string
+    description: Issuing department
+starter_idea: Build a RAG-powered Marathi chatbot that answers citizen questions about government schemes using official documents.
+build_ideas:
+  - Create a scheme eligibility checker that matches citizen profiles with applicable Maharashtra government schemes
+  - Develop a government scheme comparison tool that helps citizens choose the best scheme for their needs
+  - Build a scheme update tracker that monitors changes to Maharashtra government programs and notifies affected beneficiaries
+quick_start: "# Government scheme documents for RAG applications
+
+  from langchain.document_loaders import DirectoryLoader
+
+  # loader = DirectoryLoader('scheme_docs/', glob='*.pdf')
+
+  # docs = loader.load()
+
+  print('Collect Maharashtra government scheme documents for RAG')
+
+  "

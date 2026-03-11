@@ -1,7 +1,9 @@
 title: Marathi Newspaper Archives
-homepage: "https://www.loksatta.com/"
+homepage: https://www.loksatta.com/
 category: culture-media-tourism-heritage
-description: Historical and contemporary Marathi newspaper collections from major publications (Loksatta, Sakal, Maharashtra Times) available through digital archives
+description:
+  Historical and contemporary Marathi newspaper collections from major publications (Loksatta, Sakal, Maharashtra
+  Times) available through digital archives
 modality: Text (Marathi)
 size: Multi-year archives
 language:
@@ -16,8 +18,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Various Marathi Newspapers / Digital Library of India
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: headline
+    type: string
+    description: News article headline in Marathi
+  - field: body
+    type: string
+    description: Article body text in Marathi
+  - field: source
+    type: string
+    description: Newspaper name
+  - field: date
+    type: date
+    description: Publication date
+  - field: category
+    type: string
+    description: News category
+starter_idea: Build a Marathi news analysis platform with topic modeling, sentiment tracking, and trend detection.
+build_ideas:
+  - Create a Marathi media bias detector comparing coverage of events across different Maharashtra newspapers
+  - Develop a Marathi news knowledge graph linking entities, events, and topics from historical archives
+  - Build a public opinion tracker extracting issue salience from Marathi newspaper coverage patterns
+quick_start: "# Marathi newspaper archives
+
+  import pandas as pd
+
+  print('Marathi Newspaper Archives')
+
+  print('Major sources: Loksatta, Maharashtra Times, Sakal, Pudhari')
+
+  "

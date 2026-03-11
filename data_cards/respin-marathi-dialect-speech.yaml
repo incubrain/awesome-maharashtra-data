@@ -1,0 +1,52 @@
+title: RESPIN Marathi Dialect-Rich Speech Corpus
+homepage: https://respin.iisc.ac.in/
+category: speech-audio
+description:
+  Part of the largest publicly available dialect-rich read-speech corpus for Indian languages, comprising 10,000+
+  hours validated audio across 9 languages. Marathi subset covers agriculture and finance domains with dialect-aware phonetic
+  lexicons and speaker metadata. Captures rural speech patterns that urban-centric datasets miss.
+modality: audio
+size: 1,000+ hours Marathi speech; dialect tags; speaker metadata
+language:
+  - mr
+license: Research (IISc / Gates Foundation)
+ai_use_cases:
+  - Dialect-aware Marathi speech recognition
+  - Rural voice interface development
+  - Agricultural domain ASR
+  - Speaker diarization with dialect identification
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://openreview.net/forum?id=qL8M2dOY4L
+github_url: ""
+organization: IISc Bangalore / SPIRE Lab
+format: WAV + text transcripts + metadata
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: Dialectal Marathi speech recording
+  - field: text
+    type: string
+    description: Transcription in standard Marathi
+  - field: dialect
+    type: string
+    description: Dialect or regional variety identifier
+starter_idea: Build a dialect-robust Marathi ASR model that performs well across regional speech varieties in Maharashtra.
+build_ideas:
+  - Create a Marathi dialect identification system from speech for sociolinguistic research across Maharashtra regions
+  - Develop a dialect-to-standard Marathi speech normalizer that converts dialectal speech to standard form
+  - Build a crowd-sourcing platform for collecting more dialectal Marathi speech data from underrepresented regions
+quick_start: '# RESPIN Marathi dialect speech corpus
+
+  # Access from https://respin.iisc.ac.in/
+
+  print("RESPIN Marathi dialect speech corpus")
+
+  print("Access from: https://respin.iisc.ac.in/")
+
+  '

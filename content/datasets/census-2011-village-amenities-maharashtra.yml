@@ -1,9 +1,12 @@
 title: Census 2011 Village Amenities - Maharashtra
-homepage: "https://www.data.gov.in/catalog/village-amenities-census-2011"
+homepage: https://www.data.gov.in/catalog/village-amenities-census-2011
 category: governance-census-demographics-legal
-description: Village-level amenities data from Census 2011 covering educational facilities (pre-primary through degree colleges), medical facilities (PHC, CHC, hospitals), water sources (tap, well, hand pump), banking, post offices, and communication infrastructure for all Maharashtra villages.
+description:
+  Village-level amenities data from Census 2011 covering educational facilities (pre-primary through degree colleges),
+  medical facilities (PHC, CHC, hospitals), water sources (tap, well, hand pump), banking, post offices, and communication
+  infrastructure for all Maharashtra villages.
 modality: tabular
-size: "43,000+ villages; 100+ amenity variables per village"
+size: 43,000+ villages; 100+ amenity variables per village
 language:
   - en
 license: GODL (Government Open Data License)
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
-direct_download_url: "https://www.data.gov.in/catalog/village-amenities-census-2011"
+direct_download_url: https://www.data.gov.in/catalog/village-amenities-census-2011
 paper_url: ""
 github_url: ""
 organization: Census of India / data.gov.in
@@ -24,3 +27,39 @@ format: CSV / Excel
 update_frequency: decennial
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: village_code
+    type: string
+    description: Census village code
+  - field: village_name
+    type: string
+    description: Village name
+  - field: has_primary_school
+    type: bool
+    description: Whether village has a primary school
+  - field: has_medical_facility
+    type: bool
+    description: Whether village has medical facility
+  - field: has_paved_road
+    type: bool
+    description: Whether village has paved approach road
+starter_idea:
+  Build an infrastructure gap analyzer for Maharashtra villages that identifies the most underserved areas needing
+  investment.
+build_ideas:
+  - Create a service delivery optimizer that plans new school, hospital, and road locations to maximize coverage in Maharashtra
+  - Develop a village amenity equity score ranking Maharashtra villages by access to basic infrastructure
+  - Build a rural development progress tracker comparing village amenities between Census 2001 and 2011
+quick_start: "# Download from https://censusindia.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('village_amenities_mh.csv')
+
+  print(f'Villages: {len(df)}')
+
+  no_school = df[~df['Has_Primary_School']]
+
+  print(f'Without primary school: {len(no_school)}')
+
+  "

@@ -1,65 +1,48 @@
----
-# Awesome Marathi Datasets - Data Card
-# L3Cube MahaSent
-
-# (required) Human-readable dataset name
-title: "L3Cube-MahaSent-MD"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
+title: "L3Cube-MahaSent"
 homepage: "https://github.com/l3cube-pune/MarathiNLP"
-
-# (required) Which category file this belongs to (without number prefix)
 category: "language-nlp"
-
-# (required) One-line description of the dataset
-description: "Multi-domain Marathi sentiment analysis dataset with 60,000 samples across 4 domains, labeled for positive, negative, and neutral sentiment."
-
-# (required) Data modality
+description: "Marathi tweet sentiment analysis dataset with ~16,000 tweets labeled as positive, negative, or neutral, used as a benchmark for Marathi sentiment classification."
 modality: "text"
-
-# (required) Approximate size with units
-size: "60,000 samples"
-
-# (required) ISO 639-1 language codes
+size: "~16,000 tweets"
 language:
   - mr
-
-# (required) License identifier
 license: "CC-BY-NC-SA-4.0"
-
-# HuggingFace dataset URL (if available)
 huggingface_url: ""
-
-# Direct download URL (if different from homepage)
 direct_download_url: ""
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
 paper_url: ""
-
-# GitHub repository URL (if applicable)
 github_url: "https://github.com/l3cube-pune/MarathiNLP"
-
-# Organization or author that created/maintains the dataset
 organization: "L3Cube, Pune"
-
-# (required) List of AI/ML use cases this dataset enables
 ai_use_cases:
   - "Sentiment analysis"
   - "Opinion mining"
   - "Social media monitoring"
-  - "Customer feedback classification"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - "Text classification benchmarking"
 maharashtra_specific: true
-
-# Format of the data files
 format: "CSV"
-
-# How frequently the data is updated (if applicable)
 update_frequency: "static"
-
-# BibTeX citation (if available)
 citation: ""
+last_verified: "2026-03-11"
 
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+schema:
+  - field: "tweet"
+    type: "string"
+    description: "Marathi tweet text"
+  - field: "label"
+    type: "string"
+    description: "Sentiment label (positive, negative, neutral)"
+
+starter_idea: "Build a real-time Marathi Twitter sentiment tracker that monitors public opinion on trending Maharashtra topics."
+
+build_ideas:
+  - "Create a Marathi social media listening tool for political campaigns to gauge voter sentiment across Maharashtra constituencies"
+  - "Develop a Marathi customer complaint detector that identifies negative sentiment tweets mentioning Maharashtra businesses and services"
+  - "Build a benchmark leaderboard for Marathi sentiment models comparing BERT, RoBERTa, and other architectures on this dataset"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('l3cube-pune/MahaSent')
+  from collections import Counter
+  labels = [ex['label'] for ex in ds['train']]
+  print(f"Label distribution: {dict(Counter(labels))}")
+  for ex in ds['train'][:5]:
+      print(f"[{ex['label']}] {ex['tweet'][:80]}...")

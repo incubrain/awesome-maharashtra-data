@@ -1,0 +1,45 @@
+title: PMIndia Marathi Parallel Corpus
+homepage: http://data.statmt.org/pmindia/
+category: language-nlp
+description:
+  English-Marathi parallel corpus extracted from the Prime Minister of India website (pmindia.gov.in) containing
+  up to 56,000 aligned sentence pairs. Covers speeches, press releases, and official communications, providing a domain-specific
+  parallel corpus for machine translation.
+modality: text
+size: ~56,000 sentence pairs (English-Marathi)
+language:
+  - en
+  - mr
+license: Open
+ai_use_cases:
+  - English-Marathi machine translation training
+  - Government domain language model fine-tuning
+  - Cross-lingual transfer learning
+  - Formal Marathi text generation
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: http://data.statmt.org/pmindia/
+paper_url: https://arxiv.org/abs/2001.09907
+github_url: https://github.com/bhaddow/pmindia-crawler
+organization: University of Edinburgh
+format: TSV / plain text
+update_frequency: static
+citation: Haddow & Kirefu. 2020. PMIndia - A Collection of Parallel Corpora of Languages of India.
+last_verified: "2026-03-11"
+schema:
+  - field: en
+    type: string
+    description: English sentence from PM India website
+  - field: mr
+    type: string
+    description: Marathi translation of the sentence
+starter_idea: Build a government domain-specific English-Marathi translator trained on official PM India communications.
+build_ideas:
+  - Create a government scheme explainer that translates and simplifies central government announcements into accessible Marathi
+  - Develop a bilingual document alignment tool for Maharashtra government offices processing central directives
+  - Build a translation memory system for government translators working on English-Marathi document pairs
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('pmindia', 'en-mr', split='train', streaming=True)\nfor\
+  \ i, ex in enumerate(ds):\n    print(f\"EN: {ex['translation']['en'][:60]}...\")\n    print(f\"MR: {ex['translation']['mr'][:60]}...\\\
+  n\")\n    if i >= 4: break\n"

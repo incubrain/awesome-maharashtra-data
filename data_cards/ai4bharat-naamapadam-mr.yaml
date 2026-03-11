@@ -62,4 +62,28 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "tokens"
+    type: "list[string]"
+    description: "List of word tokens in the sentence"
+  - field: "ner_tags"
+    type: "list[int]"
+    description: "BIO-format NER tags for each token (B-PER, I-PER, B-LOC, I-LOC, B-ORG, I-ORG, O)"
+
+starter_idea: "Build a Marathi document entity extractor that automatically identifies people, places, and organizations in government circulars and news articles."
+
+build_ideas:
+  - "Create a knowledge graph of Maharashtra politicians, districts, and organizations by extracting entities from Marathi news archives"
+  - "Develop an automated contact directory builder that extracts names and locations from Marathi business correspondence"
+  - "Build a Marathi-language resume parser that extracts candidate names, companies, and locations for recruitment platforms"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('ai4bharat/naamapadam', 'mr', split='train', streaming=True)
+  label_names = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC']
+  for i, ex in enumerate(ds):
+      entities = [(t, label_names[n]) for t, n in zip(ex['tokens'], ex['ner_tags']) if n != 0]
+      print(f"Entities: {entities[:5]}")
+      if i >= 4: break

@@ -1,7 +1,9 @@
-title: "Lok Sabha / Rajya Sabha Q&A"
-homepage: "https://loksabha.nic.in/"
+title: Lok Sabha / Rajya Sabha Q&A
+homepage: https://loksabha.nic.in/
 category: governance-census-demographics-legal
-description: Maharashtra MPs — Parliamentary questions and answers raised by Maharashtra Members of Parliament available through the open parliament data platform
+description:
+  Maharashtra MPs — Parliamentary questions and answers raised by Maharashtra Members of Parliament available through
+  the open parliament data platform
 modality: Text (web, PDF)
 size: Session-level, ongoing
 language:
@@ -17,8 +19,38 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Parliament of India
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: question
+    type: string
+    description: Parliamentary question text
+  - field: answer
+    type: string
+    description: Government response text
+  - field: ministry
+    type: string
+    description: Answering ministry
+  - field: mp_name
+    type: string
+    description: Asking MP name
+  - field: date
+    type: date
+    description: Question date
+starter_idea: Build a parliamentary accountability tracker analyzing government responses to questions about Maharashtra issues.
+build_ideas:
+  - Create a topic analysis tool showing what Maharashtra-related issues are raised most frequently in Parliament
+  - Develop a government promise tracker extracting commitments from parliamentary answers about Maharashtra projects
+  - Build a RAG system over parliamentary Q&A for citizens to find government positions on Maharashtra policy issues
+quick_start: "# Lok Sabha/Rajya Sabha Q&A
+
+  import pandas as pd
+
+  print('Parliament Q&A data')
+
+  print('Access from https://sansad.in/ and https://rajyasabha.nic.in/')
+
+  "

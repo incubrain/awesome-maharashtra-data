@@ -1,7 +1,9 @@
 title: data.gov.in APIs
-homepage: "https://www.data.gov.in/apis"
+homepage: https://www.data.gov.in/apis
 category: realtime-streams-apis
-description: Open Government Data platform providing 100,000+ APIs for real-time government data feeds across sectors including agriculture, transport, health, and environment for Maharashtra
+description:
+  Open Government Data platform providing 100,000+ APIs for real-time government data feeds across sectors including
+  agriculture, transport, health, and environment for Maharashtra
 modality: API (REST/JSON)
 size: 100,000+ APIs
 language:
@@ -16,8 +18,36 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Government of India, Open Government Data Platform
+format: JSON API
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: api_name
+    type: string
+    description: Name of the government API
+  - field: endpoint
+    type: string
+    description: API endpoint URL
+  - field: category
+    type: string
+    description: Data category (agriculture, health, education, etc.)
+starter_idea:
+  Build a unified government data aggregation layer that combines multiple data.gov.in APIs for Maharashtra-focused
+  analytics.
+build_ideas:
+  - Create a Maharashtra open data catalog that auto-discovers and indexes all available government APIs
+  - Develop a government data quality monitor that tracks API uptime, freshness, and completeness
+  - Build a citizen data portal that presents government API data in simple visual dashboards for public consumption
+quick_start: "import requests
+
+  # data.gov.in API
+
+  api_key = 'YOUR_API_KEY'  # Register at data.gov.in
+
+  url = f'https://api.data.gov.in/resource/?api-key={api_key}&format=json'
+
+  print('Register for API key at: https://data.gov.in/')
+
+  "

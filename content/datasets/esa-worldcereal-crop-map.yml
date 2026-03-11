@@ -1,7 +1,9 @@
 title: ESA WorldCereal Global Crop Map (10m)
-homepage: "https://esa-worldcereal.org/"
+homepage: https://esa-worldcereal.org/
 category: agriculture-rural
-description: First open-access global cropland and crop type map at 10m resolution from Sentinel-1/2 imagery. Maharashtra subset identifies cropland extent, wheat, maize, and other major crop boundaries at field level for precision agriculture.
+description:
+  First open-access global cropland and crop type map at 10m resolution from Sentinel-1/2 imagery. Maharashtra
+  subset identifies cropland extent, wheat, maize, and other major crop boundaries at field level for precision agriculture.
 modality: raster-imagery
 size: ~50 GB (global), ~1 GB (MH subset)
 language:
@@ -16,11 +18,35 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://ewoc-rdm-ui.iiasa.ac.at/"
-paper_url: "https://www.nature.com/articles/s41597-023-02047-9"
+direct_download_url: https://ewoc-rdm-ui.iiasa.ac.at/
+paper_url: https://www.nature.com/articles/s41597-023-02047-9
 github_url: ""
 organization: ESA / IIASA / VITO
 format: GeoTIFF / Cloud Optimized GeoTIFF
 update_frequency: seasonal
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: crop_type
+    type: int
+    description: Crop type classification code
+  - field: confidence
+    type: float
+    description: Classification confidence (0-100)
+  - field: geometry
+    type: raster
+    description: 10m resolution crop map pixels
+starter_idea: Build a crop acreage estimator for Maharashtra using ESA WorldCereal's 10m resolution global crop maps.
+build_ideas:
+  - Create a crop diversity mapper showing spatial distribution of different crop types across Maharashtra
+  - Develop a crop rotation tracker using multi-year WorldCereal maps to identify farming pattern changes
+  - Build a food production estimator combining WorldCereal crop maps with yield models for Maharashtra
+quick_start: "# Access via https://worldcereal.org/
+
+  import rasterio
+
+  print('ESA WorldCereal: https://worldcereal.org/')
+
+  print('10m resolution crop maps globally')
+
+  "

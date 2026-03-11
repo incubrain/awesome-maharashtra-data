@@ -1,9 +1,12 @@
 title: OPUS Marathi Parallel Corpora
-homepage: "https://opus.nlpl.eu/results/mr&en/corpus-result-table"
+homepage: https://opus.nlpl.eu/results/mr&en/corpus-result-table
 category: language-nlp
-description: Collection of parallel corpora from the OPUS project containing English-Marathi aligned text from multiple sources including JW300, GNOME, KDE4, Ubuntu, Tanzil (Quran), Bible, WikiMatrix, and CCAligned. Provides diverse domain coverage for machine translation training.
+description:
+  Collection of parallel corpora from the OPUS project containing English-Marathi aligned text from multiple sources
+  including JW300, GNOME, KDE4, Ubuntu, Tanzil (Quran), Bible, WikiMatrix, and CCAligned. Provides diverse domain coverage
+  for machine translation training.
 modality: text
-size: "Multiple corpora; thousands to millions of sentence pairs per source"
+size: Multiple corpora; thousands to millions of sentence pairs per source
 language:
   - mr
   - en
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: ready
 huggingface_url: ""
-direct_download_url: "https://opus.nlpl.eu/"
+direct_download_url: https://opus.nlpl.eu/
 paper_url: ""
 github_url: ""
 organization: OPUS / NLPL
@@ -24,3 +27,23 @@ format: TMX / plain text / Moses format
 update_frequency: periodic
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: src
+    type: string
+    description: Source sentence (English or other language)
+  - field: tgt
+    type: string
+    description: Target sentence in Marathi
+  - field: corpus
+    type: string
+    description: Source corpus name (OpenSubtitles, WikiMatrix, etc.)
+starter_idea: Build a multi-domain English-Marathi translation model by combining parallel corpora from different OPUS sources.
+build_ideas:
+  - Create a domain-adaptive Marathi translation system that selects training data from the most relevant OPUS corpus for each
+    input
+  - Develop a parallel corpus quality filter that scores and ranks translation pairs from OPUS for cleaner model training
+  - Build a Marathi subtitle generator for English video content using OPUS OpenSubtitles-trained translation models
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('Helsinki-NLP/opus-100', 'en-mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"EN: {ex['translation']['en'][:60]}...\")\n    print(f\"MR: {ex['translation']['mr'][:60]}...\\\
+  n\")\n    if i >= 4: break\n"

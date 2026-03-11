@@ -1,0 +1,45 @@
+title: "L3Cube-MahaHate"
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: "language-nlp"
+description: "Marathi hate speech detection dataset with 25,000 tweets for 4-class classification and 37,500 tweets for binary classification."
+modality: "text"
+size: "25,000-37,500 tweets"
+language:
+  - mr
+license: "CC-BY-NC-SA-4.0"
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: "L3Cube, Pune"
+ai_use_cases:
+  - "Hate speech detection"
+  - "Content moderation"
+  - "Offensive language identification"
+  - "Social media safety"
+maharashtra_specific: true
+format: "CSV"
+update_frequency: "static"
+citation: ""
+last_verified: "2026-03-11"
+
+schema:
+  - field: "text"
+    type: "string"
+    description: "Marathi tweet text"
+  - field: "label"
+    type: "string"
+    description: "Hate speech class label (hate, offensive, profane, not in binary; hate/not-hate in binary)"
+
+starter_idea: "Build a Marathi content moderation API that flags hate speech in real-time for community forum platforms."
+
+build_ideas:
+  - "Create an automated moderation pipeline for Marathi-language social media communities that filters hateful content before it reaches users"
+  - "Develop a caste-discrimination and communal-hate monitoring dashboard for civil society organizations tracking online abuse in Maharashtra"
+  - "Build a browser extension that warns users about hateful Marathi content and suggests constructive alternatives"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('l3cube-pune/MahaHate')
+  for ex in ds['train'][:5]:
+      print(f"[{ex['label']}] {ex['text'][:80]}...")

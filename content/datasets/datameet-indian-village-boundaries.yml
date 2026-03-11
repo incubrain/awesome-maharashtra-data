@@ -1,8 +1,8 @@
 title: DataMeet Indian Village Boundaries
-homepage: "https://projects.datameet.org/indian_village_boundaries/mh/"
+homepage: https://projects.datameet.org/indian_village_boundaries/mh/
 category: geospatial-gis
 description: Maharashtra — Community-digitized village-level boundary polygons for all Maharashtra districts
-modality: "Vector (GeoJSON, EPSG:4326)"
+modality: Vector (GeoJSON, EPSG:4326)
 size: All villages across 36 districts; GeoJSON format
 language:
   - en
@@ -16,9 +16,38 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/datameet/indian_village_boundaries"
-organization: ""
-format: ""
+github_url: https://github.com/datameet/indian_village_boundaries
+organization: DataMeet Community
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: geometry
+    type: Polygon
+    description: Village boundary polygon
+  - field: village_name
+    type: string
+    description: Village name
+  - field: district
+    type: string
+    description: District name
+  - field: state
+    type: string
+    description: State name
+starter_idea: Build a pan-India village-level spatial analysis platform with Maharashtra as the primary focus area.
+build_ideas:
+  - Create a cross-state village comparison tool showing development indicators overlaid on village boundaries
+  - Develop a disaster impact assessment system using village boundaries for granular damage estimation
+  - Build a voter constituency mapper linking village boundaries with electoral ward boundaries for political analysis
+quick_start: "import geopandas as gpd
+
+  # Download from https://github.com/datameet/indian_village_boundaries
+
+  gdf = gpd.read_file('indian_village_boundaries.geojson')
+
+  mh = gdf[gdf['state'] == 'Maharashtra']
+
+  print(f'Maharashtra villages: {len(mh)}')
+
+  "

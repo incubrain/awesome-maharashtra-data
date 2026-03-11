@@ -1,7 +1,9 @@
 title: L3Cube-MahaSQuAD
-homepage: "https://github.com/l3cube-pune/MarathiNLP"
+homepage: https://github.com/l3cube-pune/MarathiNLP
 category: language-nlp
-description: Large-scale Marathi question answering dataset with 118,516 training, 11,873 validation, and 11,803 test QA samples, modeled after SQuAD.
+description:
+  Large-scale Marathi question answering dataset with 118,516 training, 11,873 validation, and 11,803 test QA samples,
+  modeled after SQuAD.
 modality: text
 size: 142,192 QA samples
 language:
@@ -16,9 +18,37 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
+github_url: https://github.com/l3cube-pune/MarathiNLP
 organization: L3Cube, Pune
 format: JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: context
+    type: string
+    description: Context paragraph in Marathi containing the answer
+  - field: question
+    type: string
+    description: Question in Marathi about the context
+  - field: answers
+    type: object
+    description: Answer object with 'text' (list of answer strings) and 'answer_start' (list of character offsets)
+starter_idea: Build a Marathi question-answering system for agricultural advisory queries from farmers.
+build_ideas:
+  - Create a RAG pipeline for answering questions over Marathi Wikipedia and government documents
+  - Develop a customer support chatbot that answers FAQs in Marathi using extractive QA
+  - Build an educational assistant that answers student questions about Marathi literature and history
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''l3cube-pune/MahaSQuAD'')
+
+  qa = ds[''train''][0]
+
+  print(f"Q: {qa[''question'']}")
+
+  print(f"A: {qa[''answers''][''text''][0]}")
+
+  print(f"Context: {qa[''context''][:100]}...")
+
+  '

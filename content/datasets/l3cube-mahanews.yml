@@ -1,5 +1,5 @@
 title: L3Cube-MahaNews
-homepage: "https://huggingface.co/l3cube-pune/marathi-topic-all-doc"
+homepage: https://huggingface.co/l3cube-pune/marathi-topic-all-doc
 category: language-nlp
 description: L3Cube-MahaNews dataset for language nlp.
 modality: text
@@ -10,12 +10,30 @@ license: CC-BY-NC-SA-4.0
 ai_use_cases:
   - News topic classification
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/l3cube-pune/marathi-topic-all-doc"
+huggingface_url: https://huggingface.co/l3cube-pune/marathi-topic-all-doc
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: L3Cube, Pune
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Marathi news headline or article text
+  - field: label
+    type: string
+    description: "News topic category (one of 12 categories: politics, sports, entertainment, etc.)"
+starter_idea:
+  Build a Marathi news aggregation and auto-tagging service that categorizes articles by topic for personalized
+  feeds.
+build_ideas:
+  - Create a breaking-news detection system that classifies and prioritizes incoming Marathi news by topic and urgency
+  - Develop a personalized Marathi news digest app that learns user preferences and recommends stories from their favourite
+    categories
+  - Build a media monitoring service for Maharashtra government officials that tracks coverage by topic across Marathi publications
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('l3cube-pune/MahaNews')\nfor ex in ds['train'][:5]:\n \
+  \   print(f\"[{ex['label']}] {ex['text'][:80]}...\")\n"

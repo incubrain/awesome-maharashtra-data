@@ -1,0 +1,55 @@
+title: Bhuvan NRSC Open EO Data Archive
+homepage: https://bhuvan-app3.nrsc.gov.in/data/
+category: geospatial-gis
+description: ISRO satellite imagery (Resourcesat LISS-III, AWiFS, Cartosat DEM) freely downloadable for Maharashtra region
+modality: Raster (GeoTIFF) / WMS
+size: 20+ TB archive; Cartosat DEM 30m, LISS-III 23.5m, AWiFS 56m resolution
+language:
+  - en
+license: OGL-India (ISRO/NRSC)
+ai_use_cases:
+  - Crop mapping
+  - NDVI time-series analysis
+  - DEM-based flood modeling
+  - change detection
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: National Remote Sensing Centre (NRSC), ISRO
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: tile_id
+    type: string
+    description: Satellite image tile identifier
+  - field: sensor
+    type: string
+    description: Satellite sensor name
+  - field: acquisition_date
+    type: date
+    description: Image capture date
+  - field: resolution_m
+    type: float
+    description: Spatial resolution in meters
+starter_idea:
+  Build a multi-temporal satellite image analysis pipeline for monitoring Maharashtra's land use changes using
+  Bhuvan data.
+build_ideas:
+  - Create an urban sprawl tracker for Maharashtra cities using temporal satellite imagery analysis
+  - Develop a reservoir water level estimator using optical satellite imagery from Bhuvan for Maharashtra dams
+  - Build a mining activity monitor for Maharashtra using change detection on Bhuvan satellite archives
+quick_start: "# Register at https://bhuvan.nrsc.gov.in/
+
+  import requests
+
+  print('Bhuvan NRSC Open EO Data Archive')
+
+  print('Register at bhuvan.nrsc.gov.in for data access')
+
+  print('Download LISS-III, AWiFS, Cartosat data for Maharashtra')
+
+  "

@@ -1,7 +1,9 @@
 title: AI4Bharat IndicQA
-homepage: "https://huggingface.co/datasets/ai4bharat/IndicQA"
+homepage: https://huggingface.co/datasets/ai4bharat/IndicQA
 category: agentic-instruction-rag
-description: Marathi — Expert-generated reading comprehension dataset for 11 Indic languages including Marathi, with context-question-answer triples for extractive QA tasks
+description:
+  Marathi — Expert-generated reading comprehension dataset for 11 Indic languages including Marathi, with context-question-answer
+  triples for extractive QA tasks
 modality: Text (Marathi)
 size: Multi-lingual, Marathi subset
 language:
@@ -12,12 +14,12 @@ ai_use_cases:
   - reading comprehension evaluation
   - RAG answer extraction
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicQA"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicQA
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
@@ -30,17 +32,21 @@ schema:
     description: Question in Marathi about the context
   - field: answers
     type: object
-    description: "Object with 'text' (list of answer strings) and 'answer_start' (character offsets)"
+    description: Object with 'text' (list of answer strings) and 'answer_start' (character offsets)
   - field: id
     type: string
     description: Unique question-answer pair identifier
 starter_idea: Build a Marathi government scheme FAQ bot using RAG
 build_ideas:
-  - "RAG-powered Marathi chatbot that answers questions about government schemes"
-  - "Marathi reading comprehension tutor for school students"
-  - "Automated Marathi customer support for insurance or banking"
-quick_start: |
-  from datasets import load_dataset
+  - RAG-powered Marathi chatbot that answers questions about government schemes
+  - Marathi reading comprehension tutor for school students
+  - Automated Marathi customer support for insurance or banking
+quick_start: 'from datasets import load_dataset
+
   ds = load_dataset("ai4bharat/IndicQA", "indicqa.mr")
+
   print(ds["test"][0]["question"])
+
   print(ds["test"][0]["answers"])
+
+  '

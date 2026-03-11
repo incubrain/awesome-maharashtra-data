@@ -1,0 +1,60 @@
+title: e-NAM Trade Data
+homepage: https://enam.gov.in/web/dashboard/trade-data
+category: agriculture-rural
+description:
+  Electronic National Agriculture Market with 118 Maharashtra mandis integrated, providing real-time commodity
+  arrivals, quality parameters, and trade prices
+modality: Tabular (web/API)
+size: 118 MH mandis; live trade data
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Real-time price discovery
+  - market integration analysis
+  - supply-demand forecasting
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Ministry of Agriculture & Farmers Welfare, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: mandi
+    type: string
+    description: e-NAM mandi name
+  - field: commodity
+    type: string
+    description: Traded commodity name
+  - field: lot_size
+    type: float
+    description: Lot size in quintals
+  - field: price
+    type: float
+    description: Trading price in Rs/quintal
+  - field: trade_date
+    type: date
+    description: Date of trade
+starter_idea:
+  Build a nationwide mandi price comparison tool that helps Maharashtra farmers find the best selling price across
+  e-NAM markets.
+build_ideas:
+  - Create an arbitrage opportunity detector that identifies price differences across e-NAM mandis for commodity traders
+  - Develop a trade volume forecasting model for Maharashtra mandis to plan logistics and storage capacity
+  - Build a farmer income optimizer that combines e-NAM prices with transport costs to recommend the most profitable selling
+    point
+quick_start: '# Download from https://enam.gov.in/web/dashboard/trade-data
+
+  import pandas as pd
+
+  df = pd.read_csv(''enam_trade.csv'')
+
+  print(f"Trade records: {len(df)}")
+
+  print(df.groupby(''Commodity'')[''Price''].mean().sort_values(ascending=False).head(10))
+
+  '

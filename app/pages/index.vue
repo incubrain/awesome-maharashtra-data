@@ -47,9 +47,6 @@ const topGaps = computed(() =>
             Find data, spark ideas, and start building.
           </p>
           <div class="flex justify-center gap-3 mt-4">
-            <UButton to="/datasets" size="lg" icon="i-lucide-database">
-              Browse All Datasets
-            </UButton>
             <UButton
               to="/gaps"
               size="lg"

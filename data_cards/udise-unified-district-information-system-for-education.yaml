@@ -1,0 +1,61 @@
+title: UDISE+ (Unified District Information System for Education)
+homepage: https://udiseplus.gov.in/
+category: education-skills
+description:
+  Comprehensive annual school-level data on enrolment, infrastructure, teachers, and facilities for all recognised
+  schools in Maharashtra
+modality: Tabular (web portal, reports)
+size: ~1.1 lakh+ schools in Maharashtra
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Education access modelling
+  - school infrastructure gap analysis
+  - dropout prediction
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Ministry of Education, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: school_id
+    type: string
+    description: School unique identifier
+  - field: district
+    type: string
+    description: District name
+  - field: enrollment
+    type: int
+    description: Total enrollment
+  - field: teachers
+    type: int
+    description: Number of teachers
+  - field: infrastructure_score
+    type: float
+    description: School infrastructure score
+starter_idea:
+  Build a school quality analyzer for Maharashtra using UDISE data on infrastructure, enrollment, and teacher
+  metrics.
+build_ideas:
+  - Create a teacher deployment optimizer for Maharashtra balancing student-teacher ratios across schools
+  - Develop a school infrastructure priority ranker identifying Maharashtra schools needing urgent upgrades
+  - Build a school consolidation recommender for Maharashtra's declining-enrollment rural schools
+quick_start: "# Download from https://udiseplus.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('udise_data.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(f'Schools: {len(mh)}')
+
+  print(mh.groupby('District')['Enrollment'].sum().sort_values(ascending=False).head())
+
+  "

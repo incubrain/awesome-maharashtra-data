@@ -1,0 +1,54 @@
+title: IMD Gridded Rainfall Data
+homepage: https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html
+category: agriculture-rural
+description:
+  India Meteorological Department high-resolution (0.25° x 0.25°) daily gridded rainfall dataset covering 1901-2024
+  in 135x129 grid points
+modality: Gridded (NetCDF/binary)
+size: 120+ years; daily; 0.25° grid
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Monsoon prediction
+  - drought early warning
+  - crop-weather correlation models
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: India Meteorological Department
+format: Various
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: rainfall_mm
+    type: float
+    description: Daily rainfall in millimeters
+  - field: latitude
+    type: float
+    description: Grid latitude (0.25 degree)
+  - field: longitude
+    type: float
+    description: Grid longitude (0.25 degree)
+  - field: date
+    type: date
+    description: Date of observation
+starter_idea: Build a high-resolution rainfall analysis tool for Maharashtra agriculture using IMD 0.25-degree gridded data.
+build_ideas:
+  - Create a taluka-level drought declaration support system using IMD gridded rainfall deficit calculations
+  - Develop a rainfall-runoff model for Maharashtra watersheds using gridded precipitation as input
+  - Build a monsoon performance tracker comparing real-time rainfall against long-period averages for Maharashtra
+quick_start: "import xarray as xr
+
+  # Download from https://www.imdpune.gov.in/
+
+  # ds = xr.open_dataset('imd_gridded_rainfall.nc')
+
+  print('IMD Gridded Rainfall: https://www.imdpune.gov.in/')
+
+  print('0.25 degree daily gridded rainfall for India')
+
+  "

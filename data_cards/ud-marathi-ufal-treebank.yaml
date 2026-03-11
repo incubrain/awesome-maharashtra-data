@@ -1,0 +1,43 @@
+title: UD Marathi-UFAL Treebank
+homepage: https://github.com/UniversalDependencies/UD_Marathi-UFAL
+category: language-nlp
+description: UD Marathi-UFAL Treebank dataset for language nlp.
+modality: text (CoNLL-U)
+size: 466 sentences, 3,506 tokens
+language:
+  - mr
+license: CC-BY-SA-4.0
+ai_use_cases:
+  - POS tagging
+  - dependency parsing
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/UniversalDependencies/UD_Marathi-UFAL
+organization: UFAL, Charles University
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Marathi sentence text
+  - field: tokens
+    type: list[string]
+    description: Word tokens
+  - field: upos
+    type: list[string]
+    description: Universal POS tags for each token
+  - field: deprel
+    type: list[string]
+    description: Dependency relation labels
+starter_idea: Build a Marathi grammar checker using dependency parsing from the Universal Dependencies treebank.
+build_ideas:
+  - Create a Marathi syntactic complexity analyzer for readability scoring of educational and government texts
+  - Develop a Marathi POS tagger and parser for integration into downstream NLP pipelines
+  - Build a Marathi sentence simplification tool that restructures complex sentences based on dependency parse analysis
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('universal_dependencies', 'mr_ufal', split='train')\nfor\
+  \ ex in ds[:5]:\n    print(f\"Text: {ex['text'][:60]}...\")\n    print(f\"POS: {ex['upos'][:8]}...\\n\")\n"

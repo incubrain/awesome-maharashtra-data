@@ -1,0 +1,54 @@
+title: IHME Global Burden of Disease
+homepage: https://vizhub.healthdata.org/gbd-results/
+category: health-nutrition
+description:
+  India Subnational — Comprehensive disease burden estimates (292 causes, 88 risk factors) for Maharashtra from
+  1990 to present via the India State-Level Disease Burden Initiative
+modality: Tabular (CSV, interactive)
+size: Subnational, 1990–2023
+language:
+  - en
+license: Open (IHME Free-of-Charge)
+ai_use_cases:
+  - Disease burden forecasting
+  - risk factor modelling
+  - health intervention prioritisation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Institute for Health Metrics and Evaluation
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: location
+    type: string
+    description: Location name (country, state, or region)
+  - field: cause
+    type: string
+    description: Disease or injury cause
+  - field: dalys
+    type: float
+    description: Disability-adjusted life years
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a health priority ranker for Maharashtra identifying diseases causing the highest burden measured in DALYs.
+build_ideas:
+  - Create a health transition tracker showing how Maharashtra's disease burden shifts from infectious to non-communicable diseases
+  - Develop a health investment optimizer allocating resources proportional to disease burden across Maharashtra
+  - Build a comparative health dashboard showing Maharashtra's disease burden against other Indian states and global benchmarks
+quick_start: "# Download from https://vizhub.healthdata.org/gbd-results/
+
+  import pandas as pd
+
+  df = pd.read_csv('gbd_results.csv')
+
+  india = df[df['Location'] == 'India']
+
+  print(india.groupby('Cause')['DALYs'].sum().sort_values(ascending=False).head(10))
+
+  "

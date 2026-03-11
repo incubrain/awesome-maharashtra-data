@@ -1,7 +1,9 @@
 title: ASER (Annual Status of Education Report)
-homepage: "https://asercentre.org/"
+homepage: https://asercentre.org/
 category: education-skills
-description: "Maharashtra — Household-based survey of children's enrolment status and learning outcomes (reading, arithmetic) across rural Maharashtra districts"
+description:
+  Maharashtra — Household-based survey of children's enrolment status and learning outcomes (reading, arithmetic)
+  across rural Maharashtra districts
 modality: Tabular (PDF, Excel)
 size: District-level, annual since 2005
 language:
@@ -16,8 +18,45 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Pratham Education Foundation
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: age_group
+    type: string
+    description: Student age group
+  - field: reading_level
+    type: string
+    description: Reading ability level
+  - field: math_level
+    type: string
+    description: Math ability level
+  - field: year
+    type: int
+    description: Survey year
+starter_idea: Build a learning outcomes tracker for Maharashtra districts that identifies schools needing urgent intervention.
+build_ideas:
+  - Create a dropout risk predictor combining ASER learning outcomes with socioeconomic indicators for Maharashtra
+  - Develop a teaching effectiveness analyzer comparing ASER scores across different school management types in Maharashtra
+  - Build a remedial education planner that targets specific skill gaps identified in ASER assessments
+quick_start: '# Download from https://asercentre.org/
+
+  import pandas as pd
+
+  df = pd.read_csv(''aser_data.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f''Maharashtra districts: {mh["District"].nunique()}'')
+
+  print(mh.groupby(''Reading_Level'').size())
+
+  '

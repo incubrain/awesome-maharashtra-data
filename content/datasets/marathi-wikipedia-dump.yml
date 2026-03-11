@@ -1,5 +1,5 @@
 title: Marathi Wikipedia Dump
-homepage: "https://dumps.wikimedia.org/mrwiki/"
+homepage: https://dumps.wikimedia.org/mrwiki/
 category: language-nlp
 description: Marathi Wikipedia Dump dataset for language nlp.
 modality: text
@@ -11,12 +11,42 @@ ai_use_cases:
   - Knowledge extraction
   - LM pretraining
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/wikipedia"
+huggingface_url: https://huggingface.co/datasets/wikipedia
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Wikimedia Foundation
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Raw Wikipedia dump text in Marathi
+  - field: title
+    type: string
+    description: Article title
+  - field: id
+    type: string
+    description: Wikipedia article ID
+starter_idea:
+  Use the raw Marathi Wikipedia dump to build a structured knowledge graph of Maharashtra-related entities and
+  relationships.
+build_ideas:
+  - Create a Marathi Wikipedia vandalism detector that identifies and reverts malicious edits in real-time
+  - Develop a cross-lingual knowledge alignment tool linking Marathi Wikipedia articles to their Hindi and English counterparts
+  - Build an automated Marathi Wikipedia article expander that suggests missing content sections based on English article structure
+quick_start: '# Download from https://dumps.wikimedia.org/mrwiki/
+
+  import bz2
+
+  import xml.etree.ElementTree as ET
+
+  # with bz2.open(''mrwiki-latest-pages-articles.xml.bz2'', ''rt'') as f:
+
+  #     tree = ET.iterparse(f, events=(''start'', ''end''))
+
+  print("Download Marathi Wikipedia dump from dumps.wikimedia.org/mrwiki/")
+
+  '

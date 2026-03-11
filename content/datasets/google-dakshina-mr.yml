@@ -1,5 +1,5 @@
 title: Google Dakshina (mr)
-homepage: "https://github.com/google-research-datasets/dakshina"
+homepage: https://github.com/google-research-datasets/dakshina
 category: language-nlp
 description: Google Dakshina (mr) dataset for language nlp.
 modality: text, transliteration
@@ -13,9 +13,26 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/google-research-datasets/dakshina"
-organization: ""
-format: ""
+github_url: https://github.com/google-research-datasets/dakshina
+organization: Google Research
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: native
+    type: string
+    description: Text in Devanagari script
+  - field: romanized
+    type: string
+    description: Text in Latin/Roman script transliteration
+starter_idea:
+  Build a Marathi transliteration engine that converts Roman-script Marathi (commonly typed on phones) to proper
+  Devanagari.
+build_ideas:
+  - Create a Marathi keyboard input method that auto-corrects Roman-to-Devanagari transliteration in real-time
+  - Develop a social media normalizer that converts code-mixed Roman-Marathi text to standard Devanagari for NLP processing
+  - Build a Marathi OCR post-processor that handles mixed-script documents with both Roman and Devanagari text
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('google/dakshina', 'mr', split='train')\nfor ex in ds[:5]:\n\
+  \    print(f\"Devanagari: {ex['native']}\")\n    print(f\"Roman: {ex['romanized']}\\n\")\n"

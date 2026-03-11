@@ -1,0 +1,57 @@
+title: AgMarkNet Daily Prices API
+homepage: https://www.agmarknet.gov.in/PriceAndArrivals/CommodityDailyStateWise.aspx
+category: realtime-streams-apis
+description:
+  Daily wholesale commodity prices and arrival data from agricultural mandis across Maharashtra provided by the
+  Directorate of Marketing & Inspection
+modality: API (web)
+size: Daily, mandi-level
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Commodity price forecasting
+  - farmer advisory systems
+  - agricultural market analytics
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Directorate of Marketing & Inspection, Government of India
+format: JSON API
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: market
+    type: string
+    description: Market/mandi name
+  - field: commodity
+    type: string
+    description: Commodity name
+  - field: min_price
+    type: float
+    description: Minimum price Rs/quintal
+  - field: max_price
+    type: float
+    description: Maximum price Rs/quintal
+  - field: modal_price
+    type: float
+    description: Modal price Rs/quintal
+starter_idea: Build a real-time mandi price alerting system via WhatsApp for Maharashtra farmers using the AgMarkNet API.
+build_ideas:
+  - Create a price volatility tracker API that monitors and alerts on sudden price swings in Maharashtra mandis
+  - Develop a conversational price query bot in Marathi that fetches live market prices via voice or text
+  - Build a price comparison dashboard aggregating real-time data across all Maharashtra agricultural markets
+quick_start: "import requests
+
+  # AgMarkNet API endpoint
+
+  url = 'https://agmarknet.gov.in/SearchCmmMkt.aspx'
+
+  print('Access AgMarkNet daily prices API')
+
+  print('Register at agmarknet.gov.in for API access')
+
+  "

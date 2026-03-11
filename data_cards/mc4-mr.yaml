@@ -62,4 +62,30 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "text"
+    type: "string"
+    description: "Web-crawled Marathi text document"
+  - field: "timestamp"
+    type: "string"
+    description: "Crawl timestamp of the document"
+  - field: "url"
+    type: "string"
+    description: "Source URL of the crawled page"
+
+starter_idea: "Pre-train a Marathi-specific language model on the mC4 corpus to create a foundation model for downstream NLP tasks like classification and QA."
+
+build_ideas:
+  - "Create a Marathi domain classifier that categorizes web content by topic (news, government, education, commerce) for targeted corpus curation"
+  - "Develop a Marathi text quality scorer that filters high-quality documents from mC4 for cleaner language model training"
+  - "Build a Marathi web content analyzer that identifies emerging topics and trends from the crawled corpus for media monitoring"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('mc4', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"URL: {ex['url'][:60]}")
+      print(f"Text: {ex['text'][:100]}...\n")
+      if i >= 4: break

@@ -1,0 +1,57 @@
+title: WorldPop Population Counts (100m)
+homepage: https://hub.worldpop.org/project/categories?id=3
+category: governance-census-demographics-legal
+description:
+  Annual population estimates at 100m resolution for 2000-2030 using Random Forest dasymetric disaggregation. Maharashtra
+  subset provides village-level population grids far more granular than census ward boundaries.
+modality: raster-gridded
+size: ~200 MB/year (India), ~30 MB (MH subset)
+language:
+  - en
+license: CC BY 4.0
+ai_use_cases:
+  - High-resolution population mapping
+  - Service delivery planning (schools, hospitals, anganwadis)
+  - Disaster vulnerability assessment
+  - Urban-rural migration analysis
+  - Electoral ward delineation
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://hub.worldpop.org/geodata/listing?id=76
+paper_url: https://www.nature.com/articles/sdata20174
+github_url: ""
+organization: WorldPop / University of Southampton
+format: GeoTIFF
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: population
+    type: float
+    description: Estimated population per 100m grid cell
+  - field: latitude
+    type: float
+    description: Grid cell latitude
+  - field: longitude
+    type: float
+    description: Grid cell longitude
+  - field: year
+    type: int
+    description: Estimate year
+starter_idea: Build a hyper-local population exposure analyzer for Maharashtra at 100m resolution for service delivery planning.
+build_ideas:
+  - Create a school catchment area population estimator for Maharashtra using 100m population grids
+  - Develop a vaccine distribution planner using high-resolution population data for Maharashtra health campaigns
+  - Build a market potential estimator for retail businesses using population density at 100m resolution in Maharashtra
+quick_start: "import rasterio
+
+  # Download from https://www.worldpop.org/
+
+  # src = rasterio.open('ind_ppp_2020_100m.tif')
+
+  print('WorldPop 100m: https://www.worldpop.org/')
+
+  print('100m resolution population estimates')
+
+  "

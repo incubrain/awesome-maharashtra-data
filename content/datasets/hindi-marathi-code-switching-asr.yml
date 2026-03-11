@@ -1,9 +1,12 @@
 title: Hindi-Marathi Code-Switching ASR Dataset
-homepage: "https://arxiv.org/abs/2104.00235"
+homepage: https://arxiv.org/abs/2104.00235
 category: speech-audio
-description: 450-hour annotated dataset of Hindi-Marathi code-switching speech, including tag-switching, intra-sentential, and inter-sentential code-mixing patterns. Designed for automatic speech recognition in multilingual contexts common in Maharashtra where Hindi-Marathi mixing is prevalent.
+description:
+  450-hour annotated dataset of Hindi-Marathi code-switching speech, including tag-switching, intra-sentential,
+  and inter-sentential code-mixing patterns. Designed for automatic speech recognition in multilingual contexts common in
+  Maharashtra where Hindi-Marathi mixing is prevalent.
 modality: audio
-size: "450 hours of annotated speech; balanced code-switching patterns"
+size: 450 hours of annotated speech; balanced code-switching patterns
 language:
   - mr
   - hi
@@ -17,10 +20,31 @@ maharashtra_specific: true
 extraction_status: ready
 huggingface_url: ""
 direct_download_url: ""
-paper_url: "https://arxiv.org/abs/2104.00235"
+paper_url: https://arxiv.org/abs/2104.00235
 github_url: ""
 organization: Research
 format: Audio + transcriptions
 update_frequency: static
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: audio
+    type: audio
+    description: Code-switched Hindi-Marathi speech audio
+  - field: transcription
+    type: string
+    description: Transcription with language tags
+starter_idea: Build an ASR system that handles Hindi-Marathi code-switching for real-world conversational settings in Maharashtra.
+build_ideas:
+  - Create a bilingual meeting transcription system for Maharashtra offices where Hindi-Marathi switching is common
+  - Develop a code-switching language model that predicts switching points between Hindi and Marathi in speech
+  - Build a customer service bot that understands mixed Hindi-Marathi queries from Mumbai and Pune callers
+quick_start: '# Hindi-Marathi code-switching ASR dataset
+
+  # Access from respective research paper/repository
+
+  print("Hindi-Marathi code-switching ASR dataset")
+
+  print("Check paper references for download instructions")
+
+  '

@@ -14,22 +14,6 @@ const { data: datasets } = await useAsyncData(`datasets-cat-${slug}`, () =>
   queryCollection('datasets').where('category', '=', slug).all()
 )
 
-const { data: sota } = await useAsyncData(`sota-${slug}`, () =>
-  queryCollection('sota').where('category', '=', slug).first()
-)
-
-const hasSota = computed(() => !!sota.value)
-
-const tabItems = computed(() => {
-  const items: { label: string; icon: string; slot: string; value: string }[] = [
-    { label: 'Datasets', icon: 'i-lucide-database', slot: 'datasets', value: 'datasets' },
-  ]
-  if (hasSota.value) {
-    items.push({ label: 'SOTA Research', icon: 'i-lucide-flask-conical', slot: 'sota', value: 'sota' })
-  }
-  return items
-})
-
 useSeoMeta({
   title: category.value.title,
   description: category.value.description,
@@ -63,34 +47,7 @@ useSeoMeta({
           <p class="text-sm text-(--ui-text-dimmed) mt-1">{{ datasets?.length || 0 }} datasets</p>
         </div>
 
-        <!-- Show tabs only when SOTA research exists -->
-        <UTabs v-if="hasSota" :items="tabItems" class="w-full">
-          <template #datasets>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pt-4">
-              <DatasetCard
-                v-for="dataset in datasets"
-                :key="dataset.stem"
-                :dataset="dataset"
-              />
-            </div>
-          </template>
-
-          <template #sota>
-            <div v-if="sota" class="pt-4">
-              <div class="flex items-center gap-2 mb-4">
-                <UBadge color="primary" variant="subtle" size="sm">
-                  Last updated: {{ sota.last_updated }}
-                </UBadge>
-              </div>
-              <div class="prose prose-sm dark:prose-invert max-w-none">
-                <ContentRenderer :value="sota" />
-              </div>
-            </div>
-          </template>
-        </UTabs>
-
-        <!-- No SOTA: show datasets directly (same as before) -->
-        <div v-else class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           <DatasetCard
             v-for="dataset in datasets"
             :key="dataset.stem"

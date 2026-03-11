@@ -1,7 +1,9 @@
 title: AI4Bharat IndicVoices
-homepage: "https://huggingface.co/datasets/ai4bharat/IndicVoices"
+homepage: https://huggingface.co/datasets/ai4bharat/IndicVoices
 category: speech-audio
-description: Large-scale multilingual speech corpus with read, extempore, and conversational audio across 22 Indian languages including Marathi, totaling 7,348 hours.
+description:
+  Large-scale multilingual speech corpus with read, extempore, and conversational audio across 22 Indian languages
+  including Marathi, totaling 7,348 hours.
 modality: speech+text
 size: 7,348 hrs total (22 langs); ~334 hrs/lang median
 language:
@@ -13,7 +15,7 @@ ai_use_cases:
   - Speaker verification
   - Multilingual speech processing
 maharashtra_specific: false
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicVoices"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicVoices
 direct_download_url: ""
 paper_url: ""
 github_url: ""
@@ -22,3 +24,32 @@ format: WAV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: audio
+    type: audio
+    description: Audio waveform of the speech recording
+  - field: transcript
+    type: string
+    description: Transcription of the spoken content
+  - field: language
+    type: string
+    description: ISO language code (e.g., mr for Marathi)
+  - field: speaker_id
+    type: string
+    description: Unique speaker identifier
+  - field: duration
+    type: float
+    description: Duration of audio clip in seconds
+starter_idea:
+  Build a Marathi voice assistant that handles read, extempore, and conversational speech styles for agricultural
+  advisory services.
+build_ideas:
+  - Create a Marathi-Hindi-English code-switching ASR model trained on the conversational speech subset for real-world call
+    center applications
+  - Develop a speaker diarization system for Marathi meetings and interviews using the multi-speaker conversational data
+  - Build a speech style classifier that distinguishes read, spontaneous, and conversational Marathi speech for adaptive ASR
+    pipelines
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicVoices', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Duration: {ex['duration']:.1f}s, Transcript: {ex['transcript'][:60]}...\")\n \
+  \   if i >= 4: break\n"

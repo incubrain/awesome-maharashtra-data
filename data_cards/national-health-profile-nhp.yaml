@@ -1,0 +1,55 @@
+title: National Health Profile (NHP)
+homepage: https://cbhidghs.mohfw.gov.in/
+category: health-nutrition
+description:
+  Maharashtra — Comprehensive health statistics including infrastructure, human resources, disease burden, and
+  vital statistics for Maharashtra
+modality: Tabular (PDF, Excel)
+size: State-level, annual
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Healthcare planning models
+  - health infrastructure gap analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Central Bureau of Health Intelligence, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: indicator
+    type: string
+    description: Health indicator name
+  - field: state
+    type: string
+    description: State name
+  - field: value
+    type: float
+    description: Indicator value
+  - field: year
+    type: int
+    description: Data year
+starter_idea:
+  Build a state health comparison dashboard showing Maharashtra's performance against national averages and other
+  states.
+build_ideas:
+  - Create a health target progress tracker for Maharashtra against India's national health targets
+  - Develop a health system efficiency analyzer comparing inputs and outcomes for Maharashtra vs peer states
+  - Build a predictive health burden model forecasting Maharashtra's future healthcare needs based on demographic trends
+quick_start: "# Download from https://cbhidghs.nic.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('nhp_data.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh[['Indicator', 'Value']].head(10))
+
+  "

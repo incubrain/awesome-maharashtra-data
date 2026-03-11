@@ -1,5 +1,5 @@
 title: L3Cube-MahaEmotions
-homepage: "https://github.com/l3cube-pune/MarathiNLP"
+homepage: https://github.com/l3cube-pune/MarathiNLP
 category: language-nlp
 description: L3Cube-MahaEmotions dataset for language nlp.
 modality: text
@@ -13,9 +13,35 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
-organization: ""
-format: ""
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Marathi text sample
+  - field: label
+    type: string
+    description: "Emotion category (one of 11 labels: happy, sad, angry, fearful, surprised, etc.)"
+starter_idea:
+  Build an emotion-aware Marathi chatbot for mental health support that adapts its responses based on detected
+  user emotions.
+build_ideas:
+  - Create a student wellbeing monitor for Marathi-medium schools that detects distress signals in written assignments
+  - Develop a customer experience analytics tool that goes beyond sentiment to identify specific emotions in Marathi feedback
+  - Build an emotion-trend dashboard that tracks the emotional pulse of Marathi social media during festivals, elections, and
+    crises
+quick_start: 'from datasets import load_dataset
+
+  ds = load_dataset(''l3cube-pune/MahaEmotions'')
+
+  from collections import Counter
+
+  labels = [ex[''label''] for ex in ds[''train'']]
+
+  print(f"Emotion distribution: {dict(Counter(labels).most_common())}")
+
+  '

@@ -1,0 +1,42 @@
+title: Marathi Wikipedia Articles Corpus
+homepage: https://mr.wikipedia.org/
+category: culture-media-tourism-heritage
+description:
+  Full dump of Marathi Wikipedia articles providing encyclopaedic knowledge coverage across diverse topics in Marathi
+  language
+modality: Text (Marathi)
+size: 90,000+ articles
+language:
+  - mr
+license: CC BY-SA 3.0
+ai_use_cases:
+  - Knowledge base construction
+  - Marathi RAG systems
+  - language model pre-training
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Wikimedia Foundation
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Marathi Wikipedia article content
+  - field: title
+    type: string
+    description: Article title in Marathi
+starter_idea: Build a Marathi text classification model trained on Wikipedia article categories for document categorization.
+build_ideas:
+  - Create a Marathi reading difficulty scorer that estimates text complexity of Wikipedia articles for educational content
+    leveling
+  - Develop a Marathi named entity resource by extracting structured entity data from Wikipedia infoboxes
+  - Build a content gap analyzer comparing Marathi Wikipedia coverage against English Wikipedia for translation prioritization
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('wikimedia/wikipedia', '20231101.mr', split='train')\n\
+  print(f\"Total articles: {len(ds)}\")\nfor ex in ds[:5]:\n    print(f\"Title: {ex['title']}, Length: {len(ex['text'])} chars\"\
+  )\n"

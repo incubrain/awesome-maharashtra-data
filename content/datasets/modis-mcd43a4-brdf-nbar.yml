@@ -1,9 +1,12 @@
 title: MODIS MCD43A4 BRDF-Adjusted Reflectance (NBAR)
-homepage: "https://lpdaac.usgs.gov/products/mcd43a4v061/"
+homepage: https://lpdaac.usgs.gov/products/mcd43a4v061/
 category: geospatial-gis
-description: Daily BRDF-corrected surface reflectance at 500m resolution from Terra+Aqua MODIS (7 spectral bands from visible to SWIR). Removes sun-angle and directional effects for consistent multi-temporal analysis. Superior to standard reflectance products for land cover classification and time-series spectral analysis.
+description:
+  Daily BRDF-corrected surface reflectance at 500m resolution from Terra+Aqua MODIS (7 spectral bands from visible
+  to SWIR). Removes sun-angle and directional effects for consistent multi-temporal analysis. Superior to standard reflectance
+  products for land cover classification and time-series spectral analysis.
 modality: satellite-imagery
-size: "500m resolution; daily; 7 spectral bands; sinusoidal tiles; 2000-present"
+size: 500m resolution; daily; 7 spectral bands; sinusoidal tiles; 2000-present
 language:
   - en
 license: Open (NASA LP DAAC, no restrictions)
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://e4ftl01.cr.usgs.gov/MOTA/MCD43A4.061/"
+direct_download_url: https://e4ftl01.cr.usgs.gov/MOTA/MCD43A4.061/
 paper_url: ""
 github_url: ""
 organization: NASA LP DAAC / USGS
@@ -24,3 +27,25 @@ format: HDF4 / GeoTIFF (via GEE/AWS)
 update_frequency: daily
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: band
+    type: string
+    description: MODIS spectral band
+  - field: nbar_value
+    type: float
+    description: Nadir BRDF-adjusted reflectance
+  - field: date
+    type: date
+    description: 16-day composite date
+starter_idea: Build a consistent vegetation monitoring system for Maharashtra using BRDF-corrected MODIS surface reflectance.
+build_ideas:
+  - Create a drought severity mapper using BRDF-corrected vegetation indices for Maharashtra agricultural areas
+  - Develop a phenology tracker detecting crop growth stages across Maharashtra from MODIS NBAR time-series
+  - Build an albedo change detector for Maharashtra's urbanizing areas linking surface changes to heat island effects
+quick_start: "import ee
+
+  # nbar = ee.ImageCollection('MODIS/061/MCD43A4')
+
+  print('MODIS BRDF/NBAR: via Google Earth Engine')
+
+  "

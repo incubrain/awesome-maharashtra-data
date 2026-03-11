@@ -1,0 +1,45 @@
+title: AI4Bharat BhasaAnuvaad (Marathi)
+homepage: https://huggingface.co/collections/ai4bharat/bhasaanuvaad-672b3790b6470eab68b1cb87
+category: speech-audio
+description:
+  Largest Indic speech translation dataset with curated, web-mined, and synthetic speech-text pairs for 13 Indian
+  languages
+modality: Speech + Text (Translation)
+size: 44,400 hrs total (13 langs + English)
+language:
+  - mr
+license: CC-BY 4.0
+ai_use_cases:
+  - Speech Translation
+  - Multilingual ASR
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/collections/ai4bharat/bhasaanuvaad-672b3790b6470eab68b1cb87
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: AI4Bharat, IIT Madras
+format: WAV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: audio
+    type: audio
+    description: Source audio speech in one language
+  - field: source_text
+    type: string
+    description: Transcription of source audio
+  - field: target_text
+    type: string
+    description: Translation in target language
+starter_idea:
+  Build a Marathi speech-to-speech translation system for real-time interpretation in multilingual Maharashtra
+  settings.
+build_ideas:
+  - Create a Marathi-Hindi real-time interpreter for cross-state government meetings and conferences
+  - Develop an audio translation service for Marathi farmers to access Hindi/English agricultural advisories
+  - Build a multilingual tourism guide that provides spoken Marathi translations of Hindi/English tourist information
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/BhasaAnuvaad', 'mr-en', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"Source: {ex['source_text'][:60]}...\")\n    print(f\"Target: {ex['target_text'][:60]}...\\\
+  n\")\n    if i >= 4: break\n"

@@ -1,5 +1,5 @@
 title: AI4Bharat BPCC (mr)
-homepage: "https://huggingface.co/datasets/ai4bharat/BPCC"
+homepage: https://huggingface.co/datasets/ai4bharat/BPCC
 category: language-nlp
 description: AI4Bharat BPCC (mr) dataset for language nlp.
 modality: parallel-text
@@ -10,12 +10,35 @@ license: CC0-1.0
 ai_use_cases:
   - Machine translation
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/BPCC"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/BPCC
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: src
+    type: string
+    description: Source sentence in English
+  - field: tgt
+    type: string
+    description: Target sentence in Marathi
+  - field: domain
+    type: string
+    description: Text domain (general, government, etc.)
+starter_idea:
+  Build a domain-specific English-to-Marathi translation model fine-tuned on government and legal text for Maharashtra
+  administrative use.
+build_ideas:
+  - Create a real-time English-to-Marathi translation Chrome extension for Maharashtra government employees reading central
+    government communications
+  - Develop a bilingual document alignment tool for Maharashtra legislative assembly to maintain English-Marathi parallel versions
+    of bills
+  - Build a translation quality estimator that scores machine translations of Marathi without reference translations
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/BPCC', 'mr-en', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"EN: {ex['src'][:60]}...\")\n    print(f\"MR: {ex['tgt'][:60]}...\\n\")\n    if\
+  \ i >= 4: break\n"

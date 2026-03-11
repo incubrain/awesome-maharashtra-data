@@ -1,5 +1,5 @@
 title: MODIS MCD12Q1 Land Cover Type (NASA)
-homepage: "https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061"
+homepage: https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061
 category: geospatial-gis
 description: Annual 500m global land cover classification (IGBP 17-class) covering Maharashtra from 2001 to present
 modality: Raster (HDF4 / GeoTIFF)
@@ -17,8 +17,30 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: NASA Land Processes Distributed Active Archive Center
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: land_cover_class
+    type: int
+    description: IGBP land cover class code
+  - field: year
+    type: int
+    description: Data year
+  - field: resolution_m
+    type: int
+    description: 500m spatial resolution
+starter_idea: Build a 20-year land cover change analysis for Maharashtra using MODIS annual land cover maps.
+build_ideas:
+  - Create an agricultural land loss tracker for Maharashtra using MODIS land cover change detection
+  - Develop a habitat fragmentation index for Maharashtra's wildlife corridors using land cover time-series
+  - Build a land use policy impact evaluator comparing land cover changes before and after government interventions
+quick_start: "import ee
+
+  # lc = ee.ImageCollection('MODIS/061/MCD12Q1')
+
+  print('MODIS Land Cover: via Google Earth Engine or NASA LP DAAC')
+
+  "

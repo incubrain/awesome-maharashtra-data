@@ -1,0 +1,55 @@
+title: Wikisource Marathi
+homepage: https://mr.wikisource.org/
+category: culture-media-tourism-heritage
+description:
+  Public domain Marathi literature including 1,000+ books from Maharashtra Granthottejak Sanstha, classical texts
+  (Dnyaneshwari, Dasbodh, Haripath), and historical documents
+modality: Text (Marathi)
+size: 1,000+ books, growing
+language:
+  - mr
+license: CC BY-SA 4.0
+ai_use_cases:
+  - Literary text mining
+  - historical language modelling
+  - OCR training for Marathi scripts
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/cltk/marathi_text_wikisource
+organization: Wikimedia Foundation
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Marathi literary text from Wikisource
+  - field: title
+    type: string
+    description: Title of the work
+  - field: author
+    type: string
+    description: Author name
+starter_idea:
+  Build a Marathi literary text analyzer that studies writing styles and linguistic features across historical
+  Marathi literature.
+build_ideas:
+  - Create a Marathi classic literature search engine with full-text search and semantic retrieval across Wikisource texts
+  - Develop an old Marathi to modern Marathi text modernizer for making historical literature accessible to contemporary readers
+  - Build a Marathi authorship attribution model trained on Wikisource texts to identify writing styles of different authors
+quick_start: '# Marathi Wikisource: https://mr.wikisource.org/
+
+  import requests
+
+  from bs4 import BeautifulSoup
+
+  url = ''https://mr.wikisource.org/wiki/Special:AllPages''
+
+  print(f"Browse Marathi Wikisource at: {url}")
+
+  # Use wikimedia API: https://mr.wikisource.org/w/api.php
+
+  '

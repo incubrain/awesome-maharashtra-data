@@ -1,9 +1,11 @@
 title: Copernicus Sentinel-1 SAR
-homepage: "https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-1"
+homepage: https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-1
 category: geospatial-gis
-description: C-band Synthetic Aperture Radar (SAR) imagery providing all-weather, day/night, cloud-penetrating observations at 5-20m resolution. Critical for flood mapping during monsoon, crop monitoring, and ground subsidence detection in Maharashtra.
+description:
+  C-band Synthetic Aperture Radar (SAR) imagery providing all-weather, day/night, cloud-penetrating observations
+  at 5-20m resolution. Critical for flood mapping during monsoon, crop monitoring, and ground subsidence detection in Maharashtra.
 modality: satellite-imagery
-size: "5-20m resolution; 6-12 day revisit; global coverage since 2014"
+size: 5-20m resolution; 6-12 day revisit; global coverage since 2014
 language:
   - en
 license: Copernicus Open License
@@ -16,11 +18,37 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://browser.dataspace.copernicus.eu/"
+direct_download_url: https://browser.dataspace.copernicus.eu/
 paper_url: ""
 github_url: ""
 organization: European Space Agency (ESA)
 format: GeoTIFF / SAFE
-update_frequency: "6-12 days"
+update_frequency: 6-12 days
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: vv_backscatter
+    type: float
+    description: VV polarization backscatter value in dB
+  - field: vh_backscatter
+    type: float
+    description: VH polarization backscatter value in dB
+  - field: acquisition_date
+    type: date
+    description: Image acquisition date
+starter_idea: Build a flood extent mapper for Maharashtra using Sentinel-1 SAR that works through cloud cover during monsoon.
+build_ideas:
+  - Create an all-weather crop classification model using SAR backscatter time-series for Maharashtra's kharif season
+  - Develop a soil moisture estimator from SAR data for drought monitoring in Maharashtra's rain-fed agriculture areas
+  - Build a built-up area change detector using SAR coherence for tracking Maharashtra's urban expansion
+quick_start: "# Access via Copernicus Data Space
+
+  import ee  # Google Earth Engine
+
+  # sentinel1 = ee.ImageCollection('COPERNICUS/S1_GRD')
+
+  # mh = sentinel1.filterBounds(ee.Geometry.Rectangle([72.6, 15.6, 80.9, 22.1]))
+
+  print('Sentinel-1 SAR: https://dataspace.copernicus.eu/')
+
+  "

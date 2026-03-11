@@ -1,9 +1,12 @@
 title: GHS-BUILT-C Building Characteristics
-homepage: "https://ghsl.jrc.ec.europa.eu/ghs_buC2025.php"
+homepage: https://ghsl.jrc.ec.europa.eu/ghs_buC2025.php
 category: transport-urban-infrastructure
-description: Global Human Settlement Layer Built-Up Characteristics providing building height, morphology classification, and building volume at 100m resolution. Derived from Sentinel-1/2 and ALOS data. Essential for urban planning, population estimation, and disaster vulnerability assessment in Maharashtra cities.
+description:
+  Global Human Settlement Layer Built-Up Characteristics providing building height, morphology classification,
+  and building volume at 100m resolution. Derived from Sentinel-1/2 and ALOS data. Essential for urban planning, population
+  estimation, and disaster vulnerability assessment in Maharashtra cities.
 modality: satellite-imagery
-size: "100m resolution; global coverage; building height, morphology, volume"
+size: 100m resolution; global coverage; building height, morphology, volume
 language:
   - en
 license: CC-BY-4.0
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://ghsl.jrc.ec.europa.eu/download.php"
+direct_download_url: https://ghsl.jrc.ec.europa.eu/download.php
 paper_url: ""
 github_url: ""
 organization: European Commission Joint Research Centre
@@ -24,3 +27,30 @@ format: GeoTIFF
 update_frequency: periodic
 citation: ""
 last_verified: "2026-03-09"
+schema:
+  - field: building_height
+    type: float
+    description: Estimated building height in meters
+  - field: building_type
+    type: string
+    description: Building typology classification
+  - field: latitude
+    type: float
+    description: Latitude coordinate
+  - field: longitude
+    type: float
+    description: Longitude coordinate
+starter_idea: Build an urban density analyzer for Maharashtra cities using building height and characteristic data.
+build_ideas:
+  - Create a building earthquake vulnerability assessment for Maharashtra cities using height and type classification
+  - Develop an urban heat island model correlating building density and height with surface temperature in Pune and Mumbai
+  - Build a 3D city model of Maharashtra cities using building characteristics for urban planning visualization
+quick_start: "import rasterio
+
+  # Download from https://ghsl.jrc.ec.europa.eu/
+
+  print('GHS-BUILT-C: https://ghsl.jrc.ec.europa.eu/')
+
+  print('Building characteristics dataset at 10m resolution')
+
+  "

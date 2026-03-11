@@ -1,7 +1,9 @@
 title: AI4Bharat Naamapadam (Marathi)
-homepage: "https://huggingface.co/datasets/ai4bharat/naamapadam"
+homepage: https://huggingface.co/datasets/ai4bharat/naamapadam
 category: language-nlp
-description: Large-scale Marathi NER dataset with 455,200 training sentences annotated across 3 entity types (PER, LOC, ORG), part of the largest publicly available Indic NER dataset.
+description:
+  Large-scale Marathi NER dataset with 455,200 training sentences annotated across 3 entity types (PER, LOC, ORG),
+  part of the largest publicly available Indic NER dataset.
 modality: text
 size: 455.2K training sentences
 language:
@@ -13,7 +15,7 @@ ai_use_cases:
   - Knowledge graph construction
   - Document understanding
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/naamapadam"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/naamapadam
 direct_download_url: ""
 paper_url: ""
 github_url: ""
@@ -22,3 +24,23 @@ format: Parquet
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: tokens
+    type: list[string]
+    description: List of word tokens in the sentence
+  - field: ner_tags
+    type: list[int]
+    description: BIO-format NER tags for each token (B-PER, I-PER, B-LOC, I-LOC, B-ORG, I-ORG, O)
+starter_idea:
+  Build a Marathi document entity extractor that automatically identifies people, places, and organizations in
+  government circulars and news articles.
+build_ideas:
+  - Create a knowledge graph of Maharashtra politicians, districts, and organizations by extracting entities from Marathi news
+    archives
+  - Develop an automated contact directory builder that extracts names and locations from Marathi business correspondence
+  - Build a Marathi-language resume parser that extracts candidate names, companies, and locations for recruitment platforms
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/naamapadam', 'mr', split='train', streaming=True)\n\
+  label_names = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC']\nfor i, ex in enumerate(ds):\n    entities = [(t,\
+  \ label_names[n]) for t, n in zip(ex['tokens'], ex['ner_tags']) if n != 0]\n    print(f\"Entities: {entities[:5]}\")\n \
+  \   if i >= 4: break\n"

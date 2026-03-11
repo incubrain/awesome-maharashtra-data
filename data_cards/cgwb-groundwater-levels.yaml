@@ -1,0 +1,61 @@
+title: CGWB Groundwater Levels (Pre/Post-Monsoon)
+homepage: https://cgwb.gov.in/
+category: environment-climate-disaster
+description:
+  Pre-monsoon and post-monsoon groundwater depth measurements from monitoring wells across Maharashtra districts
+  by the Central Ground Water Board. Provides in-situ well-level data distinct from satellite-based GRACE measurements. Critical
+  for tracking groundwater depletion trends in drought-prone Marathwada and Vidarbha.
+modality: tabular
+size: District-level; seasonal (pre/post-monsoon); multi-year time-series
+language:
+  - en
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Groundwater depletion trend forecasting
+  - Sustainable irrigation planning
+  - Drought vulnerability assessment
+  - Well-level prediction for rural water supply
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://www.data.gov.in/catalog/ground-water-level-data
+paper_url: ""
+github_url: ""
+organization: Central Ground Water Board (CGWB)
+format: CSV / Excel
+update_frequency: seasonal
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: well_id
+    type: string
+    description: Monitoring well identifier
+  - field: district
+    type: string
+    description: District name
+  - field: water_level_mbgl
+    type: float
+    description: Water level in meters below ground level
+  - field: date
+    type: date
+    description: Measurement date
+starter_idea:
+  Build a groundwater depletion prediction model for Maharashtra that forecasts water level trends for drought
+  planning.
+build_ideas:
+  - Create a groundwater recharge zone mapper combining CGWB levels with rainfall and geology data for Maharashtra
+  - Develop an early warning system for critical groundwater depletion in Maharashtra's drought-prone districts
+  - Build a well-siting recommendation tool that identifies optimal locations for new borewells using water level data
+quick_start: '# Download from https://cgwb.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv(''cgwb_levels.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f''Monitoring wells: {mh["Well_ID"].nunique()}'')
+
+  print(mh.groupby(''District'')[''Water_Level_MBGL''].mean().sort_values().head())
+
+  '

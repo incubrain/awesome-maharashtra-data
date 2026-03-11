@@ -1,0 +1,56 @@
+title: CPCB Air Quality Real-Time API
+homepage: https://airquality.cpcb.gov.in/ccr/
+category: realtime-streams-apis
+description:
+  Continuous real-time air quality index and pollutant concentration data from Central Control Room for Maharashtra
+  monitoring stations via web API
+modality: API (web)
+size: Hourly updates, 20+ Maharashtra stations
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Real-time AQI alerting
+  - pollution forecasting
+  - health advisory automation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Central Pollution Control Board, Government of India
+format: JSON API
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: station_id
+    type: string
+    description: Station identifier
+  - field: pm25
+    type: float
+    description: Real-time PM2.5 in ug/m3
+  - field: aqi
+    type: int
+    description: Current AQI value
+  - field: timestamp
+    type: datetime
+    description: Measurement timestamp
+starter_idea:
+  Build a real-time air quality alerting service for Maharashtra that sends push notifications when AQI exceeds
+  safe thresholds.
+build_ideas:
+  - Create a live pollution heatmap for Maharashtra cities updating every hour from CPCB API data
+  - Develop a traffic-air quality correlation dashboard linking real-time traffic data with pollution levels
+  - Build a smart ventilation controller that adjusts building HVAC based on real-time outdoor air quality from CPCB API
+quick_start: "import requests
+
+  # CPCB real-time API
+
+  url = 'https://app.cpcbccr.com/ccr_docs/api/'
+
+  print('CPCB Real-time Air Quality API')
+
+  print('Access at: https://app.cpcbccr.com/')
+
+  "

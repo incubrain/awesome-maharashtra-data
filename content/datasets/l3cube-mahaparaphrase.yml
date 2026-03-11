@@ -1,5 +1,5 @@
 title: L3Cube-MahaParaphrase
-homepage: "https://github.com/l3cube-pune/MarathiNLP"
+homepage: https://github.com/l3cube-pune/MarathiNLP
 category: language-nlp
 description: L3Cube-MahaParaphrase dataset for language nlp.
 modality: text
@@ -13,9 +13,30 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
-organization: ""
-format: ""
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: sentence1
+    type: string
+    description: First Marathi sentence
+  - field: sentence2
+    type: string
+    description: Second Marathi sentence
+  - field: label
+    type: int
+    description: Whether the sentences are paraphrases (1) or not (0)
+starter_idea:
+  Build a semantic search engine for Marathi educational content that finds similar questions and answers across
+  textbooks.
+build_ideas:
+  - Create a question deduplication system for Marathi Q&A platforms that merges duplicate questions and consolidates answers
+  - Develop a FAQ matching service that instantly finds whether a customer's Marathi query already has a documented answer
+  - Build a plagiarism detection tool for Marathi academic submissions that identifies paraphrased content
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('l3cube-pune/MahaParaphrase')\nfor ex in ds['train'][:5]:\n\
+  \    print(f\"S1: {ex['sentence1'][:60]}...\")\n    print(f\"S2: {ex['sentence2'][:60]}...\")\n    print(f\"Paraphrase:\
+  \ {bool(ex['label'])}\\n\")\n"

@@ -1,0 +1,53 @@
+title: Maharashtra Panchayati Raj Data
+homepage: https://grampanchayat.gov.in/
+category: governance-census-demographics-legal
+description:
+  Local governance data from the three-tier panchayati raj system covering village panchayats, taluka panchayats,
+  and zilla parishads in Maharashtra
+modality: Tabular (web)
+size: Village to district level
+language:
+  - en
+  - mr
+license: Open Government
+ai_use_cases:
+  - Local governance analytics
+  - rural development modelling
+  - decentralisation analysis
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Department of Rural Development, Government of Maharashtra
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: gram_panchayat
+    type: string
+    description: Gram Panchayat name
+  - field: district
+    type: string
+    description: District name
+  - field: indicator
+    type: string
+    description: Development indicator name
+  - field: value
+    type: float
+    description: Indicator value
+starter_idea: Build a gram panchayat performance dashboard for Maharashtra tracking local governance and development metrics.
+build_ideas:
+  - Create a panchayat resource allocation optimizer distributing funds based on development gaps across Maharashtra GPs
+  - Develop a best practices identifier finding top-performing gram panchayats in Maharashtra for knowledge sharing
+  - Build a citizen engagement platform connecting Maharashtra gram panchayat data with resident feedback
+quick_start: "# Maharashtra Panchayati Raj data
+
+  import pandas as pd
+
+  print('Maharashtra Panchayati Raj Department')
+
+  print('Access via https://rajyasabha.nic.in/ and state portals')
+
+  "

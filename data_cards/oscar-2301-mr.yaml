@@ -62,4 +62,27 @@ update_frequency: "static"
 citation: ""
 
 # Date this data card was last verified to be accurate (YYYY-MM-DD)
-last_verified: "2026-03-07"
+last_verified: "2026-03-11"
+
+schema:
+  - field: "text"
+    type: "string"
+    description: "Web-crawled Marathi text content"
+  - field: "meta"
+    type: "object"
+    description: "Metadata including quality scores, sentence count, and word count"
+
+starter_idea: "Build a Marathi text corpus quality pipeline that deduplicates and filters OSCAR data to create a clean pre-training dataset."
+
+build_ideas:
+  - "Create a Marathi Wikipedia content gap detector that compares OSCAR web content topics against existing Wikipedia coverage"
+  - "Develop a Marathi writing style analyzer trained on web text to identify formal, informal, and news writing styles"
+  - "Build a Marathi corpus for training word embeddings and evaluate them on analogy and similarity benchmarks"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('oscar-corpus/OSCAR-2301', 'mr', split='train', streaming=True)
+  for i, ex in enumerate(ds):
+      print(f"Text: {ex['text'][:100]}...")
+      print(f"Meta: {ex['meta']}\n")
+      if i >= 4: break

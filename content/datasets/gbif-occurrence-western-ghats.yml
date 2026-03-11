@@ -1,7 +1,10 @@
 title: GBIF Species Occurrence Records (Western Ghats & Maharashtra)
-homepage: "https://www.gbif.org/occurrence/search?geometry=POLYGON((72.6%2015.5,80.5%2015.5,80.5%2021.5,72.6%2021.5,72.6%2015.5))"
+homepage: https://www.gbif.org/occurrence/search?geometry=POLYGON((72.6%2015.5,80.5%2015.5,80.5%2021.5,72.6%2021.5,72.6%2015.5))
 category: environment-climate-disaster
-description: Global Biodiversity Information Facility occurrence records for Maharashtra and the Western Ghats biodiversity hotspot. Contains millions of georeferenced species observations from herbaria, museums, citizen science (iNaturalist), and field surveys.
+description:
+  Global Biodiversity Information Facility occurrence records for Maharashtra and the Western Ghats biodiversity
+  hotspot. Contains millions of georeferenced species observations from herbaria, museums, citizen science (iNaturalist),
+  and field surveys.
 modality: tabular
 size: ~5M records (MH bounding box)
 language:
@@ -16,7 +19,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://www.gbif.org/occurrence/download"
+direct_download_url: https://www.gbif.org/occurrence/download
 paper_url: ""
 github_url: ""
 organization: GBIF
@@ -27,25 +30,41 @@ last_verified: "2026-03-07"
 schema:
   - field: gbifID
     type: integer
-    description: "Unique GBIF occurrence identifier"
+    description: Unique GBIF occurrence identifier
   - field: scientificName
     type: string
-    description: "Full scientific name of the organism"
+    description: Full scientific name of the organism
   - field: decimalLatitude
     type: float
-    description: "Latitude of observation (WGS84)"
+    description: Latitude of observation (WGS84)
   - field: decimalLongitude
     type: float
-    description: "Longitude of observation (WGS84)"
+    description: Longitude of observation (WGS84)
   - field: eventDate
     type: date
-    description: "Date the observation was recorded"
+    description: Date the observation was recorded
   - field: basisOfRecord
     type: string
-    description: "Type of record (HUMAN_OBSERVATION, PRESERVED_SPECIMEN, etc.)"
+    description: Type of record (HUMAN_OBSERVATION, PRESERVED_SPECIMEN, etc.)
   - field: kingdom
     type: string
-    description: "Taxonomic kingdom (Plantae, Animalia, Fungi, etc.)"
+    description: Taxonomic kingdom (Plantae, Animalia, Fungi, etc.)
   - field: datasetName
     type: string
-    description: "Name of the contributing dataset"
+    description: Name of the contributing dataset
+starter_idea: Build a biodiversity hotspot mapper for Maharashtra's Western Ghats using species occurrence records.
+build_ideas:
+  - Create an endemic species distribution model for Maharashtra predicting suitable habitats under climate change
+  - Develop a conservation priority ranker for Maharashtra forests based on species richness and endemism
+  - Build a citizen science biodiversity app that allows users to submit and verify species sightings in Maharashtra
+quick_start: '# Download from https://www.gbif.org/
+
+  import pandas as pd
+
+  df = pd.read_csv(''gbif_western_ghats.csv'', sep=''\t'')
+
+  print(f''Occurrences: {len(df)}'')
+
+  print(f''Species: {df["species"].nunique()}'')
+
+  '

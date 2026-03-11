@@ -1,0 +1,49 @@
+title: NASA MODIS NDVI (MOD13Q1)
+homepage: https://www.earthdata.nasa.gov/data/catalog/lpcloud-mod13q1-061
+category: agriculture-rural
+description:
+  16-day composite Normalized Difference Vegetation Index at 250m resolution globally, from 2000 to present. Includes
+  EVI layer
+modality: Raster (HDF/GeoTIFF)
+size: Global; 250m; 16-day since 2000
+language:
+  - en
+license: Open (NASA EOSDIS)
+ai_use_cases:
+  - Crop health monitoring
+  - growing season phenology
+  - drought stress detection
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: National Aeronautics and Space Administration (NASA)
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: ndvi
+    type: float
+    description: NDVI value (-1 to 1)
+  - field: date
+    type: date
+    description: 16-day composite date
+  - field: resolution_m
+    type: int
+    description: 250m spatial resolution
+starter_idea: Build a Maharashtra vegetation health monitoring system using MODIS 250m NDVI 16-day composites.
+build_ideas:
+  - Create a drought severity classifier for Maharashtra districts using NDVI departure from historical averages
+  - Develop a crop phenology calendar for Maharashtra showing planting and harvesting patterns from NDVI time-series
+  - Build a grazing land productivity estimator for Maharashtra's pastoral communities using NDVI trends
+quick_start: "import ee
+
+  # ndvi = ee.ImageCollection('MODIS/061/MOD13Q1')
+
+  print('MODIS NDVI: via Google Earth Engine or NASA LP DAAC')
+
+  print('250m 16-day NDVI composites since 2000')
+
+  "

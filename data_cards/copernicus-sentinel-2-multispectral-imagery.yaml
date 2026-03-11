@@ -1,0 +1,50 @@
+title: Copernicus Sentinel-2 Multispectral Imagery
+homepage: https://browser.dataspace.copernicus.eu/
+category: geospatial-gis
+description: 10m resolution 13-band optical satellite imagery with 5-day revisit for Maharashtra
+modality: Raster (GeoTIFF / JPEG2000 / COG)
+size: 10m/20m/60m bands; 100x100 km tiles; full archive since 2015
+language:
+  - en
+license: Copernicus Open License (free, full, open)
+ai_use_cases:
+  - Crop type classification
+  - urban growth detection
+  - water quality monitoring
+  - NDVI/EVI vegetation indexing
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: European Space Agency / Copernicus Programme
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: band
+    type: string
+    description: Spectral band name (B02-Blue, B03-Green, B04-Red, B08-NIR, etc.)
+  - field: resolution_m
+    type: int
+    description: Spatial resolution (10m, 20m, or 60m)
+  - field: acquisition_date
+    type: date
+    description: Image acquisition date
+starter_idea: Build a crop type classification model for Maharashtra using Sentinel-2 multispectral time-series imagery.
+build_ideas:
+  - Create a water quality monitor for Maharashtra reservoirs using Sentinel-2 spectral indices for algal bloom detection
+  - Develop an automated crop damage assessment system using pre/post-event Sentinel-2 imagery for insurance claims
+  - Build a sugarcane area estimator for Maharashtra using NDVI phenology from Sentinel-2 time-series
+quick_start: "# Access via Copernicus Data Space or Google Earth Engine
+
+  import ee
+
+  # s2 = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
+
+  # mh = s2.filterBounds(ee.Geometry.Rectangle([72.6, 15.6, 80.9, 22.1]))
+
+  print('Sentinel-2: https://dataspace.copernicus.eu/')
+
+  "

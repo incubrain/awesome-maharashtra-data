@@ -1,5 +1,5 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
-import { datasetSchema, categorySchema, sotaSchema } from './content.collections'
+import { datasetSchema, categorySchema } from './content.collections'
 
 export default defineContentConfig({
   collections: {
@@ -12,11 +12,6 @@ export default defineContentConfig({
       type: 'data',
       source: 'categories/*.yml',
       schema: categorySchema,
-    }),
-    sota: defineCollection({
-      type: 'page',
-      source: 'sota/**/*.md',
-      schema: sotaSchema,
     }),
   },
 })

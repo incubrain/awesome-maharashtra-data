@@ -1,0 +1,61 @@
+title: MNCFC Crop Forecasting
+homepage: https://www.ncfc.gov.in/
+category: agriculture-rural
+description:
+  Mahalanobis National Crop Forecast Centre district/state-level forecasts for 9 major crops using optical and
+  microwave remote sensing data
+modality: Tabular/raster (reports)
+size: District-level; seasonal bulletins
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Crop acreage estimation
+  - production forecasting
+  - food security early warning
+maharashtra_specific: false
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Mahalanobis National Crop Forecast Centre
+format: GeoTIFF
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: crop
+    type: string
+    description: Crop name
+  - field: forecast_area
+    type: float
+    description: Forecasted area in thousand hectares
+  - field: forecast_production
+    type: float
+    description: Forecasted production in thousand tonnes
+  - field: season
+    type: string
+    description: Cropping season
+starter_idea:
+  Build a crop production forecasting model for Maharashtra that improves on MNCFC estimates using satellite and
+  weather data fusion.
+build_ideas:
+  - Create a Maharashtra food security dashboard combining crop forecasts with consumption patterns and buffer stock data
+  - Develop a market price impact model that predicts how crop production forecasts will affect commodity prices
+  - Build an agri-insurance premium calculator that uses crop forecasts to dynamically price crop insurance policies
+quick_start: '# MNCFC crop forecasting data
+
+  import pandas as pd
+
+  df = pd.read_csv(''mncfc_forecast.csv'')
+
+  mh = df[df[''State''] == ''Maharashtra'']
+
+  print(f"Maharashtra forecasts: {len(mh)}")
+
+  print(mh.groupby(''Crop'')[''Forecast_Production''].sum().sort_values(ascending=False).head())
+
+  '

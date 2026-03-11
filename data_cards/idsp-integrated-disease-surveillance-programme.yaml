@@ -1,0 +1,57 @@
+title: IDSP (Integrated Disease Surveillance Programme)
+homepage: https://idsp.mohfw.gov.in/
+category: health-nutrition
+description:
+  Weekly disease outbreak data covering epidemic-prone diseases across Maharashtra districts in syndromic, probable,
+  and lab-confirmed formats
+modality: Tabular (web reports)
+size: Weekly reports, 720+ districts nationally
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Epidemic early-warning systems
+  - disease outbreak prediction
+  - syndromic surveillance AI
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: National Centre for Disease Control, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: disease
+    type: string
+    description: Disease name
+  - field: cases
+    type: int
+    description: Number of reported cases
+  - field: week
+    type: string
+    description: Epidemiological week
+starter_idea: Build a disease outbreak prediction model for Maharashtra using weekly IDSP surveillance data.
+build_ideas:
+  - Create a real-time disease heatmap for Maharashtra showing active outbreaks and their progression
+  - Develop a dengue/malaria forecasting system correlating IDSP data with weather and mosquito breeding patterns
+  - Build a pandemic preparedness dashboard tracking respiratory illness trends across Maharashtra districts
+quick_start: "# Download from https://idsp.mohfw.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('idsp_data.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh.groupby('Disease')['Cases'].sum().sort_values(ascending=False).head())
+
+  "

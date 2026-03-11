@@ -1,0 +1,45 @@
+title: "L3Cube-MahaNews"
+homepage: "https://github.com/l3cube-pune/MarathiNLP"
+category: "language-nlp"
+description: "Marathi news topic classification dataset with 1.05 lakh records across 12 news categories."
+modality: "text"
+size: "105,000 records"
+language:
+  - mr
+license: "CC-BY-NC-SA-4.0"
+huggingface_url: "https://huggingface.co/l3cube-pune/marathi-topic-all-doc"
+direct_download_url: ""
+paper_url: ""
+github_url: "https://github.com/l3cube-pune/MarathiNLP"
+organization: "L3Cube, Pune"
+ai_use_cases:
+  - "News topic classification"
+  - "Document categorization"
+  - "Content tagging"
+  - "News aggregation"
+maharashtra_specific: true
+format: "CSV"
+update_frequency: "static"
+citation: ""
+last_verified: "2026-03-11"
+
+schema:
+  - field: "text"
+    type: "string"
+    description: "Marathi news headline or article text"
+  - field: "label"
+    type: "string"
+    description: "News topic category (one of 12 categories: politics, sports, entertainment, etc.)"
+
+starter_idea: "Build a Marathi news aggregation and auto-tagging service that categorizes articles by topic for personalized feeds."
+
+build_ideas:
+  - "Create a breaking-news detection system that classifies and prioritizes incoming Marathi news by topic and urgency"
+  - "Develop a personalized Marathi news digest app that learns user preferences and recommends stories from their favourite categories"
+  - "Build a media monitoring service for Maharashtra government officials that tracks coverage by topic across Marathi publications"
+
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('l3cube-pune/MahaNews')
+  for ex in ds['train'][:5]:
+      print(f"[{ex['label']}] {ex['text'][:80]}...")

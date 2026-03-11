@@ -1,0 +1,43 @@
+title: Marathi Alpaca Instruction Dataset
+homepage: https://huggingface.co/datasets/smallstepai/marathi-instruction-tuning-alpaca
+category: agentic-instruction-rag
+description:
+  Marathi translation of the Stanford Alpaca instruction-tuning dataset for fine-tuning instruction-following capabilities
+  in Marathi language models
+modality: Text (Marathi)
+size: ~52K instructions
+language:
+  - mr
+license: Open Research
+ai_use_cases:
+  - Marathi instruction fine-tuning
+  - conversational AI training
+  - task-following model development
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/smallstepai/marathi-instruction-tuning-alpaca
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Open-Source Community (Translated from Stanford Alpaca)
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: instruction
+    type: string
+    description: Task instruction in Marathi
+  - field: input
+    type: string
+    description: Optional input context for the task
+  - field: output
+    type: string
+    description: Expected response in Marathi
+starter_idea: Fine-tune a Marathi instruction-following LLM using this Alpaca-format dataset for building a Marathi AI assistant.
+build_ideas:
+  - Create a Marathi chatbot for Maharashtra government services that answers citizen queries about schemes and procedures
+  - Develop a Marathi writing assistant that helps with grammar correction, paraphrasing, and style improvement
+  - Build a Marathi educational tutor that generates explanations, quiz questions, and study materials on demand
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ravithejads/marathi-alpaca')\nfor ex in ds['train'][:5]:\n\
+  \    print(f\"Instruction: {ex['instruction'][:60]}...\")\n    print(f\"Output: {ex['output'][:60]}...\\n\")\n"

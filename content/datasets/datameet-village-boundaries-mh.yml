@@ -1,7 +1,9 @@
 title: DataMeet Indian Village Boundaries - Maharashtra
-homepage: "https://projects.datameet.org/indian_village_boundaries/mh/"
+homepage: https://projects.datameet.org/indian_village_boundaries/mh/
 category: geospatial-gis
-description: Community-digitized village-level boundary polygons for all Maharashtra districts across 36 districts in GeoJSON format, enabling granular spatial analysis.
+description:
+  Community-digitized village-level boundary polygons for all Maharashtra districts across 36 districts in GeoJSON
+  format, enabling granular spatial analysis.
 modality: geospatial
 size: All villages across 36 districts
 language:
@@ -17,9 +19,46 @@ maharashtra_specific: true
 huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
-github_url: "https://github.com/datameet/indian_village_boundaries"
+github_url: https://github.com/datameet/indian_village_boundaries
 organization: DataMeet
 format: GeoJSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: geometry
+    type: Polygon
+    description: Village boundary polygon coordinates
+  - field: village_name
+    type: string
+    description: Name of the village
+  - field: district
+    type: string
+    description: District the village belongs to
+  - field: sub_district
+    type: string
+    description: Sub-district / taluka name
+  - field: census_code
+    type: string
+    description: Census village code for cross-referencing
+starter_idea:
+  Build a village-level service delivery gap analyzer that overlays infrastructure data on village boundaries
+  to identify underserved areas in Maharashtra.
+build_ideas:
+  - Create a granular election results visualization tool mapping party-wise results to individual village polygons across Maharashtra
+  - Develop a school catchment area optimizer that assigns students to nearest schools using village boundary and road network
+    data
+  - Build a crop insurance claims mapper that visualizes damage reports at village level to detect patterns and potential fraud
+quick_start: 'import geopandas as gpd
+
+  # Download from https://github.com/datameet/indian_village_boundaries
+
+  gdf = gpd.read_file(''mh/maharashtra_village_boundaries.geojson'')
+
+  print(f"Total villages: {len(gdf)}")
+
+  print(f"Districts: {gdf[''district''].nunique()}")
+
+  print(gdf[[''village_name'', ''district'', ''sub_district'']].head())
+
+  '

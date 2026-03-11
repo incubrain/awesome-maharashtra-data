@@ -1,0 +1,57 @@
+title: National Achievement Survey (NAS)
+homepage: https://nas.gov.in/
+category: education-skills
+description:
+  Maharashtra — Large-scale assessment of student learning outcomes in Classes 3, 5, 8, and 10 across Maharashtra
+  government and private schools
+modality: Tabular (PDF, dashboard)
+size: ~34 lakh students nationally (2021)
+language:
+  - en
+license: Open Government
+ai_use_cases:
+  - Student performance prediction
+  - learning gap analysis
+  - education policy evaluation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: NCERT, Ministry of Education, Government of India
+format: CSV
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: state
+    type: string
+    description: State name
+  - field: district
+    type: string
+    description: District name
+  - field: grade
+    type: int
+    description: Student grade level
+  - field: subject
+    type: string
+    description: Subject name
+  - field: avg_score
+    type: float
+    description: Average performance score
+starter_idea: Build a learning outcomes analyzer for Maharashtra districts identifying subject-specific strengths and weaknesses.
+build_ideas:
+  - Create a teacher training needs identifier for Maharashtra based on student performance gaps in NAS
+  - Develop a school quality predictor using NAS scores combined with infrastructure and teacher data
+  - Build an education intervention recommender targeting specific learning gaps found in Maharashtra NAS results
+quick_start: "# Download from https://nas.gov.in/
+
+  import pandas as pd
+
+  df = pd.read_csv('nas_data.csv')
+
+  mh = df[df['State'] == 'Maharashtra']
+
+  print(mh.groupby(['Grade', 'Subject'])['Avg_Score'].mean())
+
+  "

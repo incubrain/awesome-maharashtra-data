@@ -1,0 +1,42 @@
+title: Marathi Dialect Resources (Varhadi, Malvani, Deshi)
+homepage: https://github.com/l3cube-pune/MarathiNLP
+category: benchmarks-fairness-dialects-tools
+description:
+  Regional dialect data and linguistic documentation for major Marathi dialect varieties including Varhadi (Vidarbha),
+  Malvani (Konkan coast), and Deshi (Western Maharashtra)
+modality: Text (Marathi dialects)
+size: Limited, research-grade
+language:
+  - mr
+license: Varies
+ai_use_cases:
+  - Dialect-aware NLP
+  - regional language modelling
+  - linguistic diversity preservation
+maharashtra_specific: true
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: Various Research Institutions
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: text
+    type: string
+    description: Text sample in a Marathi dialect
+  - field: dialect
+    type: string
+    description: Dialect name (Varhadi, Malvani, Deshi, etc.)
+starter_idea: Build a Marathi dialect identification system that classifies text by regional dialect for sociolinguistic research.
+build_ideas:
+  - Create a dialect-aware Marathi translation tool that converts between standard Marathi and regional dialects like Varhadi
+    and Malvani
+  - Develop a speech-to-text system specifically tuned for Varhadi dialect speakers in Vidarbha region
+  - Build a Marathi dialect preservation archive with text, audio, and vocabulary databases for each regional variety
+quick_start:
+  "# Dialect resources from various academic sources\nimport json\nwith open('marathi_dialects.json') as f:\n \
+  \   data = json.load(f)\nfor dialect in ['Varhadi', 'Malvani', 'Deshi']:\n    samples = [d for d in data if d.get('dialect')\
+  \ == dialect]\n    print(f\"{dialect}: {len(samples)} samples\")\n"

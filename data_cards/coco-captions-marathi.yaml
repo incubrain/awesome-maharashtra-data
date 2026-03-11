@@ -1,0 +1,46 @@
+title: COCO Captions Marathi
+homepage: https://huggingface.co/datasets/Singhchandann/coco-captions_marathi
+category: vision-ocr-multimodal
+description:
+  Marathi translations of MS-COCO image captions, verified by native Marathi speakers for linguistic accuracy and
+  contextual integrity. Useful for training image captioning and cross-lingual retrieval models
+modality: Text (caption pairs)
+size: 414K rows of Marathi text
+language:
+  - mr
+license: CC BY-NC-ND 4.0
+ai_use_cases:
+  - Image captioning
+  - semantic search
+  - cross-lingual retrieval
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/datasets/Singhchandann/coco-captions_marathi
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Microsoft COCO / AI4Bharat
+format: CSV/JSON
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: image_id
+    type: int
+    description: COCO image identifier
+  - field: caption_mr
+    type: string
+    description: Image caption in Marathi
+starter_idea: Build a Marathi image captioning model that generates natural Marathi descriptions of photographs.
+build_ideas:
+  - Create an accessibility tool that describes images in Marathi for visually impaired users of Marathi websites
+  - Develop a Marathi visual search engine that matches text queries to images using cross-modal embeddings
+  - Build a Marathi social media content generator that creates culturally appropriate captions for images
+quick_start: "from datasets import load_dataset
+
+  # Check HuggingFace for Marathi COCO captions
+
+  print('Marathi COCO Captions')
+
+  print('Search HuggingFace for marathi coco caption datasets')
+
+  "

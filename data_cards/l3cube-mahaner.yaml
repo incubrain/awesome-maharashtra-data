@@ -1,65 +1,47 @@
----
-# Awesome Marathi Datasets - Data Card
-# L3Cube MahaNER
-
-# (required) Human-readable dataset name
-title: "L3Cube-MahaNER"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
-homepage: "https://huggingface.co/l3cube-pune/marathi-ner"
-
-# (required) Which category file this belongs to (without number prefix)
-category: "language-nlp"
-
-# (required) One-line description of the dataset
-description: "Manually annotated Marathi named entity recognition dataset with 25,000 sentences tagged across 8 entity classes."
-
-# (required) Data modality
-modality: "text"
-
-# (required) Approximate size with units
-size: "25,000 sentences"
-
-# (required) ISO 639-1 language codes
+title: L3Cube-MahaNER
+homepage: https://huggingface.co/l3cube-pune/marathi-ner
+category: language-nlp
+description:
+  Manually annotated Marathi named entity recognition dataset with 25,000
+  sentences tagged across 8 entity classes.
+modality: text
+size: 25,000 sentences
 language:
   - mr
-
-# (required) License identifier
-license: "CC-BY-NC-SA-4.0"
-
-# HuggingFace dataset URL (if available)
-huggingface_url: "https://huggingface.co/l3cube-pune/marathi-ner"
-
-# Direct download URL (if different from homepage)
+license: CC-BY-NC-SA-4.0
+huggingface_url: https://huggingface.co/l3cube-pune/marathi-ner
 direct_download_url: ""
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
 paper_url: ""
-
-# GitHub repository URL (if applicable)
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
-
-# Organization or author that created/maintains the dataset
-organization: "L3Cube, Pune"
-
-# (required) List of AI/ML use cases this dataset enables
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
 ai_use_cases:
-  - "Named entity recognition"
-  - "Information extraction"
-  - "Knowledge graph construction"
-  - "Document understanding"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - Named entity recognition
+  - Information extraction
+  - Knowledge graph construction
+  - Document understanding
 maharashtra_specific: true
-
-# Format of the data files
-format: "JSON"
-
-# How frequently the data is updated (if applicable)
-update_frequency: "static"
-
-# BibTeX citation (if available)
+format: JSON
+update_frequency: static
 citation: ""
-
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
 last_verified: "2026-03-07"
+schema:
+  - field: tokens
+    type: list[string]
+    description: List of tokenized words in the sentence
+  - field: ner_tags
+    type: list[int]
+    description: BIO-scheme entity tags per token (8 entity classes including PER, ORG, LOC)
+starter_idea:
+  Build a named entity recognition service to extract person, organization,
+  and location names from Marathi government documents
+build_ideas:
+  - Create a knowledge graph from Marathi news articles using this NER dataset
+  - Develop a Marathi legal document parser that extracts entities for contract analysis
+  - Build a fine-tuned NER model for identifying crop names and agricultural organizations
+    in Marathi advisory texts
+quick_start: |-
+  from datasets import load_dataset
+  ds = load_dataset('l3cube-pune/marathi-ner')
+  example = ds['train'][0]
+  print(f"Tokens: {example['tokens']}")
+  print(f"Tags: {example['ner_tags']}")

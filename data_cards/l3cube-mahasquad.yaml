@@ -1,65 +1,48 @@
----
-# Awesome Marathi Datasets - Data Card
-# L3Cube MahaSQuAD
-
-# (required) Human-readable dataset name
-title: "L3Cube-MahaSQuAD"
-
-# (required) URL to the dataset homepage, download page, or HuggingFace page
-homepage: "https://github.com/l3cube-pune/MarathiNLP"
-
-# (required) Which category file this belongs to (without number prefix)
-category: "language-nlp"
-
-# (required) One-line description of the dataset
-description: "Large-scale Marathi question answering dataset with 118,516 training, 11,873 validation, and 11,803 test QA samples, modeled after SQuAD."
-
-# (required) Data modality
-modality: "text"
-
-# (required) Approximate size with units
-size: "142,192 QA samples"
-
-# (required) ISO 639-1 language codes
+title: L3Cube-MahaSQuAD
+homepage: https://github.com/l3cube-pune/MarathiNLP
+category: language-nlp
+description:
+  Large-scale Marathi question answering dataset with 118,516 training,
+  11,873 validation, and 11,803 test QA samples, modeled after SQuAD.
+modality: text
+size: 142,192 QA samples
 language:
   - mr
-
-# (required) License identifier
-license: "CC-BY-NC-SA-4.0"
-
-# HuggingFace dataset URL (if available)
+license: CC-BY-NC-SA-4.0
 huggingface_url: ""
-
-# Direct download URL (if different from homepage)
 direct_download_url: ""
-
-# Academic paper URL (arXiv, ACL Anthology, etc.)
 paper_url: ""
-
-# GitHub repository URL (if applicable)
-github_url: "https://github.com/l3cube-pune/MarathiNLP"
-
-# Organization or author that created/maintains the dataset
-organization: "L3Cube, Pune"
-
-# (required) List of AI/ML use cases this dataset enables
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
 ai_use_cases:
-  - "Question answering"
-  - "Reading comprehension"
-  - "RAG knowledge base evaluation"
-  - "Conversational AI"
-
-# Is this dataset already specific to Maharashtra, or does it need filtering?
+  - Question answering
+  - Reading comprehension
+  - RAG knowledge base evaluation
+  - Conversational AI
 maharashtra_specific: true
-
-# Format of the data files
-format: "JSON"
-
-# How frequently the data is updated (if applicable)
-update_frequency: "static"
-
-# BibTeX citation (if available)
+format: JSON
+update_frequency: static
 citation: ""
-
-# Date this data card was last verified to be accurate (YYYY-MM-DD)
 last_verified: "2026-03-07"
+schema:
+  - field: context
+    type: string
+    description: Context paragraph in Marathi containing the answer
+  - field: question
+    type: string
+    description: Question in Marathi about the context
+  - field: answers
+    type: object
+    description: "Answer object with 'text' (list of answer strings) and 'answer_start' (list of character offsets)"
+starter_idea: "Build a Marathi question-answering system for agricultural advisory queries from farmers."
+build_ideas:
+  - "Create a RAG pipeline for answering questions over Marathi Wikipedia and government documents"
+  - "Develop a customer support chatbot that answers FAQs in Marathi using extractive QA"
+  - "Build an educational assistant that answers student questions about Marathi literature and history"
+quick_start: |
+  from datasets import load_dataset
+  ds = load_dataset('l3cube-pune/MahaSQuAD')
+  qa = ds['train'][0]
+  print(f"Q: {qa['question']}")
+  print(f"A: {qa['answers']['text'][0]}")
+  print(f"Context: {qa['context'][:100]}...")

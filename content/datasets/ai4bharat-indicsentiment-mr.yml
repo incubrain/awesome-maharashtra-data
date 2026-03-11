@@ -1,5 +1,5 @@
 title: AI4Bharat IndicSentiment (mr)
-homepage: "https://huggingface.co/datasets/ai4bharat/IndicSentiment"
+homepage: https://huggingface.co/datasets/ai4bharat/IndicSentiment
 category: language-nlp
 description: AI4Bharat IndicSentiment (mr) dataset for language nlp.
 modality: text
@@ -10,12 +10,27 @@ license: CC0-1.0
 ai_use_cases:
   - Sentiment analysis
 maharashtra_specific: true
-huggingface_url: "https://huggingface.co/datasets/ai4bharat/IndicSentiment"
+huggingface_url: https://huggingface.co/datasets/ai4bharat/IndicSentiment
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: AI4Bharat, IIT Madras
+format: CSV/JSON
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: text
+    type: string
+    description: Marathi review or opinion text
+  - field: label
+    type: string
+    description: Sentiment label (positive, negative, neutral)
+starter_idea: Build a Marathi product review sentiment analyzer for regional e-commerce platforms to understand customer satisfaction.
+build_ideas:
+  - Create a competitive sentiment analysis dashboard comparing customer opinions across Marathi-language product reviews
+  - Develop an automated restaurant review aggregator that summarizes Marathi Zomato/Swiggy reviews by sentiment
+  - Build a public service feedback analyzer for Maharashtra municipal corporations processing citizen complaints in Marathi
+quick_start:
+  "from datasets import load_dataset\nds = load_dataset('ai4bharat/IndicSentiment', 'mr', split='train', streaming=True)\n\
+  for i, ex in enumerate(ds):\n    print(f\"[{ex['label']}] {ex['text'][:80]}...\")\n    if i >= 4: break\n"

@@ -1,7 +1,9 @@
 title: WHO Global Health Workforce Statistics (NHWA/GHED)
-homepage: "https://www.who.int/data/gho/data/themes/topics/health-workforce"
+homepage: https://www.who.int/data/gho/data/themes/topics/health-workforce
 category: health-nutrition
-description: National Health Workforce Accounts data with physician, nurse, and midwife density per 10,000 population by country. Combined with India's state-level HMIS data, enables health workforce gap analysis for Maharashtra's rural vs urban areas.
+description:
+  National Health Workforce Accounts data with physician, nurse, and midwife density per 10,000 population by country.
+  Combined with India's state-level HMIS data, enables health workforce gap analysis for Maharashtra's rural vs urban areas.
 modality: tabular
 size: ~50 MB (global)
 language:
@@ -16,7 +18,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://apps.who.int/gho/data/node.main.HWFGRP_0020"
+direct_download_url: https://apps.who.int/gho/data/node.main.HWFGRP_0020
 paper_url: ""
 github_url: ""
 organization: World Health Organization
@@ -24,3 +26,32 @@ format: CSV / Excel
 update_frequency: annual
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: country
+    type: string
+    description: Country name
+  - field: cadre
+    type: string
+    description: Health worker type (physician, nurse, etc.)
+  - field: density_per_10000
+    type: float
+    description: Health workers per 10,000 population
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a health workforce gap analyzer comparing Maharashtra's health worker density against WHO standards.
+build_ideas:
+  - Create a healthcare staffing optimizer recommending health worker distribution across Maharashtra districts
+  - Develop a medical education planning tool forecasting Maharashtra's future health workforce needs
+  - Build a telemedicine deployment planner identifying health worker shortage areas where remote care has highest impact
+quick_start: "# Download from https://apps.who.int/gho/data/
+
+  import pandas as pd
+
+  df = pd.read_csv('ghed_data.csv')
+
+  india = df[df['Country'] == 'India']
+
+  print(india[['Cadre', 'Density_Per_10000']].head())
+
+  "

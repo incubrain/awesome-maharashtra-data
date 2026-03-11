@@ -1,7 +1,10 @@
 title: Wikidata Maharashtra Entities (Knowledge Graph)
-homepage: "https://www.wikidata.org/wiki/Wikidata:Main_Page"
+homepage: https://www.wikidata.org/wiki/Wikidata:Main_Page
 category: agentic-instruction-rag
-description: Structured knowledge graph with multilingual labels (including Marathi) for Maharashtra entities — people, places, organizations, cultural artifacts, administrative divisions. Extractable via SPARQL for RAG systems, entity linking, and question answering.
+description:
+  Structured knowledge graph with multilingual labels (including Marathi) for Maharashtra entities — people, places,
+  organizations, cultural artifacts, administrative divisions. Extractable via SPARQL for RAG systems, entity linking, and
+  question answering.
 modality: knowledge-graph
 size: ~100 GB (full dump), ~500 MB (MH entities subset)
 language:
@@ -18,7 +21,7 @@ ai_use_cases:
 maharashtra_specific: false
 extraction_status: subset_needed
 huggingface_url: ""
-direct_download_url: "https://dumps.wikimedia.org/wikidatawiki/entities/"
+direct_download_url: https://dumps.wikimedia.org/wikidatawiki/entities/
 paper_url: ""
 github_url: ""
 organization: Wikimedia Foundation
@@ -29,16 +32,33 @@ last_verified: "2026-03-07"
 schema:
   - field: id
     type: string
-    description: "Wikidata QID (e.g., Q1156 for Mumbai)"
+    description: Wikidata QID (e.g., Q1156 for Mumbai)
   - field: labels
     type: object
-    description: "Multilingual labels keyed by language code (mr, en, hi, etc.)"
+    description: Multilingual labels keyed by language code (mr, en, hi, etc.)
   - field: descriptions
     type: object
-    description: "Multilingual entity descriptions"
+    description: Multilingual entity descriptions
   - field: claims
     type: object
-    description: "Structured property-value pairs (P31=instance_of, P17=country, etc.)"
+    description: Structured property-value pairs (P31=instance_of, P17=country, etc.)
   - field: sitelinks
     type: object
-    description: "Links to Wikipedia articles in various languages"
+    description: Links to Wikipedia articles in various languages
+starter_idea: Build a Marathi knowledge graph from Wikidata entities related to Maharashtra for entity linking and QA systems.
+build_ideas:
+  - Create a Marathi entity disambiguation service using Wikidata for resolving ambiguous mentions in text
+  - Develop a Maharashtra knowledge quiz generator using Wikidata facts for educational applications
+  - Build a Marathi-English entity alignment tool linking Marathi text mentions to Wikidata structured knowledge
+quick_start: 'import requests
+
+  # Wikidata SPARQL endpoint
+
+  url = ''https://query.wikidata.org/sparql''
+
+  query = ''SELECT ?item ?label WHERE { ?item wdt:P131 wd:Q1191 . ?item rdfs:label ?label . FILTER(LANG(?label) = "mr") }
+  LIMIT 10''
+
+  print(''Wikidata Maharashtra: Use SPARQL endpoint for queries'')
+
+  '

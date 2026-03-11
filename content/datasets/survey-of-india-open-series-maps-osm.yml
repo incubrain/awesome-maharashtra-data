@@ -1,9 +1,9 @@
 title: Survey of India Open Series Maps (OSM)
-homepage: "https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx"
+homepage: https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx
 category: geospatial-gis
-description: "Topographic map sheets at 1:50K scale covering Maharashtra terrain, contours, settlements, and transport networks"
-modality: "Vector (PDF / Shapefile at 1:1M)"
-size: "~60 sheets for Maharashtra; 1:50K scale; PDF vector format"
+description: Topographic map sheets at 1:50K scale covering Maharashtra terrain, contours, settlements, and transport networks
+modality: Vector (PDF / Shapefile at 1:1M)
+size: ~60 sheets for Maharashtra; 1:50K scale; PDF vector format
 language:
   - en
 license: OGL-India (Survey of India)
@@ -17,8 +17,32 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Survey of India
+format: GeoTIFF
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: sheet_number
+    type: string
+    description: Map sheet number
+  - field: scale
+    type: string
+    description: Map scale (1:50000, 1:250000)
+  - field: features
+    type: list[string]
+    description: Map feature types (contours, roads, rivers, etc.)
+starter_idea: Build a Maharashtra topographic base layer service using Survey of India open series maps for GIS applications.
+build_ideas:
+  - Create a terrain feature extractor digitizing contours and drainage from SOI maps for Maharashtra
+  - Develop a historical land use comparison tool using old SOI maps against current satellite imagery
+  - Build a map georeferencing pipeline converting SOI map sheets into GIS-ready raster layers for Maharashtra
+quick_start: "# Survey of India
+
+  import requests
+
+  print('Survey of India: https://onlinemaps.surveyofindia.gov.in/')
+
+  print('Open Series Maps available for download')
+
+  "

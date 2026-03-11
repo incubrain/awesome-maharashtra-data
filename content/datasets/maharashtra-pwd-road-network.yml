@@ -1,7 +1,9 @@
 title: Maharashtra PWD Road Network
-homepage: "https://mahapwd.gov.in/"
+homepage: https://mahapwd.gov.in/
 category: transport-urban-infrastructure
-description: Public Works Department data on state highways, major district roads, and other state road infrastructure in Maharashtra
+description:
+  Public Works Department data on state highways, major district roads, and other state road infrastructure in
+  Maharashtra
 modality: Tabular (web)
 size: State-wide
 language:
@@ -16,8 +18,40 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Public Works Department, Government of Maharashtra
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: road_name
+    type: string
+    description: Road name/number
+  - field: road_type
+    type: string
+    description: Road type (NH, SH, MDR, ODR)
+  - field: length_km
+    type: float
+    description: Road length in kilometers
+  - field: district
+    type: string
+    description: District traversed
+  - field: condition
+    type: string
+    description: Road surface condition
+starter_idea:
+  Build a road network analytics tool for Maharashtra showing connectivity, condition, and maintenance needs by
+  district.
+build_ideas:
+  - Create a road maintenance prioritizer ranking Maharashtra roads by condition severity and traffic volume
+  - Develop an accessibility analyzer showing how road network quality affects market access for Maharashtra farmers
+  - Build a logistics route optimizer for agricultural supply chains using road condition and distance data
+quick_start: "# Maharashtra PWD road data
+
+  import pandas as pd
+
+  print('Maharashtra PWD Road Network')
+
+  print('Source: Maharashtra Public Works Department')
+
+  "

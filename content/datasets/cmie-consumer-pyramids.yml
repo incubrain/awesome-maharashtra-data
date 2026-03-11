@@ -1,7 +1,9 @@
 title: CMIE Consumer Pyramids
-homepage: "https://consumerpyramidsdx.cmie.com/"
+homepage: https://consumerpyramidsdx.cmie.com/
 category: economy-labour-finance
-description: Maharashtra — Longitudinal panel survey of household income, expenditure, employment, and consumer behaviour across Maharashtra (requires subscription)
+description:
+  Maharashtra — Longitudinal panel survey of household income, expenditure, employment, and consumer behaviour
+  across Maharashtra (requires subscription)
 modality: Tabular (API, dashboard)
 size: ~1.7 lakh households nationally, ongoing
 language:
@@ -16,8 +18,44 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Centre for Monitoring Indian Economy (CMIE)
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: household_id
+    type: string
+    description: Anonymized household identifier
+  - field: state
+    type: string
+    description: State name
+  - field: income
+    type: float
+    description: Monthly household income
+  - field: expenditure
+    type: float
+    description: Monthly household expenditure
+  - field: quarter
+    type: string
+    description: Survey quarter
+starter_idea:
+  Build a household economic distress detector for Maharashtra using high-frequency income and expenditure panel
+  data.
+build_ideas:
+  - Create a consumer spending pattern analyzer tracking Maharashtra household behavior during economic shocks
+  - Develop an inequality trend tracker showing income distribution changes across Maharashtra districts over time
+  - Build a financial inclusion gap identifier for Maharashtra households based on savings and credit patterns
+quick_start: "# CMIE Consumer Pyramids (subscription required)
+
+  import pandas as pd
+
+  # df = pd.read_csv('cmie_cphs.csv')
+
+  # mh = df[df['State'] == 'Maharashtra']
+
+  print('CMIE Consumer Pyramids: subscription at cmie.com')
+
+  print('Covers 175,000+ households pan-India')
+
+  "

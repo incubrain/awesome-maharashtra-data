@@ -1,0 +1,55 @@
+title: NASA GPM IMERG Precipitation (V07)
+homepage: https://gpm.nasa.gov/data/imerg
+category: environment-climate-disaster
+description:
+  Global precipitation estimates at 0.1° (~10km) resolution, half-hourly from June 2000 to present. Maharashtra
+  subset enables hyper-local flood prediction, drought monitoring, and agricultural water management across all 36 districts.
+modality: raster-gridded
+size: ~5 TB (global, full history), ~10 GB (MH daily subset)
+language:
+  - en
+license: Open (NASA)
+ai_use_cases:
+  - Flood early warning systems for Maharashtra rivers
+  - Drought severity mapping at taluka level
+  - Crop water requirement estimation
+  - Urban stormwater drainage planning
+  - Reservoir inflow forecasting
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_07/summary
+paper_url: ""
+github_url: ""
+organization: NASA Goddard Space Flight Center
+format: HDF5 / NetCDF
+update_frequency: daily
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: precipitation_mm_hr
+    type: float
+    description: Precipitation rate in mm/hr
+  - field: latitude
+    type: float
+    description: Grid latitude (0.1 degree)
+  - field: longitude
+    type: float
+    description: Grid longitude (0.1 degree)
+  - field: time
+    type: datetime
+    description: Half-hourly timestamp
+starter_idea: Build a high-frequency rainfall monitor for Maharashtra using NASA GPM half-hourly precipitation estimates.
+build_ideas:
+  - Create a flash flood nowcasting system for Maharashtra using GPM real-time precipitation intensity data
+  - Develop an urban drainage overload predictor for Mumbai using GPM extreme rainfall event detection
+  - Build a crop waterlogging risk alerter combining GPM intense rainfall with soil and terrain data for Maharashtra
+quick_start: "import xarray as xr
+
+  # Download from https://gpm.nasa.gov/data/
+
+  print('NASA GPM IMERG: https://gpm.nasa.gov/')
+
+  print('Half-hourly precipitation at 0.1 degree resolution')
+
+  "

@@ -1,0 +1,54 @@
+title: MahaBERT / IndicBERT Evaluation Benchmarks
+homepage: https://huggingface.co/ai4bharat/indic-bert
+category: benchmarks-fairness-dialects-tools
+description:
+  Evaluation results and benchmark scores for MahaBERT (L3Cube) and IndicBERT (AI4Bharat) models on Marathi NLU
+  tasks including sentiment, NER, and text classification
+modality: Benchmarks (tables)
+size: Model evaluation data
+language:
+  - mr
+license: Open Research
+ai_use_cases:
+  - Model selection for Marathi tasks
+  - transfer learning baseline
+  - architecture comparison
+maharashtra_specific: true
+huggingface_url: https://huggingface.co/ai4bharat/indic-bert
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/l3cube-pune/MarathiNLP
+organization: L3Cube, Pune
+format: Various
+update_frequency: static
+citation: ""
+last_verified: "2026-03-11"
+schema:
+  - field: model
+    type: string
+    description: Model name being evaluated
+  - field: task
+    type: string
+    description: Benchmark task name
+  - field: metric
+    type: string
+    description: Evaluation metric (F1, accuracy, etc.)
+  - field: score
+    type: float
+    description: Benchmark score
+starter_idea: Build a Marathi model comparison framework using MahaBERT/IndicBERT benchmarks to guide model selection.
+build_ideas:
+  - Create an automated Marathi model benchmarking pipeline that evaluates new models on standard tasks
+  - Develop a cost-performance analyzer comparing Marathi model accuracy against inference latency and model size
+  - Build a task-specific model recommender that suggests the best Marathi BERT variant for each NLP application
+quick_start: "from transformers import AutoTokenizer, AutoModel
+
+  tokenizer = AutoTokenizer.from_pretrained('l3cube-pune/marathi-bert-v2')
+
+  model = AutoModel.from_pretrained('l3cube-pune/marathi-bert-v2')
+
+  inputs = tokenizer('मराठी भाषा', return_tensors='pt')
+
+  print(f'Output shape: {model(**inputs).last_hidden_state.shape}')
+
+  "

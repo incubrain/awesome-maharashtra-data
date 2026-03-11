@@ -1,7 +1,9 @@
 title: NIRF Rankings
-homepage: "https://www.nirfindia.org/"
+homepage: https://www.nirfindia.org/
 category: education-skills
-description: Maharashtra Institutions — National Institutional Ranking Framework data covering teaching, research, perception, and outcome metrics for Maharashtra higher education institutions
+description:
+  Maharashtra Institutions — National Institutional Ranking Framework data covering teaching, research, perception,
+  and outcome metrics for Maharashtra higher education institutions
 modality: Tabular (PDF, web)
 size: ~1,000+ institutions annually
 language:
@@ -15,8 +17,40 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Ministry of Education, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: institution
+    type: string
+    description: Institution name
+  - field: city
+    type: string
+    description: City location
+  - field: rank
+    type: int
+    description: NIRF rank
+  - field: score
+    type: float
+    description: Overall NIRF score
+  - field: category
+    type: string
+    description: Ranking category (university, engineering, etc.)
+starter_idea: Build a Maharashtra higher education quality tracker analyzing NIRF rankings and score trends over time.
+build_ideas:
+  - Create an institution improvement advisor identifying weak areas for Maharashtra colleges based on NIRF parameter scores
+  - Develop a student decision support tool comparing Maharashtra institutions by NIRF metrics and placement data
+  - Build a research output analyzer for Maharashtra universities correlating NIRF research scores with publication data
+quick_start: "# Download from https://www.nirfindia.org/
+
+  import pandas as pd
+
+  df = pd.read_csv('nirf_rankings.csv')
+
+  mh = df[df['City'].str.contains('Maharashtra|Mumbai|Pune|Nagpur', na=False)]
+
+  print(mh[['Institution', 'Rank', 'Score']].head(10))
+
+  "

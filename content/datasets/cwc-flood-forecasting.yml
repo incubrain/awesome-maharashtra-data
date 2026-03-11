@@ -1,7 +1,9 @@
 title: CWC Flood Forecasting
-homepage: "https://ffs.india-water.gov.in/"
+homepage: https://ffs.india-water.gov.in/
 category: environment-climate-disaster
-description: "Maharashtra River Gauges — Real-time and historical water level and discharge data from river gauging stations across Maharashtra's major river basins (Krishna, Godavari, Tapi)"
+description:
+  Maharashtra River Gauges — Real-time and historical water level and discharge data from river gauging stations
+  across Maharashtra's major river basins (Krishna, Godavari, Tapi)
 modality: Tabular (web portal)
 size: Hourly (monsoon), 340 stations nationally
 language:
@@ -16,8 +18,42 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Central Water Commission, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: station
+    type: string
+    description: River gauge station name
+  - field: river
+    type: string
+    description: River name
+  - field: water_level_m
+    type: float
+    description: Current water level in meters
+  - field: danger_level_m
+    type: float
+    description: Danger water level threshold
+  - field: datetime
+    type: datetime
+    description: Observation timestamp
+starter_idea:
+  Build a flood early warning system for Maharashtra rivers that predicts downstream water levels from upstream
+  gauge data.
+build_ideas:
+  - Create a real-time flood dashboard for Maharashtra showing river levels, forecasts, and evacuation zones on a map
+  - Develop a dam release impact model predicting downstream flood levels when Maharashtra dams release excess water
+  - Build a historical flood pattern analyzer identifying recurring flood-prone periods for Maharashtra river basins
+quick_start: "# CWC flood forecasting data
+
+  import pandas as pd
+
+  # Access from https://ffs.india-water.gov.in/
+
+  print('CWC Flood Forecasting: https://ffs.india-water.gov.in/')
+
+  print('Real-time river water level data for Maharashtra rivers')
+
+  "

@@ -1,7 +1,9 @@
 title: CPCB Air Quality Index
-homepage: "https://airquality.cpcb.gov.in/ccr/"
+homepage: https://airquality.cpcb.gov.in/ccr/
 category: environment-climate-disaster
-description: Maharashtra Stations — Continuous ambient air quality monitoring (PM2.5, PM10, NO2, SO2, O3, CO) from CAAQMS stations across Maharashtra cities including Mumbai, Pune, Nagpur, Aurangabad
+description:
+  Maharashtra Stations — Continuous ambient air quality monitoring (PM2.5, PM10, NO2, SO2, O3, CO) from CAAQMS
+  stations across Maharashtra cities including Mumbai, Pune, Nagpur, Aurangabad
 modality: Tabular (CSV, API)
 size: Hourly, 20+ stations
 language:
@@ -16,8 +18,42 @@ huggingface_url: ""
 direct_download_url: ""
 paper_url: ""
 github_url: ""
-organization: ""
-format: ""
+organization: Central Pollution Control Board, Government of India
+format: CSV
 update_frequency: static
 citation: ""
 last_verified: "2026-03-07"
+schema:
+  - field: city
+    type: string
+    description: City name
+  - field: aqi
+    type: int
+    description: Air Quality Index value
+  - field: category
+    type: string
+    description: AQI category (Good, Moderate, Poor, etc.)
+  - field: prominent_pollutant
+    type: string
+    description: Main pollutant driving AQI
+  - field: date
+    type: date
+    description: Measurement date
+starter_idea: Build an AQI trend analyzer for Maharashtra cities showing seasonal patterns and long-term improvement or degradation.
+build_ideas:
+  - Create an outdoor activity recommender for Maharashtra cities that suggests safe exercise times based on AQI forecasts
+  - Develop an industrial zone air quality impact model correlating AQI data with industrial activity in Maharashtra
+  - Build a policy effectiveness evaluator tracking how emission reduction measures affect AQI in Maharashtra cities
+quick_start: "# Download from https://app.cpcbccr.com/
+
+  import pandas as pd
+
+  df = pd.read_csv('cpcb_aqi.csv')
+
+  mh_cities = ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad']
+
+  mh = df[df['City'].isin(mh_cities)]
+
+  print(mh.groupby('City')['AQI'].mean().sort_values(ascending=False))
+
+  "
