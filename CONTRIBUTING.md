@@ -2,6 +2,8 @@
 
 Thank you for helping build the definitive catalog of Maharashtra and Marathi public datasets. Every contribution makes it easier for innovators to build AI-powered solutions for agriculture, governance, healthcare, and beyond.
 
+Browse the full catalog at **[data.incubrain.org](https://data.incubrain.org)**.
+
 ## What Qualifies
 
 - Dataset must be **publicly accessible** (no login-wall or paywall-only).
@@ -24,41 +26,8 @@ Use the "Add Dataset" issue template. Provide:
 ### Full (pull request)
 
 1. Fork this repo.
-2. Copy `data_cards/_template.yaml` to `data_cards/<dataset-slug>.yaml` and fill in all fields.
-3. Add the entry row to the matching `categories/<nn>-<name>.md` table.
-4. Add a bulleted entry to the matching section in `README.md`.
-5. Submit PR with title: `Add <Dataset Name>`.
-
-## Entry Formats
-
-### Bulleted entry in README.md
-
-```markdown
-- [Dataset Name](URL) - Description ending with period. `Modality` `License`
-```
-
-Example:
-
-```markdown
-- [L3Cube-MahaSent](https://huggingface.co/datasets/l3cube-pune/MahaSent) - Marathi sentiment analysis dataset with 16K tweets across 3 classes. `Text` `CC-BY-4.0`
-```
-
-Rules:
-- Link first, then ` - ` (space-dash-space), then description.
-- Description starts with uppercase, ends with `.`
-- Modality and license as inline code tags at end.
-
-### Table row in category file
-
-```markdown
-| **[Dataset Name](URL)** - Description. | Size | License | Modality | [HF](url) / [Paper](url) | AI Use Case |
-```
-
-Columns: Dataset (name + description merged) | Size | License | Modality | Links | AI Use Case
-
-### YAML data card
-
-Copy `data_cards/_template.yaml` and fill all fields. See the template for field descriptions.
+2. Add a new YAML file under `content/datasets/<dataset-slug>.yaml` with all required metadata fields.
+3. Submit PR with title: `Add <Dataset Name>`.
 
 ## Quality Standards
 
