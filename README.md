@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Datasets](https://img.shields.io/badge/datasets-248-blue.svg)](https://data.incubrain.org)
+[![Datasets](https://img.shields.io/badge/datasets-273-blue.svg)](https://data.incubrain.org)
 
 ## Browse the Catalog
 

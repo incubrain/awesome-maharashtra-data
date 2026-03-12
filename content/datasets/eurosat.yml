@@ -1,6 +1,6 @@
 title: EuroSAT
 homepage: https://github.com/phelber/EuroSAT
-category: vision-ocr-multimodal
+category: geospatial-gis
 description:
   Sentinel-2 satellite image dataset for land use and land cover classification. Contains geo-referenced RGB and
   multispectral images across 10 classes. Applicable to Maharashtra remote sensing and agricultural monitoring

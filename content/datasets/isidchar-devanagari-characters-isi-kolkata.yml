@@ -1,0 +1,57 @@
+title: ISIDCHAR - ISI Kolkata Devanagari Character Database
+homepage: https://www.isical.ac.in/~ujjwal/download/database.html
+category: vision-ocr-multimodal
+description:
+  Handwritten Devanagari character dataset from the CVPR Unit at Indian Statistical Institute (ISI), Kolkata.
+  Contains 36,172 grayscale character images across 47 character classes covering all basic Devanagari consonants,
+  vowels, and numerals. Collected from multiple writers with natural handwriting variation. One of the earliest
+  and most cited Indian script character recognition benchmark datasets. Also includes a separate ISI Devanagari
+  Numeral Database with 22,556 numeral images from 1,049 writers.
+modality: Image (handwritten character crops)
+size: 36,172 character images (47 classes) + 22,556 numeral images (10 classes, 1,049 writers)
+language:
+  - mr
+  - hi
+  - ne
+  - sa
+license: Research use (ISI Kolkata)
+ai_use_cases:
+  - Devanagari character classification benchmark
+  - Handwritten numeral recognition
+  - Character-level OCR pre-training
+  - Writer variability analysis
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: CVPR Unit, Indian Statistical Institute (ISI), Kolkata
+format: PNG/BMP
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Grayscale handwritten Devanagari character image
+  - field: character_class
+    type: string
+    description: Devanagari character or numeral label
+  - field: class_id
+    type: int
+    description: Numeric class identifier
+starter_idea: Benchmark modern deep learning character classifiers against this classic ISI Kolkata dataset.
+build_ideas:
+  - Create a comprehensive Devanagari character recognizer combining ISI data with DHCD for maximum writer diversity
+  - Develop a confusable character pair analyzer identifying which Devanagari characters are most often misrecognized
+  - Build a character-level pre-training pipeline that transfers ISI character knowledge to word-level Marathi OCR
+quick_start: |
+  # Request access from ISI Kolkata CVPR Unit
+  # https://www.isical.ac.in/~ujjwal/download/database.html
+  from PIL import Image
+  import numpy as np
+
+  # Load character images (47 class directories)
+  print("ISIDCHAR: 36,172 Devanagari character images, 47 classes")
+  print("ISI Numeral DB: 22,556 numeral images from 1,049 writers")

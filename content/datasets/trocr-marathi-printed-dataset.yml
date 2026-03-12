@@ -1,0 +1,54 @@
+title: TrOCR Marathi Printed Text Dataset
+homepage: https://github.com/MubashirTanwar/TrOCR
+category: vision-ocr-multimodal
+description:
+  Curated dataset of printed Marathi text images for training TrOCR (Transformer-based OCR) models. Contains
+  2,671 line-level and 8,077 word-level PNG images extracted from printed Marathi documents with corresponding
+  Unicode ground-truth transcriptions. Specifically designed for fine-tuning pre-trained vision-language models
+  on Marathi printed text recognition. Includes diverse font styles and document types.
+modality: Image (printed text line/word crops with transcriptions)
+size: 2,671 line images + 8,077 word images
+language:
+  - mr
+license: Not specified
+ai_use_cases:
+  - Fine-tuning TrOCR and similar vision-language models for Marathi
+  - Printed Marathi text line recognition
+  - Benchmarking OCR systems on Marathi printed text
+  - Transfer learning baseline for Devanagari OCR
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/MubashirTanwar/TrOCR
+organization: Community
+format: PNG with text labels
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Cropped line or word image from printed Marathi text
+  - field: text
+    type: string
+    description: Unicode ground-truth transcription in Marathi
+  - field: level
+    type: string
+    description: Annotation level (line or word)
+starter_idea: Fine-tune a TrOCR model on this Marathi dataset for high-accuracy printed Devanagari text recognition.
+build_ideas:
+  - Create a comparative study of TrOCR vs. CRNN vs. PaddleOCR performance on Marathi printed text
+  - Develop a data augmentation pipeline expanding this dataset with synthetic variations for more robust training
+  - Build an active learning system that identifies the hardest Marathi words for OCR and prioritizes them for annotation
+quick_start: |
+  # Clone from https://github.com/MubashirTanwar/TrOCR
+  from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+  from PIL import Image
+
+  # Load pre-trained TrOCR and fine-tune on Marathi data
+  processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-printed")
+  model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-base-printed")
+  # Fine-tune on Marathi word/line images
+  print("TrOCR Marathi: 10K+ printed text images for fine-tuning")

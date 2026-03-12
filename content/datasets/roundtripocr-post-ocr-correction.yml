@@ -1,0 +1,60 @@
+title: RoundTripOCR - Post-OCR Error Correction Dataset
+homepage: https://github.com/harshvivek14/RoundTripOCR
+category: vision-ocr-multimodal
+description:
+  Large-scale post-OCR error correction dataset containing 1.58 million Marathi sentence pairs (noisy OCR output
+  paired with corrected ground truth) for training OCR post-processing models. Generated using a round-trip
+  translation approach through Hindi/Nepali to create realistic OCR-like errors. Enables training mBART, mT5,
+  and other sequence-to-sequence models to automatically correct Devanagari OCR errors including character
+  substitutions, missing matras, broken conjuncts, and segmentation artifacts.
+modality: Text (parallel noisy-clean sentence pairs)
+size: 1.58M Marathi sentence pairs (also includes Hindi 3.1M, Nepali 2.97M)
+language:
+  - mr
+  - hi
+  - ne
+license: Not specified
+ai_use_cases:
+  - Post-OCR error correction for Marathi text
+  - OCR output quality improvement
+  - Devanagari text normalization
+  - Noisy text correction for downstream NLP tasks
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2412.15248
+github_url: https://github.com/harshvivek14/RoundTripOCR
+organization: IIT Delhi
+format: TSV/CSV
+update_frequency: static
+citation: "RoundTripOCR: A Data Generation Technique for Enhancing Post-OCR Error Correction in Low-Resource Devanagari Languages, ICON 2024"
+last_verified: "2026-03-12"
+schema:
+  - field: noisy_text
+    type: string
+    description: Simulated OCR output with realistic errors
+  - field: clean_text
+    type: string
+    description: Corrected ground truth text
+  - field: error_type
+    type: string
+    description: Type of OCR error (substitution, deletion, insertion, segmentation)
+starter_idea: Train a Marathi OCR post-processor that automatically corrects common recognition errors in Devanagari text.
+build_ideas:
+  - Create an end-to-end Marathi OCR pipeline with integrated post-correction achieving near-human accuracy
+  - Develop a Devanagari OCR error taxonomy analyzing which character confusions are most common and building targeted corrections
+  - Build a quality scoring system that rates OCR output confidence and flags passages needing human review
+quick_start: |
+  # Clone from https://github.com/harshvivek14/RoundTripOCR
+  import pandas as pd
+  from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+  # Load noisy-clean sentence pairs
+  df = pd.read_csv('roundtripocr_marathi.tsv', sep='\t')
+  print(f"Marathi sentence pairs: {len(df)}")
+  print(f"Sample noisy: {df['noisy_text'].iloc[0]}")
+  print(f"Sample clean: {df['clean_text'].iloc[0]}")
+
+  # Fine-tune mBART or mT5 for post-OCR correction
+  # model = AutoModelForSeq2SeqLM.from_pretrained("facebook/mbart-large-50")

@@ -1,0 +1,66 @@
+title: MahaBhulekh - Maharashtra 7/12 Satbara Land Record Extracts
+homepage: https://bhulekh.mahabhumi.gov.in/
+category: vision-ocr-multimodal
+description:
+  Maharashtra's digitized land record system containing 2.11 crore (21.1 million) 7/12 satbara extracts across
+  358 talukas. Each extract follows a standardized Marathi template with structured fields for survey number,
+  land area, landowner details, crop information, and encumbrances. The records are dynamically generated in
+  Marathi and represent one of the largest standardized Marathi document sources available. Raw unannotated
+  source requiring OCR ground-truth annotation, but the consistent template format makes automated annotation
+  feasible. A community scraping tool exists for aggregation.
+modality: Document images (standardized Marathi form template, unannotated)
+size: 21.1 million digitized extracts; 358 talukas; all 36 districts
+language:
+  - mr
+license: Gov Open
+ai_use_cases:
+  - Marathi government form OCR training data source
+  - Structured document field extraction for Devanagari
+  - Land record digitization and searchability
+  - Template-based document understanding model training
+maharashtra_specific: true
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://digitalsatbara.mahabhumi.gov.in/
+paper_url: ""
+github_url: https://github.com/answerquest/mahabhulekh-7-12-aggregating
+organization: Maharashtra Revenue Department, Government of Maharashtra
+format: HTML / PDF (dynamically generated)
+update_frequency: continuous
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: survey_number
+    type: string
+    description: Land survey number
+  - field: village
+    type: string
+    description: Village name in Marathi
+  - field: taluka
+    type: string
+    description: Taluka name
+  - field: district
+    type: string
+    description: District name
+  - field: landowner_name
+    type: string
+    description: Landowner name in Marathi
+  - field: land_area
+    type: float
+    description: Land area in hectares/ares
+  - field: crop_type
+    type: string
+    description: Current crop or land use
+starter_idea: Build an annotation pipeline converting MahaBhulekh 7/12 extracts into field-level OCR training data with bounding boxes and transcriptions.
+build_ideas:
+  - Create a FUNSD-style key-value extraction dataset for Marathi using 7/12 extract templates as the annotation base
+  - Develop an automated land record search system that OCRs scanned satbara documents and makes them searchable
+  - Build a land dispute analyzer extracting ownership history from sequences of 7/12 extracts for the same survey number
+quick_start: |
+  # MahaBhulekh - Maharashtra Land Records
+  # Browse: https://bhulekh.mahabhumi.gov.in/
+  # Digital Satbara: https://digitalsatbara.mahabhumi.gov.in/
+  # Aggregation tool: https://github.com/answerquest/mahabhulekh-7-12-aggregating
+
+  print("MahaBhulekh: 21.1M digitized 7/12 land records")
+  print("Standardized Marathi template - ideal for form OCR training")

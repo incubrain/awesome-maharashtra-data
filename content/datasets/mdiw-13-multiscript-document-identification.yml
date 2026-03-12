@@ -1,0 +1,64 @@
+title: MDIW-13 - Multi-Script Document Identification in the Wild
+homepage: https://zenodo.org/records/6376096
+category: vision-ocr-multimodal
+description:
+  Multi-script document dataset containing 1,135 document images with 13,979 text lines and 86,655 words across
+  13 scripts including Devanagari and Roman (Latin). Used in the ICDAR 2021 Script Identification in the Wild
+  (SIW) competition. Sources include printed newspapers and handwritten letters with word-level and line-level
+  script annotations. Enables training robust script identification models that can distinguish Devanagari from
+  Latin and other scripts in real-world mixed-script documents — a critical preprocessing step for bilingual
+  Marathi-English OCR pipelines.
+modality: Image (document pages with script identification annotations)
+size: 1,135 documents; 13,979 text lines; 86,655 words; 13 scripts
+language:
+  - hi
+  - en
+  - ar
+  - bn
+  - ja
+  - ko
+  - ta
+  - te
+license: Open access
+ai_use_cases:
+  - Multi-script identification in documents
+  - Preprocessing for bilingual Marathi-English OCR
+  - Script-aware document layout analysis
+  - Multilingual document routing and classification
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://zenodo.org/records/6376096
+paper_url: ""
+github_url: ""
+organization: ICDAR 2021 SIW Competition
+format: JPEG/PNG with word-level script labels
+update_frequency: static
+citation: "ICDAR 2021 Competition on Script Identification in the Wild (SIW)"
+last_verified: "2026-03-12"
+schema:
+  - field: document_image
+    type: image
+    description: Full document page image
+  - field: word_bbox
+    type: json
+    description: Word bounding box coordinates
+  - field: script_label
+    type: string
+    description: Script class label (Devanagari, Latin, Arabic, etc.)
+  - field: text_line
+    type: json
+    description: Line-level bounding box with script label
+starter_idea: Train a multi-script classifier that preprocesses documents by identifying Devanagari vs. Latin regions before running language-specific OCR.
+build_ideas:
+  - Create a script-aware OCR router that automatically selects Marathi or English OCR models based on detected script regions
+  - Develop a bilingual document segmenter splitting mixed Marathi-English pages into script-homogeneous zones for targeted OCR
+  - Build a script identification benchmark for Indian documents comparing deep learning approaches on the MDIW-13 Devanagari subset
+quick_start: |
+  # Download from Zenodo: https://zenodo.org/records/6376096
+  # Also available on IEEE DataPort
+  from PIL import Image
+
+  # Load multi-script document images with script annotations
+  print("MDIW-13: 1,135 documents, 86,655 words, 13 scripts")
+  print("ICDAR 2021 Script Identification in the Wild (SIW)")

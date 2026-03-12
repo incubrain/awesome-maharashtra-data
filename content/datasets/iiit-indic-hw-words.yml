@@ -1,0 +1,66 @@
+title: IIIT-INDIC-HW-WORDS - Large-Scale Handwritten Indic Words
+homepage: https://cvit.iiit.ac.in/research/projects/cvit-projects/iiit-indic-hw-words
+category: vision-ocr-multimodal
+description:
+  Massive handwritten word dataset containing 872,000 word instances across 10 Indic scripts including Devanagari,
+  written by 135 writers. Each writer contributed approximately 6,460 word instances. Includes word-level bounding
+  box annotations and Unicode transcriptions. The scale and writer diversity make this essential for training robust
+  handwritten text recognition systems that generalize across writing styles. Devanagari subset directly applicable
+  to Marathi handwriting recognition.
+modality: Image (handwritten word crops with transcriptions)
+size: 872K word instances; 135 writers; 10 Indic scripts
+language:
+  - mr
+  - hi
+  - bn
+  - ta
+  - te
+  - kn
+  - ml
+  - gu
+  - pa
+  - or
+license: Research use (CVIT/IIIT-H)
+ai_use_cases:
+  - Large-scale handwritten Marathi word recognition
+  - Writer-independent handwriting model training
+  - Cross-script transfer learning for handwritten OCR
+  - Handwriting style analysis and generation
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: CVIT, IIIT Hyderabad
+format: PNG/JPEG with text labels
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Cropped handwritten word image
+  - field: text
+    type: string
+    description: Unicode ground-truth transcription
+  - field: script
+    type: string
+    description: Script identifier (Devanagari for Marathi/Hindi)
+  - field: writer_id
+    type: string
+    description: Unique writer identifier
+starter_idea: Train a writer-independent Marathi handwriting recognizer using the Devanagari subset of this large-scale dataset.
+build_ideas:
+  - Create a handwriting-to-text API for Marathi documents using IIIT-INDIC-HW-WORDS as the primary training corpus
+  - Develop a writer identification system for Marathi handwriting that can distinguish between 100+ writing styles
+  - Build a handwriting difficulty analyzer scoring legibility of Marathi handwritten samples for quality control
+quick_start: |
+  # Request access from CVIT, IIIT Hyderabad
+  # https://cvit.iiit.ac.in/research/projects/cvit-projects/iiit-indic-hw-words
+  from PIL import Image
+
+  # After downloading, filter Devanagari (applicable to Marathi)
+  # devanagari_words/ contains word images with transcription files
+  print("IIIT-INDIC-HW-WORDS: 872K handwritten word instances")
+  print("Filter Devanagari script for Marathi OCR training")

@@ -1,0 +1,64 @@
+title: Google Fonts Devanagari Collection
+homepage: https://fonts.google.com/?subset=devanagari
+category: benchmarks-fairness-dialects-tools
+description:
+  Collection of 50+ freely licensed Devanagari typefaces from Google Fonts including Tiro Devanagari Marathi
+  (designed specifically for Marathi typographic conventions), Noto Sans/Serif Devanagari (comprehensive Unicode
+  coverage), Anek Devanagari (variable weight font), and dozens more. Combined with 283+ fonts from
+  DevanagariFonts.net, these provide the font diversity needed for synthetic OCR training data generation.
+  Critical for training OCR models that generalize across the wide range of fonts used in Marathi printing.
+modality: Font files (TTF/OTF)
+size: 50+ Google Fonts families; 283+ additional from DevanagariFonts.net
+language:
+  - mr
+  - hi
+  - ne
+  - sa
+license: OFL (SIL Open Font License) / Apache 2.0
+ai_use_cases:
+  - Synthetic OCR training data generation with font diversity
+  - Font-robust OCR model training
+  - Marathi text rendering for data augmentation
+  - Devanagari typography research
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://fonts.google.com/?subset=devanagari
+paper_url: ""
+github_url: https://github.com/google/fonts
+organization: Google / SIL International / Community
+format: TTF / OTF / WOFF2
+update_frequency: ongoing
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: font_family
+    type: string
+    description: Font family name
+  - field: font_style
+    type: string
+    description: Style variant (regular, bold, italic, etc.)
+  - field: license
+    type: string
+    description: Font license (OFL or Apache 2.0)
+  - field: script_coverage
+    type: string
+    description: Unicode blocks covered (Devanagari, Extended Devanagari, etc.)
+starter_idea: Build a Devanagari font sampler that renders Marathi text across all available fonts for visual comparison and OCR testing.
+build_ideas:
+  - Create a multi-font Marathi OCR training pipeline rendering each word in 50+ fonts with degradation for maximum robustness
+  - Develop a font identification system that detects which Devanagari font was used in a printed Marathi document
+  - Build a Marathi conjunct character coverage analyzer testing which fonts correctly render all Marathi-specific conjuncts
+quick_start: |
+  # Download Devanagari fonts from Google Fonts
+  # https://fonts.google.com/?subset=devanagari
+  # Additional fonts: https://devanagarifonts.net/
+
+  from PIL import Image, ImageDraw, ImageFont
+
+  # Render Marathi text in multiple fonts
+  marathi_text = "नमस्कार, मी मराठी बोलतो"
+  font = ImageFont.truetype("NotoSansDevanagari-Regular.ttf", 48)
+  img = Image.new('RGB', (800, 100), 'white')
+  ImageDraw.Draw(img).text((10, 10), marathi_text, fill='black', font=font)
+  img.save('marathi_sample.png')

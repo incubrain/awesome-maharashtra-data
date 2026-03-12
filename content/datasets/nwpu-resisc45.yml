@@ -1,6 +1,6 @@
 title: NWPU-RESISC45
 homepage: https://huggingface.co/datasets/timm/resisc45
-category: vision-ocr-multimodal
+category: geospatial-gis
 description:
   Large-scale remote sensing image scene classification benchmark with 45 scene classes extracted from Google Earth
   covering 100+ countries. Applicable to Maharashtra urban planning, land use mapping, and infrastructure analysis

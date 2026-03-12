@@ -1,0 +1,54 @@
+title: LDC-IL Marathi Gold Standard Text Corpus
+homepage: https://data.ldcil.org/a-gold-standard-marathi-raw-text-corpus
+category: language-nlp
+description:
+  Curated Marathi text corpus of 2,157,109 words across 678 titles collected from books, magazines, and newspapers
+  by the Linguistic Data Consortium for Indian Languages (LDC-IL) under the Ministry of Electronics and IT. The
+  corpus includes newspaper-sourced Marathi text that can serve as ground-truth for synthetic OCR training data
+  generation — render the text using Devanagari fonts with degradation effects to create paired image-text training
+  data. Also valuable as a language model corpus for post-OCR beam search decoding and error correction.
+modality: Text (Marathi)
+size: 2,157,109 words; 678 titles
+language:
+  - mr
+license: Gov Open (LDC-IL terms)
+ai_use_cases:
+  - Ground-truth text source for synthetic OCR data generation
+  - Language model training for post-OCR correction
+  - Marathi text normalization and spell-checking
+  - Vocabulary coverage analysis for OCR lexicon building
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://data.ldcil.org/a-gold-standard-marathi-raw-text-corpus
+paper_url: ""
+github_url: ""
+organization: LDC-IL, Ministry of Electronics and IT, Government of India
+format: XML / Text
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: text
+    type: string
+    description: Marathi text content
+  - field: source_type
+    type: string
+    description: Source type (book, magazine, newspaper)
+  - field: title
+    type: string
+    description: Source title
+starter_idea: Generate millions of synthetic Marathi OCR training images by rendering LDC-IL text in diverse Devanagari fonts with degradation.
+build_ideas:
+  - Create a synthetic Marathi newspaper OCR dataset by rendering LDC-IL newspaper text in newspaper-style layouts with column formatting
+  - Develop a Marathi OCR vocabulary and language model using LDC-IL's curated 2.1M word corpus for beam search decoding
+  - Build a Marathi conjunct character frequency analyzer using LDC-IL text to identify rare jodakshara needing special OCR attention
+quick_start: |
+  # Download from https://data.ldcil.org/
+  # Register for access to LDC-IL resources
+  import xml.etree.ElementTree as ET
+
+  # Parse LDC-IL Marathi corpus
+  # tree = ET.parse('ldcil_marathi_corpus.xml')
+  print("LDC-IL Marathi: 2.1M words from books, magazines, newspapers")
+  print("Use as ground-truth text for synthetic OCR data generation")

@@ -1,0 +1,59 @@
+title: Sanskrit Letter Dataset (602 Character Classes)
+homepage: https://github.com/avadesh02/Sanskrit-letter-dataset
+category: vision-ocr-multimodal
+description:
+  Handwritten Devanagari character dataset with the widest class diversity available — 602 character classes
+  covering basic vowels, consonants, modifiers, AND hundreds of conjunct/compound character combinations found
+  in Sanskrit texts. Contains 7,702 images (~12.8 per class). While the per-class sample count is low, the
+  class inventory is invaluable as a reference for which conjuncts actually appear in real Devanagari text.
+  Many Sanskrit conjuncts carry over into Marathi vocabulary (e.g., विद्या, संस्कृत, शास्त्र). Essential
+  for building comprehensive conjunct recognition models.
+modality: Image (handwritten character crops)
+size: 7,702 images; 602 character classes
+language:
+  - sa
+  - mr
+  - hi
+license: Research use
+ai_use_cases:
+  - Comprehensive Devanagari conjunct character recognition
+  - Character class inventory for OCR model coverage testing
+  - Low-shot learning for rare conjunct characters
+  - Sanskrit-Marathi shared vocabulary OCR
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/avadesh02/Sanskrit-letter-dataset
+organization: Research community (DAS 2018)
+format: PNG/JPEG
+update_frequency: static
+citation: "Optical Character Recognition for Sanskrit Using CNN, DAS 2018"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Handwritten Devanagari character image
+  - field: character_class
+    type: string
+    description: Unicode character or conjunct sequence label
+  - field: class_id
+    type: int
+    description: Numeric class identifier (0-601)
+starter_idea: Use the 602-class inventory to build a comprehensive conjunct coverage test suite for Marathi OCR evaluation.
+build_ideas:
+  - Create a data augmentation pipeline expanding each of the 602 classes to 500+ samples using font rendering and GAN generation
+  - Develop a conjunct frequency analyzer mapping Sanskrit dataset classes against Marathi text corpus frequencies to prioritize OCR training
+  - Build a few-shot conjunct recognizer using meta-learning to handle the long tail of rare Devanagari conjuncts
+quick_start: |
+  # Clone from https://github.com/avadesh02/Sanskrit-letter-dataset
+  import os
+  from PIL import Image
+
+  dataset_dir = 'Sanskrit-letter-dataset/'
+  classes = os.listdir(dataset_dir)
+  print(f"Total character classes: {len(classes)}")
+  # 602 classes including hundreds of conjunct characters
+  total = sum(len(os.listdir(os.path.join(dataset_dir, c))) for c in classes)
+  print(f"Total images: {total}")

@@ -1,0 +1,59 @@
+title: CMATERdb - Devanagari-Roman Mixed-Script Handwritten Documents
+homepage: https://code.google.com/archive/p/cmaterdb/
+category: vision-ocr-multimodal
+description:
+  Benchmark dataset of 150 handwritten document pages containing intermixed Devanagari and Roman (Latin/English)
+  text within the same page, with word-level script annotations. Contains 15,528 annotated Devanagari words and
+  10,331 Roman words (44,790 total extracted word images). The only publicly available mixed-script document
+  dataset featuring Devanagari-Latin co-occurrence. Essential for training script identification modules in
+  bilingual OCR pipelines handling Marathi-English mixed documents. Achieves 95.30% word-level script ID accuracy.
+modality: Image (handwritten mixed-script document pages with word-level annotations)
+size: 150 document pages; 15,528 Devanagari + 10,331 Roman word images
+language:
+  - hi
+  - en
+license: Free for non-commercial research (CMATER lab, Jadavpur University)
+ai_use_cases:
+  - Bilingual Devanagari-English script identification
+  - Mixed-script document OCR pipeline training
+  - Handwritten mixed-script word segmentation
+  - Code-mixed document processing
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://link.springer.com/article/10.1007/s11042-017-4745-3
+github_url: ""
+organization: CMATER Lab, Jadavpur University
+format: JPEG/PNG with word-level annotations
+update_frequency: static
+citation: "Benchmark databases of handwritten Bangla-Roman and Devanagari-Roman mixed-script document images, Multimedia Tools and Applications, 2017"
+last_verified: "2026-03-12"
+schema:
+  - field: page_image
+    type: image
+    description: Full-page mixed-script handwritten document scan
+  - field: word_image
+    type: image
+    description: Cropped word image
+  - field: script_label
+    type: string
+    description: Script identifier (Devanagari or Roman)
+  - field: word_bbox
+    type: json
+    description: Word bounding box coordinates
+starter_idea: Build a bilingual script identifier that classifies words as Devanagari or Latin in mixed Marathi-English documents.
+build_ideas:
+  - Create a Marathi-English mixed-document OCR pipeline using CMATERdb for script identification training
+  - Develop a synthetic mixed-script document generator creating realistic bilingual Marathi-English pages at scale
+  - Build a bilingual handwriting recognition system handling both Devanagari and Latin scripts in the same document
+quick_start: |
+  # CMATERdb Devanagari-Roman mixed-script dataset
+  # Download from: https://code.google.com/archive/p/cmaterdb/
+  from PIL import Image
+  import os
+
+  # Load mixed-script document pages
+  # Each page contains both Devanagari and Roman text
+  print("CMATERdb: 150 mixed-script pages, 25K+ annotated words")
+  print("Script ID accuracy baseline: 95.30%")

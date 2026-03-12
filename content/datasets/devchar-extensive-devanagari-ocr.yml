@@ -1,0 +1,57 @@
+title: DevChar - Extensive Dataset for Devanagari Character OCR
+homepage: https://link.springer.com/chapter/10.1007/978-981-16-2911-2_13
+category: vision-ocr-multimodal
+description:
+  Large-scale handwritten Devanagari character dataset containing approximately 4 million character samples,
+  explicitly designed to address the limitations of existing datasets that fail on text containing matras
+  (vowel modifiers) and conjuncts (jodakshara). Covers characters with varying combinations of matras and
+  conjunct forms that appear in real Marathi/Hindi text. The scale and explicit focus on matras and conjuncts
+  makes this one of the most important datasets for training robust Devanagari OCR systems.
+modality: Image (handwritten character crops with matra/conjunct labels)
+size: ~4 million character images
+language:
+  - mr
+  - hi
+license: Research use (DevChar2020)
+ai_use_cases:
+  - Matra-aware Devanagari character recognition
+  - Conjunct character recognition at scale
+  - Robust Devanagari OCR model pre-training
+  - Character-level error analysis for OCR systems
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://link.springer.com/chapter/10.1007/978-981-16-2911-2_13
+github_url: ""
+organization: Research community
+format: PNG/JPEG
+update_frequency: static
+citation: "DevChar: An Extensive Dataset for OCR of Devanagari Characters, 2021"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Handwritten Devanagari character image (may include matra modifiers)
+  - field: character_label
+    type: string
+    description: Unicode character with matra/conjunct annotation
+  - field: has_matra
+    type: boolean
+    description: Whether character includes a matra modifier
+  - field: is_conjunct
+    type: boolean
+    description: Whether character is a conjunct form
+starter_idea: Pre-train a Devanagari character recognizer on DevChar's 4M samples for transfer to word-level Marathi OCR.
+build_ideas:
+  - Create a matra error detector identifying which vowel modifier combinations are most problematic for OCR systems
+  - Develop a conjunct-focused fine-tuning pipeline using DevChar's labeled conjunct samples for targeted OCR improvement
+  - Build a Devanagari character difficulty ranker scoring character classes by OCR error rates to guide data collection priorities
+quick_start: |
+  # DevChar dataset
+  # Paper: https://link.springer.com/chapter/10.1007/978-981-16-2911-2_13
+  # Contact authors for access to DevChar2020
+
+  print("DevChar: ~4M handwritten Devanagari character images")
+  print("Explicitly covers matras and conjunct characters")
+  print("Addresses key weakness of standard 46-class datasets")

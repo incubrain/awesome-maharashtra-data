@@ -1,0 +1,52 @@
+title: MODI-HHDoc - Historical Modi Script Handwritten Document Dataset
+homepage: https://data.mendeley.com/datasets/sg337vf6wn/1
+category: vision-ocr-multimodal
+description:
+  Collection of 3,350 handwritten historical Modi script document images for document-level recognition research.
+  Modi script was used for writing Marathi for over 700 years and vast archives of administrative, legal, and
+  literary documents remain undigitized. This dataset provides full-page document scans suitable for training
+  document-level detection and recognition models for historical Marathi manuscripts.
+modality: Image (historical handwritten document scans)
+size: 3,350 document images
+language:
+  - mr
+license: CC BY 4.0
+ai_use_cases:
+  - Historical Modi script document recognition
+  - Marathi manuscript digitization pipeline development
+  - Document image binarization and enhancement for degraded manuscripts
+  - Historical script detection and segmentation
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://data.mendeley.com/datasets/sg337vf6wn/1
+paper_url: ""
+github_url: ""
+organization: Research community
+format: JPEG/PNG
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Full-page historical Modi script document scan
+  - field: document_id
+    type: string
+    description: Unique document identifier
+starter_idea: Build a historical Modi script document preprocessing pipeline handling binarization, noise removal, and line segmentation.
+build_ideas:
+  - Create a Modi script document digitization pipeline combining image enhancement, line segmentation, and character recognition
+  - Develop an archive management system for historical Marathi documents with automatic cataloguing and indexing
+  - Build a document age and condition estimator for historical Marathi manuscripts to prioritize conservation efforts
+quick_start: |
+  # Download from https://data.mendeley.com/datasets/sg337vf6wn/1
+  # Also available on IEEE DataPort
+  from PIL import Image
+  import os
+
+  img_dir = 'modi_hhdoc/'
+  images = [f for f in os.listdir(img_dir) if f.endswith(('.jpg', '.png'))]
+  print(f"Historical Modi documents: {len(images)}")
+  img = Image.open(os.path.join(img_dir, images[0]))
+  print(f"Image size: {img.size}")

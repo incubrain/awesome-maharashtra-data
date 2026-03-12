@@ -1,0 +1,67 @@
+title: OCR Synthetic Benchmark for Indic Languages
+homepage: https://arxiv.org/abs/2205.02543
+category: benchmarks-fairness-dialects-tools
+description:
+  Standardized synthetic OCR benchmark dataset containing 90,000 images with ground truth across 23 Indic
+  languages including Marathi. Designed for evaluating and comparing OCR system performance across Indian
+  scripts in a controlled setting. Uses synthetic rendering with known ground truth to provide clean evaluation
+  metrics. Includes varied font sizes, styles, and text lengths. Essential for benchmarking Marathi OCR models
+  against other Indic language results and tracking progress toward SOTA.
+modality: Image (synthetic text renders with ground truth)
+size: 90K images; 23 Indic languages
+language:
+  - mr
+  - hi
+  - bn
+  - ta
+  - te
+  - kn
+  - ml
+  - gu
+  - pa
+  - or
+  - as
+license: Research use
+ai_use_cases:
+  - Marathi OCR model benchmarking
+  - Cross-script OCR performance comparison
+  - Standardized evaluation for Indic language OCR
+  - Regression testing for OCR model updates
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2205.02543
+github_url: ""
+organization: Research community
+format: PNG/JPEG with text labels
+update_frequency: static
+citation: "OCR Synthetic Benchmark Dataset for Indic Languages, 2022"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Synthetically rendered text image
+  - field: text
+    type: string
+    description: Ground-truth text
+  - field: language
+    type: string
+    description: Language/script identifier
+  - field: font_size
+    type: int
+    description: Font size used for rendering
+starter_idea: Benchmark your Marathi OCR model against standardized synthetic test sets to measure progress and compare with published results.
+build_ideas:
+  - Create a Marathi OCR leaderboard tracking model performance on this standardized benchmark over time
+  - Develop an error analysis tool that categorizes OCR mistakes by character type (vowel, consonant, conjunct, matra) on benchmark results
+  - Build an automated OCR regression testing pipeline that runs benchmarks on every model update
+quick_start: |
+  # OCR Synthetic Benchmark for Indic Languages
+  # Paper: https://arxiv.org/abs/2205.02543
+  from PIL import Image
+
+  # Load Marathi subset of the benchmark
+  # Evaluate OCR models using Character Error Rate (CER) and Word Error Rate (WER)
+  print("Benchmark: 90K synthetic images across 23 Indic languages")
+  print("Metrics: CER (Character Error Rate), WER (Word Error Rate)")

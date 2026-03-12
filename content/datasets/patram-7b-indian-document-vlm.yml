@@ -1,0 +1,61 @@
+title: Patram-7B - Indian Document Vision-Language Model
+homepage: https://huggingface.co/bharatgenai/patram-7b-instruct
+category: benchmarks-fairness-dialects-tools
+description:
+  Open-source 7B parameter vision-language model specifically trained for Indian document understanding, from
+  government forms to handwritten pages. Handles the varied structure of scanned and photographed Indian
+  documents including Devanagari text. Achieves strong scores on DocVQA (0.855), VisualMRC (0.851), and the
+  custom Patram-Bench. Can be fine-tuned for specific Marathi document types (7/12 extracts, certificates,
+  forms). Represents the current state-of-the-art in open-source Indian document AI.
+modality: Model (Vision-Language Model for document understanding)
+size: 7B parameters
+language:
+  - mr
+  - hi
+  - en
+  - bn
+  - ta
+  - te
+license: Open source (HuggingFace)
+ai_use_cases:
+  - Marathi government document OCR and understanding
+  - Indian form field extraction
+  - Document visual question answering in Indian languages
+  - Zero-shot document classification for Indian documents
+maharashtra_specific: false
+extraction_status: not_applicable
+huggingface_url: https://huggingface.co/bharatgenai/patram-7b-instruct
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: BharatGenAI
+format: Model weights (Safetensors)
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: input_image
+    type: image
+    description: Document image (scanned or photographed)
+  - field: query
+    type: string
+    description: Question or extraction instruction about the document
+  - field: response
+    type: string
+    description: Extracted text, field values, or answer
+starter_idea: Fine-tune Patram-7B on Maharashtra government documents (7/12 extracts, certificates) for automated field extraction.
+build_ideas:
+  - Create a Maharashtra e-governance document processor using Patram-7B to automatically extract and validate form fields
+  - Develop a multilingual Indian document QA system handling mixed Marathi-English government documents
+  - Build a document digitization pipeline combining Patram-7B with post-OCR correction for end-to-end Marathi document understanding
+quick_start: |
+  from transformers import AutoModelForVision2Seq, AutoProcessor
+  from PIL import Image
+
+  model = AutoModelForVision2Seq.from_pretrained("bharatgenai/patram-7b-instruct")
+  processor = AutoProcessor.from_pretrained("bharatgenai/patram-7b-instruct")
+
+  image = Image.open("marathi_document.jpg")
+  prompt = "Extract all field values from this Marathi document"
+  # inputs = processor(images=image, text=prompt, return_tensors="pt")
+  print("Patram-7B: Indian document VLM for Marathi form understanding")

@@ -1,0 +1,60 @@
+title: India Geodata - Administrative & Electoral Boundaries
+homepage: https://yashveeeeeer.github.io/india-geodata/
+category: geospatial-gis
+description:
+  Curated collection of 26 geospatial datasets covering India's administrative boundaries (state, district, block,
+  sub-district, village, gram panchayat), electoral boundaries (parliamentary and assembly constituencies), census
+  geometries (2011 and historical 1951-2001), and urban ward boundaries for major cities including Mumbai, Pune, and
+  Nagpur. Available in modern formats including Parquet and GeoJSON via GitHub releases.
+modality: Vector (Parquet / GeoJSON / Shapefile)
+size: 35+ GB across 26 datasets; all-India coverage with Maharashtra state-level extracts
+language:
+  - en
+license: CC0-1.0 / CC-BY-4.0 / OGL-India-2.0
+ai_use_cases:
+  - Electoral constituency analysis and delimitation modeling
+  - Multi-level administrative boundary geocoding
+  - Census geometry time-series analysis (1951-2011)
+  - Urban ward-level service delivery mapping
+  - Gram panchayat level rural planning
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: https://github.com/yashveeeeeer/india-geodata
+organization: Community (India Geodata)
+format: Parquet / GeoJSON / Shapefile / PMTiles
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: geometry
+    type: Polygon/MultiPolygon
+    description: Administrative or electoral boundary polygon
+  - field: name
+    type: string
+    description: Area name (state, district, constituency, ward, etc.)
+  - field: admin_level
+    type: string
+    description: Administrative level (state, district, block, sub-district, village, gram panchayat)
+  - field: state_name
+    type: string
+    description: Parent state name
+  - field: census_code
+    type: string
+    description: Census code for cross-referencing with Census 2011 data
+starter_idea: Build a multi-resolution Maharashtra boundary API serving district, taluka, village, and ward geometries from a single endpoint.
+build_ideas:
+  - Create a constituency-to-village mapper linking electoral boundaries with administrative units for Maharashtra political analysis
+  - Develop a historical boundary change visualizer showing how Maharashtra's district boundaries evolved from 1951 to 2011
+  - Build a gram panchayat development dashboard overlaying scheme data on GP-level boundaries for rural Maharashtra
+quick_start: |
+  import geopandas as gpd
+
+  # Download Maharashtra district boundaries from GitHub releases
+  # https://github.com/yashveeeeeer/india-geodata/releases
+  gdf = gpd.read_parquet('india_districts.parquet')
+  mh = gdf[gdf['state_name'] == 'Maharashtra']
+  print(f"Maharashtra districts: {len(mh)}")
+  mh.plot(figsize=(10, 8))
