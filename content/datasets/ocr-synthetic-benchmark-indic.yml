@@ -1,6 +1,6 @@
 title: OCR Synthetic Benchmark for Indic Languages
 homepage: https://arxiv.org/abs/2205.02543
-category: benchmarks-tools-dialects
+category: benchmarks-fairness-dialects-tools
 description:
   Standardized synthetic OCR benchmark dataset containing 90,000 images with ground truth across 23 Indic
   languages including Marathi. Designed for evaluating and comparing OCR system performance across Indian

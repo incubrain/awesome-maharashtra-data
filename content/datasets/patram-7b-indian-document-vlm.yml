@@ -1,6 +1,6 @@
 title: Patram-7B - Indian Document Vision-Language Model
 homepage: https://huggingface.co/bharatgenai/patram-7b-instruct
-category: benchmarks-tools-dialects
+category: benchmarks-fairness-dialects-tools
 description:
   Open-source 7B parameter vision-language model specifically trained for Indian document understanding, from
   government forms to handwritten pages. Handles the varied structure of scanned and photographed Indian

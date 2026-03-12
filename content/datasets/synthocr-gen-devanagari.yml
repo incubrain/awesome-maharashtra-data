@@ -1,6 +1,6 @@
 title: SynthOCR-Gen - Synthetic OCR Data Generator for Devanagari
 homepage: https://arxiv.org/abs/2601.16113
-category: benchmarks-tools-dialects
+category: benchmarks-fairness-dialects-tools
 description:
   Open-source synthetic OCR dataset generation tool validated on Devanagari and other low-resource scripts.
   Generates unlimited synthetic training images by rendering text from Unicode corpora using diverse TTF/OTF
