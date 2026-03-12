@@ -1,0 +1,62 @@
+title: Maharashtra State Data Bank - Industry & Factory Statistics
+homepage: https://mahasdb.maharashtra.gov.in/
+category: economy-labour-finance
+description:
+  District-wise industrial statistics from MahaSDB including Annual Survey of Industries (ASI) data, factory
+  counts, employment in registered factories, industrial output, and investment. Maharashtra is India's most
+  industrialized state. Data covers MIDC industrial areas, factory employment, gross value added, and sector-wise
+  industrial production critical for economic planning and labor market analysis.
+modality: Tabular (web / Excel)
+size: All 36 districts; annual time-series; factory-level aggregates
+language:
+  - en
+  - mr
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - Industrial cluster identification and analysis
+  - Factory employment trend forecasting
+  - Manufacturing sector productivity benchmarking
+  - Industrial land use optimization
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://mahasdb.maharashtra.gov.in/
+paper_url: ""
+github_url: ""
+organization: Directorate of Economics & Statistics, Maharashtra
+format: CSV / Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: registered_factories
+    type: int
+    description: Number of registered factories
+  - field: factory_employment
+    type: int
+    description: Total employment in registered factories
+  - field: gross_output_crore
+    type: float
+    description: Gross industrial output in crores INR
+  - field: sector
+    type: string
+    description: Industrial sector classification
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a Maharashtra industrial productivity dashboard comparing districts on factory density, employment, and output.
+build_ideas:
+  - Create an industrial diversification recommender for Maharashtra districts overly dependent on single sectors
+  - Develop a factory closure risk predictor using employment trends, output changes, and sector health indicators
+  - Build an MIDC industrial area utilization analyzer matching available land with sector-specific demand forecasts
+quick_start: |
+  import pandas as pd
+
+  # Download from https://mahasdb.maharashtra.gov.in/
+  # Navigate to Industry sector for district-wise factory statistics
+  df = pd.read_csv('mahasdb_industry.csv')
+  print(f"Districts: {df['district'].nunique()}")
+  print(df.groupby('district')['factory_employment'].sum().sort_values(ascending=False).head(10))

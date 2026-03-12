@@ -1,0 +1,63 @@
+title: NDAP - National Data & Analytics Platform (Maharashtra)
+homepage: https://ndap.niti.gov.in/search?query=maharashtra
+category: governance-census-legal
+description:
+  NITI Aayog's unified data analytics platform aggregating 900+ datasets from central and state ministries with
+  standardized schemas and APIs. Maharashtra-relevant datasets span health (HMIS, NFHS), education (UDISE+, AISHE),
+  economy (GSDP, employment), agriculture (crop production, irrigation), and infrastructure (roads, electrification).
+  The platform adds value through standardized variable names, time-series alignment, and a query API that simplifies
+  cross-dataset analysis.
+modality: Tabular (API / CSV / Excel)
+size: 900+ datasets nationally; 100+ with Maharashtra district-level granularity
+language:
+  - en
+license: Gov Open (GODL)
+ai_use_cases:
+  - Cross-domain policy analysis for Maharashtra
+  - District development index construction
+  - Standardized time-series analysis across government datasets
+  - Multi-source data fusion for Maharashtra planning
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: NITI Aayog, Government of India
+format: CSV / Excel / API
+update_frequency: varies by dataset
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: dataset_name
+    type: string
+    description: Source dataset name
+  - field: variable
+    type: string
+    description: Standardized variable name
+  - field: state
+    type: string
+    description: State name (filter for Maharashtra)
+  - field: district
+    type: string
+    description: District name where available
+  - field: value
+    type: float
+    description: Indicator value
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a Maharashtra district development dashboard pulling standardized indicators from NDAP's unified API.
+build_ideas:
+  - Create a multi-domain district ranker combining NDAP health, education, and economic indicators for Maharashtra
+  - Develop a policy impact tracker measuring year-over-year changes in NDAP indicators after government interventions
+  - Build a data quality monitor comparing NDAP aggregates with source ministry data to flag discrepancies
+quick_start: |
+  import pandas as pd
+
+  # NDAP provides standardized datasets with API access
+  # Browse: https://ndap.niti.gov.in/search?query=maharashtra
+  # Register for API key at https://ndap.niti.gov.in/
+  print("NDAP: https://ndap.niti.gov.in/")
+  print("Search for Maharashtra-specific datasets")
+  print("API documentation: https://ndap.niti.gov.in/info?tab=api")

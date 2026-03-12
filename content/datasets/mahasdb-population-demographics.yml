@@ -1,0 +1,65 @@
+title: Maharashtra State Data Bank - Population & Demographics
+homepage: https://mahasdb.maharashtra.gov.in/
+category: governance-census-legal
+description:
+  District-wise population statistics from MahaSDB covering total, rural, and urban populations, literacy rates,
+  sex ratios, scheduled caste and tribe populations, and decadal growth rates. Combines Census 2011 data with
+  inter-censal estimates and vital statistics (birth rates, death rates, infant mortality) published by the
+  Directorate of Economics and Statistics, Maharashtra.
+modality: Tabular (web / Excel)
+size: All 36 districts; multi-year time-series
+language:
+  - en
+  - mr
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - District-level demographic profiling
+  - Urbanization trend prediction
+  - Gender gap analysis and intervention planning
+  - Population projection for Maharashtra districts
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://mahasdb.maharashtra.gov.in/
+paper_url: ""
+github_url: ""
+organization: Directorate of Economics & Statistics, Maharashtra
+format: CSV / Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: population_total
+    type: int
+    description: Total population
+  - field: population_rural
+    type: int
+    description: Rural population
+  - field: population_urban
+    type: int
+    description: Urban population
+  - field: literacy_rate
+    type: float
+    description: Literacy rate percentage
+  - field: sex_ratio
+    type: int
+    description: Females per 1000 males
+  - field: year
+    type: int
+    description: Census or estimate year
+starter_idea: Build a Maharashtra demographic transition tracker showing urbanization, literacy, and gender ratio trends by district.
+build_ideas:
+  - Create a population growth forecaster for Maharashtra districts using historical census trends and urbanization patterns
+  - Develop a literacy gender-gap analyzer identifying Maharashtra districts where female literacy lags most behind male literacy
+  - Build a migration flow estimator using inter-censal population changes to model rural-urban migration in Maharashtra
+quick_start: |
+  import pandas as pd
+
+  # Download from https://mahasdb.maharashtra.gov.in/
+  # Navigate to Population sector for district-wise data
+  df = pd.read_csv('mahasdb_population.csv')
+  print(f"Districts: {df['district'].nunique()}")
+  print(df[['district', 'population_total', 'literacy_rate', 'sex_ratio']].head())

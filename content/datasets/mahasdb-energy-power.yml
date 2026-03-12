@@ -1,0 +1,59 @@
+title: Maharashtra State Data Bank - Energy & Power
+homepage: https://mahasdb.maharashtra.gov.in/
+category: economy-labour-finance
+description:
+  District-wise energy statistics from MahaSDB covering electricity generation, installed capacity, consumption
+  by sector (domestic, commercial, industrial, agricultural), village electrification status, and renewable
+  energy capacity. Tracks Maharashtra's power infrastructure and consumption patterns essential for energy
+  transition planning and industrial growth analysis.
+modality: Tabular (web / Excel)
+size: All 36 districts; annual time-series
+language:
+  - en
+  - mr
+license: GODL (Government Open Data License)
+ai_use_cases:
+  - District-level electricity demand forecasting
+  - Renewable energy siting optimization
+  - Agricultural power subsidy analysis
+  - Industrial energy consumption benchmarking
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: https://mahasdb.maharashtra.gov.in/
+paper_url: ""
+github_url: ""
+organization: Directorate of Economics & Statistics, Maharashtra
+format: CSV / Excel
+update_frequency: annual
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: district
+    type: string
+    description: District name
+  - field: installed_capacity_mw
+    type: float
+    description: Installed power capacity in megawatts
+  - field: consumption_sector
+    type: string
+    description: Consumption sector (domestic, commercial, industrial, agricultural)
+  - field: consumption_gwh
+    type: float
+    description: Electricity consumption in GWh
+  - field: year
+    type: int
+    description: Data year
+starter_idea: Build a Maharashtra energy transition tracker showing the shift from thermal to renewable power by district.
+build_ideas:
+  - Create a solar rooftop potential estimator for Maharashtra districts based on consumption patterns and solar irradiance
+  - Develop an agricultural pump electrification planner mapping unelectrified farm wells against grid infrastructure
+  - Build an industrial electricity cost optimizer recommending open-access renewable procurement for Maharashtra factories
+quick_start: |
+  import pandas as pd
+
+  # Download from https://mahasdb.maharashtra.gov.in/
+  # Navigate to Energy sector for district-wise data
+  df = pd.read_csv('mahasdb_energy.csv')
+  print(f"Districts: {df['district'].nunique()}")
+  print(df.groupby('consumption_sector')['consumption_gwh'].sum())

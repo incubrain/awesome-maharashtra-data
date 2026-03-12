@@ -1,0 +1,61 @@
+title: DGFT India Trade Statistics
+homepage: https://www.dgft.gov.in/CP/?opt=trade-statistics
+category: economy-labour-finance
+description:
+  India's official merchandise trade statistics from the Directorate General of Foreign Trade (DGFT). Covers
+  commodity-wise and country-wise export and import data, ITC-HS code level trade flows, and port-wise statistics.
+  Maharashtra is India's top exporting state with major ports (JNPT, Mumbai) and export hubs (Pune, Nashik, Aurangabad).
+  Essential for analyzing Maharashtra's trade competitiveness and export sector.
+modality: Tabular (web portal / Excel)
+size: Commodity-level; monthly and annual; multi-year time-series
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Maharashtra export competitiveness analysis
+  - Trade pattern forecasting for JNPT port
+  - Commodity price trend prediction
+  - Supply chain optimization for Maharashtra exporters
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Directorate General of Foreign Trade, Ministry of Commerce, Government of India
+format: Excel / CSV
+update_frequency: monthly
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: hs_code
+    type: string
+    description: ITC-HS commodity code
+  - field: commodity
+    type: string
+    description: Commodity description
+  - field: country
+    type: string
+    description: Trading partner country
+  - field: export_value_usd
+    type: float
+    description: Export value in USD millions
+  - field: import_value_usd
+    type: float
+    description: Import value in USD millions
+  - field: period
+    type: string
+    description: Trade period (month/year)
+starter_idea: Build a Maharashtra export sector analyzer identifying top commodities, trading partners, and growth trends.
+build_ideas:
+  - Create a JNPT port trade flow visualizer showing commodity movements and seasonal patterns
+  - Develop an export opportunity finder matching Maharashtra MSME capabilities with growing global demand categories
+  - Build a trade disruption early warning system detecting anomalous drops in Maharashtra's key export commodities
+quick_start: |
+  import pandas as pd
+
+  # Download trade data from https://www.dgft.gov.in/CP/?opt=trade-statistics
+  # Select commodity-wise or country-wise reports
+  df = pd.read_excel('trade_statistics.xlsx')
+  print(f"Commodities: {df['Commodity'].nunique()}")
+  print(df.groupby('Commodity')['Export_Value_USD'].sum().sort_values(ascending=False).head(10))

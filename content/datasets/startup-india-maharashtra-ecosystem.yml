@@ -1,0 +1,61 @@
+title: Startup India - Maharashtra Startup Ecosystem
+homepage: https://www.startupindia.gov.in/content/sih/en/search.html/Maharashtra?states=5f48ce592a9bb065cdf9fb31&roles=Startup&page=0
+category: economy-labour-finance
+description:
+  Comprehensive directory of DPIIT-recognized startups, mentors, incubators, and accelerators in Maharashtra from
+  the Startup India portal. Maharashtra leads India in startup registrations. Includes entity profiles with sector,
+  stage, city, and founding details. Covers the full ecosystem - startups seeking funding, mentors offering guidance,
+  incubators providing infrastructure, and accelerators driving growth.
+modality: Tabular (web portal / searchable directory)
+size: 25,000+ registered startups; 500+ mentors; 200+ incubators and accelerators in Maharashtra
+language:
+  - en
+license: Gov Open
+ai_use_cases:
+  - Startup ecosystem mapping and cluster analysis
+  - Mentor-startup matching recommendation engine
+  - Sector trend analysis for Maharashtra innovation economy
+  - Incubator capacity planning and gap identification
+maharashtra_specific: true
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Department for Promotion of Industry and Internal Trade (DPIIT), Government of India
+format: Web / JSON API
+update_frequency: continuous
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: entity_name
+    type: string
+    description: Name of startup, mentor, incubator, or accelerator
+  - field: role
+    type: string
+    description: Entity type (Startup, Mentor, Incubator, Accelerator)
+  - field: sector
+    type: string
+    description: Industry sector or domain
+  - field: city
+    type: string
+    description: City in Maharashtra
+  - field: stage
+    type: string
+    description: Startup stage (ideation, validation, early traction, scaling)
+starter_idea: Build a Maharashtra startup ecosystem map showing sector clusters, mentor networks, and incubator coverage across cities.
+build_ideas:
+  - Create a startup-mentor matchmaker using sector and stage data to recommend relevant Maharashtra mentors to startups
+  - Develop an ecosystem gap analyzer identifying underserved sectors and cities in Maharashtra's startup infrastructure
+  - Build a startup survival predictor using ecosystem density, sector, and support infrastructure as features
+quick_start: |
+  import requests
+  import pandas as pd
+
+  # Startup India search API for Maharashtra startups
+  # Browse: https://www.startupindia.gov.in/content/sih/en/search.html/Maharashtra
+  # Roles: Startup, Mentor, Incubator, Accelerator
+  print("Startup India Maharashtra ecosystem data")
+  print("Startups: https://www.startupindia.gov.in/.../roles=Startup")
+  print("Mentors: https://www.startupindia.gov.in/.../roles=Mentor")
+  print("Incubators: https://www.startupindia.gov.in/.../roles=Incubator")
