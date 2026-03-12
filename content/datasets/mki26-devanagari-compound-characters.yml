@@ -1,0 +1,63 @@
+title: MKI-26 Devanagari Handwritten Characters with Compound Characters
+homepage: https://github.com/MKI-26/Devanagari-handwritten-character-dataset-with-Compound-characters
+category: vision-ocr-multimodal
+description:
+  Handwritten Devanagari character dataset specifically designed to include compound/conjunct characters
+  (jodakshara) alongside basic characters. Contains 36,000 images across 60 classes (10 numerals, 13 vowels,
+  17 similar-looking consonants, and 20 compound character classes) with 600 balanced images per class. One of
+  the few publicly available datasets that explicitly addresses conjunct character recognition — a major challenge
+  for Marathi/Devanagari OCR where characters like क्ष, ज्ञ, त्र merge into single glyphs. Achieves 99.66%
+  accuracy with CNN 2D.
+modality: Image (handwritten character crops with class labels)
+size: 36,000 images; 60 classes (including 20 conjunct classes); 600 images per class
+language:
+  - mr
+  - hi
+license: Research use
+ai_use_cases:
+  - Devanagari conjunct character recognition
+  - Compound character classification for OCR pipelines
+  - Similar-looking character disambiguation
+  - Handwritten character recognition with conjunct support
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://link.springer.com/chapter/10.1007/978-3-031-69769-2_17
+github_url: https://github.com/MKI-26/Devanagari-handwritten-character-dataset-with-Compound-characters
+organization: Research community
+format: PNG/JPEG
+update_frequency: static
+citation: "A New Comprehensive Dataset and Deep Learning Approach for Devanagari Character Recognition, 2024"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Handwritten Devanagari character image
+  - field: character_class
+    type: string
+    description: Character or compound character label
+  - field: class_type
+    type: string
+    description: Type (numeral, vowel, consonant, compound)
+  - field: class_id
+    type: int
+    description: Numeric class identifier (0-59)
+starter_idea: Build a Devanagari character recognizer that handles both basic and compound characters for robust Marathi OCR.
+build_ideas:
+  - Create a conjunct-aware Marathi OCR system using MKI-26 for compound character classification within word segmentation
+  - Develop an augmented training pipeline generating additional conjunct classes beyond the 20 in MKI-26 using font rendering
+  - Build a confusable character analyzer testing OCR robustness on similar-looking Devanagari consonant pairs
+quick_start: |
+  # Clone from https://github.com/MKI-26/Devanagari-handwritten-character-dataset-with-Compound-characters
+  import torch
+  from torchvision import datasets, transforms
+
+  transform = transforms.Compose([
+      transforms.Grayscale(),
+      transforms.Resize((32, 32)),
+      transforms.ToTensor()
+  ])
+  dataset = datasets.ImageFolder('mki26_dataset/', transform=transform)
+  print(f"Total images: {len(dataset)}, Classes: {len(dataset.classes)}")
+  # 60 classes including 20 compound characters

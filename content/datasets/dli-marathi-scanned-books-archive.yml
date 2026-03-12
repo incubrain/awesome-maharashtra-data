@@ -1,0 +1,59 @@
+title: Digital Library of India - Scanned Marathi Books & Periodicals
+homepage: https://archive.org/details/digitallibraryindia
+category: vision-ocr-multimodal
+description:
+  Thousands of scanned Marathi books, periodicals, and historical publications hosted on Internet Archive as part
+  of the Digital Library of India project. Contains high-resolution page scans in TIFF/JPEG/PDF format covering
+  literature, government publications, religious texts, and historical periodicals. These are raw unannotated scans
+  without OCR ground-truth transcriptions — they represent a massive source of real-world printed Marathi page images
+  suitable for OCR training data creation, document layout annotation, and historical text digitization projects.
+  Includes materials from 19th and 20th century Marathi publishing.
+modality: Image (scanned book/periodical pages, unannotated)
+size: Thousands of scanned Marathi volumes; millions of page images
+language:
+  - mr
+  - sa
+license: Public domain / Out of copyright
+ai_use_cases:
+  - Raw source material for Marathi OCR training data creation
+  - Historical Marathi document digitization
+  - Font diversity sampling across printing eras
+  - Document degradation modeling from real aged scans
+maharashtra_specific: true
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: https://archive.org/details/digitallibraryindia
+paper_url: ""
+github_url: ""
+organization: Digital Library of India / Internet Archive
+format: TIFF / JPEG / PDF (scanned pages)
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: page_image
+    type: image
+    description: Scanned page image (unannotated, needs OCR ground-truth creation)
+  - field: volume_title
+    type: string
+    description: Book or periodical title
+  - field: publication_year
+    type: int
+    description: Year of publication
+  - field: publisher
+    type: string
+    description: Publisher name
+starter_idea: Build a semi-automated annotation pipeline to create OCR ground truth from DLI Marathi scans using existing OCR + human correction.
+build_ideas:
+  - Create a Marathi OCR training corpus by running existing OCR on DLI scans and crowdsourcing corrections
+  - Develop a historical Marathi font catalog by extracting and classifying typefaces across publishing eras from DLI scans
+  - Build a document quality scorer that rates scan clarity and recommends preprocessing steps for each DLI volume
+quick_start: |
+  import requests
+  from bs4 import BeautifulSoup
+
+  # Search Digital Library of India for Marathi books
+  # https://archive.org/details/digitallibraryindia
+  url = "https://archive.org/search?query=language:Marathi+collection:digitallibraryindia"
+  print("DLI Marathi: Thousands of scanned volumes on Internet Archive")
+  print("Download individual pages as JPEG/TIFF for OCR annotation")

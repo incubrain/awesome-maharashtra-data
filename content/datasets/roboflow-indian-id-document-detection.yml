@@ -1,0 +1,61 @@
+title: Roboflow Indian Identity Document Detection Datasets
+homepage: https://universe.roboflow.com/search?q=class:aadhar
+category: vision-ocr-multimodal
+description:
+  Collection of annotated Indian identity document datasets on Roboflow Universe covering Aadhaar cards (2,645
+  images with field-level bounding boxes), Voter ID cards (1,274 images), PAN cards, and Driving Licenses.
+  Annotations include object detection bounding boxes for key fields (name, number, date of birth, address,
+  photo, gender). While not Marathi-specific, many documents contain Devanagari text fields. These are among
+  the few publicly available annotated Indian government document datasets suitable for training field detection
+  and extraction models.
+modality: Image (identity documents with bounding box annotations)
+size: 2,645 Aadhaar + 1,274 Voter ID + smaller PAN/DL sets
+language:
+  - en
+  - hi
+  - mr
+license: Varies by dataset (check individual Roboflow pages)
+ai_use_cases:
+  - Indian identity document field detection
+  - Aadhaar/PAN/Voter ID automated extraction
+  - Document classification (ID type identification)
+  - KYC automation for Indian documents
+maharashtra_specific: false
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: ""
+github_url: ""
+organization: Community (Roboflow Universe)
+format: JPEG/PNG with YOLO/COCO/VOC annotations
+update_frequency: static
+citation: ""
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Identity document image
+  - field: document_type
+    type: string
+    description: Document type (Aadhaar, PAN, Voter ID, Driving License)
+  - field: field_bbox
+    type: json
+    description: Bounding box coordinates for each detected field
+  - field: field_label
+    type: string
+    description: Field label (name, number, DOB, address, photo, etc.)
+starter_idea: Build a multi-document Indian KYC processor that detects document type and extracts key fields from identity documents.
+build_ideas:
+  - Create a Marathi-aware Aadhaar field extractor combining detection with Devanagari OCR for address fields
+  - Develop a document verification system comparing extracted fields across Aadhaar, PAN, and Voter ID for consistency
+  - Build a privacy-preserving document anonymizer that detects and redacts sensitive fields in Indian identity documents
+quick_start: |
+  # Download from Roboflow Universe
+  # Aadhaar: https://universe.roboflow.com/cutm-iwh4a/aadhaar-card-details
+  # Voter ID: https://universe.roboflow.com/ocr-aadhar/voter_id-qiygw
+  from roboflow import Roboflow
+
+  # rf = Roboflow(api_key="YOUR_KEY")
+  # project = rf.workspace().project("aadhaar-card-details")
+  # dataset = project.version(1).download("yolov8")
+  print("Roboflow Indian ID datasets: Aadhaar, PAN, Voter ID, DL")
