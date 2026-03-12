@@ -1,0 +1,63 @@
+title: SynthOCR-Gen - Synthetic OCR Data Generator for Devanagari
+homepage: https://arxiv.org/abs/2601.16113
+category: benchmarks-tools-dialects
+description:
+  Open-source synthetic OCR dataset generation tool validated on Devanagari and other low-resource scripts.
+  Generates unlimited synthetic training images by rendering text from Unicode corpora using diverse TTF/OTF
+  fonts with configurable degradation effects (blur, noise, skew, low DPI, ink bleed, paper texture). Combined
+  with Marathi text corpora and 283+ Devanagari fonts, this tool can generate millions of labeled training
+  images for printed Marathi OCR without manual annotation. Essential for data augmentation in low-resource
+  OCR scenarios.
+modality: Tool (synthetic image generator)
+size: Unlimited generation capacity; requires input text corpus + fonts
+language:
+  - mr
+  - hi
+  - ne
+  - sa
+license: Open source
+ai_use_cases:
+  - Synthetic training data generation for Marathi OCR
+  - Font diversity augmentation for robust text recognition
+  - Degradation simulation for historical document OCR
+  - Low-resource OCR data bootstrapping
+maharashtra_specific: false
+extraction_status: not_applicable
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2601.16113
+github_url: ""
+organization: Research community
+format: Tool (generates PNG/JPEG + text labels)
+update_frequency: static
+citation: "SynthOCR-Gen: Open-source Synthetic OCR Dataset Generator for Low-Resource Languages, 2026"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Synthetically rendered text image
+  - field: text
+    type: string
+    description: Ground-truth text used for rendering
+  - field: font
+    type: string
+    description: Font name used for rendering
+  - field: degradation
+    type: string
+    description: Applied degradation effects (blur, noise, skew, etc.)
+starter_idea: Generate 1M+ synthetic Marathi word images using L3Cube MahaCorpus text and 283 Devanagari fonts.
+build_ideas:
+  - Create a Marathi OCR training data factory combining SynthOCR-Gen with real annotated data for optimal model performance
+  - Develop a targeted synthetic data pipeline that oversamples rare Marathi conjunct characters to improve recognition of hard cases
+  - Build an automated curriculum learning system that generates progressively harder synthetic examples as the OCR model improves
+quick_start: |
+  # SynthOCR-Gen for Devanagari synthetic data generation
+  # Paper: https://arxiv.org/abs/2601.16113
+  # Also consider: TextRecognitionDataGenerator (TRDG)
+  # https://github.com/Belval/TextRecognitionDataGenerator
+
+  # Requirements: Marathi text corpus + Devanagari fonts
+  # Text: L3Cube MahaCorpus (24.8M sentences)
+  # Fonts: https://fonts.google.com/?subset=devanagari (50+)
+  #        https://devanagarifonts.net/ (283+ fonts)
+  print("Generate unlimited Marathi OCR training data synthetically")

@@ -1,0 +1,69 @@
+title: CHIPS - Corpus of Handwritten Indic Scripts (Page-Level OCR)
+homepage: https://arxiv.org/abs/2502.06172
+category: vision-ocr-multimodal
+description:
+  Page-level handwritten OCR dataset for Indic scripts with both text detection and recognition annotations.
+  Part of the PLATTER (Page-Level Handwritten Text Recognition) project. Unlike word-level datasets, CHIPS
+  provides full-page handwritten document images with bounding box annotations for text regions plus Unicode
+  transcriptions, enabling training end-to-end page-level OCR systems that handle detection and recognition
+  jointly. Covers multiple Indic scripts including Devanagari.
+modality: Image (full-page handwritten documents with detection + recognition annotations)
+size: 1,458+ page-level document images; 11 Indic scripts; 463 writers
+language:
+  - mr
+  - hi
+  - bn
+  - ta
+  - te
+  - kn
+  - ml
+  - gu
+  - pa
+  - or
+  - as
+license: Research use
+ai_use_cases:
+  - Page-level handwritten Marathi text detection and recognition
+  - End-to-end handwritten document OCR
+  - Text line detection in handwritten Indic documents
+  - Handwriting segmentation model training
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2502.06172
+github_url: ""
+organization: Multi-institutional (PLATTER project)
+format: PNG/JPEG with COCO-format annotations
+update_frequency: static
+citation: "PLATTER: A Page-Level Handwritten Text Recognition System for Indic Scripts, 2025"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Full-page handwritten document scan
+  - field: text_regions
+    type: json
+    description: Bounding box coordinates for text line regions
+  - field: transcriptions
+    type: array
+    description: Unicode transcriptions for each detected text region
+  - field: script
+    type: string
+    description: Script identifier
+  - field: writer_id
+    type: string
+    description: Writer identifier
+starter_idea: Build a page-level Marathi handwritten OCR system that processes entire document pages without manual line segmentation.
+build_ideas:
+  - Create an automatic Marathi handwritten exam paper grader that detects and reads handwritten answers from full pages
+  - Develop a historical Marathi letter digitizer that handles full pages of cursive Devanagari handwriting
+  - Build a handwritten form processor for Maharashtra government offices that extracts field values from handwritten forms
+quick_start: |
+  # PLATTER project - page-level handwritten OCR
+  # Paper: https://arxiv.org/abs/2502.06172
+  # Contact authors for dataset access
+
+  print("CHIPS: Page-level handwritten Indic OCR dataset")
+  print("Supports detection + recognition jointly")
+  print("Filter Devanagari script pages for Marathi OCR")

@@ -1,0 +1,72 @@
+title: Mozhi - Printed Document OCR Dataset
+homepage: https://cvit.iiit.ac.in/usodi/tdocrmil.php
+category: vision-ocr-multimodal
+description:
+  Large-scale printed document OCR dataset from IIIT Hyderabad's CVIT lab and the NLTM-Bhashini project containing
+  1.2 million annotated word images and approximately 120,000 text line images across 13 Indian languages including
+  Marathi. Sourced from scanned books, textbooks, and printed documents. Provides word-level and line-level cropped
+  images paired with Unicode ground-truth transcriptions. The largest publicly available printed Indic OCR dataset,
+  essential for training robust printed text recognizers.
+modality: Image (printed text word/line crops with transcriptions)
+size: 1.2M+ word images; ~120K line images; 13 languages
+language:
+  - mr
+  - hi
+  - en
+  - bn
+  - ta
+  - te
+  - kn
+  - ml
+  - gu
+  - pa
+  - or
+  - as
+  - ur
+license: Research use (NLTM/Bhashini)
+ai_use_cases:
+  - Printed Marathi text recognition model training
+  - Multi-script OCR system development
+  - Transfer learning from Hindi to Marathi OCR
+  - Document digitization pipeline training
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2205.06740
+github_url: ""
+organization: CVIT, IIIT Hyderabad / NLTM-Bhashini
+format: PNG/JPEG with text labels
+update_frequency: static
+citation: "Deploying and Benchmarking Printed Document OCR for Multiple Indian Languages, 2022"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Cropped word or line image from printed document
+  - field: text
+    type: string
+    description: Unicode ground-truth transcription
+  - field: language
+    type: string
+    description: Script/language of the text
+  - field: level
+    type: string
+    description: Annotation level (word or line)
+starter_idea: Train a production-grade Marathi printed text recognizer using Mozhi's large-scale word image corpus.
+build_ideas:
+  - Create a Marathi book digitization pipeline combining Mozhi-trained recognizer with layout analysis
+  - Develop a cross-script transfer learning study comparing OCR performance when pre-training on Hindi vs. directly training on Marathi
+  - Build a font-robust Marathi OCR system by augmenting Mozhi data with synthetic multi-font renderings
+quick_start: |
+  # Request access from CVIT, IIIT Hyderabad
+  # https://cvit.iiit.ac.in/usodi/tdocrmil.php
+  from PIL import Image
+  import os
+
+  # After downloading, load word images
+  img_dir = 'mozhi/marathi/words/'
+  for img_file in os.listdir(img_dir)[:5]:
+      img = Image.open(os.path.join(img_dir, img_file))
+      label = open(os.path.join(img_dir, img_file.replace('.png', '.txt'))).read()
+      print(f"{img_file}: {label}")

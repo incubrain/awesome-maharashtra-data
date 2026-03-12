@@ -1,0 +1,71 @@
+title: IndicDLP - Indic Document Layout Parsing
+homepage: https://github.com/Indic-Layout/IndicDLP
+category: vision-ocr-multimodal
+description:
+  Large-scale document layout analysis dataset covering 119,809 annotated document images across 11 Indic languages
+  plus English, including Marathi. Spans 12 document domains (novels, textbooks, magazines, newspapers, government
+  acts and rules, forms, question papers, certificates, annual reports, handwritten documents, scientific papers,
+  and mixed-content pages). Annotated with 42 physical and logical layout classes including paragraphs, headings,
+  tables, figures, captions, headers, footers, page numbers, equations, and footnotes. Winner of ICDAR 2025 Best
+  Student Paper Runner-Up.
+modality: Image (document pages with layout annotations)
+size: 119,809 annotated document pages; 12 domains; 42 layout classes
+language:
+  - mr
+  - hi
+  - en
+  - bn
+  - ta
+  - te
+  - kn
+  - ml
+  - gu
+  - pa
+  - or
+  - as
+license: CC BY 4.0
+ai_use_cases:
+  - Document layout analysis for Marathi texts
+  - Table detection and extraction from Marathi documents
+  - Document structure understanding for OCR pipelines
+  - Marathi document digitization preprocessing
+maharashtra_specific: false
+extraction_status: subset_needed
+huggingface_url: https://huggingface.co/datasets/IndicDLP/IndicDLP-dataset
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2501.04497
+github_url: https://github.com/Indic-Layout/IndicDLP
+organization: AI4Bharat / IIT Madras
+format: PNG/JPEG with COCO-format annotations
+update_frequency: static
+citation: "IndicDLP: A Benchmark for Indic Document Layout Parsing, ICDAR 2025"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Full-page document scan
+  - field: annotations
+    type: json
+    description: COCO-format bounding boxes with layout class labels
+  - field: category
+    type: string
+    description: Layout element class (paragraph, heading, table, figure, etc.)
+  - field: language
+    type: string
+    description: Document language
+  - field: domain
+    type: string
+    description: Document type (novel, textbook, newspaper, form, etc.)
+starter_idea: Build a Marathi document structure analyzer that detects paragraphs, tables, headings, and figures for automated digitization.
+build_ideas:
+  - Create a Marathi document OCR pipeline combining IndicDLP layout detection with text recognition for end-to-end digitization
+  - Develop a government form field extractor using layout analysis to automatically parse structured Marathi forms
+  - Build a Marathi newspaper article segmenter separating headlines, body text, images, and advertisements
+quick_start: |
+  from datasets import load_dataset
+
+  ds = load_dataset("IndicDLP/IndicDLP-dataset")
+  # Filter for Marathi documents
+  mr_docs = [x for x in ds['train'] if x['language'] == 'mr']
+  print(f"Marathi document pages: {len(mr_docs)}")
+  print(f"Layout classes: {set(a['category'] for doc in mr_docs for a in doc['annotations'])}")

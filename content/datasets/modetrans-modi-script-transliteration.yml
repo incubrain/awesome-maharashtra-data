@@ -1,0 +1,54 @@
+title: MoDeTrans - Modi Script Document Transliteration Dataset
+homepage: https://arxiv.org/abs/2503.13060
+category: vision-ocr-multimodal
+description:
+  Dataset of 2,043 historical Modi script document images paired with Devanagari transliterations. Modi was the
+  official script for writing Marathi from the 12th century until the British colonial period when Devanagari
+  replaced it. This dataset enables training vision-language models (MoScNet architecture) to transliterate Modi
+  documents into modern Devanagari, unlocking centuries of Marathi historical records including Peshwa-era
+  administrative documents, Shivaji Maharaj's correspondence, and Maratha empire legal records.
+modality: Image (historical document scans with Devanagari transliterations)
+size: 2,043 document images with parallel Devanagari text
+language:
+  - mr
+license: Research use
+ai_use_cases:
+  - Historical Modi script to Devanagari transliteration
+  - Historical Marathi document digitization
+  - Maratha empire document analysis
+  - Cultural heritage preservation
+maharashtra_specific: true
+extraction_status: ready
+huggingface_url: ""
+direct_download_url: ""
+paper_url: https://arxiv.org/abs/2503.13060
+github_url: ""
+organization: Research community
+format: Image + text pairs
+update_frequency: static
+citation: "MoDeTrans: Modi Script Document Transliteration, 2025"
+last_verified: "2026-03-12"
+schema:
+  - field: image
+    type: image
+    description: Scanned historical Modi script document page
+  - field: devanagari_text
+    type: string
+    description: Transliterated text in modern Devanagari script
+  - field: document_type
+    type: string
+    description: Type of historical document
+starter_idea: Build a Modi-to-Devanagari transliteration tool that makes historical Marathi documents readable to modern Marathi speakers.
+build_ideas:
+  - Create a historical Marathi document archive with automatic Modi-to-Devanagari conversion for researchers
+  - Develop a Maratha empire correspondence analyzer extracting names, places, and dates from transliterated Modi documents
+  - Build a public-facing web tool where users can upload Modi script images and receive Devanagari transliterations
+quick_start: |
+  # MoDeTrans dataset for Modi script transliteration
+  # Paper: https://arxiv.org/abs/2503.13060
+  from PIL import Image
+
+  # Load Modi script document images paired with Devanagari ground truth
+  # Train VLM-based transliteration model (MoScNet architecture)
+  print("MoDeTrans: 2,043 Modi script documents with Devanagari transliterations")
+  print("Historical Marathi script preservation dataset")
